@@ -2,7 +2,7 @@
 $(function() {
 
   // Slider
-  $('#coin-slider').coinslider({width:960,height:360,opacity:1});
+  $('#coin-slider').coinslider({width:1030,height:230,opacity:1});
 
   // Radius Box
   //$('a.com, a.rm, img.fl, .menu_nav ul, .menu_nav ul li a').css({"border-radius":"6px", "-moz-border-radius":"6px", "-webkit-border-radius":"6px"});
