@@ -8,24 +8,33 @@
      padding:1 px;
      margin:10px;
      background: none;
-     border-radius: 5px;
+     box-shadow: 2px 2px 4px 0px #ccc;
      
 }
 
 .box:hover{
       box-shadow: 0 0 6px #FFBC8A;
       border:white;
-     
 }
 
-.smallbox{
+.smallboxTitle{
      float:left;
-     height:30px;
-     width:315px;
-     padding:1 px;
-     margin:1px;
+     height:35px;
+     width:290px;
+     padding:10 px;
+     margin:10px;
      background: linear-gradient(#FFE3CF,#FFBC8A);
-     border-radius: 5px;
+     border-color:#orange;
+ }
+ 
+ .smallboxText{
+     float:left;
+     height:140px;
+     width:280px;
+     padding:10 px;
+     margin:15px;
+     border-bottom:solid ;
+     border-color:#FFBC8A;
  }
  .smallbox p{
      text-align:center;
