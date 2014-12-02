@@ -11,10 +11,10 @@ body {
 html, .main {
 	padding:0;
 	margin:0;
+    background:#EEEEEE;
 }
 .main {
-    background-color: #FFFFFF;
-	background:white;
+	background:#EEEEEE;
     background-repeat: repeat-x;
 	background-position: left top;
 }
@@ -48,10 +48,11 @@ a {
 .header, .content, .menu_nav, .fbg, .footer, form, ol, ol li, ul, .content .mainbar, .content, .sidebar {
 	margin:0;
 	padding:0;
+    
 }
 .header {
 	padding:0;
-
+   
     
 }
 .header_resize {
@@ -97,8 +98,7 @@ h1 small {
 .slider {
 	padding:0 0 5px;
     margin-top:15px;
-	background:url(../images/slider_bg.jpg) no-repeat center bottom;
-     box-shadow: 3px 3px 3px 0px #ccc;
+    box-shadow: 2px 2px 4px 0px #404040;
    
 }
 .rss {
@@ -215,7 +215,7 @@ h1 small {
 }
 .content {
 	padding:0 0 10px;
-	
+
 
 }
 .content_resize {
@@ -241,7 +241,7 @@ h1 small {
 	margin:0;
 	padding:12px 0 0;
 	float:left;
-    background:white;
+    background:gray;
 }
 .content .mainbar img {
 }
@@ -398,7 +398,6 @@ a.rm {
 .content_resize .c2 {
 	padding:0 36px 0 16px;
 	width:775px;
-    border:solid 2px black;
 }
 .content_resize .c3 {
 	padding:0 0 0 16px;

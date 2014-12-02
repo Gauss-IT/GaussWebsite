@@ -42,7 +42,7 @@
 	color:#fff;
 	font-size:15px;
 	line-height:1.5em;
-	background:url(../images/overlay.png) repeat left top;
+	/*background:url(../images/overlay.png) repeat left top;*/
 }
 /* buttons Next and Prew */
 .cs-prev, .cs-next {

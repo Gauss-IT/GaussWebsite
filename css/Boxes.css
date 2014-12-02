@@ -7,8 +7,8 @@
      width:315px;
      padding:1 px;
      margin:10px;
-     background: none;
-     box-shadow: 2px 2px 4px 0px #ccc;
+     background: white;
+     box-shadow: 2px 2px 4px 0px #606060;
      
 }
 
@@ -16,6 +16,9 @@
       box-shadow: 0 0 6px #FFBC8A;
       border:white;
 }
+
+
+
 
 .smallboxTitle{
      float:left;
@@ -41,3 +44,83 @@
      font-size:large;
      vertical-align:middle;
   }
+  
+  .largeBox{
+     float:left;
+     height:500px;
+     width:500px;
+     padding:1 px;
+     margin:10px;
+     background: white;
+     box-shadow: 2px 2px 4px 0px #606060;
+     
+}
+  
+  .rectangleLong{
+     float:left;
+     height:250px;
+     width:1010px;
+     padding:1 px;
+     margin:10px;
+     background: gray;
+     box-shadow: 2px 2px 4px 0px #606060;
+     
+}
+
+ .rectangleShort{
+     float:left;
+     height:500px;
+     width:235px;
+     padding:1 px;
+     margin:10px;
+     background: gray;
+     box-shadow: 2px 2px 4px 0px #606060;
+     
+}
+
+ .squareBox{
+     float:left;
+     height:235px;
+     width:235px;
+     padding:1 px;
+     margin:10px;
+     background: white;
+     box-shadow: 2px 2px 4px 0px #606060;
+     
+}
+ .squareBox:hover{
+     background: #C6E7F7;
+     border:white;
+     
+}
+ .squareBoxGray{
+     float:left;
+     height:235px;
+     width:235px;
+     padding:1 px;
+     margin:10px;
+     background: lightgray;
+     box-shadow: 2px 2px 4px 0px #606060;
+     
+}
+ .squareBoxGray:hover{
+     background: #A1A1A1;
+     border:white;
+     
+}
+
+ .squareBoxOrange{
+     float:left;
+     height:235px;
+     width:235px;
+     padding:1 px;
+     margin:10px;
+     background: #FFBC8A;
+     box-shadow: 2px 2px 4px 0px #606060;
+     
+}
+ .squareBoxOrange:hover{
+     background: #F2A368;
+     border:white;
+     
+}
