@@ -12,22 +12,22 @@
      
 }
 
-.box:hover{
+/*.box:hover{
       box-shadow: 0 0 6px #FFBC8A;
       border:white;
-}
+}*/
 
 
 
 
 .smallboxTitle{
      float:left;
-     height:35px;
-     width:290px;
-     padding:10 px;
-     margin:10px;
+     height:45px;
+     width:315px;
+     padding:0px;
+     margin:0px;
      background: linear-gradient(#FFE3CF,#FFBC8A);
-     border-color:#orange;
+     border-bottom: solid 2px #C2C2C2;
  }
  
  .smallboxText{
@@ -39,9 +39,9 @@
      border-bottom:solid ;
      border-color:#FFBC8A;
  }
- .smallbox p{
+ .smallboxTitle p{
      text-align:center;
-     font-size:large;
+     font-size:medium;
      vertical-align:middle;
   }
   
@@ -58,7 +58,7 @@
   
   .rectangleLong{
      float:left;
-     height:250px;
+     height:290px;
      width:1010px;
      padding:1 px;
      margin:10px;
@@ -66,6 +66,37 @@
      box-shadow: 2px 2px 4px 0px #606060;
      
 }
+
+.rectangleLongTitle{
+     float:left;
+     height:30px;
+     width:1010px;
+     padding:0px;
+     margin-bottom:10px;
+     background: #FFBC8A;
+     border-bottom: solid 2px #C2C2C2;
+ }
+ 
+ .rectangleLong p{
+     text-align:justify;
+     font-size:medium;
+     vertical-align:middle;
+     margin-right:inherit;
+  }
+  
+   .rectangleLong h3{
+     text-align:left;
+     font-size:medium;
+     vertical-align:middle;
+  }
+  
+ .imageBook{
+  float:left;
+  height:220px;
+  width: 200px;
+  margin: 10px;
+  border-right:solid 2px #FFBC8A;
+} 
 
  .rectangleShort{
      float:left;
