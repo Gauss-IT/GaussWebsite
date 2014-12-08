@@ -140,9 +140,11 @@ h1 small {
 	padding:4px;
     color:#575757;
 	height:37px;
-    /*box-shadow: 0 0 5px #FF9240;*/
-    background: linear-gradient(#FFE3CF,#FFBC8A);
+    /*box-shadow: 0 0 5px #FF9240;
+    background: linear-gradient(#FFE3CF,#FFBC8A);*/
+    background:#FFE3CF;
     border-radius: 5px;
+    box-shadow: 2px 2px 4px 0px #606060; 
    
 }
 .menu_nav {
@@ -159,7 +161,8 @@ h1 small {
 	height:20px;
     /*box-shadow: 0 0 5px #FF9240;*/
     background: linear-gradient(#FFE3CF,#FFBC8A);
-    border-radius: 5px; 
+    border-radius: 5px;
+    
    
 }
 .bottom ul li {
@@ -199,10 +202,10 @@ h1 small {
 }
 .menu_nav ul li a:hover {
 	text-decoration:none;
-	color:#fff;
-	background:linear-gradient(#965B32,#D1854F);
+	color:#D1854F;
+	background:#fff;
     border-radius: 5px; 
-    box-shadow: 0 0 5px #FFFFFF;
+    box-shadow: 0 0 3px #FFFFFF;
 }
 
 .sidebar{

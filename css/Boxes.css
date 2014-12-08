@@ -26,7 +26,7 @@
      width:315px;
      padding:0px;
      margin:0px;
-     background: linear-gradient(#FFE3CF,#FFBC8A);
+     background: #FFE3CF;
      border-bottom: solid 2px #C2C2C2;
  }
  
@@ -37,7 +37,7 @@
      padding:10 px;
      margin:15px;
      border-bottom:solid ;
-     border-color:#FFBC8A;
+     border-color:#FFE3CF;
  }
  .smallboxTitle p{
      text-align:center;
@@ -73,7 +73,7 @@
      width:1010px;
      padding:0px;
      margin-bottom:10px;
-     background: #FFBC8A;
+     background: #FFE3CF;
      border-bottom: solid 2px #C2C2C2;
  }
  
@@ -95,7 +95,47 @@
   height:220px;
   width: 200px;
   margin: 10px;
-  border-right:solid 2px #FFBC8A;
+  border-right:solid 2px #FFE3CF;
+} 
+.personBox{
+     float:left;
+     height:230px;
+     width:490px;
+     padding:1 px;
+     margin:10px;
+     background: white;
+     box-shadow: 2px 2px 4px 0px #606060;
+     
+}
+
+.personBoxTitle{
+     float:left;
+     height:40px;
+     width:490px;
+     padding:0px;
+     margin:0px;
+     background: #FFE3CF;
+     border-bottom: solid 2px #C2C2C2;
+ }
+ 
+ .personBoxText{
+     float:left;
+     height:170px;
+     width:300px;
+     padding:10 px;
+     margin:10px;
+ }
+ .smallboxTitle p{
+     text-align:center;
+     font-size:medium;
+     vertical-align:middle;
+  }
+ .imagePerson{
+  float:left;
+  height:170px;
+  width: 140px;
+  margin: 10px;
+  border-right:solid 2px #FFE3CF;
 } 
 
  .rectangleShort{
