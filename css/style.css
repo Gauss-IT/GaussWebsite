@@ -1,11 +1,14 @@
-/* Design by http://www.dreamtemplate.com */
+/* Design by http://&euml;w.dreamtemplate.com */
 @charset "utf-8";
 body {
 	margin:0;
 	padding:0;
 	width:100%;
 	color:#333;
-	font:normal 12px/1.5em "Liberation sans", Arial, Helvetica, sans-serif;
+	/*font:normal 12px/1.5em "Liberation sans", Arial, Helvetica, sans-serif;*/
+	background: #323232;
+	font-family: 'Imprima';
+	font-size: 76%;
     
 }
 html, .main {
@@ -154,6 +157,51 @@ h1 small {
     color:#575757;
 
 }
+
+.menu_nav ul li {
+	margin:3px;
+	padding:0;
+    color:#575757;
+	float:left;
+	/* little box shadow too! */
+	
+   
+}
+.menu_nav ul li.active {
+	margin:3px;
+	padding:0;
+    color:#575757;
+	float:left;
+	background:#D17373;
+	/* little box shadow too! */
+	
+   
+}
+.menu_nav ul li a {
+	display:block;
+	margin:0;
+	padding:14px 30px;
+	font-size:medium;
+	line-height:2px;
+	font-weight:normal;
+	color:black;
+	text-decoration:none;
+}
+.menu_nav ul li.active a {
+	text-decoration:none;
+	color:white;
+    border-radius: 10px; 
+	background:#D17373;
+    
+	
+}
+.menu_nav ul li a:hover {
+	text-decoration:none;
+	color:white;
+	background:#FFBC8A;
+    border-radius: 5px; 
+    box-shadow: 0 0 3px #FFFFFF;
+}
 .bottom ul {
 	list-style:none;
 	padding:4px;
@@ -174,7 +222,36 @@ h1 small {
 	
    
 }
-.menu_nav ul li {
+
+.menu_subnav {
+	margin:0 auto;
+	padding:0;
+	height:20px;
+    color:#575757;
+
+}
+.menu_subnav ul {
+	list-style:none;
+	float:center;
+	padding:4px;
+    color:#575757;
+	height:27px;
+    /*box-shadow: 0 0 5px #FF9240;
+    background: linear-gradient(#FFE3CF,#FFBC8A);*/
+    background:#D17373;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px 0px #606060; 
+   
+}
+.menu_subnav {
+	margin:0 auto;
+	padding:0;
+	height:15px;
+    color:#575757;
+
+}
+
+.menu_subnav ul li {
 	margin:3px;
 	padding:0;
     color:#575757;
@@ -183,31 +260,30 @@ h1 small {
 	
    
 }
-.menu_nav ul li a {
+.menu_subnav ul li a {
 	display:block;
 	margin:0;
-	padding:14px 30px;
-	font-size:medium;
+	padding:10px 30px;
+	font-size:small;
 	line-height:2px;
 	font-weight:normal;
-	color:black;
+	color:white;
 	text-decoration:none;
 }
-.menu_nav ul li.active a {
+.menu_subnav ul li.active a {
 	text-decoration:none;
 	color:white;
     border-radius: 10px; 
     
 	
 }
-.menu_nav ul li a:hover {
+.menu_subnav ul li a:hover {
 	text-decoration:none;
 	color:#D1854F;
 	background:#fff;
     border-radius: 5px; 
     box-shadow: 0 0 3px #FFFFFF;
 }
-
 .sidebar{
     text-decoration:none;
     float:left;
@@ -284,9 +360,9 @@ ul.sb_menu, ul.ex_menu {
     
 }
 ul.sb_menu li, ul.ex_menu li {
-	margin:0;;
-	color:#FF9240;
-    border-bottom:1px solid #FF9240;
+	margin:0;
+	color:#FFE3CF;
+    border-bottom:1px solid #F7D5BC;
 }
 ul.sb_menu li {
 	padding:4px 0;
@@ -296,14 +372,16 @@ ul.sb_menu li {
 ul.sb_menu li:hover {
 	padding:4px 0;
 	width:150px;
-    border-bottom:2px solid #FF9240;
+	color:#FFFFFF;
+	background: #FFE3CF;
+    border-bottom:2px solid #F7D5BC;
 }
 
 ul.ex_menu li {
 	padding:4px 0;
 }
 ul.sb_menu li a {
-	color:#FF9240;
+	color:#A1A1A1;
 	text-decoration:none;
     line-height:30px;
     font-size:medium;
@@ -317,6 +395,7 @@ ul.ex_menu li a {
     
 }
 ul.sb_menu li a:hover, ul.ex_menu li a:hover {
+color:#212121;
 }
 
 p.spec {
