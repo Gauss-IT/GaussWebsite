@@ -6,7 +6,8 @@ body {
 	width:100%;
 	color:#333;
 	/*font:normal 12px/1.5em "Liberation sans", Arial, Helvetica, sans-serif;*/
-	background: #323232;
+	/*background: #323232;*/
+	background: #FFFFFF;
 	font-family: 'Imprima';
 	font-size: 76%;
     
@@ -14,11 +15,13 @@ body {
 html, .main {
 	padding:0;
 	margin:0;
-    background:#EEEEEE;
+	/*background:#EEEEEE;*/
+	background: #FDFDFD;
 }
 .main {
-	background:#EEEEEE;
-    background-repeat: repeat-x;
+	/*background:#EEEEEE;*/
+	background: #FDFDFD;
+    	background-repeat: repeat-x;
 	background-position: left top;
 }
 .clr {
