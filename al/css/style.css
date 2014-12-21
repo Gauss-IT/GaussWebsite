@@ -5,10 +5,10 @@ body {
 	padding:0;
 	width:100%;
 	color:#333;
-	/*font:normal 12px/1.5em "Liberation sans", Arial, Helvetica, sans-serif;*/
+	font:normal 12px/1.5em "Liberation sans", Arial, Helvetica, sans-serif;
 	/*background: #323232;*/
 	background: #FFFFFF;
-	font-family: 'Imprima';
+	font-family: 'Arial';
 	font-size: 76%;
     
 }
@@ -163,7 +163,6 @@ h1 small {
     /*box-shadow: 0 0 5px #FF9240;
     background: linear-gradient(#FFE3CF,#FFBC8A);*/
     background:#FFE3CF;
-    border-radius: 5px;
     box-shadow: 2px 2px 4px 0px #606060; 
    
 }
@@ -226,7 +225,6 @@ h1 small {
 	height:20px;
     /*box-shadow: 0 0 5px #FF9240;*/
     background: linear-gradient(#FFE3CF,#FFBC8A);
-    border-radius: 5px;
     
    
 }
@@ -245,6 +243,7 @@ h1 small {
 	padding:0;
 	height:20px;
     color:#575757;
+	border-top: solid 2px #C2C2C2;
 
 }
 .menu_subnav ul {
@@ -255,8 +254,7 @@ h1 small {
 	height:27px;
     /*box-shadow: 0 0 5px #FF9240;
     background: linear-gradient(#FFE3CF,#FFBC8A);*/
-    background:#D17373;
-    border-radius: 5px;
+    background:#fff;
     box-shadow: 2px 2px 4px 0px #606060; 
    
 }
@@ -284,21 +282,21 @@ h1 small {
 	font-size:small;
 	line-height:2px;
 	font-weight:normal;
-	color:white;
+	color:#D17373;
 	text-decoration:none;
 }
 .menu_subnav ul li.active a {
 	text-decoration:none;
 	color:white;
-    border-radius: 10px; 
+	
     
 	
 }
 .menu_subnav ul li a:hover {
 	text-decoration:none;
-	color:#D17373;
-	background:#fff;
-    border-radius: 5px; 
+	color:#fff;
+	background:#D17373;
+	border-radius:5px;
     box-shadow: 0 0 3px #FFFFFF;
 }
 .sidebar{

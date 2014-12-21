@@ -122,7 +122,7 @@ ul.smallboxLink_Menu li a:hover {
   .rectangleLong{
      float:left;
      height:290px;
-     width:505px;
+     width:1030px;
      padding:1 px;
      margin:0px;
      background: gray;
@@ -133,7 +133,7 @@ ul.smallboxLink_Menu li a:hover {
 .rectangleLongTitle{
      float:left;
      height:30px;
-     width:100%;
+     width:1030px;
      padding:0px;
      margin-bottom:10px;
      background: #FFE3CF;
@@ -147,18 +147,17 @@ ul.smallboxLink_Menu li a:hover {
      margin-right:inherit;
   }
   
- /*  .rectangleLong h3{
+   .rectangleLong h3{
      text-align:left;
      font-size:medium;
      vertical-align:middle;
-  }*/
+  }
   
  .imageBook{
   float:left;
-  height:170px;
-  width: 150px;
+  height:220px;
+  width: 200px;
   margin: 10px;
-  vertical-align:center;
   border-right:solid 2px #FFE3CF;
 } 
 .personBox{
