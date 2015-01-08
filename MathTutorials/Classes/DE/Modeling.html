@@ -1,0 +1,2893 @@
+
+
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
+xmlns:st1="urn:schemas-microsoft-com:office:smarttags"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+
+<!-- Mirrored from tutorial.math.lamar.edu/Classes/DE/Modeling.aspx by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 07 Jan 2015 21:49:17 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<!-- saved from url=(0014)about:internet --><!-- MSIE Mark of the Web -->
+
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=keywords content="MathPageGen">
+
+<meta name=Generator content="MathPage 1.0.1">
+<meta name=Originator content="Microsoft Word 12">
+
+
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<meta name="keywords" content="modeling with differential equations, linear models, modeling with first order differential equations, mixing problems, modeling mixing problems, falling bodies, modeling falling bodies, population problems, modeling population problems">
+
+<title id="_PageTitle">Pauls Online Notes : Differential Equations  - Modeling with First Order DE's</title>
+
+
+
+<!-- This if for the general behavior of all the pages and for the 	-->
+<!-- behaviour of the text areas in particular...					-->
+<link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen"> 
+<link rel="stylesheet" href="../../css/notes.css" type="text/css" media="screen"> 
+<!--[if IE]>
+  <link href="/css/main_IE.css" rel="stylesheet" type="text/css" media="screen" />
+  <link rel="stylesheet" href="/css/notes_IE.css" type="text/css" media="screen"> 
+<![endif]-->
+<link rel="stylesheet" href="../../css/menuprint.css" type="text/css" media="print">
+
+<script type="text/javascript" language="JavaScript" src="../../js/main.js"></script>
+<script type="text/javascript" language="JavaScript" src="../../js/Show_Hide.js"></script>
+<script type="text/javascript" language="JavaScript" src="../../js/eventManager.js"></script>
+<script type="text/javascript" language="JavaScript" src="../../js/DHTMLAPI.js"></script>
+
+
+<link rel=themeData href="Modeling_files/themedata.thmx">
+<link rel=colorSchemeMapping href="Modeling_files/colorschememapping.xml">
+
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	}
+@font-face
+	{font-family:Cambria;
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	}
+h1
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-indent:0in;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:"Arial","sans-serif";
+	}
+h2
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-indent:0in;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Arial","sans-serif";
+	font-style:italic;}
+h3
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-indent:0in;
+	page-break-after:avoid;
+	font-size:13.0pt;
+	font-family:"Arial","sans-serif";}
+h4
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-indent:0in;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Times New Roman","serif";}
+h5
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-indent:0in;
+	font-size:13.0pt;
+	font-family:"Times New Roman","serif";
+	font-style:italic;}
+h6
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-indent:0in;
+	font-size:11.0pt;
+	font-family:"Times New Roman","serif";}
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-indent:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	}
+p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-indent:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	font-style:italic;}
+p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-indent:0in;
+	font-size:11.0pt;
+	font-family:"Arial","sans-serif";
+	}
+
+
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:8.0pt;
+	font-family:"Tahoma","sans-serif";
+	}
+p.MTDisplayEquation, li.MTDisplayEquation, div.MTDisplayEquation
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	}
+span.MTEquationSection
+	{color:red;
+	display:none;
+	}
+span.MTDisplayEquationChar
+	{}
+span.Heading2Char
+	{font-family:"Arial","sans-serif";
+	font-weight:bold;
+	font-style:italic;}
+span.BalloonTextChar
+	{font-family:"Tahoma","sans-serif";
+	}
+.MsoChpDefault
+	{font-size:10.0pt;
+	}
+ /* Page Definitions */
+ @page
+	{}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	}
+div.Section1
+	{page:Section1;}
+@page Section2
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	}
+div.Section2
+	{page:Section2;}
+ /* List Definitions */
+ @list l0
+	{}
+@list l0:level1
+	{margin-left:0in;
+	text-indent:0in;}
+@list l0:level2
+	{margin-left:0in;
+	text-indent:0in;}
+@list l0:level3
+	{margin-left:0in;
+	text-indent:0in;}
+@list l0:level4
+	{margin-left:0in;
+	text-indent:0in;}
+@list l0:level5
+	{margin-left:0in;
+	text-indent:0in;}
+@list l0:level6
+	{margin-left:0in;
+	text-indent:0in;}
+@list l0:level7
+	{margin-left:0in;
+	text-indent:0in;}
+@list l0:level8
+	{margin-left:0in;
+	text-indent:0in;}
+@list l0:level9
+	{margin-left:0in;
+	text-indent:0in;}
+@list l1
+	{}
+@list l1:level1
+	{margin-left:0in;
+	text-indent:0in;
+	font-family:"Times New Roman","serif";
+	}
+@list l1:level2
+	{margin-left:0in;
+	text-indent:0in;}
+@list l1:level3
+	{margin-left:0in;
+	text-indent:0in;
+	font-family:"Times New Roman","serif";}
+@list l1:level4
+	{margin-left:.6in;
+	text-indent:-.1in;}
+@list l1:level5
+	{margin-left:.7in;
+	text-indent:-.3in;}
+@list l1:level6
+	{margin-left:.8in;
+	text-indent:-.3in;}
+@list l1:level7
+	{margin-left:.9in;
+	text-indent:-.2in;}
+@list l1:level8
+	{margin-left:1.0in;
+	text-indent:-.3in;}
+@list l1:level9
+	{margin-left:1.1in;
+	text-indent:-.1in;}
+@list l2
+	{}
+@list l2:level1
+	{margin-left:0in;
+	text-indent:0in;}
+@list l2:level2
+	{margin-left:0in;
+	text-indent:0in;}
+@list l2:level3
+	{margin-left:0in;
+	text-indent:0in;}
+@list l2:level4
+	{margin-left:0in;
+	text-indent:0in;}
+@list l2:level5
+	{margin-left:0in;
+	text-indent:0in;}
+@list l2:level6
+	{margin-left:0in;
+	text-indent:0in;}
+@list l2:level7
+	{margin-left:0in;
+	text-indent:0in;}
+@list l2:level8
+	{margin-left:0in;
+	text-indent:0in;}
+@list l2:level9
+	{margin-left:0in;
+	text-indent:0in;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+<!-- MP HEAD( -->
+<style>
+.MPPH { visibility:hidden; page-break-inside:avoid }
+.MPPHSpan { text-indent:0 }
+sub,sup { font-size:x-small }
+#MPDpiSpan { position:absolute; top:1in; left:1in; width:100px; border:none; visibility:hidden }
+.MPEntity { font-family:'Times New Roman',Times,serif }
+</style>
+<style media=screen>
+.MPScreenEqn { position:absolute; visibility:visible; z-index:98 }
+.MPPrintEqn { display:none }
+.MPScreenPH { }
+.MPPrintPH { display:none }
+.MPPopup { position:absolute; visibility:hidden; z-index:99; top:0; left:0; text-indent:0; cursor:hand; 
+border:solid blue 1px; padding:5px; background-color:#FFFFCC; 
+filter:progid:DXImageTransform.Microsoft.DropShadow(color=#444444,offx=3,offy=3,positive=1) 
+}
+.MPPopupNoBg { position:absolute; visibility:hidden; z-index:99; top:0; left:0; text-indent:0; cursor:hand; 
+border:solid blue 1px; padding:5px; 
+filter:progid:DXImageTransform.Microsoft.DropShadow(color=#444444,offx=3,offy=3,positive=1) 
+}
+</style>
+<style media=print>
+.MPScreenEqn { display:none }
+.MPPrintEqn { position:absolute; visibility:visible }
+.MPScreenPH { display:none }
+.MPPrintPH { }
+.MPPopup { display:none }
+.MPPopupNoBg { display:none }
+</style>
+<script language=javascript src='mathpage.js'></script>
+<script language=javascript>
+if (typeof DSMP == 'undefined') {
+	alert('MathPage Javascript file missing; equations and symbols will not display.');
+	var DSMP = new Object;
+	MPBodyInit=MPSetEqnAttrs=MPSetChAttrs=MPEquation=MPInlineChar=MPDeleteCode=MPNNCalcTopLeft=MPHidePopup=MPShowPopup=MPNNSelectScreenEqn=MPWebEQApplet=MPTechexplorerObject=function(){};
+	DSMP.gEmptySrc=DSMP.gPlaceholderHeight=DSMP.gPlaceholderWidth=DSMP.gPlaceholder2Height=DSMP.gNNPopupBgColor=DSMP.gPopupEqnSrc=DSMP.gPopupEqnPadding=DSMP.gNNLayerTop=DSMP.gNNLayerLeft=DSMP.gScreenEqnSrc=DSMP.gScreenEqnWidth=DSMP.gScreenEqnHeight=DSMP.gPrintEqnSrc=null;
+}
+DSMP.gPageVersion = '1.1';
+DSMP.gMaxCharCompat = 1;
+DSMP.gGenMathZoom = 1;
+DSMP.gPopupEqnBgColorDefault = '#FFFFCC';
+DSMP.gPopupEqnPaddingDefault = 5;
+DSMP.gPlaceholderPadding = 4;
+DSMP.gOldJSMessage = 'Warning: this MathPage document requires a newer JavaScript file and may not display correctly.';
+DSMP.gCompatMessage = 'Warning: this MathPage document was generated for Windows IE5 or later only and may not display correctly.';
+DSMP.gMinBrowserMessage = 'Warning: MathPage requires a version 4 or later browser.';
+DSMP.gHidePopupMessage = 'Click on a MathZoom equation to dismiss it, or shift-Click to close all.';
+DSMP.gShowPopupMessage = 'Click on an equation to show the enlarged MathZoom version.';
+</script>
+<!-- )MP HEAD -->
+</head>
+
+<body onLoad="init()">
+<!-- MP BODY(-->
+<span id=MPDpiSpan></span>
+<script language=javascript>
+MPBodyInit('Modeling_files')
+</script>
+<!-- )MP BODY -->
+
+
+<div class=Section1>
+
+<form name="Form1" method="post" action="http://tutorial.math.lamar.edu/Classes/DE/Modeling.aspx" onsubmit="javascript:return WebForm_OnSubmit();" id="Form1">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJMTU0NjU4NzYwD2QWCGYPFQHsAW1vZGVsaW5nIHdpdGggZGlmZmVyZW50aWFsIGVxdWF0aW9ucywgbGluZWFyIG1vZGVscywgbW9kZWxpbmcgd2l0aCBmaXJzdCBvcmRlciBkaWZmZXJlbnRpYWwgZXF1YXRpb25zLCBtaXhpbmcgcHJvYmxlbXMsIG1vZGVsaW5nIG1peGluZyBwcm9ibGVtcywgZmFsbGluZyBib2RpZXMsIG1vZGVsaW5nIGZhbGxpbmcgYm9kaWVzLCBwb3B1bGF0aW9uIHByb2JsZW1zLCBtb2RlbGluZyBwb3B1bGF0aW9uIHByb2JsZW1zZAIBDxYCHglpbm5lcmh0bWwFTVBhdWxzIE9ubGluZSBOb3RlcyA6IERpZmZlcmVudGlhbCBFcXVhdGlvbnMgIC0gTW9kZWxpbmcgd2l0aCBGaXJzdCBPcmRlciBERSdzZAIFD2QWBAIDD2QWFGYPFQIVL21lbnUvbWVudV9kYXRhX0RFLmpzGi9tZW51L3RvcF9tZW51X2RhdGFfYWxsLmpzZAIBDw9kFgQeB29uRm9jdXMFR2phdmFzY3JpcHQ6dGJXYXRlck1hcmtfRm9jdXMoJ25IZWFkZXJfcScsICdXYXRlcm1hcmtfRm9jdXMnLCAnJywgZmFsc2UpHgZvbkJsdXIFRWphdmFzY3JpcHQ6dGJXYXRlck1hcmtfQmx1cignbkhlYWRlcl9xJywgJ1dhdGVybWFya19CbHVyJywgJycsIGZhbHNlKWQCCg8VARovbWVudS9zaWRlX21lbnVfZGF0YV9ERS5qc2QCCw8PFgIeBFRleHQFY09ubGluZSBOb3RlcyAgLyBEaWZmZXJlbnRpYWwgRXF1YXRpb25zICAoTm90ZXMpIC8gRmlyc3QgT3JkZXIgREVgcyAvIE1vZGVsaW5nIHdpdGggRmlyc3QgT3JkZXIgREUnc2RkAg8PDxYCHgdWaXNpYmxlZ2QWAmYPDxYCHwMF3gQ8YnIgLz4NCjxkaXYgY2xhc3M9Ik5vdGljZSI+PHNwYW4gc3R5bGU9ImZvbnQtd2VpZ2h0OmJvbGQ7Y29sb3I6UmVkIj5JbnRlcm5ldCBFeHBsb3JlciAxMCAmYW1wOyAxMSBVc2VycyA6IDwvc3Bhbj5JZiB5b3UgYXJlIHVzaW5nIEludGVybmV0IEV4cGxvcmVyIDEwIG9yIEludGVybmV0IEV4cGxvcmVyIDExIHRoZW4sIGluIGFsbCBsaWtlbGlob29kLCB0aGUgZXF1YXRpb25zIG9uIHRoZSBwYWdlcyBhcmUgYWxsIHNoaWZ0ZWQgZG93bndhcmQuICBUbyBmaXggdGhpcyB5b3UgbmVlZCB0byBwdXQgeW91ciBicm93c2VyIGluIENvbXBhdGliaWxpdHkgVmlldyBmb3IgbXkgc2l0ZS4gIENsaWNrIDxhIGhyZWY9Ii9JRV9Db21wYXRpYmlsaXR5LmFzcHgiPmhlcmU8L2E+IGZvciBpbnN0cnVjdGlvbnMgb24gaG93IHRvIGRvIHRoYXQuICBBbHRlcm5hdGl2ZWx5LCB5b3UgY2FuIGFsc28gdmlldyB0aGUgcGFnZXMgaW4gQ2hyb21lIG9yIEZpcmVmb3ggYXMgdGhleSBzaG91bGQgZGlzcGxheSBwcm9wZXJseSBpbiB0aGUgbGF0ZXN0IHZlcnNpb25zIG9mIHRob3NlIGJyb3dzZXJzIHdpdGhvdXQgYW55IGFkZGl0aW9uYWwgc3RlcHMgb24geW91ciBwYXJ0Lg0KDQo8L2Rpdj5kZAITDw8WBh4LTmF2aWdhdGVVcmwFFC9DbGFzc2VzL0RFL0lvVi5hc3B4HwMFSTxpbWcgc3JjPSIvSW1hZ2VzL1NpbmdsZUFycm93TGVmdC5naWYiIGJvcmRlcj0iMCIgLz5JbnRlcnZhbHMgb2YgVmFsaWRpdHkfBGcWBB4Lb25Nb3VzZU92ZXIFIXRoaXMuY2xhc3NOYW1lPSdQcmV2TmV4dEJ1dHRvbk9uJx4Kb25Nb3VzZU91dAUidGhpcy5jbGFzc05hbWU9J1ByZXZOZXh0QnV0dG9uT2ZmJ2QCFQ8PFgIfAwUfRGlmZmVyZW50aWFsIEVxdWF0aW9ucyAgLSBOb3Rlc2RkAhcPDxYGHwUFJS9DbGFzc2VzL0RFL0VxdWlsaWJyaXVtU29sdXRpb25zLmFzcHgfAwVKRXF1aWxpYnJpdW0gU29sdXRpb25zPGltZyBzcmM9Ii9JbWFnZXMvU2luZ2xlQXJyb3dSaWdodC5naWYiIGJvcmRlcj0iMCIgLz4fBGcWBB8GBSF0aGlzLmNsYXNzTmFtZT0nUHJldk5leHRCdXR0b25PbicfBwUidGhpcy5jbGFzc05hbWU9J1ByZXZOZXh0QnV0dG9uT2ZmJ2QCGw8QDxYCHgtfIURhdGFCb3VuZGcWAh4Ib25DaGFuZ2UFLmlmICh0aGlzLnZhbHVlICE9ICItMSIpIHtHb1RvUGFnZSh0aGlzLnZhbHVlKX0QFQkcIC0gU2VsZWN0IGEgUGFnZSB0byBWaXNpdCAtIAAVU2VjdGlvbiBEb3dubG9hZCBQYWdlABpDaGFwdGVyIE5vdGVzIEludHJvZHVjdGlvbhVDaGFwdGVyIERvd25sb2FkIFBhZ2UAGUUtQm9vayBOb3RlcyBJbnRyb2R1Y3Rpb24URS1Cb29rIERvd25sb2FkIFBhZ2UVCQItMQItMRkvZG93bmxvYWQuYXNweD9QREY9Uyw5MjsxAi0xIC9jbGFzc2VzL0RFL0ludHJvRmlyc3RPcmRlci5hc3B4GS9kb3dubG9hZC5hc3B4P1BERj1DLDE3OzECLTETL2NsYXNzZXMvREUvREUuYXNweBgvZG93bmxvYWQuYXNweD9QREY9QiwxOzEUKwMJZ2dnZ2dnZ2dnZGQCHQ8QDxYCHwhnFgIfCQUyaWYgKHRoaXMudmFsdWUgIT0gIi0xIikge0Rvd25sb2FkRmlsZSh0aGlzLnZhbHVlKX0QFQcjIC0gU2VsZWN0IGEgUERGIEZpbGUgdG8gRG93bmxvYWQgLSAADVNlY3Rpb24gTm90ZXMADUNoYXB0ZXIgTm90ZXMADEUtQm9vayBOb3RlcxUHAi0xAi0xHlMsOTIsTjsvcGRmL2RlL2RlX21vZGVsaW5nLnBkZgItMSFDLDE3LE47L3BkZi9kZS9kZV9maXJzdF9vcmRlci5wZGYCLTEdQiwxLE47L3BkZi9kZS9kZV9jb21wbGV0ZS5wZGYUKwMHZ2dnZ2dnZ2RkAgUPZBYKAgEPDxYGHwUFFC9DbGFzc2VzL0RFL0lvVi5hc3B4HwMFSTxpbWcgc3JjPSIvSW1hZ2VzL1NpbmdsZUFycm93TGVmdC5naWYiIGJvcmRlcj0iMCIgLz5JbnRlcnZhbHMgb2YgVmFsaWRpdHkfBGcWBB8GBSF0aGlzLmNsYXNzTmFtZT0nUHJldk5leHRCdXR0b25PbicfBwUidGhpcy5jbGFzc05hbWU9J1ByZXZOZXh0QnV0dG9uT2ZmJ2QCAw8PFgIfAwUfRGlmZmVyZW50aWFsIEVxdWF0aW9ucyAgLSBOb3Rlc2RkAgUPDxYGHwUFJS9DbGFzc2VzL0RFL0VxdWlsaWJyaXVtU29sdXRpb25zLmFzcHgfAwVKRXF1aWxpYnJpdW0gU29sdXRpb25zPGltZyBzcmM9Ii9JbWFnZXMvU2luZ2xlQXJyb3dSaWdodC5naWYiIGJvcmRlcj0iMCIgLz4fBGcWBB8GBSF0aGlzLmNsYXNzTmFtZT0nUHJldk5leHRCdXR0b25PbicfBwUidGhpcy5jbGFzc05hbWU9J1ByZXZOZXh0QnV0dG9uT2ZmJ2QCBw8PFgIfAwVjT25saW5lIE5vdGVzICAvIERpZmZlcmVudGlhbCBFcXVhdGlvbnMgIChOb3RlcykgLyBGaXJzdCBPcmRlciBERWBzIC8gTW9kZWxpbmcgd2l0aCBGaXJzdCBPcmRlciBERSdzZGQCCQ8PFgIfAwUfJmNvcHk7IDIwMDMgLSAyMDE1IFBhdWwgRGF3a2luc2RkAgcPZBYCZg8VBAAAAABkZJU3qofdhpT1zRcSJFPRiVIS0cOE" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['Form1'];
+if (!theForm) {
+    theForm = document.Form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="../../WebResource33e8.js?d=YORUXOHolGkRCONPo84CJuYPHXBGUApHFAl7shtryPGwK0bFOwei0v3Gy5tKjz0-5qdg_bNA8_7sxPSNiIy-Bw7cHY81&amp;t=635294879132453548" type="text/javascript"></script>
+
+
+<script src="../../WebResource4708.js?d=yIPaMuK0NxJLVub7mSuSHqFWoFTW5iDqhVoywpwtB7lhIuxbZboTnB_8tYrkof7S65NEVr1oGs5sxDAczrabQRD4pw01&amp;t=635294879132453548" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="0ADE13D5" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWFgKpuqbsCAKEw8WwBALK141YAqbV4bUHArzX7VQCn/q9+gwCgZCz6g4CgZCz6g4Cj9XhjAQCgZCz6g4C8LjX1AEC3Jq4sgECgZCz6g4CrKXhrAgC8MyjnAoC5L7jtg8C5L7jtg8CmvrT6QkC5L7jtg8C6+ii7A4C5L7jtg8C0uXZpQvBhDVJt1+7WS/Ww3t5iY/8s4sK+w==" />
+</div>
+<input type="hidden" name="PDFUrl" id="PDFUrl" />
+
+
+<!--
+	 Milonic DHTML Website Navigation Menu Version 5.0
+	 Copyright 2004 (c) Milonic Solutions Limited (UK). All Rights Reserved.
+	 Please visit http://www.milonic.com/ for more information.
+
+	 Although this software may have been freely downloaded, you must obtain a license before using it in any production environment.		 
+	 The free use of this menu is only available for Non-Profit, Educational & Personal Web Sites who have obtained a license to use. 
+	 
+	 Free, Commercial and Corporate Licenses are available from our website.
+	 You also need to include a link back to http://www.milonic.com/ if you use the free license.
+	 
+	 All Copyright notices MUST remain in place at ALL times. 
+	 This includes the first three lines of this notice on every page that uses the menu.
+	 If you cannot comply with all of the above requirements, please contact us to arrange a license waiver.
+-->	
+
+<SCRIPT language=JavaScript src="../../menu/milonic_src.js" type=text/javascript></SCRIPT>	
+<script	language=JavaScript>
+if(ns4)_d.write("<scr"+"ipt language=JavaScript src=/menu/mmenuns4.js><\/scr"+"ipt>");		
+  else _d.write("<scr"+"ipt language=JavaScript src=/menu/mmenudom.js><\/scr"+"ipt>"); 
+</script>
+<SCRIPT language=JavaScript src="../../menu/menu_data_DE.js" type=text/javascript></SCRIPT>	
+
+
+<table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+	<td align="center" colspan="5" valign="top" height="50"><span class="Main_Heading">Paul's Online Math Notes</span></td>
+</tr>
+
+<tr>
+	<td width="150">&nbsp;</td>
+	<td width="3">&nbsp;</td>
+	<td><SCRIPT language=JavaScript src="../../menu/top_menu_data_all.js" type=text/javascript></SCRIPT></td>	
+	<td width="400" align="right">
+		<!-- I found the following code at -->
+		<!-- http://www.codeproject.com/KB/aspnet/CustomSearchEngine.aspx -->
+		<!-- Emulated Google CSE Search Box Begins -->
+	<input name="nHeader$q" type="text" maxlength="512" id="nHeader_q" onFocus="javascript:tbWaterMark_Focus('nHeader_q', 'Watermark_Focus', '', false)" onBlur="javascript:tbWaterMark_Blur('nHeader_q', 'Watermark_Blur', '', false)" style="width:175px;" />
+	<input type="submit" name="nHeader$btnGoogleSearch" value="Search" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;nHeader$btnGoogleSearch&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="nHeader_btnGoogleSearch" />
+	<span id="nHeader__rfvQ" style="color:Red;visibility:hidden;"></span>
+	
+	<input type="hidden" name="nHeader$cx" id="nHeader_cx" value="001004262401526223570:11yv6vpcqvy" />
+	<input type="hidden" name="nHeader$cof" id="nHeader_cof" value="FORID:11" />
+	<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=searchbox_001004262401526223570%3A11yv6vpcqvy"></script>
+	
+	<!-- 
+		In order to make the button's click event fire when the text box is highlighted, we have to
+		have a second text box be a part of the form.  Make it invisible so that the user never 
+		knows it's there.
+		
+		From what research I did, this appears to be an IE-specific problem.  Nevertheless, this 
+		was the only "solution" I found.
+	-->
+	<input name="dummyHidden" value="" style="visibility:hidden;display:none;" />
+	<!-- Emulated Google CSE Search Box Ends -->
+	
+	</td>
+<!-- Google CSE Search Box Ends -->	
+</tr>
+<tr><td colspan="4" height="3"></td></tr>
+<tr>
+	<td valign="top">
+    
+    <SCRIPT language=JavaScript src="../../menu/side_menu_data_DE.js" type=text/javascript></SCRIPT>
+
+    <!--
+    <div style="width: 180px; margin-top: 20px">
+    <script type='text/javascript' id='openstudy-widget-loader' src='http://math.openstudy.com/javascripts/load.js?type=feed&color=blue&studygroup=Mathematics&env=math.openstudy.com'></script>
+    </div>
+    -->
+
+	</td>
+	<td width="3">&nbsp;</td>
+	<td valign="top" colspan="2">
+		<table border="0" width="100%" cellpadding="0">
+		<tr>
+			<td>
+			<div class="MainBox" align="center">
+
+            <table width="97%">
+                <tr>
+                    <td><div align="left"><span id="nHeader_lblBreadCrumb" class="BreadCrumb">Online Notes  / Differential Equations  (Notes) / First Order DE`s / Modeling with First Order DE's</span></div></td>
+                    <td width="250" align="right">
+                                <!-- Place this tag where you want the +1 button to render -->
+<g:plusone size="medium"></g:plusone>
+
+<!-- Place this render call where appropriate -->
+<script type="text/javascript">
+    (function () {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = '../../../apis.google.com/js/plusone.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+    })();
+</script>
+                    </td>
+                </tr>
+            </table>
+
+			
+            
+
+            						
+			
+			
+			<div id="nHeader_pClassNote" class="Classes_Note">
+	<span id="nHeader_lblClassNote"><br />
+<div class="Notice"><span style="font-weight:bold;color:Red">Internet Explorer 10 &amp; 11 Users : </span>If you are using Internet Explorer 10 or Internet Explorer 11 then, in all likelihood, the equations on the pages are all shifted downward.  To fix this you need to put your browser in Compatibility View for my site.  Click <a href="../../IE_Compatibility.html">here</a> for instructions on how to do that.  Alternatively, you can also view the pages in Chrome or Firefox as they should display properly in the latest versions of those browsers without any additional steps on your part.
+
+</div></span>
+</div>
+			
+			
+			
+			<div class="Top_Nav">
+			<table width="100%" align="center" cellspacing="0" cellpadding="0" border="0">
+			<tr><td colspan="3"><hr color="#00000" size="2" /></td></tr>
+			<tr>
+				<td width="36%"><span class="Button_Outer">
+				<a id="nHeader_aPrev" class="PrevNextButtonOff" onMouseOver="this.className='PrevNextButtonOn'" onMouseOut="this.className='PrevNextButtonOff'" href="IoV.html"><img src="../../Images/SingleArrowLeft.gif" border="0" />Intervals of Validity</a>
+				</span></td>
+				<td width="27%" align="center"><span class="MainTitle"><span id="nHeader_lblTitle">Differential Equations  - Notes</span></span></td>
+				<td width="36%" align="right"><span class="Button_Outer">
+				<a id="nHeader_aNext" class="PrevNextButtonOff" onMouseOver="this.className='PrevNextButtonOn'" onMouseOut="this.className='PrevNextButtonOff'" href="EquilibriumSolutions.html">Equilibrium Solutions<img src="../../Images/SingleArrowRight.gif" border="0" /></a>
+				</span></td>
+			</tr>
+			<tr><td colspan="3">
+			<hr color="#00000" size="2" /></td></tr>
+			</table>
+			</div>  <!-- Top_Nav -->
+
+			<div class="Top_Links">
+			<table width="100%" align="center" cellspacing="0" cellpadding="0" border="0">
+			<tr>
+				<td width="40%"><span class="Smaller"><select name="nHeader$ddlGoTo" id="nHeader_ddlGoTo" onChange="if (this.value != &quot;-1&quot;) {GoToPage(this.value)}">
+	<option value="-1"> - Select a Page to Visit - </option>
+	<option value="-1"></option>
+	<option value="/download.aspx?PDF=S,92;1">Section Download Page</option>
+	<option value="-1"></option>
+	<option value="/classes/DE/IntroFirstOrder.aspx">Chapter Notes Introduction</option>
+	<option value="/download.aspx?PDF=C,17;1">Chapter Download Page</option>
+	<option value="-1"></option>
+	<option value="/classes/DE/DE.aspx">E-Book Notes Introduction</option>
+	<option value="/download.aspx?PDF=B,1;1">E-Book Download Page</option>
+
+</select></span></td>
+				<td align="center">
+				<span class="Smaller" width="40%"><select name="nHeader$ddlDownload" id="nHeader_ddlDownload" onChange="if (this.value != &quot;-1&quot;) {DownloadFile(this.value)}">
+	<option value="-1"> - Select a PDF File to Download - </option>
+	<option value="-1"></option>
+	<option value="S,92,N;/pdf/de/de_modeling.pdf">Section Notes</option>
+	<option value="-1"></option>
+	<option value="C,17,N;/pdf/de/de_first_order.pdf">Chapter Notes</option>
+	<option value="-1"></option>
+	<option value="B,1,N;/pdf/de/de_complete.pdf">E-Book Notes</option>
+
+</select></span>
+				</td>
+				<td align="right" width="19%"><a class="Smaller" href="javascript:ShowPage('NHelp')">Show Page Help</a></td>
+			</tr>
+			</table>
+			</div>
+
+
+			
+			<div class="Content">
+
+
+<div style='border:none;border-bottom:double windowtext 3.0pt;
+padding:0in 0in 1.0pt 0in'>
+
+<h2 style='margin-left:0in;text-indent:0in;border:none;padding:0in'> <a
+name="_Toc179254270"></a><a name="_Toc186162728"></a><span
+style='mso-bookmark:_Toc186162728'><span style='mso-bookmark:_Toc179254270'><span
+style='font-size:12.0pt;font-family:"Cambria","serif"'>Modeling with First
+Order Differential Equations</span></span></span></h2>
+
+</div>
+
+<p class=MsoNormal>We now move into one of the main applications of
+differential equations both in this class and in general.  Modeling is the process of writing a
+differential equation to describe a physical situation.  Almost all of the differential equations that
+you will use in your job (for the engineers out there in the audience) are
+there because somebody, at some time, modeled a situation to come up with the
+differential equation that you are using.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>This section is not intended to completely teach you how to
+go about modeling all physical situations. 
+A whole course could be devoted to the subject of modeling and still not
+cover everything!  This section is
+designed to introduce you to the process of modeling and show you what is
+involved in modeling.  We will look at
+three different situations in this section : Mixing Problems, Population
+Problems, and Falling Bodies.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>In all of these situations we will be forced to make
+assumptions that do not accurately depict reality in most cases, but without
+them the problems would be very difficult and beyond the scope of this
+discussion (and the course in most cases to be honest).</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>So let’s get started.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><a name="First_Model_Mixing"></a><b >Mixing Problems</b></p>
+
+<p class=MsoNormal>In these problems we will start with a substance that is
+dissolved in a liquid.  Liquid will be
+entering and leaving a holding tank.  The
+liquid entering the tank may or may not contain more of the substance dissolved
+in it.  Liquid leaving the tank will of
+course contain the substance dissolved in it. 
+If <i >Q(t)</i> gives the amount of
+the substance dissolved in the liquid in the tank at any time <i
+>t</i> we want to develop a differential
+equation that, when solved, will give us an expression for <i >Q(t)</i>.  Note as well that in
+many situations we can think of air as a liquid for the purposes of these kinds
+of discussions and so we don’t actually need to have an actual liquid, but
+could instead use air as the “liquid”.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>The main assumption that we’ll be using here is that the
+concentration of the substance in the liquid is uniform throughout the
+tank.  Clearly this will not be the case,
+but if we allow the concentration to vary depending on the location in the tank
+the problem becomes very difficult and will involve partial differential
+equations, which is not the focus of this course.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>The main “equation” that we’ll be using to model this
+situation is :</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<div align=center>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse'>
+ <tr >
+  <td style='padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Rate of</p>
+  <p class=MsoNormal align=center style='text-align:center'>change of</p>
+  <p class=MsoNormal align=center style='text-align:center'><i
+  >Q(t)</i></p>
+  </td>
+  <td style='padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>=</p>
+  </td>
+  <td style='padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Rate at </p>
+  <p class=MsoNormal align=center style='text-align:center'>which <i
+  >Q(t)</i></p>
+  <p class=MsoNormal align=center style='text-align:center'>enters the </p>
+  <p class=MsoNormal align=center style='text-align:center'>tank</p>
+  </td>
+  <td style='padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'> <!-- MP SYPH( --><script id=mpch0001s1>
+	MPSetChAttrs('ch0001','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0001ph class=MPNNCode
+	><img border=0 name=mpch0001ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+>&nbsp;</span><![endif]><script id=mpch0001s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --></p>
+  </td>
+  <td style='padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Rate at </p>
+  <p class=MsoNormal align=center style='text-align:center'>which <i
+  >Q(t)</i></p>
+  <p class=MsoNormal align=center style='text-align:center'>exits the </p>
+  <p class=MsoNormal align=center style='text-align:center'>tank</p>
+  </td>
+ </tr>
+</table><!-- MP SYRA( --><script id=mpch0001s1>
+	MPSetChAttrs('ch0001','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0001 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0001ph,'')
+	</script><layer id=mpch0001 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0001s3>
+	MPDeleteCode('ch0001')
+</script><![endif]><!-- )MP SY -->
+
+</div>
+
+<p class=MsoNormal>where,</p>
+
+<div align=center>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse'>
+ <tr >
+  <td style='padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Rate of change of <i >Q(t)</i>
+  = <!-- MP EQPH( --><script id=mpeq0001s1>
+	MPSetEqnAttrs('eq0001','',3,[[53,26,9,-1,-1],[70,33,12,-1,-1],[88,42,15,-1,-1],[80,39,14,-1,-1],[106,50,18,-1,-1],[134,64,23,-2,-2],[222,106,38,-3,-3]])
+</script><![if !ie]><span id=mpnneq0001ph class=MPNNCode
+	><img border=0 align=bottom name=mpeq0001ph src="%26%7bDSMP.html" height="&{DSMP.gPlaceholderHeight};"
+		width="&{DSMP.gPlaceholderWidth};" 
+	><img border=0 align=top src="%26%7bDSMP.html" width=1 
+		height="&{DSMP.gPlaceholder2Height};" 
+>&nbsp;</span><![endif]><script id=mpeq0001s2>
+	MPEquation()
+</script><!-- )MP EQPH --></p>
+  </td>
+ </tr>
+ <tr >
+  <td style='padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Rate at which <i >Q(t) </i>enters
+  the tank = (flow rate of liquid entering) x </p>
+  <p class=MsoNormal>                                                              
+  (concentration of substance in liquid entering)</p>
+  </td>
+ </tr>
+ <tr >
+  <td style='padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Rate at which <i >Q(t) </i>exits
+  the tank = (flow rate of liquid exiting) x </p>
+  <p class=MsoNormal>                                                              
+  (concentration of substance in liquid exiting)</p>
+  </td>
+ </tr>
+</table><!-- MP EQRA( --><script id=mpeq0001s1>
+	MPSetEqnAttrs('eq0001','',3,[[53,26,9,-1,-1],[70,33,12,-1,-1],[88,42,15,-1,-1],[80,39,14,-1,-1],[106,50,18,-1,-1],[134,64,23,-2,-2],[222,106,38,-3,-3]]);
+</script><!-- )MP EQRA --><!-- MP EQ( --><![if !ie]><div id=mpnneq0001 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpeq0001ph,'1')
+	</script><layer id=mpeq0001pop bgcolor='&{DSMP.gNNPopupBgColor};' z-index=99 visibility=hidden top=0 left=0
+		 onmouseover="status=DSMP.gHidePopupMessage"  onmouseout="status=''" 
+		><a href='%26%7bDSMP-3.html' onmousedown='return MPHidePopup(event,mpeq0001pop)'
+			><img border=0 src='%26%7bDSMP-3.html' hspace='&{DSMP.gPopupEqnPadding};' vspace='&{DSMP.gPopupEqnPadding};'
+		></a></layer><layer id=mpeq0001 bgcolor='' z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		 onmouseover="status=DSMP.gShowPopupMessage" onmouseout="status=''" 
+		><a href='%26%7bDSMP-4.html' onmousedown='return MPShowPopup(mpeq0001,mpeq0001pop,event)'
+			><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+		></a></layer></div><script id=mpeq0001s3>
+	MPDeleteCode('eq0001')
+</script><![endif]><!-- )MP EQ -->
+
+</div>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Let’s take a look at the first problem.</p>
+
+<p class=MsoNormal><a name="First_Model_Ex1"></a>&nbsp;</p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=5 width="100%" bordercolor="black"
+ style='width:100.0%;border-collapse:collapse'>
+ <tr >
+  <td width="100%" valign=top style='width:100.0%;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-left:0in;text-indent:0in'><b
+  ><i >Example 1  </i></b>A
+  1500 gallon tank initially contains 600 gallons of water with 5 lbs of salt
+  dissolved in it.  Water enters the tank
+  at a rate of 9 gal/hr and the water entering the tank has a salt
+  concentration of <!-- MP EQPH( --><script id=mpeq0002s1>
+	MPSetEqnAttrs('eq0002','',3,[[60,16,6,-1,-1],[80,21,7,-1,-1],[102,27,10,-1,-1],[91,23,9,-1,-1],[122,32,11,-1,-1],[153,42,15,-2,-2],[254,69,24,-3,-3]])
+</script><![if !ie]><span id=mpnneq0002ph class=MPNNCode
+	><img border=0 align=bottom name=mpeq0002ph src="%26%7bDSMP.html" height="&{DSMP.gPlaceholderHeight};"
+		width="&{DSMP.gPlaceholderWidth};" 
+	><img border=0 align=top src="%26%7bDSMP.html" width=1 
+		height="&{DSMP.gPlaceholder2Height};" 
+></span><![endif]><script id=mpeq0002s2>
+	MPEquation()
+</script><!-- )MP EQPH --> lbs/gal. 
+  If a well mixed solution leaves the tank at a rate of 6 gal/hr, how
+  much salt is in the tank when it overflows?</p>
+  <p class=MsoNormal>&nbsp;</p>
+  <p class=MsoNormal><b ><i
+  >Solution</i></b></p>
+  <p class=MsoNormal>First off, let’s address the “well mixed solution”
+  bit.  This is the assumption that was
+  mentioned earlier.  We are going to
+  assume that the instant the water enters the tank it somehow instantly
+  disperses evenly throughout the tank to give a uniform concentration of salt
+  in the tank at every point.  Again,
+  this will clearly not be the case in reality, but it will allow us to do the
+  problem.</p>
+  <p class=MsoNormal>&nbsp;</p>
+  <p class=MsoNormal>Now, to set up the IVP that we’ll need to solve to get <i
+  >Q(t)</i> we’ll need the flow rate of the
+  water entering (we’ve got that), the concentration of the salt in the water
+  entering (we’ve got that), the flow rate of the water leaving (we’ve got
+  that) and the concentration of the salt in the water exiting (we don’t have
+  this yet).</p>
+  <p class=MsoNormal>&nbsp;</p>
+  <p class=MsoNormal>So, we first need to determine the concentration of the
+  salt in the water exiting the tank. 
+  Since we are assuming a uniform concentration of salt in the tank the
+  concentration at any point in the tank and hence in the water exiting is
+  given by,</p>
+  <p class=MsoNormal align=center style='text-align:center'><!-- MP EQPH( --><script id=mpeq0003s1>
+	MPSetEqnAttrs('eq0003','',3,[[282,29,12,-1,-1],[374,36,15,-1,-1],[470,47,19,-1,-1],[423,43,18,-1,-1],[563,56,23,-1,-1],[705,70,29,-2,-2],[1175,116,48,-3,-3]])
+</script><![if !ie]><span id=mpnneq0003ph class=MPNNCode
+	><img border=0 align=bottom name=mpeq0003ph src="%26%7bDSMP.html" height="&{DSMP.gPlaceholderHeight};"
+		width="&{DSMP.gPlaceholderWidth};" 
+	><img border=0 align=top src="%26%7bDSMP.html" width=1 
+		height="&{DSMP.gPlaceholder2Height};" 
+>&nbsp;</span><![endif]><script id=mpeq0003s2>
+	MPEquation()
+</script><!-- )MP EQPH --></p>
+  <p class=MsoNormal align=center style='text-align:center'>&nbsp;</p>
+  <p class=MsoNormal>The amount at any time <i >t</i>
+  is easy it’s just <i >Q(t)</i>.  The volume is also pretty easy.  We start with 600 gallons and every hour 9
+  gallons enters and 6 gallons leave. 
+  So, if we use <i >t</i> in hours,
+  every hour 3 gallons enters the tank, or at any time <i >t</i> there is 600 + 3<i >t</i>
+  gallons of water in the tank.</p>
+  <p class=MsoNormal>&nbsp;</p>
+  <p class=MsoNormal>So, the IVP for this situation is,</p>
+  <p class=MTDisplayEquation>                       <!-- MP EQPH( --><script id=mpeq0004s1>
+	MPSetEqnAttrs('eq0004','',3,[[295,68,31,-1,-1],[393,91,41,-1,-1],[491,113,52,-1,-1],[441,102,47,-1,-1],[590,136,62,-1,-1],[737,170,78,-2,-2],[1229,284,130,-3,-3]])
+</script><![if !ie]><span id=mpnneq0004ph class=MPNNCode
+	><img border=0 align=bottom name=mpeq0004ph src="%26%7bDSMP.html" height="&{DSMP.gPlaceholderHeight};"
+		width="&{DSMP.gPlaceholderWidth};" 
+	><img border=0 align=top src="%26%7bDSMP.html" width=1 
+		height="&{DSMP.gPlaceholder2Height};" 
+>&nbsp;</span><![endif]><script id=mpeq0004s2>
+	MPEquation()
+</script><!-- )MP EQPH --></p>
+  <p class=MsoNormal>&nbsp;</p>
+  <p class=MsoNormal>This is a linear differential equation and it isn’t too
+  difficult to solve (hopefully).  We
+  will show most of the details, but leave the description of the solution
+  process out.  If you need a refresher
+  on solving linear first order differential equations go back and take a look
+  at that <a href="Linear.html">section</a>.</p>
+  <p class=MTDisplayEquation>                                                <!-- MP EQPH( --><script id=mpeq0005s1>
+	MPSetEqnAttrs('eq0005','',3,[[145,28,9,-1,-1],[193,37,12,-1,-1],[241,46,15,-1,-1],[217,42,14,-1,-1],[291,56,18,-1,-1],[363,70,23,-2,-2],[605,117,38,-3,-3]])
+</script><![if !ie]><span id=mpnneq0005ph class=MPNNCode
+	><img border=0 align=bottom name=mpeq0005ph src="%26%7bDSMP.html" height="&{DSMP.gPlaceholderHeight};"
+		width="&{DSMP.gPlaceholderWidth};" 
+	><img border=0 align=top src="%26%7bDSMP.html" width=1 
+		height="&{DSMP.gPlaceholder2Height};" 
+>&nbsp;</span><![endif]><script id=mpeq0005s2>
+	MPEquation()
+</script><!-- )MP EQPH --></p>
+  <p class=MTDisplayEquation>                                          <!-- MP EQPH( --><script id=mpeq0006s1>
+	MPSetEqnAttrs('eq0006','',3,[[180,23,4,-1,-1],[240,31,5,-1,-1],[302,39,7,-1,-1],[271,36,7,-1,-1],[361,48,9,-1,-1],[452,58,11,-2,-2],[752,96,18,-3,-3]])
+</script><![if !ie]><span id=mpnneq0006ph class=MPNNCode
+	><img border=0 align=bottom name=mpeq0006ph src="%26%7bDSMP.html" height="&{DSMP.gPlaceholderHeight};"
+		width="&{DSMP.gPlaceholderWidth};" 
+	><img border=0 align=top src="%26%7bDSMP.html" width=1 
+		height="&{DSMP.gPlaceholder2Height};" 
+>&nbsp;</span><![endif]><script id=mpeq0006s2>
+	MPEquation()
+</script><!-- )MP EQPH --></p>
+  <p class=MsoNormal align=center style='text-align:center'><b
+  ><!-- MP EQPH( --><script id=mpeq0007s1>
+	MPSetEqnAttrs('eq0007','',3,[[246,27,10,-1,-1],[327,35,13,-1,-1],[410,43,16,-1,-1],[368,39,15,-1,-1],[492,51,20,-1,-1],[614,64,25,-2,-2],[1025,107,42,-3,-3]])
+</script><![if !ie]><span id=mpnneq0007ph class=MPNNCode
+	><img border=0 align=bottom name=mpeq0007ph src="%26%7bDSMP.html" height="&{DSMP.gPlaceholderHeight};"
+		width="&{DSMP.gPlaceholderWidth};" 
+	><img border=0 align=top src="%26%7bDSMP.html" width=1 
+		height="&{DSMP.gPlaceholder2Height};" 
+>&nbsp;</span><![endif]><script id=mpeq0007s2>
+	MPEquation()
+</script><!-- )MP EQPH --></b><b
+  ></b></p>
+  <p class=MTDisplayEquation>     <!-- MP EQPH( --><script id=mpeq0008s1>
+	MPSetEqnAttrs('eq0008','',3,[[398,74,34,-1,-1],[532,99,45,-1,-1],[665,123,57,-1,-1],[599,111,51,-1,-1],[799,148,68,-1,-1],[1000,185,85,-2,-2],[1666,309,142,-3,-3]])
+</script><![if !ie]><span id=mpnneq0008ph class=MPNNCode
+	><img border=0 align=bottom name=mpeq0008ph src="%26%7bDSMP.html" height="&{DSMP.gPlaceholderHeight};"
+		width="&{DSMP.gPlaceholderWidth};" 
+	><img border=0 align=top src="%26%7bDSMP.html" width=1 
+		height="&{DSMP.gPlaceholder2Height};" 
+>&nbsp;</span><![endif]><script id=mpeq0008s2>
+	MPEquation()
+</script><!-- )MP EQPH --></p>
+  <p class=MsoNormal>&nbsp;</p>
+  <p class=MsoNormal>So, here’s the general solution.  Now, apply the initial condition to get the
+  value of the constant, <i >c</i>.</p>
+  <p class=MTDisplayEquation>                   <!-- MP EQPH( --><script id=mpeq0009s1>
+	MPSetEqnAttrs('eq0009','',3,[[318,32,15,-1,-1],[424,43,20,-1,-1],[530,53,25,-1,-1],[477,49,23,-1,-1],[637,65,30,-1,-1],[795,82,38,-2,-2],[1326,135,64,-3,-3]])
+</script><![if !ie]><span id=mpnneq0009ph class=MPNNCode
+	><img border=0 align=bottom name=mpeq0009ph src="%26%7bDSMP.html" height="&{DSMP.gPlaceholderHeight};"
+		width="&{DSMP.gPlaceholderWidth};" 
+	><img border=0 align=top src="%26%7bDSMP.html" width=1 
+		height="&{DSMP.gPlaceholder2Height};" 
+>&nbsp;</span><![endif]><script id=mpeq0009s2>
+	MPEquation()
+</script><!-- )MP EQPH --></p>
+  <p class=MsoNormal>&nbsp;</p>
+  <p class=MsoNormal>So, the amount of salt in the tank at any time <i
+  >t</i> is.</p>
+  <p class=MsoNormal align=center style='text-align:center'><!-- MP EQPH( --><script id=mpeq0010s1>
+	MPSetEqnAttrs('eq0010','',3,[[314,38,16,-1,-1],[418,51,21,-1,-1],[523,63,27,-1,-1],[471,57,24,-1,-1],[628,76,32,-1,-1],[786,95,40,-2,-2],[1309,159,67,-3,-3]])
+</script><![if !ie]><span id=mpnneq0010ph class=MPNNCode
+	><img border=0 align=bottom name=mpeq0010ph src="%26%7bDSMP.html" height="&{DSMP.gPlaceholderHeight};"
+		width="&{DSMP.gPlaceholderWidth};" 
+	><img border=0 align=top src="%26%7bDSMP.html" width=1 
+		height="&{DSMP.gPlaceholder2Height};" 
+>&nbsp;</span><![endif]><script id=mpeq0010s2>
+	MPEquation()
+</script><!-- )MP EQPH --></p>
+  <p class=MsoNormal align=center style='text-align:center'>&nbsp;</p>
+  <p class=MsoNormal>Now, the tank will overflow at <i >t</i> = 300 hrs.  The amount of
+  salt in the tank at that time is.</p>
+  <p class=MTDisplayEquation>                                                       <!-- MP EQPH( --><script id=mpeq0011s1>
+	MPSetEqnAttrs('eq0011','',3,[[105,14,4,-1,-1],[139,19,5,-1,-1],[173,23,7,-1,-1],[156,21,7,-1,-1],[209,29,9,-1,-1],[261,36,11,-2,-2],[436,60,18,-3,-3]])
+</script><![if !ie]><span id=mpnneq0011ph class=MPNNCode
+	><img border=0 align=bottom name=mpeq0011ph src="%26%7bDSMP.html" height="&{DSMP.gPlaceholderHeight};"
+		width="&{DSMP.gPlaceholderWidth};" 
+	><img border=0 align=top src="%26%7bDSMP.html" width=1 
+		height="&{DSMP.gPlaceholder2Height};" 
+>&nbsp;</span><![endif]><script id=mpeq0011s2>
+	MPEquation()
+</script><!-- )MP EQPH --></p>
+  <p class=MsoNormal>&nbsp;</p>
+  <p class=MsoNormal>Here’s a graph of the salt in the tank before it
+  overflows.</p>
+  <p class=MsoNormal align=center style='text-align:center'><!--[if gte vml 1]><v:shapetype id="_x0000_t75"
+   coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe"
+   filled="f" stroked="f">
+   <v:stroke joinstyle="miter" />
+   <v:formulas>
+    <v:f eqn="if lineDrawn pixelLineWidth 0" />
+    <v:f eqn="sum @0 1 0" />
+    <v:f eqn="sum 0 0 @1" />
+    <v:f eqn="prod @2 1 2" />
+    <v:f eqn="prod @3 21600 pixelWidth" />
+    <v:f eqn="prod @3 21600 pixelHeight" />
+    <v:f eqn="sum @0 0 1" />
+    <v:f eqn="prod @6 1 2" />
+    <v:f eqn="prod @7 21600 pixelWidth" />
+    <v:f eqn="sum @8 21600 0" />
+    <v:f eqn="prod @7 21600 pixelHeight" />
+    <v:f eqn="sum @10 21600 0" />
+   </v:formulas>
+   <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect" />
+   <o:lock v:ext="edit" aspectratio="t" />
+  </v:shapetype><v:shape id="Picture_x0020_12" o:spid="_x0000_i1073" type="#_x0000_t75"
+   alt="Modeling_Ex1_G1" style='width:270pt;height:181.5pt;visibility:visible;
+   mso-wrap-style:square'>
+   <v:imagedata src="Modeling_files/image001.gif" o:title="Modeling_Ex1_G1" />
+  </v:shape><![endif]--><![if !vml]><img border=0 width=360 height=242
+  src="Modeling_files/image001.gif" alt="Modeling_Ex1_G1" v:shapes="Picture_x0020_12"><![endif]></p>
+  <p class=MsoNormal>&nbsp;</p>
+  <p class=MsoNormal>Note that the whole graph should have small oscillations
+  in it as you can see in the range from 200 to 250.  The scale of the oscillations however was
+  small enough that the program used to generate the image had trouble showing
+  all of them. </p>
+  </td>
+ </tr>
+</table><!-- MP EQRA( --><script id=mpeq0011s1>
+	MPSetEqnAttrs('eq0011','',3,[[105,14,4,-1,-1],[139,19,5,-1,-1],[173,23,7,-1,-1],[156,21,7,-1,-1],[209,29,9,-1,-1],[261,36,11,-2,-2],[436,60,18,-3,-3]]);
+</script><!-- )MP EQRA --><!-- MP EQ( --><![if !ie]><div id=mpnneq0011 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpeq0011ph,'1')
+	</script><layer id=mpeq0011pop bgcolor='&{DSMP.gNNPopupBgColor};' z-index=99 visibility=hidden top=0 left=0
+		 onmouseover="status=DSMP.gHidePopupMessage"  onmouseout="status=''" 
+		><a href='%26%7bDSMP-3.html' onmousedown='return MPHidePopup(event,mpeq0011pop)'
+			><img border=0 src='%26%7bDSMP-3.html' hspace='&{DSMP.gPopupEqnPadding};' vspace='&{DSMP.gPopupEqnPadding};'
+		></a></layer><layer id=mpeq0011 bgcolor='' z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		 onmouseover="status=DSMP.gShowPopupMessage" onmouseout="status=''" 
+		><a href='%26%7bDSMP-4.html' onmousedown='return MPShowPopup(mpeq0011,mpeq0011pop,event)'
+			><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+		></a></layer></div><script id=mpeq0011s3>
+	MPDeleteCode('eq0011')
+</script><![endif]><!-- )MP EQ --><!-- MP EQRA( --><script id=mpeq0010s1>
+	MPSetEqnAttrs('eq0010','',3,[[314,38,16,-1,-1],[418,51,21,-1,-1],[523,63,27,-1,-1],[471,57,24,-1,-1],[628,76,32,-1,-1],[786,95,40,-2,-2],[1309,159,67,-3,-3]]);
+</script><!-- )MP EQRA --><!-- MP EQ( --><![if !ie]><div id=mpnneq0010 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpeq0010ph,'1')
+	</script><layer id=mpeq0010pop bgcolor='&{DSMP.gNNPopupBgColor};' z-index=99 visibility=hidden top=0 left=0
+		 onmouseover="status=DSMP.gHidePopupMessage"  onmouseout="status=''" 
+		><a href='%26%7bDSMP-3.html' onmousedown='return MPHidePopup(event,mpeq0010pop)'
+			><img border=0 src='%26%7bDSMP-3.html' hspace='&{DSMP.gPopupEqnPadding};' vspace='&{DSMP.gPopupEqnPadding};'
+		></a></layer><layer id=mpeq0010 bgcolor='' z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		 onmouseover="status=DSMP.gShowPopupMessage" onmouseout="status=''" 
+		><a href='%26%7bDSMP-4.html' onmousedown='return MPShowPopup(mpeq0010,mpeq0010pop,event)'
+			><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+		></a></layer></div><script id=mpeq0010s3>
+	MPDeleteCode('eq0010')
+</script><![endif]><!-- )MP EQ --><!-- MP EQRA( --><script id=mpeq0009s1>
+	MPSetEqnAttrs('eq0009','',3,[[318,32,15,-1,-1],[424,43,20,-1,-1],[530,53,25,-1,-1],[477,49,23,-1,-1],[637,65,30,-1,-1],[795,82,38,-2,-2],[1326,135,64,-3,-3]]);
+</script><!-- )MP EQRA --><!-- MP EQ( --><![if !ie]><div id=mpnneq0009 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpeq0009ph,'1')
+	</script><layer id=mpeq0009pop bgcolor='&{DSMP.gNNPopupBgColor};' z-index=99 visibility=hidden top=0 left=0
+		 onmouseover="status=DSMP.gHidePopupMessage"  onmouseout="status=''" 
+		><a href='%26%7bDSMP-3.html' onmousedown='return MPHidePopup(event,mpeq0009pop)'
+			><img border=0 src='%26%7bDSMP-3.html' hspace='&{DSMP.gPopupEqnPadding};' vspace='&{DSMP.gPopupEqnPadding};'
+		></a></layer><layer id=mpeq0009 bgcolor='' z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		 onmouseover="status=DSMP.gShowPopupMessage" onmouseout="status=''" 
+		><a href='%26%7bDSMP-4.html' onmousedown='return MPShowPopup(mpeq0009,mpeq0009pop,event)'
+			><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+		></a></layer></div><script id=mpeq0009s3>
+	MPDeleteCode('eq0009')
+</script><![endif]><!-- )MP EQ --><!-- MP EQRA( --><script id=mpeq0008s1>
+	MPSetEqnAttrs('eq0008','',3,[[398,74,34,-1,-1],[532,99,45,-1,-1],[665,123,57,-1,-1],[599,111,51,-1,-1],[799,148,68,-1,-1],[1000,185,85,-2,-2],[1666,309,142,-3,-3]]);
+</script><!-- )MP EQRA --><!-- MP EQ( --><![if !ie]><div id=mpnneq0008 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpeq0008ph,'1')
+	</script><layer id=mpeq0008pop bgcolor='&{DSMP.gNNPopupBgColor};' z-index=99 visibility=hidden top=0 left=0
+		 onmouseover="status=DSMP.gHidePopupMessage"  onmouseout="status=''" 
+		><a href='%26%7bDSMP-3.html' onmousedown='return MPHidePopup(event,mpeq0008pop)'
+			><img border=0 src='%26%7bDSMP-3.html' hspace='&{DSMP.gPopupEqnPadding};' vspace='&{DSMP.gPopupEqnPadding};'
+		></a></layer><layer id=mpeq0008 bgcolor='' z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		 onmouseover="status=DSMP.gShowPopupMessage" onmouseout="status=''" 
+		><a href='%26%7bDSMP-4.html' onmousedown='return MPShowPopup(mpeq0008,mpeq0008pop,event)'
+			><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+		></a></layer></div><script id=mpeq0008s3>
+	MPDeleteCode('eq0008')
+</script><![endif]><!-- )MP EQ --><!-- MP EQRA( --><script id=mpeq0007s1>
+	MPSetEqnAttrs('eq0007','',3,[[246,27,10,-1,-1],[327,35,13,-1,-1],[410,43,16,-1,-1],[368,39,15,-1,-1],[492,51,20,-1,-1],[614,64,25,-2,-2],[1025,107,42,-3,-3]]);
+</script><!-- )MP EQRA --><!-- MP EQ( --><![if !ie]><div id=mpnneq0007 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpeq0007ph,'1')
+	</script><layer id=mpeq0007pop bgcolor='&{DSMP.gNNPopupBgColor};' z-index=99 visibility=hidden top=0 left=0
+		 onmouseover="status=DSMP.gHidePopupMessage"  onmouseout="status=''" 
+		><a href='%26%7bDSMP-3.html' onmousedown='return MPHidePopup(event,mpeq0007pop)'
+			><img border=0 src='%26%7bDSMP-3.html' hspace='&{DSMP.gPopupEqnPadding};' vspace='&{DSMP.gPopupEqnPadding};'
+		></a></layer><layer id=mpeq0007 bgcolor='' z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		 onmouseover="status=DSMP.gShowPopupMessage" onmouseout="status=''" 
+		><a href='%26%7bDSMP-4.html' onmousedown='return MPShowPopup(mpeq0007,mpeq0007pop,event)'
+			><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+		></a></layer></div><script id=mpeq0007s3>
+	MPDeleteCode('eq0007')
+</script><![endif]><!-- )MP EQ --><!-- MP EQRA( --><script id=mpeq0006s1>
+	MPSetEqnAttrs('eq0006','',3,[[180,23,4,-1,-1],[240,31,5,-1,-1],[302,39,7,-1,-1],[271,36,7,-1,-1],[361,48,9,-1,-1],[452,58,11,-2,-2],[752,96,18,-3,-3]]);
+</script><!-- )MP EQRA --><!-- MP EQ( --><![if !ie]><div id=mpnneq0006 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpeq0006ph,'1')
+	</script><layer id=mpeq0006pop bgcolor='&{DSMP.gNNPopupBgColor};' z-index=99 visibility=hidden top=0 left=0
+		 onmouseover="status=DSMP.gHidePopupMessage"  onmouseout="status=''" 
+		><a href='%26%7bDSMP-3.html' onmousedown='return MPHidePopup(event,mpeq0006pop)'
+			><img border=0 src='%26%7bDSMP-3.html' hspace='&{DSMP.gPopupEqnPadding};' vspace='&{DSMP.gPopupEqnPadding};'
+		></a></layer><layer id=mpeq0006 bgcolor='' z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		 onmouseover="status=DSMP.gShowPopupMessage" onmouseout="status=''" 
+		><a href='%26%7bDSMP-4.html' onmousedown='return MPShowPopup(mpeq0006,mpeq0006pop,event)'
+			><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+		></a></layer></div><script id=mpeq0006s3>
+	MPDeleteCode('eq0006')
+</script><![endif]><!-- )MP EQ --><!-- MP EQRA( --><script id=mpeq0005s1>
+	MPSetEqnAttrs('eq0005','',3,[[145,28,9,-1,-1],[193,37,12,-1,-1],[241,46,15,-1,-1],[217,42,14,-1,-1],[291,56,18,-1,-1],[363,70,23,-2,-2],[605,117,38,-3,-3]]);
+</script><!-- )MP EQRA --><!-- MP EQ( --><![if !ie]><div id=mpnneq0005 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpeq0005ph,'1')
+	</script><layer id=mpeq0005pop bgcolor='&{DSMP.gNNPopupBgColor};' z-index=99 visibility=hidden top=0 left=0
+		 onmouseover="status=DSMP.gHidePopupMessage"  onmouseout="status=''" 
+		><a href='%26%7bDSMP-3.html' onmousedown='return MPHidePopup(event,mpeq0005pop)'
+			><img border=0 src='%26%7bDSMP-3.html' hspace='&{DSMP.gPopupEqnPadding};' vspace='&{DSMP.gPopupEqnPadding};'
+		></a></layer><layer id=mpeq0005 bgcolor='' z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		 onmouseover="status=DSMP.gShowPopupMessage" onmouseout="status=''" 
+		><a href='%26%7bDSMP-4.html' onmousedown='return MPShowPopup(mpeq0005,mpeq0005pop,event)'
+			><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+		></a></layer></div><script id=mpeq0005s3>
+	MPDeleteCode('eq0005')
+</script><![endif]><!-- )MP EQ --><!-- MP EQRA( --><script id=mpeq0004s1>
+	MPSetEqnAttrs('eq0004','',3,[[295,68,31,-1,-1],[393,91,41,-1,-1],[491,113,52,-1,-1],[441,102,47,-1,-1],[590,136,62,-1,-1],[737,170,78,-2,-2],[1229,284,130,-3,-3]]);
+</script><!-- )MP EQRA --><!-- MP EQ( --><![if !ie]><div id=mpnneq0004 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpeq0004ph,'1')
+	</script><layer id=mpeq0004pop bgcolor='&{DSMP.gNNPopupBgColor};' z-index=99 visibility=hidden top=0 left=0
+		 onmouseover="status=DSMP.gHidePopupMessage"  onmouseout="status=''" 
+		><a href='%26%7bDSMP-3.html' onmousedown='return MPHidePopup(event,mpeq0004pop)'
+			><img border=0 src='%26%7bDSMP-3.html' hspace='&{DSMP.gPopupEqnPadding};' vspace='&{DSMP.gPopupEqnPadding};'
+		></a></layer><layer id=mpeq0004 bgcolor='' z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		 onmouseover="status=DSMP.gShowPopupMessage" onmouseout="status=''" 
+		><a href='%26%7bDSMP-4.html' onmousedown='return MPShowPopup(mpeq0004,mpeq0004pop,event)'
+			><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+		></a></layer></div><script id=mpeq0004s3>
+	MPDeleteCode('eq0004')
+</script><![endif]><!-- )MP EQ --><!-- MP EQRA( --><script id=mpeq0003s1>
+	MPSetEqnAttrs('eq0003','',3,[[282,29,12,-1,-1],[374,36,15,-1,-1],[470,47,19,-1,-1],[423,43,18,-1,-1],[563,56,23,-1,-1],[705,70,29,-2,-2],[1175,116,48,-3,-3]]);
+</script><!-- )MP EQRA --><!-- MP EQ( --><![if !ie]><div id=mpnneq0003 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpeq0003ph,'1')
+	</script><layer id=mpeq0003pop bgcolor='&{DSMP.gNNPopupBgColor};' z-index=99 visibility=hidden top=0 left=0
+		 onmouseover="status=DSMP.gHidePopupMessage"  onmouseout="status=''" 
+		><a href='%26%7bDSMP-3.html' onmousedown='return MPHidePopup(event,mpeq0003pop)'
+			><img border=0 src='%26%7bDSMP-3.html' hspace='&{DSMP.gPopupEqnPadding};' vspace='&{DSMP.gPopupEqnPadding};'
+		></a></layer><layer id=mpeq0003 bgcolor='' z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		 onmouseover="status=DSMP.gShowPopupMessage" onmouseout="status=''" 
+		><a href='%26%7bDSMP-4.html' onmousedown='return MPShowPopup(mpeq0003,mpeq0003pop,event)'
+			><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+		></a></layer></div><script id=mpeq0003s3>
+	MPDeleteCode('eq0003')
+</script><![endif]><!-- )MP EQ --><!-- MP EQRA( --><script id=mpeq0002s1>
+	MPSetEqnAttrs('eq0002','',3,[[60,16,6,-1,-1],[80,21,7,-1,-1],[102,27,10,-1,-1],[91,23,9,-1,-1],[122,32,11,-1,-1],[153,42,15,-2,-2],[254,69,24,-3,-3]]);
+</script><!-- )MP EQRA --><!-- MP EQ( --><![if !ie]><div id=mpnneq0002 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpeq0002ph,'1')
+	</script><layer id=mpeq0002pop bgcolor='&{DSMP.gNNPopupBgColor};' z-index=99 visibility=hidden top=0 left=0
+		 onmouseover="status=DSMP.gHidePopupMessage"  onmouseout="status=''" 
+		><a href='%26%7bDSMP-3.html' onmousedown='return MPHidePopup(event,mpeq0002pop)'
+			><img border=0 src='%26%7bDSMP-3.html' hspace='&{DSMP.gPopupEqnPadding};' vspace='&{DSMP.gPopupEqnPadding};'
+		></a></layer><layer id=mpeq0002 bgcolor='' z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		 onmouseover="status=DSMP.gShowPopupMessage" onmouseout="status=''" 
+		><a href='%26%7bDSMP-4.html' onmousedown='return MPShowPopup(mpeq0002,mpeq0002pop,event)'
+			><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+		></a></layer></div><script id=mpeq0002s3>
+	MPDeleteCode('eq0002')
+</script><![endif]><!-- )MP EQ -->
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>The work was a little messy with that one, but they will
+often be that way so don’t get excited about it.  This first example also assumed that nothing
+would change throughout the life of the process.  That, of course will usually not be the
+case.  Let’s take a look at an example
+where something changes in the process.</p>
+
+
+<p class=MsoNormal><a name="First_Model_Ex2"></a>&nbsp;</p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=5 width="100%" bordercolor="black"
+ style='width:100.0%;border-collapse:collapse'>
+ <tr >
+  <td width="100%" valign=top style='width:100.0%;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-left:0in;text-indent:0in'><b
+  ><i >Example 2  </i></b>A
+  1000 gallon holding tank that catches runoff from some chemical process
+  initially has 800 gallons of water with 2 ounces of pollution dissolved in
+  it.  Polluted water flows into the tank
+  at a rate of 3 gal/hr and contains 5 ounces/gal of pollution in it. A well
+  mixed solution leaves the tank at 3 gal/hr as well.  When the amount of pollution in the holding
+  tank reaches 500 ounces the inflow of polluted water is cut off and fresh
+  water will enter the tank at a decreased rate of 2 gallons while the outflow
+  is increased to 4 gal/hr.  Determine
+  the amount of pollution in the tank at any time <i >t</i>.</p>
+  <p class=MsoNormal>&nbsp;</p>
+  <p class=MsoNormal><b ><i
+  >Solution</i></b></p>
+  <p class=MsoNormal>Okay, so clearly the pollution in the tank will increase
+  as time passes.  If the amount of
+  pollution ever reaches the maximum allowed there will be a change in the
+  situation.  This will necessitate a
+  change in the differential equation describing the process as well.  In other words, we’ll need two IVP’s for
+  this problem.  One will describe the
+  initial situation when polluted runoff is entering the tank and one for after
+  the maximum allowed pollution is reached and fresh water is entering the
+  tank.</p>
+  <p class=MsoNormal>&nbsp;</p>
+  <p class=MsoNormal>Here are the two IVP’s for this problem.</p>
+  <p class=MTDisplayEquation>                 <!-- MP EQPH( --><script id=mpeq0012s1>
+	MPSetEqnAttrs('eq0012','',3,[[332,75,35,-1,-1],[442,100,46,-1,-1],[551,126,59,-1,-1],[496,113,53,-1,-1],[662,151,70,-1,-1],[828,188,87,-2,-2],[1381,314,146,-3,-3]])
+</script><![if !ie]><span id=mpnneq0012ph class=MPNNCode
+	><img border=0 align=bottom name=mpeq0012ph src="%26%7bDSMP.html" height="&{DSMP.gPlaceholderHeight};"
+		width="&{DSMP.gPlaceholderWidth};" 
+	><img border=0 align=top src="%26%7bDSMP.html" width=1 
+		height="&{DSMP.gPlaceholder2Height};" 
+>&nbsp;</span><![endif]><script id=mpeq0012s2>
+	MPEquation()
+</script><!-- )MP EQPH --></p>
+  <p class=MsoNormal>The first one is fairly straight forward and will be valid
+  until the maximum amount of pollution is reached.  We’ll call that time <i >t<sub>m</sub>.</i>  Also, the
+  volume in the tank remains constant during this time so we don’t need to do
+  anything fancy with that this time in the second term as we did in the previous
+  example.</p>
+  <p class=MsoNormal>&nbsp;</p>
+  <p class=MsoNormal>We’ll need a little explanation for the second one.  First notice that we don’t “start over” at <i
+  >t</i> = 0. 
+  We start this one at <i >t<sub>m</sub></i>,
+  the time at which the new process starts. 
+  Next, fresh water is flowing into the tank and so the concentration of
+  pollution in the incoming water is zero. 
+  This will drop out the first term, and that’s okay so don’t worry
+  about that.  </p>
+  <p class=MsoNormal>&nbsp;</p>
+  <p class=MsoNormal>Now, notice that the volume at any time looks a little
+  funny.  During this time frame we are
+  losing two gallons of water every hour of the process so we need the “-2” in
+  there to account for that.  However, we
+  can’t just use <i >t</i> as we did in the
+  previous example.  When this new
+  process starts up there needs to be 800 gallons of water in the tank and if
+  we just use <i >t</i> there we won’t have
+  the required 800 gallons that we need in the equation.  So, to make sure that we have the proper
+  volume we need to put in the difference in times.  In this way once we are one hour into the
+  new process (<i >i.e t - t<sub>m</sub> =</i>
+  1) we will have 798 gallons in the tank as required.</p>
+  <p class=MsoNormal>&nbsp;</p>
+  <p class=MsoNormal>Finally, the second process can’t continue forever as
+  eventually the tank will empty.  This
+  is denoted in the time restrictions as <i >t<sub>e</sub>.</i>  We can also note that <i >t<sub>e </sub></i>= <i >t<sub>m</sub></i>
+  + 400 since the tank will empty 400 hours after this new process starts up.  Well, it will end provided something
+  doesn’t come along and start changing the situation again.</p>
+  <p class=MsoNormal>&nbsp;</p>
+  <p class=MsoNormal>Okay, now that we’ve got all the explanations taken care
+  of here’s the simplified version of the IVP’s that we’ll be solving.</p>
+  <p class=MTDisplayEquation>                             <!-- MP EQPH( --><script id=mpeq0013s1>
+	MPSetEqnAttrs('eq0013','',3,[[260,66,30,-1,-1],[346,87,40,-1,-1],[431,110,50,-1,-1],[388,99,46,-1,-1],[518,132,60,-1,-1],[648,165,76,-2,-2],[1081,277,127,-3,-3]])
+</script><![if !ie]><span id=mpnneq0013ph class=MPNNCode
+	><img border=0 align=bottom name=mpeq0013ph src="%26%7bDSMP.html" height="&{DSMP.gPlaceholderHeight};"
+		width="&{DSMP.gPlaceholderWidth};" 
+	><img border=0 align=top src="%26%7bDSMP.html" width=1 
+		height="&{DSMP.gPlaceholder2Height};" 
+>&nbsp;</span><![endif]><script id=mpeq0013s2>
+	MPEquation()
+</script><!-- )MP EQPH --></p>
+  <p class=MsoNormal>&nbsp;</p>
+  <p class=MsoNormal>The first IVP is a fairly simple linear differential
+  equation so we’ll leave the details of the solution to you to check.  Upon solving you get.</p>
+  <p class=MTDisplayEquation>                                                    <!-- MP EQPH( --><script id=mpeq0014s1>
+	MPSetEqnAttrs('eq0014','',3,[[118,20,4,-1,-1],[156,27,5,-1,-1],[197,32,7,-1,-1],[176,30,7,-1,-1],[236,39,8,-1,-1],[295,49,11,-2,-2],[492,82,18,-3,-3]])
+</script><![if !ie]><span id=mpnneq0014ph class=MPNNCode
+	><img border=0 align=bottom name=mpeq0014ph src="%26%7bDSMP.html" height="&{DSMP.gPlaceholderHeight};"
+		width="&{DSMP.gPlaceholderWidth};" 
+	><img border=0 align=top src="%26%7bDSMP.html" width=1 
+		height="&{DSMP.gPlaceholder2Height};" 
+>&nbsp;</span><![endif]><script id=mpeq0014s2>
+	MPEquation()
+</script><!-- )MP EQPH --></p>
+  <p class=MsoNormal>&nbsp;</p>
+  <p class=MsoNormal>Now, we need to find <i >t<sub>m</sub></i>.  This isn’t too bad all we need to do is
+  determine when the amount of pollution reaches 500.  So we need to solve.</p>
+  <p class=MTDisplayEquation>                           <!-- MP EQPH( --><script id=mpeq0015s1>
+	MPSetEqnAttrs('eq0015','',3,[[271,20,4,-1,-1],[361,27,5,-1,-1],[451,32,7,-1,-1],[405,30,7,-1,-1],[542,39,8,-1,-1],[677,49,11,-2,-2],[1129,82,18,-3,-3]])
+</script><![if !ie]><span id=mpnneq0015ph class=MPNNCode
+	><img border=0 align=bottom name=mpeq0015ph src="%26%7bDSMP.html" height="&{DSMP.gPlaceholderHeight};"
+		width="&{DSMP.gPlaceholderWidth};" 
+	><img border=0 align=top src="%26%7bDSMP.html" width=1 
+		height="&{DSMP.gPlaceholder2Height};" 
+>&nbsp;</span><![endif]><script id=mpeq0015s2>
+	MPEquation()
+</script><!-- )MP EQPH --></p>
+  <p class=MsoNormal>&nbsp;</p>
+  <p class=MsoNormal>So, the second process will pick up at 35.475 hours.  For completeness sake here is the IVP with
+  this information inserted.</p>
+  <p class=MTDisplayEquation>              <!-- MP EQPH( --><script id=mpeq0016s1>
+	MPSetEqnAttrs('eq0016','',3,[[352,28,9,-1,-1],[469,37,12,-1,-1],[584,46,15,-1,-1],[525,42,14,-1,-1],[702,56,18,-1,-1],[878,70,23,-2,-2],[1464,118,39,-3,-3]])
+</script><![if !ie]><span id=mpnneq0016ph class=MPNNCode
+	><img border=0 align=bottom name=mpeq0016ph src="%26%7bDSMP.html" height="&{DSMP.gPlaceholderHeight};"
+		width="&{DSMP.gPlaceholderWidth};" 
+	><img border=0 align=top src="%26%7bDSMP.html" width=1 
+		height="&{DSMP.gPlaceholder2Height};" 
+>&nbsp;</span><![endif]><script id=mpeq0016s2>
+	MPEquation()
+</script><!-- )MP EQPH --></p>
+  <p class=MsoNormal>&nbsp;</p>
+  <p class=MsoNormal>This differential equation is both linear and separable
+  and again isn’t terribly difficult to solve so I’ll leave the details to you
+  again to check that we should get.</p>
+  <p class=MTDisplayEquation>                                                      <!-- MP EQPH( --><script id=mpeq0017s1>
+	MPSetEqnAttrs('eq0017','',3,[[108,30,9,-1,-1],[143,40,12,-1,-1],[179,51,15,-1,-1],[162,46,14,-1,-1],[215,60,18,-1,-1],[270,75,23,-2,-2],[449,124,38,-3,-3]])
+</script><![if !ie]><span id=mpnneq0017ph class=MPNNCode
+	><img border=0 align=bottom name=mpeq0017ph src="%26%7bDSMP.html" height="&{DSMP.gPlaceholderHeight};"
+		width="&{DSMP.gPlaceholderWidth};" 
+	><img border=0 align=top src="%26%7bDSMP.html" width=1 
+		height="&{DSMP.gPlaceholder2Height};" 
+>&nbsp;</span><![endif]><script id=mpeq0017s2>
+	MPEquation()
+</script><!-- )MP EQPH --></p>
+  <p class=MsoNormal>&nbsp;</p>
+  <p class=MsoNormal>So, a solution that encompasses the complete running time
+  of the process is</p>
+  <p class=MTDisplayEquation>                          <!-- MP EQPH( --><script id=mpeq0018s1>
+	MPSetEqnAttrs('eq0018','',3,[[276,57,26,-1,-1],[367,76,34,-1,-1],[459,96,43,-1,-1],[413,86,39,-1,-1],[551,115,52,-1,-1],[688,143,64,-2,-2],[1148,237,108,-3,-3]])
+</script><![if !ie]><span id=mpnneq0018ph class=MPNNCode
+	><img border=0 align=bottom name=mpeq0018ph src="%26%7bDSMP.html" height="&{DSMP.gPlaceholderHeight};"
+		width="&{DSMP.gPlaceholderWidth};" 
+	><img border=0 align=top src="%26%7bDSMP.html" width=1 
+		height="&{DSMP.gPlaceholder2Height};" 
+>&nbsp;</span><![endif]><script id=mpeq0018s2>
+	MPEquation()
+</script><!-- )MP EQPH --></p>
+  <p class=MsoNormal>&nbsp;</p>
+  <p class=MsoNormal>Here is a graph of the amount of pollution in the tank at
+  any time <i >t</i>.</p>
+  <p class=MsoNormal align=center style='text-align:center'><!--[if gte vml 1]><v:shape id="Picture_x0020_20"
+   o:spid="_x0000_i1065" type="#_x0000_t75" alt="Modeling_Ex2_G1" style='width:270pt;
+   height:181.5pt;visibility:visible;mso-wrap-style:square'>
+   <v:imagedata src="Modeling_files/image002.gif" o:title="Modeling_Ex2_G1" />
+  </v:shape><![endif]--><![if !vml]><img border=0 width=360 height=242
+  src="Modeling_files/image002.gif" alt="Modeling_Ex2_G1" v:shapes="Picture_x0020_20"><![endif]></p>
+  </td>
+ </tr>
+</table><!-- MP EQRA( --><script id=mpeq0018s1>
+	MPSetEqnAttrs('eq0018','',3,[[276,57,26,-1,-1],[367,76,34,-1,-1],[459,96,43,-1,-1],[413,86,39,-1,-1],[551,115,52,-1,-1],[688,143,64,-2,-2],[1148,237,108,-3,-3]]);
+</script><!-- )MP EQRA --><!-- MP EQ( --><![if !ie]><div id=mpnneq0018 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpeq0018ph,'1')
+	</script><layer id=mpeq0018pop bgcolor='&{DSMP.gNNPopupBgColor};' z-index=99 visibility=hidden top=0 left=0
+		 onmouseover="status=DSMP.gHidePopupMessage"  onmouseout="status=''" 
+		><a href='%26%7bDSMP-3.html' onmousedown='return MPHidePopup(event,mpeq0018pop)'
+			><img border=0 src='%26%7bDSMP-3.html' hspace='&{DSMP.gPopupEqnPadding};' vspace='&{DSMP.gPopupEqnPadding};'
+		></a></layer><layer id=mpeq0018 bgcolor='' z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		 onmouseover="status=DSMP.gShowPopupMessage" onmouseout="status=''" 
+		><a href='%26%7bDSMP-4.html' onmousedown='return MPShowPopup(mpeq0018,mpeq0018pop,event)'
+			><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+		></a></layer></div><script id=mpeq0018s3>
+	MPDeleteCode('eq0018')
+</script><![endif]><!-- )MP EQ --><!-- MP EQRA( --><script id=mpeq0017s1>
+	MPSetEqnAttrs('eq0017','',3,[[108,30,9,-1,-1],[143,40,12,-1,-1],[179,51,15,-1,-1],[162,46,14,-1,-1],[215,60,18,-1,-1],[270,75,23,-2,-2],[449,124,38,-3,-3]]);
+</script><!-- )MP EQRA --><!-- MP EQ( --><![if !ie]><div id=mpnneq0017 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpeq0017ph,'1')
+	</script><layer id=mpeq0017pop bgcolor='&{DSMP.gNNPopupBgColor};' z-index=99 visibility=hidden top=0 left=0
+		 onmouseover="status=DSMP.gHidePopupMessage"  onmouseout="status=''" 
+		><a href='%26%7bDSMP-3.html' onmousedown='return MPHidePopup(event,mpeq0017pop)'
+			><img border=0 src='%26%7bDSMP-3.html' hspace='&{DSMP.gPopupEqnPadding};' vspace='&{DSMP.gPopupEqnPadding};'
+		></a></layer><layer id=mpeq0017 bgcolor='' z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		 onmouseover="status=DSMP.gShowPopupMessage" onmouseout="status=''" 
+		><a href='%26%7bDSMP-4.html' onmousedown='return MPShowPopup(mpeq0017,mpeq0017pop,event)'
+			><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+		></a></layer></div><script id=mpeq0017s3>
+	MPDeleteCode('eq0017')
+</script><![endif]><!-- )MP EQ --><!-- MP EQRA( --><script id=mpeq0016s1>
+	MPSetEqnAttrs('eq0016','',3,[[352,28,9,-1,-1],[469,37,12,-1,-1],[584,46,15,-1,-1],[525,42,14,-1,-1],[702,56,18,-1,-1],[878,70,23,-2,-2],[1464,118,39,-3,-3]]);
+</script><!-- )MP EQRA --><!-- MP EQ( --><![if !ie]><div id=mpnneq0016 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpeq0016ph,'1')
+	</script><layer id=mpeq0016pop bgcolor='&{DSMP.gNNPopupBgColor};' z-index=99 visibility=hidden top=0 left=0
+		 onmouseover="status=DSMP.gHidePopupMessage"  onmouseout="status=''" 
+		><a href='%26%7bDSMP-3.html' onmousedown='return MPHidePopup(event,mpeq0016pop)'
+			><img border=0 src='%26%7bDSMP-3.html' hspace='&{DSMP.gPopupEqnPadding};' vspace='&{DSMP.gPopupEqnPadding};'
+		></a></layer><layer id=mpeq0016 bgcolor='' z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		 onmouseover="status=DSMP.gShowPopupMessage" onmouseout="status=''" 
+		><a href='%26%7bDSMP-4.html' onmousedown='return MPShowPopup(mpeq0016,mpeq0016pop,event)'
+			><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+		></a></layer></div><script id=mpeq0016s3>
+	MPDeleteCode('eq0016')
+</script><![endif]><!-- )MP EQ --><!-- MP EQRA( --><script id=mpeq0015s1>
+	MPSetEqnAttrs('eq0015','',3,[[271,20,4,-1,-1],[361,27,5,-1,-1],[451,32,7,-1,-1],[405,30,7,-1,-1],[542,39,8,-1,-1],[677,49,11,-2,-2],[1129,82,18,-3,-3]]);
+</script><!-- )MP EQRA --><!-- MP EQ( --><![if !ie]><div id=mpnneq0015 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpeq0015ph,'1')
+	</script><layer id=mpeq0015pop bgcolor='&{DSMP.gNNPopupBgColor};' z-index=99 visibility=hidden top=0 left=0
+		 onmouseover="status=DSMP.gHidePopupMessage"  onmouseout="status=''" 
+		><a href='%26%7bDSMP-3.html' onmousedown='return MPHidePopup(event,mpeq0015pop)'
+			><img border=0 src='%26%7bDSMP-3.html' hspace='&{DSMP.gPopupEqnPadding};' vspace='&{DSMP.gPopupEqnPadding};'
+		></a></layer><layer id=mpeq0015 bgcolor='' z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		 onmouseover="status=DSMP.gShowPopupMessage" onmouseout="status=''" 
+		><a href='%26%7bDSMP-4.html' onmousedown='return MPShowPopup(mpeq0015,mpeq0015pop,event)'
+			><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+		></a></layer></div><script id=mpeq0015s3>
+	MPDeleteCode('eq0015')
+</script><![endif]><!-- )MP EQ --><!-- MP EQRA( --><script id=mpeq0014s1>
+	MPSetEqnAttrs('eq0014','',3,[[118,20,4,-1,-1],[156,27,5,-1,-1],[197,32,7,-1,-1],[176,30,7,-1,-1],[236,39,8,-1,-1],[295,49,11,-2,-2],[492,82,18,-3,-3]]);
+</script><!-- )MP EQRA --><!-- MP EQ( --><![if !ie]><div id=mpnneq0014 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpeq0014ph,'1')
+	</script><layer id=mpeq0014pop bgcolor='&{DSMP.gNNPopupBgColor};' z-index=99 visibility=hidden top=0 left=0
+		 onmouseover="status=DSMP.gHidePopupMessage"  onmouseout="status=''" 
+		><a href='%26%7bDSMP-3.html' onmousedown='return MPHidePopup(event,mpeq0014pop)'
+			><img border=0 src='%26%7bDSMP-3.html' hspace='&{DSMP.gPopupEqnPadding};' vspace='&{DSMP.gPopupEqnPadding};'
+		></a></layer><layer id=mpeq0014 bgcolor='' z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		 onmouseover="status=DSMP.gShowPopupMessage" onmouseout="status=''" 
+		><a href='%26%7bDSMP-4.html' onmousedown='return MPShowPopup(mpeq0014,mpeq0014pop,event)'
+			><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+		></a></layer></div><script id=mpeq0014s3>
+	MPDeleteCode('eq0014')
+</script><![endif]><!-- )MP EQ --><!-- MP EQRA( --><script id=mpeq0013s1>
+	MPSetEqnAttrs('eq0013','',3,[[260,66,30,-1,-1],[346,87,40,-1,-1],[431,110,50,-1,-1],[388,99,46,-1,-1],[518,132,60,-1,-1],[648,165,76,-2,-2],[1081,277,127,-3,-3]]);
+</script><!-- )MP EQRA --><!-- MP EQ( --><![if !ie]><div id=mpnneq0013 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpeq0013ph,'1')
+	</script><layer id=mpeq0013pop bgcolor='&{DSMP.gNNPopupBgColor};' z-index=99 visibility=hidden top=0 left=0
+		 onmouseover="status=DSMP.gHidePopupMessage"  onmouseout="status=''" 
+		><a href='%26%7bDSMP-3.html' onmousedown='return MPHidePopup(event,mpeq0013pop)'
+			><img border=0 src='%26%7bDSMP-3.html' hspace='&{DSMP.gPopupEqnPadding};' vspace='&{DSMP.gPopupEqnPadding};'
+		></a></layer><layer id=mpeq0013 bgcolor='' z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		 onmouseover="status=DSMP.gShowPopupMessage" onmouseout="status=''" 
+		><a href='%26%7bDSMP-4.html' onmousedown='return MPShowPopup(mpeq0013,mpeq0013pop,event)'
+			><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+		></a></layer></div><script id=mpeq0013s3>
+	MPDeleteCode('eq0013')
+</script><![endif]><!-- )MP EQ --><!-- MP EQRA( --><script id=mpeq0012s1>
+	MPSetEqnAttrs('eq0012','',3,[[332,75,35,-1,-1],[442,100,46,-1,-1],[551,126,59,-1,-1],[496,113,53,-1,-1],[662,151,70,-1,-1],[828,188,87,-2,-2],[1381,314,146,-3,-3]]);
+</script><!-- )MP EQRA --><!-- MP EQ( --><![if !ie]><div id=mpnneq0012 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpeq0012ph,'1')
+	</script><layer id=mpeq0012pop bgcolor='&{DSMP.gNNPopupBgColor};' z-index=99 visibility=hidden top=0 left=0
+		 onmouseover="status=DSMP.gHidePopupMessage"  onmouseout="status=''" 
+		><a href='%26%7bDSMP-3.html' onmousedown='return MPHidePopup(event,mpeq0012pop)'
+			><img border=0 src='%26%7bDSMP-3.html' hspace='&{DSMP.gPopupEqnPadding};' vspace='&{DSMP.gPopupEqnPadding};'
+		></a></layer><layer id=mpeq0012 bgcolor='' z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		 onmouseover="status=DSMP.gShowPopupMessage" onmouseout="status=''" 
+		><a href='%26%7bDSMP-4.html' onmousedown='return MPShowPopup(mpeq0012,mpeq0012pop,event)'
+			><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+		></a></layer></div><script id=mpeq0012s3>
+	MPDeleteCode('eq0012')
+</script><![endif]><!-- )MP EQ -->
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>As you can surely see, these problems can get quite
+complicated if you want them to.  Take
+the last example.  A more realistic
+situation would be that once the pollution dropped below some predetermined
+point the polluted runoff would, in all likelihood, be allowed to flow back in
+and then the whole process would repeat itself. 
+So, realistically, there should be at least one more IVP in the process.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Let’s move on to another type of problem now.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><a name="First_Model_Pop"></a><b >Population</b></p>
+
+<p class=MsoNormal>These are somewhat easier than the mixing problems although,
+in some ways, they are very similar to mixing problems.  So, if <i >P(t)</i>
+represents a population in a given region at any time <i >t</i> the basic equation that we’ll use is identical to the one that we
+used for mixing.  Namely,</p>
+
+<div align=center>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse'>
+ <tr >
+  <td style='padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Rate of</p>
+  <p class=MsoNormal align=center style='text-align:center'>change of</p>
+  <p class=MsoNormal align=center style='text-align:center'><i
+  >P(t)</i></p>
+  </td>
+  <td style='padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>=</p>
+  </td>
+  <td style='padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Rate at </p>
+  <p class=MsoNormal align=center style='text-align:center'>which <i
+  >P(t)</i></p>
+  <p class=MsoNormal align=center style='text-align:center'>enters the </p>
+  <p class=MsoNormal align=center style='text-align:center'>region</p>
+  </td>
+  <td style='padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>-</p>
+  </td>
+  <td style='padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Rate at </p>
+  <p class=MsoNormal align=center style='text-align:center'>which <i
+  >P(t)</i></p>
+  <p class=MsoNormal align=center style='text-align:center'>exits the </p>
+  <p class=MsoNormal align=center style='text-align:center'>region</p>
+  </td>
+ </tr>
+ <tr >
+  <td style='padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>&nbsp;</p>
+  </td>
+  <td style='padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>&nbsp;</p>
+  </td>
+  <td style='padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>&nbsp;</p>
+  </td>
+  <td style='padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>&nbsp;</p>
+  </td>
+  <td style='padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'>&nbsp;</p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal>Here the rate of change of <i >P(t)</i> is still the derivative. 
+What’s different this time is the rate at which the population enters
+and exits the region.  For population
+problems all the ways for a population to enter the region are included in the
+entering rate.  Birth rate and migration
+into the region are examples of terms that would go into the rate at which the
+population enters the region.  Likewise,
+all the ways for a population to leave an area will be included in the exiting
+rate.  Therefore things like death rate,
+migration out and predation are examples of terms that would go into the rate
+at which the population exits the area.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Here’s an example.</p>
+
+<p class=MsoNormal><a name="First_Model_Ex3"></a>&nbsp;</p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=5 width="100%" bordercolor="black"
+ style='width:100.0%;border-collapse:collapse'>
+ <tr >
+  <td width="100%" valign=top style='width:100.0%;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-left:0in;text-indent:0in'><b
+  ><i >Example 3  </i></b>A
+  population of insects in a region will grow at a rate that is proportional to
+  their current population.  In the
+  absence of any outside factors the population will triple in two weeks
+  time.  On any given day there is a net
+  migration into the area of 15 insects and 16 are eaten by the local bird
+  population and 7 die of natural causes. 
+  If there are initially 100 insects in the area will the population
+  survive?  If not, when do they die out?</p>
+  <p class=MsoNormal>&nbsp;</p>
+  <p class=MsoNormal><b ><i
+  >Solution</i></b></p>
+  <p class=MsoNormal>Let’s start out by looking at the birth rate.  We are told that the insects will be born
+  at a rate that is proportional to the current population.  This means that the birth rate can be written
+  as</p>
+  <p class=MTDisplayEquation>                                                                      <!-- MP EQPH( --><script id=mpeq0019s1>
+	MPSetEqnAttrs('eq0019','',3,[[11,9,0,-1,-1],[15,11,0,-1,-1],[19,12,0,-1,-1],[16,12,0,-1,-1],[21,15,0,-1,-1],[26,20,0,-2,-2],[44,32,0,-3,-3]])
+</script><![if !ie]><span id=mpnneq0019ph class=MPNNCode
+	><img border=0 align=bottom name=mpeq0019ph src="%26%7bDSMP.html" height="&{DSMP.gPlaceholderHeight};"
+		width="&{DSMP.gPlaceholderWidth};" 
+	><img border=0 align=top src="%26%7bDSMP.html" width=1 
+		height="&{DSMP.gPlaceholder2Height};" 
+>&nbsp;</span><![endif]><script id=mpeq0019s2>
+	MPEquation()
+</script><!-- )MP EQPH --></p>
+  <p class=MsoNormal>where <i >r</i> is a
+  positive constant that will need to be determined.  Now, let’s take everything into account and
+  get the IVP for this problem.</p>
+  <p class=MTDisplayEquation>                                       <!-- MP EQPH( --><script id=mpeq0020s1>
+	MPSetEqnAttrs('eq0020','',3,[[196,34,14,-1,-1],[261,45,18,-1,-1],[326,57,24,-1,-1],[294,51,22,-1,-1],[392,69,28,-1,-1],[492,85,35,-2,-2],[820,144,60,-3,-3]])
+</script><![if !ie]><span id=mpnneq0020ph class=MPNNCode
+	><img border=0 align=bottom name=mpeq0020ph src="%26%7bDSMP.html" height="&{DSMP.gPlaceholderHeight};"
+		width="&{DSMP.gPlaceholderWidth};" 
+	><img border=0 align=top src="%26%7bDSMP.html" width=1 
+		height="&{DSMP.gPlaceholder2Height};" 
+>&nbsp;</span><![endif]><script id=mpeq0020s2>
+	MPEquation()
+</script><!-- )MP EQPH --></p>
+  <p class=MsoNormal>&nbsp;</p>
+  <p class=MsoNormal>Note that in the first line we used parenthesis to note
+  which terms went into which part of the differential equation.  Also note that we don’t make use of the
+  fact that the population will triple in two weeks time in the absence of
+  outside factors here.  In the absence
+  of outside factors means that the ONLY thing that we can consider is birth
+  rate.  Nothing else can enter into the
+  picture and clearly we have other influences in the differential equation.</p>
+  <p class=MsoNormal>&nbsp;</p>
+  <p class=MsoNormal>So, just how does this tripling come into play?  Well, we should also note that without
+  knowing <i >r</i> we will have a difficult
+  time solving the IVP completely.  We
+  will use the fact that the population triples in two week time to help us
+  find <i >r</i>.  In the absence of outside factors the
+  differential equation would become.</p>
+  <p class=MTDisplayEquation>                                <!-- MP EQPH( --><script id=mpeq0021s1>
+	MPSetEqnAttrs('eq0021','',3,[[238,14,4,-1,-1],[317,19,5,-1,-1],[396,23,7,-1,-1],[357,21,7,-1,-1],[478,29,9,-1,-1],[597,36,11,-2,-2],[995,60,18,-3,-3]])
+</script><![if !ie]><span id=mpnneq0021ph class=MPNNCode
+	><img border=0 align=bottom name=mpeq0021ph src="%26%7bDSMP.html" height="&{DSMP.gPlaceholderHeight};"
+		width="&{DSMP.gPlaceholderWidth};" 
+	><img border=0 align=top src="%26%7bDSMP.html" width=1 
+		height="&{DSMP.gPlaceholder2Height};" 
+>&nbsp;</span><![endif]><script id=mpeq0021s2>
+	MPEquation()
+</script><!-- )MP EQPH --></p>
+  <p class=MsoNormal>&nbsp;</p>
+  <p class=MsoNormal>Note that since we used days as the time frame in the
+  actual IVP I needed to convert the two weeks to 14 days.  We could have just as easily converted the
+  original IVP to weeks as the time frame, in which case there would have been
+  a net change of <!-- MP SYPH( --><script id=mpch0002s1>
+	MPSetChAttrs('ch0002','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0002ph class=MPNNCode
+	><img border=0 name=mpch0002ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0002s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH -->56
+  per week instead of the <!-- MP SYPH( --><script id=mpch0003s1>
+	MPSetChAttrs('ch0003','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0003ph class=MPNNCode
+	><img border=0 name=mpch0003ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0003s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH -->8
+  per day that we are currently using in the original differential equation.</p>
+  <p class=MsoNormal>&nbsp;</p>
+  <p class=MsoNormal>Okay back to the differential equation that ignores all
+  the outside factors.  This differential
+  equation is separable and linear and is a simple differential equation to
+  solve.  I’ll leave the detail to you to
+  get the general solution.</p>
+  <p class=MTDisplayEquation>                                                                <!-- MP EQPH( --><script id=mpeq0022s1>
+	MPSetEqnAttrs('eq0022','',3,[[50,14,4,-1,-1],[67,19,5,-1,-1],[82,23,7,-1,-1],[74,21,7,-1,-1],[102,29,9,-1,-1],[126,36,11,-2,-2],[211,60,18,-3,-3]])
+</script><![if !ie]><span id=mpnneq0022ph class=MPNNCode
+	><img border=0 align=bottom name=mpeq0022ph src="%26%7bDSMP.html" height="&{DSMP.gPlaceholderHeight};"
+		width="&{DSMP.gPlaceholderWidth};" 
+	><img border=0 align=top src="%26%7bDSMP.html" width=1 
+		height="&{DSMP.gPlaceholder2Height};" 
+>&nbsp;</span><![endif]><script id=mpeq0022s2>
+	MPEquation()
+</script><!-- )MP EQPH --></p>
+  <p class=MsoNormal>&nbsp;</p>
+  <p class=MsoNormal>Applying the initial condition gives <i >c</i> = 100.  Now apply the
+  second condition.</p>
+  <p class=MTDisplayEquation>                                      <!-- MP EQPH( --><script id=mpeq0023s1>
+	MPSetEqnAttrs('eq0023','',3,[[207,14,4,-1,-1],[275,19,5,-1,-1],[342,24,7,-1,-1],[309,22,7,-1,-1],[411,30,9,-1,-1],[515,36,11,-2,-2],[859,60,18,-3,-3]])
+</script><![if !ie]><span id=mpnneq0023ph class=MPNNCode
+	><img border=0 align=bottom name=mpeq0023ph src="%26%7bDSMP.html" height="&{DSMP.gPlaceholderHeight};"
+		width="&{DSMP.gPlaceholderWidth};" 
+	><img border=0 align=top src="%26%7bDSMP.html" width=1 
+		height="&{DSMP.gPlaceholder2Height};" 
+>&nbsp;</span><![endif]><script id=mpeq0023s2>
+	MPEquation()
+</script><!-- )MP EQPH --></p>
+  <p class=MsoNormal>&nbsp;</p>
+  <p class=MsoNormal>We need to solve this for <i >r</i>.  First divide both sides
+  by 100, then take the natural log of both sides.</p>
+  <p class=MTDisplayEquation>                                                               <!-- MP EQPH( --><script id=mpeq0024s1>
+	MPSetEqnAttrs('eq0024','',3,[[54,82,38,-1,-1],[72,109,51,-1,-1],[88,137,63,-1,-1],[81,124,58,-1,-1],[107,163,76,-1,-1],[135,203,96,-2,-2],[224,339,159,-3,-3]])
+</script><![if !ie]><span id=mpnneq0024ph class=MPNNCode
+	><img border=0 align=bottom name=mpeq0024ph src="%26%7bDSMP.html" height="&{DSMP.gPlaceholderHeight};"
+		width="&{DSMP.gPlaceholderWidth};" 
+	><img border=0 align=top src="%26%7bDSMP.html" width=1 
+		height="&{DSMP.gPlaceholder2Height};" 
+>&nbsp;</span><![endif]><script id=mpeq0024s2>
+	MPEquation()
+</script><!-- )MP EQPH --></p>
+  <p class=MsoNormal>&nbsp;</p>
+  <p class=MsoNormal>We made use of the fact that <!-- MP EQPH( --><script id=mpeq0025s1>
+	MPSetEqnAttrs('eq0025','',3,[[66,15,4,-1,-1],[88,20,5,-1,-1],[111,25,7,-1,-1],[100,24,7,-1,-1],[134,30,8,-1,-1],[167,39,11,-2,-2],[277,65,18,-3,-3]])
+</script><![if !ie]><span id=mpnneq0025ph class=MPNNCode
+	><img border=0 align=bottom name=mpeq0025ph src="%26%7bDSMP.html" height="&{DSMP.gPlaceholderHeight};"
+		width="&{DSMP.gPlaceholderWidth};" 
+	><img border=0 align=top src="%26%7bDSMP.html" width=1 
+		height="&{DSMP.gPlaceholder2Height};" 
+></span><![endif]><script id=mpeq0025s2>
+	MPEquation()
+</script><!-- )MP EQPH --> here to simplify the problem.  Now, that we have <i >r</i> we can go back and solve the original differential
+  equation.  We’ll rewrite it a little
+  for the solution process.</p>
+  <p class=MTDisplayEquation>                                 <!-- MP EQPH( --><script id=mpeq0026s1>
+	MPSetEqnAttrs('eq0026','',3,[[232,26,9,-1,-1],[309,33,12,-1,-1],[386,42,15,-1,-1],[348,39,14,-1,-1],[464,50,18,-1,-1],[582,64,23,-2,-2],[970,106,38,-3,-3]])
+</script><![if !ie]><span id=mpnneq0026ph class=MPNNCode
+	><img border=0 align=bottom name=mpeq0026ph src="%26%7bDSMP.html" height="&{DSMP.gPlaceholderHeight};"
+		width="&{DSMP.gPlaceholderWidth};" 
+	><img border=0 align=top src="%26%7bDSMP.html" width=1 
+		height="&{DSMP.gPlaceholder2Height};" 
+>&nbsp;</span><![endif]><script id=mpeq0026s2>
+	MPEquation()
+</script><!-- )MP EQPH --></p>
+  <p class=MsoNormal>&nbsp;</p>
+  <p class=MsoNormal>This is a fairly simple linear differential equation, but
+  that coefficient of <i >P</i> always get
+  people bent out of shape, so we’ll go through at least some of the details
+  here.</p>
+  <p class=MTDisplayEquation>                                                       <!-- MP EQPH( --><script id=mpeq0027s1>
+	MPSetEqnAttrs('eq0027','',3,[[104,23,4,-1,-1],[138,31,5,-1,-1],[174,39,7,-1,-1],[156,36,7,-1,-1],[207,48,9,-1,-1],[261,59,11,-2,-2],[433,97,18,-3,-3]])
+</script><![if !ie]><span id=mpnneq0027ph class=MPNNCode
+	><img border=0 align=bottom name=mpeq0027ph src="%26%7bDSMP.html" height="&{DSMP.gPlaceholderHeight};"
+		width="&{DSMP.gPlaceholderWidth};" 
+	><img border=0 align=top src="%26%7bDSMP.html" width=1 
+		height="&{DSMP.gPlaceholder2Height};" 
+>&nbsp;</span><![endif]><script id=mpeq0027s2>
+	MPEquation()
+</script><!-- )MP EQPH --></p>
+  <p class=MsoNormal>&nbsp;</p>
+  <p class=MsoNormal>Now, don’t get excited about the integrating factor
+  here.  It’s just like <!-- MP EQPH( --><script id=mpeq0028s1>
+	MPSetEqnAttrs('eq0028','',3,[[12,10,0,-1,-1],[16,13,0,-1,-1],[18,16,0,-1,-1],[17,16,1,-1,-1],[23,19,0,-1,-1],[29,23,1,-2,-2],[48,40,2,-3,-3]])
+</script><![if !ie]><span id=mpnneq0028ph class=MPNNCode
+	><img border=0 align=bottom name=mpeq0028ph src="%26%7bDSMP.html" height="&{DSMP.gPlaceholderHeight};"
+		width="&{DSMP.gPlaceholderWidth};" 
+	><img border=0 align=top src="%26%7bDSMP.html" width=1 
+		height="&{DSMP.gPlaceholder2Height};" 
+></span><![endif]><script id=mpeq0028s2>
+	MPEquation()
+</script><!-- )MP EQPH --> only this time the constant is a little more
+  complicated than just a 2, but it is a constant!  Now, solve the differential equation.</p>
+  <p class=MTDisplayEquation>                                                 <!-- MP EQPH( --><script id=mpeq0029s1>
+	MPSetEqnAttrs('eq0029','',3,[[139,97,44,-1,-1],[185,129,58,-1,-1],[232,163,74,-1,-1],[208,146,66,-1,-1],[279,194,88,-1,-1],[351,243,110,-2,-2],[585,405,184,-3,-3]])
+</script><![if !ie]><span id=mpnneq0029ph class=MPNNCode
+	><img border=0 align=bottom name=mpeq0029ph src="%26%7bDSMP.html" height="&{DSMP.gPlaceholderHeight};"
+		width="&{DSMP.gPlaceholderWidth};" 
+	><img border=0 align=top src="%26%7bDSMP.html" width=1 
+		height="&{DSMP.gPlaceholder2Height};" 
+>&nbsp;</span><![endif]><script id=mpeq0029s2>
+	MPEquation()
+</script><!-- )MP EQPH --></p>
+  <p class=MsoNormal>&nbsp;</p>
+  <p class=MsoNormal>Again, do not get excited about doing the right hand
+  integral, it’s just like integrating <!-- MP EQPH( --><script id=mpeq0030s1>
+	MPSetEqnAttrs('eq0030','',3,[[12,10,0,-1,-1],[16,13,0,-1,-1],[18,16,0,-1,-1],[17,16,1,-1,-1],[23,19,0,-1,-1],[29,23,1,-2,-2],[48,40,2,-3,-3]])
+</script><![if !ie]><span id=mpnneq0030ph class=MPNNCode
+	><img border=0 align=bottom name=mpeq0030ph src="%26%7bDSMP.html" height="&{DSMP.gPlaceholderHeight};"
+		width="&{DSMP.gPlaceholderWidth};" 
+	><img border=0 align=top src="%26%7bDSMP.html" width=1 
+		height="&{DSMP.gPlaceholder2Height};" 
+></span><![endif]><script id=mpeq0030s2>
+	MPEquation()
+</script><!-- )MP EQPH -->!  Applying the initial condition gives the
+  following.</p>
+  <p class=MTDisplayEquation>                                <!-- MP EQPH( --><script id=mpeq0031s1>
+	MPSetEqnAttrs('eq0031','',3,[[239,30,12,-1,-1],[318,40,16,-1,-1],[397,50,20,-1,-1],[358,45,18,-1,-1],[477,59,24,-1,-1],[598,75,30,-2,-2],[997,123,50,-3,-3]])
+</script><![if !ie]><span id=mpnneq0031ph class=MPNNCode
+	><img border=0 align=bottom name=mpeq0031ph src="%26%7bDSMP.html" height="&{DSMP.gPlaceholderHeight};"
+		width="&{DSMP.gPlaceholderWidth};" 
+	><img border=0 align=top src="%26%7bDSMP.html" width=1 
+		height="&{DSMP.gPlaceholder2Height};" 
+>&nbsp;</span><![endif]><script id=mpeq0031s2>
+	MPEquation()
+</script><!-- )MP EQPH --></p>
+  <p class=MsoNormal>&nbsp;</p>
+  <p class=MsoNormal>Now, the exponential has a positive exponent and so will
+  go to plus infinity as <i >t</i>
+  increases.  Its coefficient, however,
+  is negative and so the whole population will go negative eventually.  Clearly, population can’t be negative, but
+  in order for the population to go negative it must pass through zero.  In other words, eventually all the insects
+  must die.  So, they don’t survive and
+  we can solve the following to determine when they die out.</p>
+  <p class=MTDisplayEquation>                       <!-- MP EQPH( --><script id=mpeq0032s1>
+	MPSetEqnAttrs('eq0032','',3,[[293,26,9,-1,-1],[389,33,12,-1,-1],[487,41,15,-1,-1],[439,38,14,-1,-1],[584,49,18,-1,-1],[730,63,23,-2,-2],[1219,104,38,-3,-3]])
+</script><![if !ie]><span id=mpnneq0032ph class=MPNNCode
+	><img border=0 align=bottom name=mpeq0032ph src="%26%7bDSMP.html" height="&{DSMP.gPlaceholderHeight};"
+		width="&{DSMP.gPlaceholderWidth};" 
+	><img border=0 align=top src="%26%7bDSMP.html" width=1 
+		height="&{DSMP.gPlaceholder2Height};" 
+>&nbsp;</span><![endif]><script id=mpeq0032s2>
+	MPEquation()
+</script><!-- )MP EQPH --></p>
+  <p class=MsoNormal>&nbsp;</p>
+  <p class=MsoNormal>So, the insects will survive for around 7.2 weeks.  Here is a graph of the population during
+  the time in which they survive.</p>
+  <p class=MsoNormal align=center style='text-align:center'><!--[if gte vml 1]><v:shape id="Picture_x0020_35"
+   o:spid="_x0000_i1048" type="#_x0000_t75" alt="Modeling_Ex3_G1" style='width:270pt;
+   height:181.5pt;visibility:visible;mso-wrap-style:square'>
+   <v:imagedata src="Modeling_files/image003.gif" o:title="Modeling_Ex3_G1" />
+  </v:shape><![endif]--><![if !vml]><img border=0 width=360 height=242
+  src="Modeling_files/image003.gif" alt="Modeling_Ex3_G1" v:shapes="Picture_x0020_35"><![endif]></p>
+  </td>
+ </tr>
+</table><!-- MP EQRA( --><script id=mpeq0032s1>
+	MPSetEqnAttrs('eq0032','',3,[[293,26,9,-1,-1],[389,33,12,-1,-1],[487,41,15,-1,-1],[439,38,14,-1,-1],[584,49,18,-1,-1],[730,63,23,-2,-2],[1219,104,38,-3,-3]]);
+</script><!-- )MP EQRA --><!-- MP EQ( --><![if !ie]><div id=mpnneq0032 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpeq0032ph,'1')
+	</script><layer id=mpeq0032pop bgcolor='&{DSMP.gNNPopupBgColor};' z-index=99 visibility=hidden top=0 left=0
+		 onmouseover="status=DSMP.gHidePopupMessage"  onmouseout="status=''" 
+		><a href='%26%7bDSMP-3.html' onmousedown='return MPHidePopup(event,mpeq0032pop)'
+			><img border=0 src='%26%7bDSMP-3.html' hspace='&{DSMP.gPopupEqnPadding};' vspace='&{DSMP.gPopupEqnPadding};'
+		></a></layer><layer id=mpeq0032 bgcolor='' z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		 onmouseover="status=DSMP.gShowPopupMessage" onmouseout="status=''" 
+		><a href='%26%7bDSMP-4.html' onmousedown='return MPShowPopup(mpeq0032,mpeq0032pop,event)'
+			><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+		></a></layer></div><script id=mpeq0032s3>
+	MPDeleteCode('eq0032')
+</script><![endif]><!-- )MP EQ --><!-- MP EQRA( --><script id=mpeq0031s1>
+	MPSetEqnAttrs('eq0031','',3,[[239,30,12,-1,-1],[318,40,16,-1,-1],[397,50,20,-1,-1],[358,45,18,-1,-1],[477,59,24,-1,-1],[598,75,30,-2,-2],[997,123,50,-3,-3]]);
+</script><!-- )MP EQRA --><!-- MP EQ( --><![if !ie]><div id=mpnneq0031 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpeq0031ph,'1')
+	</script><layer id=mpeq0031pop bgcolor='&{DSMP.gNNPopupBgColor};' z-index=99 visibility=hidden top=0 left=0
+		 onmouseover="status=DSMP.gHidePopupMessage"  onmouseout="status=''" 
+		><a href='%26%7bDSMP-3.html' onmousedown='return MPHidePopup(event,mpeq0031pop)'
+			><img border=0 src='%26%7bDSMP-3.html' hspace='&{DSMP.gPopupEqnPadding};' vspace='&{DSMP.gPopupEqnPadding};'
+		></a></layer><layer id=mpeq0031 bgcolor='' z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		 onmouseover="status=DSMP.gShowPopupMessage" onmouseout="status=''" 
+		><a href='%26%7bDSMP-4.html' onmousedown='return MPShowPopup(mpeq0031,mpeq0031pop,event)'
+			><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+		></a></layer></div><script id=mpeq0031s3>
+	MPDeleteCode('eq0031')
+</script><![endif]><!-- )MP EQ --><!-- MP EQRA( --><script id=mpeq0030s1>
+	MPSetEqnAttrs('eq0030','',3,[[12,10,0,-1,-1],[16,13,0,-1,-1],[18,16,0,-1,-1],[17,16,1,-1,-1],[23,19,0,-1,-1],[29,23,1,-2,-2],[48,40,2,-3,-3]]);
+</script><!-- )MP EQRA --><!-- MP EQ( --><![if !ie]><div id=mpnneq0030 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpeq0030ph,'1')
+	</script><layer id=mpeq0030pop bgcolor='&{DSMP.gNNPopupBgColor};' z-index=99 visibility=hidden top=0 left=0
+		 onmouseover="status=DSMP.gHidePopupMessage"  onmouseout="status=''" 
+		><a href='%26%7bDSMP-3.html' onmousedown='return MPHidePopup(event,mpeq0030pop)'
+			><img border=0 src='%26%7bDSMP-3.html' hspace='&{DSMP.gPopupEqnPadding};' vspace='&{DSMP.gPopupEqnPadding};'
+		></a></layer><layer id=mpeq0030 bgcolor='' z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		 onmouseover="status=DSMP.gShowPopupMessage" onmouseout="status=''" 
+		><a href='%26%7bDSMP-4.html' onmousedown='return MPShowPopup(mpeq0030,mpeq0030pop,event)'
+			><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+		></a></layer></div><script id=mpeq0030s3>
+	MPDeleteCode('eq0030')
+</script><![endif]><!-- )MP EQ --><!-- MP EQRA( --><script id=mpeq0029s1>
+	MPSetEqnAttrs('eq0029','',3,[[139,97,44,-1,-1],[185,129,58,-1,-1],[232,163,74,-1,-1],[208,146,66,-1,-1],[279,194,88,-1,-1],[351,243,110,-2,-2],[585,405,184,-3,-3]]);
+</script><!-- )MP EQRA --><!-- MP EQ( --><![if !ie]><div id=mpnneq0029 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpeq0029ph,'1')
+	</script><layer id=mpeq0029pop bgcolor='&{DSMP.gNNPopupBgColor};' z-index=99 visibility=hidden top=0 left=0
+		 onmouseover="status=DSMP.gHidePopupMessage"  onmouseout="status=''" 
+		><a href='%26%7bDSMP-3.html' onmousedown='return MPHidePopup(event,mpeq0029pop)'
+			><img border=0 src='%26%7bDSMP-3.html' hspace='&{DSMP.gPopupEqnPadding};' vspace='&{DSMP.gPopupEqnPadding};'
+		></a></layer><layer id=mpeq0029 bgcolor='' z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		 onmouseover="status=DSMP.gShowPopupMessage" onmouseout="status=''" 
+		><a href='%26%7bDSMP-4.html' onmousedown='return MPShowPopup(mpeq0029,mpeq0029pop,event)'
+			><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+		></a></layer></div><script id=mpeq0029s3>
+	MPDeleteCode('eq0029')
+</script><![endif]><!-- )MP EQ --><!-- MP EQRA( --><script id=mpeq0028s1>
+	MPSetEqnAttrs('eq0028','',3,[[12,10,0,-1,-1],[16,13,0,-1,-1],[18,16,0,-1,-1],[17,16,1,-1,-1],[23,19,0,-1,-1],[29,23,1,-2,-2],[48,40,2,-3,-3]]);
+</script><!-- )MP EQRA --><!-- MP EQ( --><![if !ie]><div id=mpnneq0028 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpeq0028ph,'1')
+	</script><layer id=mpeq0028pop bgcolor='&{DSMP.gNNPopupBgColor};' z-index=99 visibility=hidden top=0 left=0
+		 onmouseover="status=DSMP.gHidePopupMessage"  onmouseout="status=''" 
+		><a href='%26%7bDSMP-3.html' onmousedown='return MPHidePopup(event,mpeq0028pop)'
+			><img border=0 src='%26%7bDSMP-3.html' hspace='&{DSMP.gPopupEqnPadding};' vspace='&{DSMP.gPopupEqnPadding};'
+		></a></layer><layer id=mpeq0028 bgcolor='' z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		 onmouseover="status=DSMP.gShowPopupMessage" onmouseout="status=''" 
+		><a href='%26%7bDSMP-4.html' onmousedown='return MPShowPopup(mpeq0028,mpeq0028pop,event)'
+			><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+		></a></layer></div><script id=mpeq0028s3>
+	MPDeleteCode('eq0028')
+</script><![endif]><!-- )MP EQ --><!-- MP EQRA( --><script id=mpeq0027s1>
+	MPSetEqnAttrs('eq0027','',3,[[104,23,4,-1,-1],[138,31,5,-1,-1],[174,39,7,-1,-1],[156,36,7,-1,-1],[207,48,9,-1,-1],[261,59,11,-2,-2],[433,97,18,-3,-3]]);
+</script><!-- )MP EQRA --><!-- MP EQ( --><![if !ie]><div id=mpnneq0027 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpeq0027ph,'1')
+	</script><layer id=mpeq0027pop bgcolor='&{DSMP.gNNPopupBgColor};' z-index=99 visibility=hidden top=0 left=0
+		 onmouseover="status=DSMP.gHidePopupMessage"  onmouseout="status=''" 
+		><a href='%26%7bDSMP-3.html' onmousedown='return MPHidePopup(event,mpeq0027pop)'
+			><img border=0 src='%26%7bDSMP-3.html' hspace='&{DSMP.gPopupEqnPadding};' vspace='&{DSMP.gPopupEqnPadding};'
+		></a></layer><layer id=mpeq0027 bgcolor='' z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		 onmouseover="status=DSMP.gShowPopupMessage" onmouseout="status=''" 
+		><a href='%26%7bDSMP-4.html' onmousedown='return MPShowPopup(mpeq0027,mpeq0027pop,event)'
+			><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+		></a></layer></div><script id=mpeq0027s3>
+	MPDeleteCode('eq0027')
+</script><![endif]><!-- )MP EQ --><!-- MP EQRA( --><script id=mpeq0026s1>
+	MPSetEqnAttrs('eq0026','',3,[[232,26,9,-1,-1],[309,33,12,-1,-1],[386,42,15,-1,-1],[348,39,14,-1,-1],[464,50,18,-1,-1],[582,64,23,-2,-2],[970,106,38,-3,-3]]);
+</script><!-- )MP EQRA --><!-- MP EQ( --><![if !ie]><div id=mpnneq0026 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpeq0026ph,'1')
+	</script><layer id=mpeq0026pop bgcolor='&{DSMP.gNNPopupBgColor};' z-index=99 visibility=hidden top=0 left=0
+		 onmouseover="status=DSMP.gHidePopupMessage"  onmouseout="status=''" 
+		><a href='%26%7bDSMP-3.html' onmousedown='return MPHidePopup(event,mpeq0026pop)'
+			><img border=0 src='%26%7bDSMP-3.html' hspace='&{DSMP.gPopupEqnPadding};' vspace='&{DSMP.gPopupEqnPadding};'
+		></a></layer><layer id=mpeq0026 bgcolor='' z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		 onmouseover="status=DSMP.gShowPopupMessage" onmouseout="status=''" 
+		><a href='%26%7bDSMP-4.html' onmousedown='return MPShowPopup(mpeq0026,mpeq0026pop,event)'
+			><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+		></a></layer></div><script id=mpeq0026s3>
+	MPDeleteCode('eq0026')
+</script><![endif]><!-- )MP EQ --><!-- MP EQRA( --><script id=mpeq0025s1>
+	MPSetEqnAttrs('eq0025','',3,[[66,15,4,-1,-1],[88,20,5,-1,-1],[111,25,7,-1,-1],[100,24,7,-1,-1],[134,30,8,-1,-1],[167,39,11,-2,-2],[277,65,18,-3,-3]]);
+</script><!-- )MP EQRA --><!-- MP EQ( --><![if !ie]><div id=mpnneq0025 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpeq0025ph,'1')
+	</script><layer id=mpeq0025pop bgcolor='&{DSMP.gNNPopupBgColor};' z-index=99 visibility=hidden top=0 left=0
+		 onmouseover="status=DSMP.gHidePopupMessage"  onmouseout="status=''" 
+		><a href='%26%7bDSMP-3.html' onmousedown='return MPHidePopup(event,mpeq0025pop)'
+			><img border=0 src='%26%7bDSMP-3.html' hspace='&{DSMP.gPopupEqnPadding};' vspace='&{DSMP.gPopupEqnPadding};'
+		></a></layer><layer id=mpeq0025 bgcolor='' z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		 onmouseover="status=DSMP.gShowPopupMessage" onmouseout="status=''" 
+		><a href='%26%7bDSMP-4.html' onmousedown='return MPShowPopup(mpeq0025,mpeq0025pop,event)'
+			><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+		></a></layer></div><script id=mpeq0025s3>
+	MPDeleteCode('eq0025')
+</script><![endif]><!-- )MP EQ --><!-- MP EQRA( --><script id=mpeq0024s1>
+	MPSetEqnAttrs('eq0024','',3,[[54,82,38,-1,-1],[72,109,51,-1,-1],[88,137,63,-1,-1],[81,124,58,-1,-1],[107,163,76,-1,-1],[135,203,96,-2,-2],[224,339,159,-3,-3]]);
+</script><!-- )MP EQRA --><!-- MP EQ( --><![if !ie]><div id=mpnneq0024 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpeq0024ph,'1')
+	</script><layer id=mpeq0024pop bgcolor='&{DSMP.gNNPopupBgColor};' z-index=99 visibility=hidden top=0 left=0
+		 onmouseover="status=DSMP.gHidePopupMessage"  onmouseout="status=''" 
+		><a href='%26%7bDSMP-3.html' onmousedown='return MPHidePopup(event,mpeq0024pop)'
+			><img border=0 src='%26%7bDSMP-3.html' hspace='&{DSMP.gPopupEqnPadding};' vspace='&{DSMP.gPopupEqnPadding};'
+		></a></layer><layer id=mpeq0024 bgcolor='' z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		 onmouseover="status=DSMP.gShowPopupMessage" onmouseout="status=''" 
+		><a href='%26%7bDSMP-4.html' onmousedown='return MPShowPopup(mpeq0024,mpeq0024pop,event)'
+			><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+		></a></layer></div><script id=mpeq0024s3>
+	MPDeleteCode('eq0024')
+</script><![endif]><!-- )MP EQ --><!-- MP EQRA( --><script id=mpeq0023s1>
+	MPSetEqnAttrs('eq0023','',3,[[207,14,4,-1,-1],[275,19,5,-1,-1],[342,24,7,-1,-1],[309,22,7,-1,-1],[411,30,9,-1,-1],[515,36,11,-2,-2],[859,60,18,-3,-3]]);
+</script><!-- )MP EQRA --><!-- MP EQ( --><![if !ie]><div id=mpnneq0023 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpeq0023ph,'1')
+	</script><layer id=mpeq0023pop bgcolor='&{DSMP.gNNPopupBgColor};' z-index=99 visibility=hidden top=0 left=0
+		 onmouseover="status=DSMP.gHidePopupMessage"  onmouseout="status=''" 
+		><a href='%26%7bDSMP-3.html' onmousedown='return MPHidePopup(event,mpeq0023pop)'
+			><img border=0 src='%26%7bDSMP-3.html' hspace='&{DSMP.gPopupEqnPadding};' vspace='&{DSMP.gPopupEqnPadding};'
+		></a></layer><layer id=mpeq0023 bgcolor='' z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		 onmouseover="status=DSMP.gShowPopupMessage" onmouseout="status=''" 
+		><a href='%26%7bDSMP-4.html' onmousedown='return MPShowPopup(mpeq0023,mpeq0023pop,event)'
+			><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+		></a></layer></div><script id=mpeq0023s3>
+	MPDeleteCode('eq0023')
+</script><![endif]><!-- )MP EQ --><!-- MP EQRA( --><script id=mpeq0022s1>
+	MPSetEqnAttrs('eq0022','',3,[[50,14,4,-1,-1],[67,19,5,-1,-1],[82,23,7,-1,-1],[74,21,7,-1,-1],[102,29,9,-1,-1],[126,36,11,-2,-2],[211,60,18,-3,-3]]);
+</script><!-- )MP EQRA --><!-- MP EQ( --><![if !ie]><div id=mpnneq0022 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpeq0022ph,'1')
+	</script><layer id=mpeq0022pop bgcolor='&{DSMP.gNNPopupBgColor};' z-index=99 visibility=hidden top=0 left=0
+		 onmouseover="status=DSMP.gHidePopupMessage"  onmouseout="status=''" 
+		><a href='%26%7bDSMP-3.html' onmousedown='return MPHidePopup(event,mpeq0022pop)'
+			><img border=0 src='%26%7bDSMP-3.html' hspace='&{DSMP.gPopupEqnPadding};' vspace='&{DSMP.gPopupEqnPadding};'
+		></a></layer><layer id=mpeq0022 bgcolor='' z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		 onmouseover="status=DSMP.gShowPopupMessage" onmouseout="status=''" 
+		><a href='%26%7bDSMP-4.html' onmousedown='return MPShowPopup(mpeq0022,mpeq0022pop,event)'
+			><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+		></a></layer></div><script id=mpeq0022s3>
+	MPDeleteCode('eq0022')
+</script><![endif]><!-- )MP EQ --><!-- MP SYRA( --><script id=mpch0003s1>
+	MPSetChAttrs('ch0003','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0003 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0003ph,'')
+	</script><layer id=mpch0003 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0003s3>
+	MPDeleteCode('ch0003')
+</script><![endif]><!-- )MP SY --><!-- MP SYRA( --><script id=mpch0002s1>
+	MPSetChAttrs('ch0002','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0002 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0002ph,'')
+	</script><layer id=mpch0002 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0002s3>
+	MPDeleteCode('ch0002')
+</script><![endif]><!-- )MP SY --><!-- MP EQRA( --><script id=mpeq0021s1>
+	MPSetEqnAttrs('eq0021','',3,[[238,14,4,-1,-1],[317,19,5,-1,-1],[396,23,7,-1,-1],[357,21,7,-1,-1],[478,29,9,-1,-1],[597,36,11,-2,-2],[995,60,18,-3,-3]]);
+</script><!-- )MP EQRA --><!-- MP EQ( --><![if !ie]><div id=mpnneq0021 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpeq0021ph,'1')
+	</script><layer id=mpeq0021pop bgcolor='&{DSMP.gNNPopupBgColor};' z-index=99 visibility=hidden top=0 left=0
+		 onmouseover="status=DSMP.gHidePopupMessage"  onmouseout="status=''" 
+		><a href='%26%7bDSMP-3.html' onmousedown='return MPHidePopup(event,mpeq0021pop)'
+			><img border=0 src='%26%7bDSMP-3.html' hspace='&{DSMP.gPopupEqnPadding};' vspace='&{DSMP.gPopupEqnPadding};'
+		></a></layer><layer id=mpeq0021 bgcolor='' z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		 onmouseover="status=DSMP.gShowPopupMessage" onmouseout="status=''" 
+		><a href='%26%7bDSMP-4.html' onmousedown='return MPShowPopup(mpeq0021,mpeq0021pop,event)'
+			><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+		></a></layer></div><script id=mpeq0021s3>
+	MPDeleteCode('eq0021')
+</script><![endif]><!-- )MP EQ --><!-- MP EQRA( --><script id=mpeq0020s1>
+	MPSetEqnAttrs('eq0020','',3,[[196,34,14,-1,-1],[261,45,18,-1,-1],[326,57,24,-1,-1],[294,51,22,-1,-1],[392,69,28,-1,-1],[492,85,35,-2,-2],[820,144,60,-3,-3]]);
+</script><!-- )MP EQRA --><!-- MP EQ( --><![if !ie]><div id=mpnneq0020 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpeq0020ph,'1')
+	</script><layer id=mpeq0020pop bgcolor='&{DSMP.gNNPopupBgColor};' z-index=99 visibility=hidden top=0 left=0
+		 onmouseover="status=DSMP.gHidePopupMessage"  onmouseout="status=''" 
+		><a href='%26%7bDSMP-3.html' onmousedown='return MPHidePopup(event,mpeq0020pop)'
+			><img border=0 src='%26%7bDSMP-3.html' hspace='&{DSMP.gPopupEqnPadding};' vspace='&{DSMP.gPopupEqnPadding};'
+		></a></layer><layer id=mpeq0020 bgcolor='' z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		 onmouseover="status=DSMP.gShowPopupMessage" onmouseout="status=''" 
+		><a href='%26%7bDSMP-4.html' onmousedown='return MPShowPopup(mpeq0020,mpeq0020pop,event)'
+			><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+		></a></layer></div><script id=mpeq0020s3>
+	MPDeleteCode('eq0020')
+</script><![endif]><!-- )MP EQ --><!-- MP EQRA( --><script id=mpeq0019s1>
+	MPSetEqnAttrs('eq0019','',3,[[11,9,0,-1,-1],[15,11,0,-1,-1],[19,12,0,-1,-1],[16,12,0,-1,-1],[21,15,0,-1,-1],[26,20,0,-2,-2],[44,32,0,-3,-3]]);
+</script><!-- )MP EQRA --><!-- MP EQ( --><![if !ie]><div id=mpnneq0019 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpeq0019ph,'1')
+	</script><layer id=mpeq0019pop bgcolor='&{DSMP.gNNPopupBgColor};' z-index=99 visibility=hidden top=0 left=0
+		 onmouseover="status=DSMP.gHidePopupMessage"  onmouseout="status=''" 
+		><a href='%26%7bDSMP-3.html' onmousedown='return MPHidePopup(event,mpeq0019pop)'
+			><img border=0 src='%26%7bDSMP-3.html' hspace='&{DSMP.gPopupEqnPadding};' vspace='&{DSMP.gPopupEqnPadding};'
+		></a></layer><layer id=mpeq0019 bgcolor='' z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		 onmouseover="status=DSMP.gShowPopupMessage" onmouseout="status=''" 
+		><a href='%26%7bDSMP-4.html' onmousedown='return MPShowPopup(mpeq0019,mpeq0019pop,event)'
+			><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+		></a></layer></div><script id=mpeq0019s3>
+	MPDeleteCode('eq0019')
+</script><![endif]><!-- )MP EQ -->
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>As with the mixing problems, we could make the population
+problems more complicated by changing the circumstances at some point in
+time.  For instance, if at some point in
+time the local bird population saw a decrease due to disease they wouldn’t eat
+as much after that point and a second differential equation to govern the time
+after this point.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Let’s now take a look at the final type of problem that
+we’ll be modeling in this section.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><b >Falling Body</b></p>
+
+<p class=MsoNormal>This will not be the first time that we’ve looked into
+falling bodies.  If you recall, we looked
+at one of these when we were looking at <a href="DirectionFields.html">Direction
+Fields</a>.  In that section we saw that
+the basic equation that we’ll use is <st1:PersonName w:st="on"><st1:City w:st="on">Newton</st1:City></st1:PersonName>’s
+Second Law of Motion.</p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%"
+ style='width:100.0%;border-collapse:collapse'>
+ <tr>
+  <td align=left style='width:30%' nowrap>
+  <p class=MTDisplayEquation ></p>
+  </td>
+  <td align=center style='width:40%' nowrap>
+  <p class=MTDisplayEquation ><!-- MP EQPH( --><script id=mpeq0033s1>
+	MPSetEqnAttrs('eq0033','',3,[[61,14,4,-1,-1],[81,19,5,-1,-1],[102,23,7,-1,-1],[92,21,7,-1,-1],[123,29,9,-1,-1],[154,36,11,-2,-2],[256,60,18,-3,-3]])
+</script><![if !ie]><span id=mpnneq0033ph class=MPNNCode
+	><img border=0 align=bottom name=mpeq0033ph src="%26%7bDSMP.html" height="&{DSMP.gPlaceholderHeight};"
+		width="&{DSMP.gPlaceholderWidth};" 
+	><img border=0 align=top src="%26%7bDSMP.html" width=1 
+		height="&{DSMP.gPlaceholder2Height};" 
+>&nbsp;</span><![endif]><script id=mpeq0033s2>
+	MPEquation()
+</script><!-- )MP EQPH --><span
+  style='position:relative;top:7.0pt'></span></p>
+  </td>
+  <td align=right style='width:30%' nowrap>
+  <p class=MTDisplayEquation >&nbsp;</p>
+  </td>
+ </tr>
+</table><!-- MP EQRA( --><script id=mpeq0033s1>
+	MPSetEqnAttrs('eq0033','',3,[[61,14,4,-1,-1],[81,19,5,-1,-1],[102,23,7,-1,-1],[92,21,7,-1,-1],[123,29,9,-1,-1],[154,36,11,-2,-2],[256,60,18,-3,-3]]);
+</script><!-- )MP EQRA --><!-- MP EQ( --><![if !ie]><div id=mpnneq0033 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpeq0033ph,'1')
+	</script><layer id=mpeq0033pop bgcolor='&{DSMP.gNNPopupBgColor};' z-index=99 visibility=hidden top=0 left=0
+		 onmouseover="status=DSMP.gHidePopupMessage"  onmouseout="status=''" 
+		><a href='%26%7bDSMP-3.html' onmousedown='return MPHidePopup(event,mpeq0033pop)'
+			><img border=0 src='%26%7bDSMP-3.html' hspace='&{DSMP.gPopupEqnPadding};' vspace='&{DSMP.gPopupEqnPadding};'
+		></a></layer><layer id=mpeq0033 bgcolor='' z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		 onmouseover="status=DSMP.gShowPopupMessage" onmouseout="status=''" 
+		><a href='%26%7bDSMP-4.html' onmousedown='return MPShowPopup(mpeq0033,mpeq0033pop,event)'
+			><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+		></a></layer></div><script id=mpeq0033s3>
+	MPDeleteCode('eq0033')
+</script><![endif]><!-- )MP EQ -->
+
+
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>The two forces that we’ll be looking at here are gravity and
+air resistance.  The main issue with
+these problems is to correctly define conventions and then remember to keep
+those conventions.  By this we mean
+define which direction will be termed the positive direction and then make sure
+that all your forces match that convention. 
+This is especially important for air resistance as this is usually
+dependent on the velocity and so the “sign” of the velocity can and does affect
+the “sign” of the air resistance force.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Let’s take a look at an example.</p>
+
+<p class=MsoNormal><a name="First_Model_Ex4"></a>&nbsp;</p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=5 width="100%" bordercolor="black"
+ style='width:100.0%;border-collapse:collapse'>
+ <tr >
+  <td width="100%" valign=top style='width:100.0%;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-left:0in;text-indent:0in'><b
+  ><i >Example 4  </i></b>A
+  50 kg mass is shot from a cannon straight up with an initial velocity of
+  10m/s off a bridge that is 100 meters above the ground.  If air resistance is given by 5<i
+  >v</i> determine the velocity of the mass
+  when it hits the ground.</p>
+  <p class=MsoNormal>&nbsp;</p>
+  <p class=MsoNormal><b ><i
+  >Solution</i></b></p>
+  <p class=MsoNormal>First, notice that when we say straight up, we really mean
+  straight up, but in such a way that it will miss the bridge on the way back
+  down.  Here is a sketch of the
+  situation.</p>
+  <p class=MsoNormal align=center style='text-align:center'><!--[if gte vml 1]><v:shape id="Picture_x0020_37"
+   o:spid="_x0000_i1045" type="#_x0000_t75" alt="Model_Ex4" style='width:230.25pt;
+   height:157.5pt;visibility:visible;mso-wrap-style:square'>
+   <v:imagedata src="Modeling_files/image004.gif" o:title="Model_Ex4" />
+  </v:shape><![endif]--><![if !vml]><img border=0 width=307 height=210
+  src="Modeling_files/image004.gif" alt="Model_Ex4" v:shapes="Picture_x0020_37"><![endif]></p>
+  <p class=MsoNormal align=center style='text-align:center'>&nbsp;</p>
+  <p class=MsoNormal>Notice the conventions that we set up for this
+  problem.  Since the vast majority of
+  the motion will be in the downward direction we decided to assume that
+  everything acting in the downward direction should be positive.  Note that we also defined the “zero
+  position” as the bridge, which makes the ground have a “position” of 100.</p>
+  <p class=MsoNormal>&nbsp;</p>
+  <p class=MsoNormal>Okay, if you think about it we actually have two
+  situations here.  The initial phase in
+  which the mass is rising in the air and the second phase when the mass is on
+  its way down.  We will need to examine
+  both situations and set up an IVP for each. 
+  We will do this simultaneously. 
+  Here are the forces that are acting on the object on the way up and on
+  the way down.</p>
+  <p class=MsoNormal align=center style='text-align:center'><!--[if gte vml 1]><v:shape id="Picture_x0020_38"
+   o:spid="_x0000_i1044" type="#_x0000_t75" alt="Model_Ex4b" style='width:228pt;
+   height:95.25pt;visibility:visible;mso-wrap-style:square'>
+   <v:imagedata src="Modeling_files/image005.gif" o:title="Model_Ex4b" />
+  </v:shape><![endif]--><![if !vml]><img border=0 width=304 height=127
+  src="Modeling_files/image005.gif" alt="Model_Ex4b" v:shapes="Picture_x0020_38"><![endif]></p>
+  <p class=MsoNormal align=center style='text-align:center'>&nbsp;</p>
+  <p class=MsoNormal>Notice that the air resistance force needs a negative in
+  both cases in order to get the correct “sign” or direction on the force.  When the mass is moving upwards the
+  velocity (and hence <i >v</i>) is negative,
+  yet the force must be acting in a downward direction.  Therefore, the “-” must be part of the force
+  to make sure that, overall, the force is positive and hence acting in the
+  downward direction.  Likewise, when the
+  mass is moving downward the velocity (and so <i >v</i>) is positive.  Therefore,
+  the air resistance must also have a “-” in order to make sure that it’s
+  negative and hence acting in the upward direction.</p>
+  <p class=MsoNormal>&nbsp;</p>
+  <p class=MsoNormal>So, the IVP for each of these situations are.</p>
+  <p class=MTDisplayEquation>                              <!-- MP EQPH( --><script id=mpeq0034s1>
+	MPSetEqnAttrs('eq0034','',3,[[215,50,23,-1,-1],[287,65,30,-1,-1],[359,81,39,-1,-1],[322,74,36,-1,-1],[432,97,46,-1,-1],[538,123,59,-2,-2],[898,204,97,-3,-3]])
+</script><![if !ie]><span id=mpnneq0034ph class=MPNNCode
+	><img border=0 align=bottom name=mpeq0034ph src="%26%7bDSMP.html" height="&{DSMP.gPlaceholderHeight};"
+		width="&{DSMP.gPlaceholderWidth};" 
+	><img border=0 align=top src="%26%7bDSMP.html" width=1 
+		height="&{DSMP.gPlaceholder2Height};" 
+>&nbsp;</span><![endif]><script id=mpeq0034s2>
+	MPEquation()
+</script><!-- )MP EQPH --></p>
+  <p class=MsoNormal>&nbsp;</p>
+  <p class=MsoNormal>In the second IVP, the <i >t</i><sub>0</sub>
+  is the time when the object is at the highest point and is ready to start on
+  the way down.  Note that at this time
+  the velocity would be zero.  Also note
+  that the initial condition of the first differential equation will have to be
+  negative since the initial velocity is upward.</p>
+  <p class=MsoNormal>&nbsp;</p>
+  <p class=MsoNormal>In this case, the differential equation for both of the
+  situations is identical.  This won’t
+  always happen, but in those cases where it does, we can ignore the second IVP
+  and just let the first govern the whole process.</p>
+  <p class=MsoNormal>&nbsp;</p>
+  <p class=MsoNormal>So, let’s actually plug in for the mass and gravity (we’ll
+  be using <i >g</i> = 9.8 m/s<sup>2</sup>
+  here).  We’ll go ahead and divide out
+  the mass while we’re at it since we’ll need to do that eventually anyway.</p>
+  <p class=MTDisplayEquation>                                 <!-- MP EQPH( --><script id=mpeq0035s1>
+	MPSetEqnAttrs('eq0035','',3,[[232,26,9,-1,-1],[309,33,12,-1,-1],[388,41,15,-1,-1],[349,38,14,-1,-1],[464,49,18,-1,-1],[582,63,23,-2,-2],[969,104,38,-3,-3]])
+</script><![if !ie]><span id=mpnneq0035ph class=MPNNCode
+	><img border=0 align=bottom name=mpeq0035ph src="%26%7bDSMP.html" height="&{DSMP.gPlaceholderHeight};"
+		width="&{DSMP.gPlaceholderWidth};" 
+	><img border=0 align=top src="%26%7bDSMP.html" width=1 
+		height="&{DSMP.gPlaceholder2Height};" 
+>&nbsp;</span><![endif]><script id=mpeq0035s2>
+	MPEquation()
+</script><!-- )MP EQPH --></p>
+  <p class=MsoNormal>&nbsp;</p>
+  <p class=MsoNormal>This is a simple linear differential equation to solve so
+  we’ll leave the details to you.  Upon
+  solving we arrive at the following equation for the velocity of the object at
+  any time <i >t</i>.</p>
+  <p class=MTDisplayEquation>                                                          <!-- MP EQPH( --><script id=mpeq0036s1>
+	MPSetEqnAttrs('eq0036','',3,[[86,18,4,-1,-1],[114,25,5,-1,-1],[143,31,7,-1,-1],[129,27,7,-1,-1],[170,37,8,-1,-1],[215,45,11,-2,-2],[357,77,18,-3,-3]])
+</script><![if !ie]><span id=mpnneq0036ph class=MPNNCode
+	><img border=0 align=bottom name=mpeq0036ph src="%26%7bDSMP.html" height="&{DSMP.gPlaceholderHeight};"
+		width="&{DSMP.gPlaceholderWidth};" 
+	><img border=0 align=top src="%26%7bDSMP.html" width=1 
+		height="&{DSMP.gPlaceholder2Height};" 
+>&nbsp;</span><![endif]><script id=mpeq0036s2>
+	MPEquation()
+</script><!-- )MP EQPH --></p>
+  <p class=MsoNormal>&nbsp;</p>
+  <p class=MsoNormal>Okay, we want the velocity of the ball when it hits the
+  ground.  Of course we need to know <i
+  >when</i> it hits the ground before we can
+  ask this.  In order to find this we
+  will need to find the position function. 
+  This is easy enough to do.</p>
+  <p class=MTDisplayEquation>                              <!-- MP EQPH( --><script id=mpeq0037s1>
+	MPSetEqnAttrs('eq0037','',3,[[251,20,6,-1,-1],[335,27,8,-1,-1],[419,31,9,-1,-1],[377,30,9,-1,-1],[503,40,12,-1,-1],[629,50,15,-2,-2],[1049,82,24,-3,-3]])
+</script><![if !ie]><span id=mpnneq0037ph class=MPNNCode
+	><img border=0 align=bottom name=mpeq0037ph src="%26%7bDSMP.html" height="&{DSMP.gPlaceholderHeight};"
+		width="&{DSMP.gPlaceholderWidth};" 
+	><img border=0 align=top src="%26%7bDSMP.html" width=1 
+		height="&{DSMP.gPlaceholder2Height};" 
+>&nbsp;</span><![endif]><script id=mpeq0037s2>
+	MPEquation()
+</script><!-- )MP EQPH --></p>
+  <p class=MsoNormal>&nbsp;</p>
+  <p class=MsoNormal>We can now use the fact that I took the convention that <i
+  >s</i>(0) = 0 to find that <i
+  >c</i> = -1080.  The position at any time is then.</p>
+  <p class=MTDisplayEquation>                                                  <!-- MP EQPH( --><script id=mpeq0038s1>
+	MPSetEqnAttrs('eq0038','',3,[[130,18,4,-1,-1],[173,25,5,-1,-1],[218,31,7,-1,-1],[196,27,7,-1,-1],[261,37,8,-1,-1],[327,45,11,-2,-2],[545,77,18,-3,-3]])
+</script><![if !ie]><span id=mpnneq0038ph class=MPNNCode
+	><img border=0 align=bottom name=mpeq0038ph src="%26%7bDSMP.html" height="&{DSMP.gPlaceholderHeight};"
+		width="&{DSMP.gPlaceholderWidth};" 
+	><img border=0 align=top src="%26%7bDSMP.html" width=1 
+		height="&{DSMP.gPlaceholder2Height};" 
+>&nbsp;</span><![endif]><script id=mpeq0038s2>
+	MPEquation()
+</script><!-- )MP EQPH --></p>
+  <p class=MsoNormal>&nbsp;</p>
+  <p class=MsoNormal>To determine when the mass hits the ground we just need to
+  solve.</p>
+  <p class=MTDisplayEquation>                        <!-- MP EQPH( --><script id=mpeq0039s1>
+	MPSetEqnAttrs('eq0039','',3,[[286,16,2,-1,-1],[381,21,2,-1,-1],[478,26,3,-1,-1],[432,24,4,-1,-1],[572,31,3,-1,-1],[717,39,5,-2,-2],[1194,66,9,-3,-3]])
+</script><![if !ie]><span id=mpnneq0039ph class=MPNNCode
+	><img border=0 align=bottom name=mpeq0039ph src="%26%7bDSMP.html" height="&{DSMP.gPlaceholderHeight};"
+		width="&{DSMP.gPlaceholderWidth};" 
+	><img border=0 align=top src="%26%7bDSMP.html" width=1 
+		height="&{DSMP.gPlaceholder2Height};" 
+>&nbsp;</span><![endif]><script id=mpeq0039s2>
+	MPEquation()
+</script><!-- )MP EQPH --></p>
+  <p class=MsoNormal>&nbsp;</p>
+  <p class=MsoNormal>We’ve got two solutions here, but since we are starting
+  things at <i >t</i> = 0, the negative is
+  clearly the incorrect value.  Therefore
+  the mass hits the ground at <i >t</i> =
+  5.98147.  The velocity of the object
+  upon hitting the ground is then.</p>
+  <p class=MTDisplayEquation>                                                      <!-- MP EQPH( --><script id=mpeq0040s1>
+	MPSetEqnAttrs('eq0040','',3,[[109,14,4,-1,-1],[146,19,5,-1,-1],[183,23,7,-1,-1],[165,21,7,-1,-1],[218,29,9,-1,-1],[275,36,11,-2,-2],[456,60,18,-3,-3]])
+</script><![if !ie]><span id=mpnneq0040ph class=MPNNCode
+	><img border=0 align=bottom name=mpeq0040ph src="%26%7bDSMP.html" height="&{DSMP.gPlaceholderHeight};"
+		width="&{DSMP.gPlaceholderWidth};" 
+	><img border=0 align=top src="%26%7bDSMP.html" width=1 
+		height="&{DSMP.gPlaceholder2Height};" 
+>&nbsp;</span><![endif]><script id=mpeq0040s2>
+	MPEquation()
+</script><!-- )MP EQPH --></p>
+  </td>
+ </tr>
+</table><!-- MP EQRA( --><script id=mpeq0040s1>
+	MPSetEqnAttrs('eq0040','',3,[[109,14,4,-1,-1],[146,19,5,-1,-1],[183,23,7,-1,-1],[165,21,7,-1,-1],[218,29,9,-1,-1],[275,36,11,-2,-2],[456,60,18,-3,-3]]);
+</script><!-- )MP EQRA --><!-- MP EQ( --><![if !ie]><div id=mpnneq0040 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpeq0040ph,'1')
+	</script><layer id=mpeq0040pop bgcolor='&{DSMP.gNNPopupBgColor};' z-index=99 visibility=hidden top=0 left=0
+		 onmouseover="status=DSMP.gHidePopupMessage"  onmouseout="status=''" 
+		><a href='%26%7bDSMP-3.html' onmousedown='return MPHidePopup(event,mpeq0040pop)'
+			><img border=0 src='%26%7bDSMP-3.html' hspace='&{DSMP.gPopupEqnPadding};' vspace='&{DSMP.gPopupEqnPadding};'
+		></a></layer><layer id=mpeq0040 bgcolor='' z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		 onmouseover="status=DSMP.gShowPopupMessage" onmouseout="status=''" 
+		><a href='%26%7bDSMP-4.html' onmousedown='return MPShowPopup(mpeq0040,mpeq0040pop,event)'
+			><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+		></a></layer></div><script id=mpeq0040s3>
+	MPDeleteCode('eq0040')
+</script><![endif]><!-- )MP EQ --><!-- MP EQRA( --><script id=mpeq0039s1>
+	MPSetEqnAttrs('eq0039','',3,[[286,16,2,-1,-1],[381,21,2,-1,-1],[478,26,3,-1,-1],[432,24,4,-1,-1],[572,31,3,-1,-1],[717,39,5,-2,-2],[1194,66,9,-3,-3]]);
+</script><!-- )MP EQRA --><!-- MP EQ( --><![if !ie]><div id=mpnneq0039 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpeq0039ph,'1')
+	</script><layer id=mpeq0039pop bgcolor='&{DSMP.gNNPopupBgColor};' z-index=99 visibility=hidden top=0 left=0
+		 onmouseover="status=DSMP.gHidePopupMessage"  onmouseout="status=''" 
+		><a href='%26%7bDSMP-3.html' onmousedown='return MPHidePopup(event,mpeq0039pop)'
+			><img border=0 src='%26%7bDSMP-3.html' hspace='&{DSMP.gPopupEqnPadding};' vspace='&{DSMP.gPopupEqnPadding};'
+		></a></layer><layer id=mpeq0039 bgcolor='' z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		 onmouseover="status=DSMP.gShowPopupMessage" onmouseout="status=''" 
+		><a href='%26%7bDSMP-4.html' onmousedown='return MPShowPopup(mpeq0039,mpeq0039pop,event)'
+			><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+		></a></layer></div><script id=mpeq0039s3>
+	MPDeleteCode('eq0039')
+</script><![endif]><!-- )MP EQ --><!-- MP EQRA( --><script id=mpeq0038s1>
+	MPSetEqnAttrs('eq0038','',3,[[130,18,4,-1,-1],[173,25,5,-1,-1],[218,31,7,-1,-1],[196,27,7,-1,-1],[261,37,8,-1,-1],[327,45,11,-2,-2],[545,77,18,-3,-3]]);
+</script><!-- )MP EQRA --><!-- MP EQ( --><![if !ie]><div id=mpnneq0038 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpeq0038ph,'1')
+	</script><layer id=mpeq0038pop bgcolor='&{DSMP.gNNPopupBgColor};' z-index=99 visibility=hidden top=0 left=0
+		 onmouseover="status=DSMP.gHidePopupMessage"  onmouseout="status=''" 
+		><a href='%26%7bDSMP-3.html' onmousedown='return MPHidePopup(event,mpeq0038pop)'
+			><img border=0 src='%26%7bDSMP-3.html' hspace='&{DSMP.gPopupEqnPadding};' vspace='&{DSMP.gPopupEqnPadding};'
+		></a></layer><layer id=mpeq0038 bgcolor='' z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		 onmouseover="status=DSMP.gShowPopupMessage" onmouseout="status=''" 
+		><a href='%26%7bDSMP-4.html' onmousedown='return MPShowPopup(mpeq0038,mpeq0038pop,event)'
+			><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+		></a></layer></div><script id=mpeq0038s3>
+	MPDeleteCode('eq0038')
+</script><![endif]><!-- )MP EQ --><!-- MP EQRA( --><script id=mpeq0037s1>
+	MPSetEqnAttrs('eq0037','',3,[[251,20,6,-1,-1],[335,27,8,-1,-1],[419,31,9,-1,-1],[377,30,9,-1,-1],[503,40,12,-1,-1],[629,50,15,-2,-2],[1049,82,24,-3,-3]]);
+</script><!-- )MP EQRA --><!-- MP EQ( --><![if !ie]><div id=mpnneq0037 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpeq0037ph,'1')
+	</script><layer id=mpeq0037pop bgcolor='&{DSMP.gNNPopupBgColor};' z-index=99 visibility=hidden top=0 left=0
+		 onmouseover="status=DSMP.gHidePopupMessage"  onmouseout="status=''" 
+		><a href='%26%7bDSMP-3.html' onmousedown='return MPHidePopup(event,mpeq0037pop)'
+			><img border=0 src='%26%7bDSMP-3.html' hspace='&{DSMP.gPopupEqnPadding};' vspace='&{DSMP.gPopupEqnPadding};'
+		></a></layer><layer id=mpeq0037 bgcolor='' z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		 onmouseover="status=DSMP.gShowPopupMessage" onmouseout="status=''" 
+		><a href='%26%7bDSMP-4.html' onmousedown='return MPShowPopup(mpeq0037,mpeq0037pop,event)'
+			><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+		></a></layer></div><script id=mpeq0037s3>
+	MPDeleteCode('eq0037')
+</script><![endif]><!-- )MP EQ --><!-- MP EQRA( --><script id=mpeq0036s1>
+	MPSetEqnAttrs('eq0036','',3,[[86,18,4,-1,-1],[114,25,5,-1,-1],[143,31,7,-1,-1],[129,27,7,-1,-1],[170,37,8,-1,-1],[215,45,11,-2,-2],[357,77,18,-3,-3]]);
+</script><!-- )MP EQRA --><!-- MP EQ( --><![if !ie]><div id=mpnneq0036 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpeq0036ph,'1')
+	</script><layer id=mpeq0036pop bgcolor='&{DSMP.gNNPopupBgColor};' z-index=99 visibility=hidden top=0 left=0
+		 onmouseover="status=DSMP.gHidePopupMessage"  onmouseout="status=''" 
+		><a href='%26%7bDSMP-3.html' onmousedown='return MPHidePopup(event,mpeq0036pop)'
+			><img border=0 src='%26%7bDSMP-3.html' hspace='&{DSMP.gPopupEqnPadding};' vspace='&{DSMP.gPopupEqnPadding};'
+		></a></layer><layer id=mpeq0036 bgcolor='' z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		 onmouseover="status=DSMP.gShowPopupMessage" onmouseout="status=''" 
+		><a href='%26%7bDSMP-4.html' onmousedown='return MPShowPopup(mpeq0036,mpeq0036pop,event)'
+			><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+		></a></layer></div><script id=mpeq0036s3>
+	MPDeleteCode('eq0036')
+</script><![endif]><!-- )MP EQ --><!-- MP EQRA( --><script id=mpeq0035s1>
+	MPSetEqnAttrs('eq0035','',3,[[232,26,9,-1,-1],[309,33,12,-1,-1],[388,41,15,-1,-1],[349,38,14,-1,-1],[464,49,18,-1,-1],[582,63,23,-2,-2],[969,104,38,-3,-3]]);
+</script><!-- )MP EQRA --><!-- MP EQ( --><![if !ie]><div id=mpnneq0035 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpeq0035ph,'1')
+	</script><layer id=mpeq0035pop bgcolor='&{DSMP.gNNPopupBgColor};' z-index=99 visibility=hidden top=0 left=0
+		 onmouseover="status=DSMP.gHidePopupMessage"  onmouseout="status=''" 
+		><a href='%26%7bDSMP-3.html' onmousedown='return MPHidePopup(event,mpeq0035pop)'
+			><img border=0 src='%26%7bDSMP-3.html' hspace='&{DSMP.gPopupEqnPadding};' vspace='&{DSMP.gPopupEqnPadding};'
+		></a></layer><layer id=mpeq0035 bgcolor='' z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		 onmouseover="status=DSMP.gShowPopupMessage" onmouseout="status=''" 
+		><a href='%26%7bDSMP-4.html' onmousedown='return MPShowPopup(mpeq0035,mpeq0035pop,event)'
+			><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+		></a></layer></div><script id=mpeq0035s3>
+	MPDeleteCode('eq0035')
+</script><![endif]><!-- )MP EQ --><!-- MP EQRA( --><script id=mpeq0034s1>
+	MPSetEqnAttrs('eq0034','',3,[[215,50,23,-1,-1],[287,65,30,-1,-1],[359,81,39,-1,-1],[322,74,36,-1,-1],[432,97,46,-1,-1],[538,123,59,-2,-2],[898,204,97,-3,-3]]);
+</script><!-- )MP EQRA --><!-- MP EQ( --><![if !ie]><div id=mpnneq0034 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpeq0034ph,'1')
+	</script><layer id=mpeq0034pop bgcolor='&{DSMP.gNNPopupBgColor};' z-index=99 visibility=hidden top=0 left=0
+		 onmouseover="status=DSMP.gHidePopupMessage"  onmouseout="status=''" 
+		><a href='%26%7bDSMP-3.html' onmousedown='return MPHidePopup(event,mpeq0034pop)'
+			><img border=0 src='%26%7bDSMP-3.html' hspace='&{DSMP.gPopupEqnPadding};' vspace='&{DSMP.gPopupEqnPadding};'
+		></a></layer><layer id=mpeq0034 bgcolor='' z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		 onmouseover="status=DSMP.gShowPopupMessage" onmouseout="status=''" 
+		><a href='%26%7bDSMP-4.html' onmousedown='return MPShowPopup(mpeq0034,mpeq0034pop,event)'
+			><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+		></a></layer></div><script id=mpeq0034s3>
+	MPDeleteCode('eq0034')
+</script><![endif]><!-- )MP EQ -->
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>This last example gave us an example of a situation where
+the two differential equations needed for the problem ended up being identical
+and so we didn’t need the second one after all. 
+Be careful however to not always expect this.  We could very easily change this problem so
+that it required two different differential equations.  For instance we could have had a parachute on
+the mass open at the top of its arc changing its air resistance.  This would have completely changed the second
+differential equation and forced us to use it as well.  Or, we could have put a river under the
+bridge so that before it actually hit the ground it would have first had to go
+through some water which would have a different “air” resistance for that phase
+necessitating a new differential equation for that portion.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Or, we could be really crazy and have both the parachute and
+the river which would then require three IVP’s to be solved before we
+determined the velocity of the mass before it actually hits the solid ground.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Before leaving this section let’s work a couple examples
+illustrating the importance of remembering the conventions that you set up for
+the positive direction in these problems.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Awhile back I gave my students a problem in which a sky
+diver jumps out of a plane.  Most of my
+students are engineering majors and following the standard convention from most
+of their engineering classes they defined the positive direction as upward,
+despite the fact that all the motion in the problem was downward.  There is nothing wrong with this assumption,
+however, because they forgot the convention that up was positive they did not
+correctly deal with the air resistance which caused them to get the incorrect
+answer.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>So, let’s take a look at the problem and set up the IVP that
+will give the sky diver's velocity at any time <i >t</i>.</p>
+
+<p class=MsoNormal><a name="First_Model_Ex5"></a>&nbsp;</p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=5 width="100%" bordercolor="black"
+ style='width:100.0%;border-collapse:collapse'>
+ <tr >
+  <td width="100%" valign=top style='width:100.0%;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-left:0in;text-indent:0in'><b
+  ><i >Example 5  </i></b>Set
+  up the IVP that will give the velocity of a 60 kg sky diver that jumps out of
+  a plane with no initial velocity and an air resistance of <!-- MP EQPH( --><script id=mpeq0041s1>
+	MPSetEqnAttrs('eq0041','',3,[[25,15,5,-1,-1],[32,20,6,-1,-1],[41,27,10,-1,-1],[37,23,9,-1,-1],[49,32,11,-1,-1],[61,41,15,-2,-2],[101,66,23,-3,-3]])
+</script><![if !ie]><span id=mpnneq0041ph class=MPNNCode
+	><img border=0 align=bottom name=mpeq0041ph src="%26%7bDSMP.html" height="&{DSMP.gPlaceholderHeight};"
+		width="&{DSMP.gPlaceholderWidth};" 
+	><img border=0 align=top src="%26%7bDSMP.html" width=1 
+		height="&{DSMP.gPlaceholder2Height};" 
+></span><![endif]><script id=mpeq0041s2>
+	MPEquation()
+</script><!-- )MP EQPH -->.  For this example assume that the positive
+  direction is upward.</p>
+  <p class=MsoNormal>&nbsp;</p>
+  <p class=MsoNormal><b ><i
+  >Solution</i></b></p>
+  <p class=MsoNormal>Here are the forces that are acting on the sky diver</p>
+  <p class=MsoNormal align=center style='text-align:center'><!--[if gte vml 1]><v:shape id="Picture_x0020_47"
+   o:spid="_x0000_i1035" type="#_x0000_t75" alt="Model_Ex5" style='width:106.5pt;
+   height:112.5pt;visibility:visible;mso-wrap-style:square'>
+   <v:imagedata src="Modeling_files/image006.gif" o:title="Model_Ex5" />
+  </v:shape><![endif]--><![if !vml]><img border=0 width=142 height=150
+  src="Modeling_files/image006.gif" alt="Model_Ex5" v:shapes="Picture_x0020_47"><![endif]></p>
+  <p class=MsoNormal>Because of the conventions the force due to gravity is
+  negative and the force due to air resistance is positive.  As set up, these forces have the correct
+  sign and so the IVP is</p>
+  <p class=MTDisplayEquation>                                         <!-- MP EQPH( --><script id=mpeq0042s1>
+	MPSetEqnAttrs('eq0042','',3,[[184,15,5,-1,-1],[246,20,6,-1,-1],[308,27,10,-1,-1],[277,23,9,-1,-1],[370,32,11,-1,-1],[462,41,15,-2,-2],[770,66,23,-3,-3]])
+</script><![if !ie]><span id=mpnneq0042ph class=MPNNCode
+	><img border=0 align=bottom name=mpeq0042ph src="%26%7bDSMP.html" height="&{DSMP.gPlaceholderHeight};"
+		width="&{DSMP.gPlaceholderWidth};" 
+	><img border=0 align=top src="%26%7bDSMP.html" width=1 
+		height="&{DSMP.gPlaceholder2Height};" 
+>&nbsp;</span><![endif]><script id=mpeq0042s2>
+	MPEquation()
+</script><!-- )MP EQPH --></p>
+  <p class=MsoNormal>&nbsp;</p>
+  <p class=MsoNormal>The problem arises when you go to remove the absolute
+  value bars.  In order to do the problem
+  they do need to be removed.  This is
+  where most of the students made their mistake.  Because they had forgotten about the
+  convention and the direction of motion they just dropped the absolute value
+  bars to get.</p>
+  <p class=MTDisplayEquation>                       <!-- MP EQPH( --><script id=mpeq0043s1>
+	MPSetEqnAttrs('eq0043','',3,[[295,14,4,-1,-1],[393,19,5,-1,-1],[492,23,7,-1,-1],[443,21,7,-1,-1],[591,29,9,-1,-1],[739,36,11,-2,-2],[1231,60,18,-3,-3]])
+</script><![if !ie]><span id=mpnneq0043ph class=MPNNCode
+	><img border=0 align=bottom name=mpeq0043ph src="%26%7bDSMP.html" height="&{DSMP.gPlaceholderHeight};"
+		width="&{DSMP.gPlaceholderWidth};" 
+	><img border=0 align=top src="%26%7bDSMP.html" width=1 
+		height="&{DSMP.gPlaceholder2Height};" 
+>&nbsp;</span><![endif]><script id=mpeq0043s2>
+	MPEquation()
+</script><!-- )MP EQPH --></p>
+  <p class=MsoNormal>&nbsp;</p>
+  <p class=MsoNormal>So, why is this incorrect? 
+  Well remember that the convention is that positive is upward.  However in this case the object is moving
+  downward and so <i >v</i> is negative!  Upon dropping the absolute value bars the
+  air resistance became a negative force and hence was acting in the downward
+  direction!</p>
+  <p class=MsoNormal>&nbsp;</p>
+  <p class=MsoNormal>To get the correct IVP recall that because <i
+  >v</i> is negative then |<i
+  >v</i>| = -<i >v</i>.  Using this, the air
+  resistance becomes F<sub>A</sub> = -0.8<i >v</i>
+  and despite appearances this is a positive force since the “-” cancels out
+  against the velocity (which is negative) to get a positive force.  </p>
+  <p class=MsoNormal>&nbsp;</p>
+  <p class=MsoNormal>The correct IVP is then</p>
+  <p class=MTDisplayEquation>                                         <!-- MP EQPH( --><script id=mpeq0044s1>
+	MPSetEqnAttrs('eq0044','',3,[[184,14,4,-1,-1],[246,19,5,-1,-1],[308,23,7,-1,-1],[277,21,7,-1,-1],[370,29,9,-1,-1],[462,36,11,-2,-2],[770,60,18,-3,-3]])
+</script><![if !ie]><span id=mpnneq0044ph class=MPNNCode
+	><img border=0 align=bottom name=mpeq0044ph src="%26%7bDSMP.html" height="&{DSMP.gPlaceholderHeight};"
+		width="&{DSMP.gPlaceholderWidth};" 
+	><img border=0 align=top src="%26%7bDSMP.html" width=1 
+		height="&{DSMP.gPlaceholder2Height};" 
+>&nbsp;</span><![endif]><script id=mpeq0044s2>
+	MPEquation()
+</script><!-- )MP EQPH --></p>
+  <p class=MsoNormal>&nbsp;</p>
+  <p class=MsoNormal>Plugging in the mass gives</p>
+  <p class=MTDisplayEquation>                                               <!-- MP EQPH( --><script id=mpeq0045s1>
+	MPSetEqnAttrs('eq0045','',3,[[148,23,9,-1,-1],[198,29,12,-1,-1],[248,37,15,-1,-1],[223,34,14,-1,-1],[297,44,18,-1,-1],[372,56,23,-2,-2],[619,94,38,-3,-3]])
+</script><![if !ie]><span id=mpnneq0045ph class=MPNNCode
+	><img border=0 align=bottom name=mpeq0045ph src="%26%7bDSMP.html" height="&{DSMP.gPlaceholderHeight};"
+		width="&{DSMP.gPlaceholderWidth};" 
+	><img border=0 align=top src="%26%7bDSMP.html" width=1 
+		height="&{DSMP.gPlaceholder2Height};" 
+>&nbsp;</span><![endif]><script id=mpeq0045s2>
+	MPEquation()
+</script><!-- )MP EQPH --></p>
+  <p class=MsoNormal>&nbsp;</p>
+  <p class=MsoNormal>For the sake of completeness the velocity of the sky
+  diver, at least until the parachute opens, which I didn’t include in this
+  problem is.</p>
+  <p class=MTDisplayEquation>                                                       <!-- MP EQPH( --><script id=mpeq0046s1>
+	MPSetEqnAttrs('eq0046','',3,[[101,17,4,-1,-1],[134,23,5,-1,-1],[169,27,7,-1,-1],[151,26,7,-1,-1],[202,34,8,-1,-1],[252,42,11,-2,-2],[420,71,18,-3,-3]])
+</script><![if !ie]><span id=mpnneq0046ph class=MPNNCode
+	><img border=0 align=bottom name=mpeq0046ph src="%26%7bDSMP.html" height="&{DSMP.gPlaceholderHeight};"
+		width="&{DSMP.gPlaceholderWidth};" 
+	><img border=0 align=top src="%26%7bDSMP.html" width=1 
+		height="&{DSMP.gPlaceholder2Height};" 
+>&nbsp;</span><![endif]><script id=mpeq0046s2>
+	MPEquation()
+</script><!-- )MP EQPH --></p>
+  </td>
+ </tr>
+</table><!-- MP EQRA( --><script id=mpeq0046s1>
+	MPSetEqnAttrs('eq0046','',3,[[101,17,4,-1,-1],[134,23,5,-1,-1],[169,27,7,-1,-1],[151,26,7,-1,-1],[202,34,8,-1,-1],[252,42,11,-2,-2],[420,71,18,-3,-3]]);
+</script><!-- )MP EQRA --><!-- MP EQ( --><![if !ie]><div id=mpnneq0046 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpeq0046ph,'1')
+	</script><layer id=mpeq0046pop bgcolor='&{DSMP.gNNPopupBgColor};' z-index=99 visibility=hidden top=0 left=0
+		 onmouseover="status=DSMP.gHidePopupMessage"  onmouseout="status=''" 
+		><a href='%26%7bDSMP-3.html' onmousedown='return MPHidePopup(event,mpeq0046pop)'
+			><img border=0 src='%26%7bDSMP-3.html' hspace='&{DSMP.gPopupEqnPadding};' vspace='&{DSMP.gPopupEqnPadding};'
+		></a></layer><layer id=mpeq0046 bgcolor='' z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		 onmouseover="status=DSMP.gShowPopupMessage" onmouseout="status=''" 
+		><a href='%26%7bDSMP-4.html' onmousedown='return MPShowPopup(mpeq0046,mpeq0046pop,event)'
+			><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+		></a></layer></div><script id=mpeq0046s3>
+	MPDeleteCode('eq0046')
+</script><![endif]><!-- )MP EQ --><!-- MP EQRA( --><script id=mpeq0045s1>
+	MPSetEqnAttrs('eq0045','',3,[[148,23,9,-1,-1],[198,29,12,-1,-1],[248,37,15,-1,-1],[223,34,14,-1,-1],[297,44,18,-1,-1],[372,56,23,-2,-2],[619,94,38,-3,-3]]);
+</script><!-- )MP EQRA --><!-- MP EQ( --><![if !ie]><div id=mpnneq0045 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpeq0045ph,'1')
+	</script><layer id=mpeq0045pop bgcolor='&{DSMP.gNNPopupBgColor};' z-index=99 visibility=hidden top=0 left=0
+		 onmouseover="status=DSMP.gHidePopupMessage"  onmouseout="status=''" 
+		><a href='%26%7bDSMP-3.html' onmousedown='return MPHidePopup(event,mpeq0045pop)'
+			><img border=0 src='%26%7bDSMP-3.html' hspace='&{DSMP.gPopupEqnPadding};' vspace='&{DSMP.gPopupEqnPadding};'
+		></a></layer><layer id=mpeq0045 bgcolor='' z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		 onmouseover="status=DSMP.gShowPopupMessage" onmouseout="status=''" 
+		><a href='%26%7bDSMP-4.html' onmousedown='return MPShowPopup(mpeq0045,mpeq0045pop,event)'
+			><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+		></a></layer></div><script id=mpeq0045s3>
+	MPDeleteCode('eq0045')
+</script><![endif]><!-- )MP EQ --><!-- MP EQRA( --><script id=mpeq0044s1>
+	MPSetEqnAttrs('eq0044','',3,[[184,14,4,-1,-1],[246,19,5,-1,-1],[308,23,7,-1,-1],[277,21,7,-1,-1],[370,29,9,-1,-1],[462,36,11,-2,-2],[770,60,18,-3,-3]]);
+</script><!-- )MP EQRA --><!-- MP EQ( --><![if !ie]><div id=mpnneq0044 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpeq0044ph,'1')
+	</script><layer id=mpeq0044pop bgcolor='&{DSMP.gNNPopupBgColor};' z-index=99 visibility=hidden top=0 left=0
+		 onmouseover="status=DSMP.gHidePopupMessage"  onmouseout="status=''" 
+		><a href='%26%7bDSMP-3.html' onmousedown='return MPHidePopup(event,mpeq0044pop)'
+			><img border=0 src='%26%7bDSMP-3.html' hspace='&{DSMP.gPopupEqnPadding};' vspace='&{DSMP.gPopupEqnPadding};'
+		></a></layer><layer id=mpeq0044 bgcolor='' z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		 onmouseover="status=DSMP.gShowPopupMessage" onmouseout="status=''" 
+		><a href='%26%7bDSMP-4.html' onmousedown='return MPShowPopup(mpeq0044,mpeq0044pop,event)'
+			><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+		></a></layer></div><script id=mpeq0044s3>
+	MPDeleteCode('eq0044')
+</script><![endif]><!-- )MP EQ --><!-- MP EQRA( --><script id=mpeq0043s1>
+	MPSetEqnAttrs('eq0043','',3,[[295,14,4,-1,-1],[393,19,5,-1,-1],[492,23,7,-1,-1],[443,21,7,-1,-1],[591,29,9,-1,-1],[739,36,11,-2,-2],[1231,60,18,-3,-3]]);
+</script><!-- )MP EQRA --><!-- MP EQ( --><![if !ie]><div id=mpnneq0043 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpeq0043ph,'1')
+	</script><layer id=mpeq0043pop bgcolor='&{DSMP.gNNPopupBgColor};' z-index=99 visibility=hidden top=0 left=0
+		 onmouseover="status=DSMP.gHidePopupMessage"  onmouseout="status=''" 
+		><a href='%26%7bDSMP-3.html' onmousedown='return MPHidePopup(event,mpeq0043pop)'
+			><img border=0 src='%26%7bDSMP-3.html' hspace='&{DSMP.gPopupEqnPadding};' vspace='&{DSMP.gPopupEqnPadding};'
+		></a></layer><layer id=mpeq0043 bgcolor='' z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		 onmouseover="status=DSMP.gShowPopupMessage" onmouseout="status=''" 
+		><a href='%26%7bDSMP-4.html' onmousedown='return MPShowPopup(mpeq0043,mpeq0043pop,event)'
+			><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+		></a></layer></div><script id=mpeq0043s3>
+	MPDeleteCode('eq0043')
+</script><![endif]><!-- )MP EQ --><!-- MP EQRA( --><script id=mpeq0042s1>
+	MPSetEqnAttrs('eq0042','',3,[[184,15,5,-1,-1],[246,20,6,-1,-1],[308,27,10,-1,-1],[277,23,9,-1,-1],[370,32,11,-1,-1],[462,41,15,-2,-2],[770,66,23,-3,-3]]);
+</script><!-- )MP EQRA --><!-- MP EQ( --><![if !ie]><div id=mpnneq0042 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpeq0042ph,'1')
+	</script><layer id=mpeq0042pop bgcolor='&{DSMP.gNNPopupBgColor};' z-index=99 visibility=hidden top=0 left=0
+		 onmouseover="status=DSMP.gHidePopupMessage"  onmouseout="status=''" 
+		><a href='%26%7bDSMP-3.html' onmousedown='return MPHidePopup(event,mpeq0042pop)'
+			><img border=0 src='%26%7bDSMP-3.html' hspace='&{DSMP.gPopupEqnPadding};' vspace='&{DSMP.gPopupEqnPadding};'
+		></a></layer><layer id=mpeq0042 bgcolor='' z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		 onmouseover="status=DSMP.gShowPopupMessage" onmouseout="status=''" 
+		><a href='%26%7bDSMP-4.html' onmousedown='return MPShowPopup(mpeq0042,mpeq0042pop,event)'
+			><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+		></a></layer></div><script id=mpeq0042s3>
+	MPDeleteCode('eq0042')
+</script><![endif]><!-- )MP EQ --><!-- MP EQRA( --><script id=mpeq0041s1>
+	MPSetEqnAttrs('eq0041','',3,[[25,15,5,-1,-1],[32,20,6,-1,-1],[41,27,10,-1,-1],[37,23,9,-1,-1],[49,32,11,-1,-1],[61,41,15,-2,-2],[101,66,23,-3,-3]]);
+</script><!-- )MP EQRA --><!-- MP EQ( --><![if !ie]><div id=mpnneq0041 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpeq0041ph,'1')
+	</script><layer id=mpeq0041pop bgcolor='&{DSMP.gNNPopupBgColor};' z-index=99 visibility=hidden top=0 left=0
+		 onmouseover="status=DSMP.gHidePopupMessage"  onmouseout="status=''" 
+		><a href='%26%7bDSMP-3.html' onmousedown='return MPHidePopup(event,mpeq0041pop)'
+			><img border=0 src='%26%7bDSMP-3.html' hspace='&{DSMP.gPopupEqnPadding};' vspace='&{DSMP.gPopupEqnPadding};'
+		></a></layer><layer id=mpeq0041 bgcolor='' z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		 onmouseover="status=DSMP.gShowPopupMessage" onmouseout="status=''" 
+		><a href='%26%7bDSMP-4.html' onmousedown='return MPShowPopup(mpeq0041,mpeq0041pop,event)'
+			><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+		></a></layer></div><script id=mpeq0041s3>
+	MPDeleteCode('eq0041')
+</script><![endif]><!-- )MP EQ -->
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>This mistake was made in part because the students were in a
+hurry and weren’t paying attention, but also because they simply forgot about
+their convention and the direction of motion! 
+Don’t fall into this mistake. 
+Always pay attention to your conventions and what is happening in the
+problems.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Just to show you the difference here is the problem worked
+by assuming that down is positive.</p>
+
+<p class=MsoNormal><a name="First_Model_Ex6"></a>&nbsp;</p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=5 width="100%" bordercolor="black"
+ style='width:100.0%;border-collapse:collapse'>
+ <tr >
+  <td width="100%" valign=top style='width:100.0%;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-left:0in;text-indent:0in'><b
+  ><i >Example 6  </i></b>Set
+  up the IVP that will give the velocity of a 60 kg sky diver that jumps out of
+  a plane with no initial velocity and an air resistance of <!-- MP EQPH( --><script id=mpeq0047s1>
+	MPSetEqnAttrs('eq0047','',3,[[25,15,5,-1,-1],[32,20,6,-1,-1],[41,27,10,-1,-1],[37,23,9,-1,-1],[49,32,11,-1,-1],[61,41,15,-2,-2],[101,66,23,-3,-3]])
+</script><![if !ie]><span id=mpnneq0047ph class=MPNNCode
+	><img border=0 align=bottom name=mpeq0047ph src="%26%7bDSMP.html" height="&{DSMP.gPlaceholderHeight};"
+		width="&{DSMP.gPlaceholderWidth};" 
+	><img border=0 align=top src="%26%7bDSMP.html" width=1 
+		height="&{DSMP.gPlaceholder2Height};" 
+></span><![endif]><script id=mpeq0047s2>
+	MPEquation()
+</script><!-- )MP EQPH -->.  For this example assume that the positive
+  direction is downward.</p>
+  <p class=MsoNormal>&nbsp;</p>
+  <p class=MsoNormal><b ><i
+  >Solution</i></b></p>
+  <p class=MsoNormal>Here are the forces that are acting on the sky diver</p>
+  <p class=MsoNormal align=center style='text-align:center'><!--[if gte vml 1]><v:shape id="Picture_x0020_54"
+   o:spid="_x0000_i1028" type="#_x0000_t75" alt="Model_Ex6" style='width:120pt;
+   height:112.5pt;visibility:visible;mso-wrap-style:square'>
+   <v:imagedata src="Modeling_files/image007.gif" o:title="Model_Ex6" />
+  </v:shape><![endif]--><![if !vml]><img border=0 width=160 height=150
+  src="Modeling_files/image007.gif" alt="Model_Ex6" v:shapes="Picture_x0020_54"><![endif]></p>
+  <p class=MsoNormal>In this case the force due to gravity is positive since
+  it’s a downward force and air resistance is an upward force and so needs to
+  be negative.  In this case since the
+  motion is downward the velocity is positive so |<i >v</i>| = <i >v</i>.  The air resistance is then F<sub>A </sub>=
+  -0.8<i >v</i>.  The IVP for this case is</p>
+  <p class=MTDisplayEquation>                                         <!-- MP EQPH( --><script id=mpeq0048s1>
+	MPSetEqnAttrs('eq0048','',3,[[184,14,4,-1,-1],[246,19,5,-1,-1],[308,23,7,-1,-1],[277,21,7,-1,-1],[370,29,9,-1,-1],[463,36,11,-2,-2],[770,60,18,-3,-3]])
+</script><![if !ie]><span id=mpnneq0048ph class=MPNNCode
+	><img border=0 align=bottom name=mpeq0048ph src="%26%7bDSMP.html" height="&{DSMP.gPlaceholderHeight};"
+		width="&{DSMP.gPlaceholderWidth};" 
+	><img border=0 align=top src="%26%7bDSMP.html" width=1 
+		height="&{DSMP.gPlaceholder2Height};" 
+>&nbsp;</span><![endif]><script id=mpeq0048s2>
+	MPEquation()
+</script><!-- )MP EQPH --></p>
+  <p class=MsoNormal>&nbsp;</p>
+  <p class=MsoNormal>Plugging in the mass gives</p>
+  <p class=MTDisplayEquation>                                               <!-- MP EQPH( --><script id=mpeq0049s1>
+	MPSetEqnAttrs('eq0049','',3,[[148,23,9,-1,-1],[198,29,12,-1,-1],[248,37,15,-1,-1],[223,34,14,-1,-1],[297,44,18,-1,-1],[372,56,23,-2,-2],[619,94,38,-3,-3]])
+</script><![if !ie]><span id=mpnneq0049ph class=MPNNCode
+	><img border=0 align=bottom name=mpeq0049ph src="%26%7bDSMP.html" height="&{DSMP.gPlaceholderHeight};"
+		width="&{DSMP.gPlaceholderWidth};" 
+	><img border=0 align=top src="%26%7bDSMP.html" width=1 
+		height="&{DSMP.gPlaceholder2Height};" 
+>&nbsp;</span><![endif]><script id=mpeq0049s2>
+	MPEquation()
+</script><!-- )MP EQPH --></p>
+  <p class=MsoNormal>&nbsp;</p>
+  <p class=MsoNormal>Solving this gives</p>
+  <p class=MTDisplayEquation>                                                        <!-- MP EQPH( --><script id=mpeq0050s1>
+	MPSetEqnAttrs('eq0050','',3,[[94,17,4,-1,-1],[125,24,5,-1,-1],[158,31,7,-1,-1],[141,28,7,-1,-1],[188,37,9,-1,-1],[236,45,11,-2,-2],[392,75,18,-3,-3]])
+</script><![if !ie]><span id=mpnneq0050ph class=MPNNCode
+	><img border=0 align=bottom name=mpeq0050ph src="%26%7bDSMP.html" height="&{DSMP.gPlaceholderHeight};"
+		width="&{DSMP.gPlaceholderWidth};" 
+	><img border=0 align=top src="%26%7bDSMP.html" width=1 
+		height="&{DSMP.gPlaceholder2Height};" 
+>&nbsp;</span><![endif]><script id=mpeq0050s2>
+	MPEquation()
+</script><!-- )MP EQPH --></p>
+  <p class=MsoNormal>&nbsp;</p>
+  <p class=MsoNormal>This is the same solution as the previous example, except
+  that it’s got the opposite sign.  This
+  is to be expected since the conventions have been switched between the two
+  examples.</p>
+  </td>
+ </tr>
+</table><!-- MP EQRA( --><script id=mpeq0050s1>
+	MPSetEqnAttrs('eq0050','',3,[[94,17,4,-1,-1],[125,24,5,-1,-1],[158,31,7,-1,-1],[141,28,7,-1,-1],[188,37,9,-1,-1],[236,45,11,-2,-2],[392,75,18,-3,-3]]);
+</script><!-- )MP EQRA --><!-- MP EQ( --><![if !ie]><div id=mpnneq0050 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpeq0050ph,'1')
+	</script><layer id=mpeq0050pop bgcolor='&{DSMP.gNNPopupBgColor};' z-index=99 visibility=hidden top=0 left=0
+		 onmouseover="status=DSMP.gHidePopupMessage"  onmouseout="status=''" 
+		><a href='%26%7bDSMP-3.html' onmousedown='return MPHidePopup(event,mpeq0050pop)'
+			><img border=0 src='%26%7bDSMP-3.html' hspace='&{DSMP.gPopupEqnPadding};' vspace='&{DSMP.gPopupEqnPadding};'
+		></a></layer><layer id=mpeq0050 bgcolor='' z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		 onmouseover="status=DSMP.gShowPopupMessage" onmouseout="status=''" 
+		><a href='%26%7bDSMP-4.html' onmousedown='return MPShowPopup(mpeq0050,mpeq0050pop,event)'
+			><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+		></a></layer></div><script id=mpeq0050s3>
+	MPDeleteCode('eq0050')
+</script><![endif]><!-- )MP EQ --><!-- MP EQRA( --><script id=mpeq0049s1>
+	MPSetEqnAttrs('eq0049','',3,[[148,23,9,-1,-1],[198,29,12,-1,-1],[248,37,15,-1,-1],[223,34,14,-1,-1],[297,44,18,-1,-1],[372,56,23,-2,-2],[619,94,38,-3,-3]]);
+</script><!-- )MP EQRA --><!-- MP EQ( --><![if !ie]><div id=mpnneq0049 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpeq0049ph,'1')
+	</script><layer id=mpeq0049pop bgcolor='&{DSMP.gNNPopupBgColor};' z-index=99 visibility=hidden top=0 left=0
+		 onmouseover="status=DSMP.gHidePopupMessage"  onmouseout="status=''" 
+		><a href='%26%7bDSMP-3.html' onmousedown='return MPHidePopup(event,mpeq0049pop)'
+			><img border=0 src='%26%7bDSMP-3.html' hspace='&{DSMP.gPopupEqnPadding};' vspace='&{DSMP.gPopupEqnPadding};'
+		></a></layer><layer id=mpeq0049 bgcolor='' z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		 onmouseover="status=DSMP.gShowPopupMessage" onmouseout="status=''" 
+		><a href='%26%7bDSMP-4.html' onmousedown='return MPShowPopup(mpeq0049,mpeq0049pop,event)'
+			><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+		></a></layer></div><script id=mpeq0049s3>
+	MPDeleteCode('eq0049')
+</script><![endif]><!-- )MP EQ --><!-- MP EQRA( --><script id=mpeq0048s1>
+	MPSetEqnAttrs('eq0048','',3,[[184,14,4,-1,-1],[246,19,5,-1,-1],[308,23,7,-1,-1],[277,21,7,-1,-1],[370,29,9,-1,-1],[463,36,11,-2,-2],[770,60,18,-3,-3]]);
+</script><!-- )MP EQRA --><!-- MP EQ( --><![if !ie]><div id=mpnneq0048 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpeq0048ph,'1')
+	</script><layer id=mpeq0048pop bgcolor='&{DSMP.gNNPopupBgColor};' z-index=99 visibility=hidden top=0 left=0
+		 onmouseover="status=DSMP.gHidePopupMessage"  onmouseout="status=''" 
+		><a href='%26%7bDSMP-3.html' onmousedown='return MPHidePopup(event,mpeq0048pop)'
+			><img border=0 src='%26%7bDSMP-3.html' hspace='&{DSMP.gPopupEqnPadding};' vspace='&{DSMP.gPopupEqnPadding};'
+		></a></layer><layer id=mpeq0048 bgcolor='' z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		 onmouseover="status=DSMP.gShowPopupMessage" onmouseout="status=''" 
+		><a href='%26%7bDSMP-4.html' onmousedown='return MPShowPopup(mpeq0048,mpeq0048pop,event)'
+			><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+		></a></layer></div><script id=mpeq0048s3>
+	MPDeleteCode('eq0048')
+</script><![endif]><!-- )MP EQ --><!-- MP EQRA( --><script id=mpeq0047s1>
+	MPSetEqnAttrs('eq0047','',3,[[25,15,5,-1,-1],[32,20,6,-1,-1],[41,27,10,-1,-1],[37,23,9,-1,-1],[49,32,11,-1,-1],[61,41,15,-2,-2],[101,66,23,-3,-3]]);
+</script><!-- )MP EQRA --><!-- MP EQ( --><![if !ie]><div id=mpnneq0047 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpeq0047ph,'1')
+	</script><layer id=mpeq0047pop bgcolor='&{DSMP.gNNPopupBgColor};' z-index=99 visibility=hidden top=0 left=0
+		 onmouseover="status=DSMP.gHidePopupMessage"  onmouseout="status=''" 
+		><a href='%26%7bDSMP-3.html' onmousedown='return MPHidePopup(event,mpeq0047pop)'
+			><img border=0 src='%26%7bDSMP-3.html' hspace='&{DSMP.gPopupEqnPadding};' vspace='&{DSMP.gPopupEqnPadding};'
+		></a></layer><layer id=mpeq0047 bgcolor='' z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		 onmouseover="status=DSMP.gShowPopupMessage" onmouseout="status=''" 
+		><a href='%26%7bDSMP-4.html' onmousedown='return MPShowPopup(mpeq0047,mpeq0047pop,event)'
+			><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+		></a></layer></div><script id=mpeq0047s3>
+	MPDeleteCode('eq0047')
+</script><![endif]><!-- )MP EQ -->
+
+
+			
+			</div>  <!-- Content -->
+			
+			<div class="Bottom_Nav">
+			<table width="100%" align="center" cellspacing="0" cellpadding="0" border="0">
+			<tr>
+				<td width="36%"><span class="Button_Outer">
+				<a id="nFooter_aPrev" class="PrevNextButtonOff" onMouseOver="this.className='PrevNextButtonOn'" onMouseOut="this.className='PrevNextButtonOff'" href="IoV.html"><img src="../../Images/SingleArrowLeft.gif" border="0" />Intervals of Validity</a>
+				</span></td>
+				<td width="27%" align="center"><span class="MainTitle"><span id="nFooter_lblTitle">Differential Equations  - Notes</span></span></td>
+				<td width="36%" align="right"><span class="Button_Outer">
+				<a id="nFooter_aNext" class="PrevNextButtonOff" onMouseOver="this.className='PrevNextButtonOn'" onMouseOut="this.className='PrevNextButtonOff'" href="EquilibriumSolutions.html">Equilibrium Solutions<img src="../../Images/SingleArrowRight.gif" border="0" /></a>
+				</span></td>
+			</tr>
+			</table>
+			</div>
+			
+			<br />
+			
+			<div align="left"><span id="nFooter_lblBreadCrumb" class="BreadCrumb">Online Notes  / Differential Equations  (Notes) / First Order DE`s / Modeling with First Order DE's</span></div>
+			
+			</div>  <!-- MainBox -->
+			</td>
+		</tr>
+		</table>
+	</td>
+</tr>
+<tr>
+	<td colspan="4" align="center"><span class="Smaller"><br>[<a href="http://tutorial.math.lamar.edu/contact.aspx">Contact Me</a>]&nbsp;[<a href="../../links.html">Links</a>]&nbsp;[<a href="http://tutorial.math.lamar.edu/privacy.aspx">Privacy Statement</a>]&nbsp;[<a href="../../sitemap.html">Site Map</a>]&nbsp;[<a href="http://tutorial.math.lamar.edu/terms.aspx">Terms of Use</a>]&nbsp;[<a href="http://www.milonic.com/">Menus by Milonic</a>]</span></td>
+</tr>
+</table>
+
+
+
+
+<hr width="95%">
+	
+<table width="100%">
+<tr>
+	<td><span id="Foot"><span id="nFooter__CopyRight">&copy; 2003 - 2015 Paul Dawkins</span></span></td>
+	<td align="right"><span id="Foot">&nbsp;</span></td>
+</tr>
+</table>
+
+
+<script type="text/javascript">
+//<![CDATA[
+var Page_Validators =  new Array(document.getElementById("nHeader__rfvQ"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var nHeader__rfvQ = document.all ? document.all["nHeader__rfvQ"] : document.getElementById("nHeader__rfvQ");
+nHeader__rfvQ.controltovalidate = "nHeader_q";
+nHeader__rfvQ.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+nHeader__rfvQ.initialvalue = "";
+//]]>
+</script>
+
+<script language="javascript">
+<!--
+tbWaterMark_Blur('nHeader_q', 'Watermark_Blur','', false);//-->
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        //]]>
+</script>
+</form>
+
+</div>
+
+
+
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '../../../www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-331594-1', 'lamar.edu');
+    ga('send', 'pageview');
+
+</script>
+
+<script type="text/javascript">
+
+    var Cat = '';
+
+    if (Cat != '') {
+        ga('send', 'event', '', '', '');
+    }
+
+</script>
+
+</body>
+
+<!-- Mirrored from tutorial.math.lamar.edu/Classes/DE/Modeling.aspx by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 07 Jan 2015 21:49:25 GMT -->
+</html>

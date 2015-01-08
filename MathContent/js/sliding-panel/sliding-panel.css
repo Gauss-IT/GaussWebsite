@@ -1,0 +1,55 @@
+
+.slidePanelHolder { position: absolute; top: 0px; left: 504px; width: 156px;}
+.slidePanel { border-left: 1px solid black; border-right: 1px solid black;
+		  margin-left: 1px; margin-right:1px; background-color: white;
+		  height: 150px; display: none; }
+.slidePanel p {text-align: center; font-size: 0.9em; color: black;}
+.showSlidePanel { margin: 0; padding: 0; background: url(imagesM/arrow-quiz-slide.gif);
+		     background-repeat: no-repeat; background-position: top center;
+}
+.showSlidePanel:hover {background: url(imagesM/arrow-quiz-slide.gif);
+	 background-repeat: no-repeat; background-position: top center;}
+.btn-slide {
+     background: url(imagesM/choose-quiz-white-arrow.gif) no-repeat right -50px;
+     text-align: center;
+     width: 144px;
+     height: 31px;
+     padding: 10px 10px 0 0;
+     margin: 0 auto;
+     display: block;
+     font: bold 120%/100% Arial, Helvetica, sans-serif;
+     color: #fff;
+     text-decoration: none;
+}
+.active {
+     background-position: right 12px;
+}
+
+
+
+/* sliding panel za izabir podkviza i sve unutar njega */
+#chooseQuizPanel{ height: 150px; display: none; border-top: 4px solid black; width: 94%; margin: 0 auto;}
+#chooseQuizPanel p{ margin:10px 0 0 20px; font-size: 1.2em; font-weight: bold; color: black;}
+span.preporuka{font-size: 0.8em;}
+
+
+
+#chooseQuizPanel div.linkUpaneluHolder{ width: 600px; background: url(imagesM/tema-background.gif); 
+			background-repeat: no-repeat;	height:60px;  margin: 0 auto 10px auto;}
+#chooseQuizPanel div.linkUpaneluHolder:hover{background-position: center;}
+#chooseQuizPanel div.linkUpaneluHolder a{width:95%; height:55px; line-height: 25px; 
+						     text-decoration:none; display:block; 
+						     float: right; padding-top: 5px;
+						     text-align: center; font-size: 1.1em;
+						     color: black;}
+.infoText {color: black; font-size: 0.9em;}
+
+.beforeMainSlide {width: 94%; height: 4px; background-color: #422410; margin: 0 auto;}
+.slide { padding: 0; width: 94%; margin: 0 auto; }
+.btn-slide-chose { background: url(imagesM/choose-quiz-btn-slide.gif) no-repeat; 
+			 background-position: top;
+			 text-align: center;
+			 width: 200px; height: 30px; padding: 10px 10px 0 0; margin: 0 auto; display: block;
+			 font: bold 120%/100% Arial, Helvetica, sans-serif; color: #fff; text-decoration: none; float: right;
+}
+.btn-slide-chose:hover{background-position: bottom; }

@@ -1,0 +1,34 @@
+
+
+
+
+#slider ul, #slider li{margin:0;padding:0;list-style:none;position:relative;display:block;}
+/* Uncomment this if you wan't to only have 1 visible slide before the javascript kicks in. 
+#slider li {display:none;}	
+#slider li:first-child {display:block;}
+*/
+
+#slider, #slider li {width:660px;overflow:hidden; margin: 0 auto;}
+	
+/* Numeric Navigation */
+ol {margin:1em 30px;padding:0;height:28px;}
+ol li{margin:0 8px 0 0; padding:0;float:left;list-style:none;height:28px;line-height:28px;}
+ol li a{float:left;height:28px;line-height:28px;border:1px solid #ccc;
+			  background:#E4E4E4; color:#555;padding:0 8px;text-decoration:none;}
+ol li a:hover{ background:#B0F7C0;}
+ol li.current a{background:#01BA29;color:#fff;}
+ol li a:focus, .prevBtn a:focus, .nextBtn a:focus{outline:none;}
+
+.graphic, .prevBtn, .nextBtn{margin:0;padding:0;display:block;overflow:hidden;text-indent:-8000px; border:0}
+
+.prevBtn, .nextBtn {display:block;width:62px;height:64px;position:absolute;
+			  left:0px;top:300px;z-index:1000; border:0;
+			  background:url(../imagesM/btn-prev-quiz.gif) no-repeat;
+			  background-position: top center ;cursor:pointer;}	
+
+.prevBtn:hover {background-position: bottom center; border:0}
+
+.nextBtn {left:650px; background: url(../imagesM/btn-next-quiz.gif) no-repeat;
+	    background-position: top center; border:0}
+.nextBtn:hover {background-position: bottom center; border:0}
+

@@ -1,0 +1,147 @@
+
+@media screen and (max-width:1100px)
+{	
+	.textLogo{display: none;}
+	.navigacija1calc h2 span{display:  none;}
+	.gornjiLinkovi{display: none;}
+	.baner p.paragraf1{font-size: 3.4vw;}
+	.baner p.paragraf2{font-size: 2.9vw;}
+	.glavniLinkovi ul li a span{font-size: 16px;}
+	.putanjaCalc{font-size: 16px; font-weight: normal;}
+	p.logo a{background: none;}
+	.sve{width: 98%;}
+	.footer { padding: 20px 20px 10px 20px; width: 90%;}
+}
+@media screen and (max-width:980px)
+{
+
+}
+@media screen and (max-width:780px)
+{
+	.logo{display: none;}
+	.baner p.paragraf1{padding-top: 40px; font-size: 3.6vw;}
+	.baner p.paragraf2{font-size: 3vw;}
+	.header{height: auto;}
+	div.show-manu{display: block; margin-left: 20px;}
+	.putanjaCalc{width: 85%;}
+	.levaKolona{display: none; width:220px; position: absolute; z-index: 1000; top:120px; left:1px; }
+	.search{padding-bottom: 5px; background-image: none;}
+	.navigacijaLevo h1{display: none;}
+	.navigacija1 {padding-left: 5px; width: 97%;}
+	.navigacija1calc h2{font-size: 15px;}
+	.sadrzaj{padding-left: 10px; width: auto; float: none;}
+	.contentTop{display: none;}
+	
+	.glavniLinkovi{width: 99%; padding: 0px; height: auto; margin-left: 2px; }
+	.glavniLinkovi ul{float:left; width: 100%; height: 50px; }
+	.glavniLinkovi ul li{width: 25%; height: 50px;}
+	.glavniLinkovi ul li a{ background-image: none; padding: 0; text-align: center;
+					height: 50px; display: block;
+					border-bottom: 2px solid gainsboro;
+	}
+	.glavniLinkovi ul li a.current{
+		border:2px solid gainsboro;
+		border-top-right-radius: 10px;
+		border-top-left-radius: 10px;
+		border-bottom: none;}
+	.glavniLinkovi ul li a span
+	{
+		background-image: none;
+		padding: 0;
+		display: table-cell;
+		height: 50px;
+		width: 200px;
+		vertical-align: middle;
+	}
+	#formcalc table.jednaKolona{width: 90%; margin-left: 40px;}
+	#formcalc button{width: 75%;}
+	#formcalc div.leviSpacer50{width: 30px;}
+	#formcalc div.leviSpacer100{width: 50px;}
+	#formcalc div.leviSpacer150{width: 50px;}
+	#formcalc div.leviSpacer163{width: 50px;}
+	#formcalc div.verticalSpacer10480{height: 10px; clear: both;}
+	.linija{display: none;}
+	.contentBottom{width: auto;}
+	.footer { padding: 10px 10px 10px 10px; width: 88%;}
+	.footer .welcome {width: 49%;}
+	.footer .footerForma {display: none;}
+	.footer .footerLinkovi {width: 49%;}
+	.dodatakDesnoCalc{display: none;}
+	.realatedCalculators{width: 95%;}
+	
+	/* lessons */
+	.calculator .naslov h1{font-size: 18px;}
+	.calculator .lessonIntro {font-size: 15px;}
+	.dodatakDesno {display: none;}
+	.dodatakFormulaDesno{width: 100%;}
+	.related {width: 100%;}
+	.related .aHolder{margin-left: 5px;}
+	.related .caption{margin-left: 5px; padding-left: 0px;}
+	.googleOglasUDodatkuFor{margin: 0 auto; float: none;}
+	.formulasPlusOne{display: none;}
+	.mathformulas h3{margin-left: 0px;}
+	.sadrzaj p.zuB{margin-left: 0px;}
+	table.formulaTable65{padding-left: 15px;}
+	.lesson p{margin-left: 0px;}
+	.lesson p.uvucen{margin-left: 5px;}
+	.lesson .siroko{width: 100%; margin-right: 0px;}
+	
+	/* formulas */
+	div.trigger{top: 650px;}
+	.panel{top: 690px;}
+}
+@media screen and (max-width:480px)
+{
+	/* opste */
+	.sve{width: 100%;}
+	div.show-manu{display: block; margin-left: 5px; padding: 0;}
+	.baner p.paragraf1{padding-top: 30px; font-size: 4.3vw;}	
+	.baner p.paragraf2{font-size: 18px;}
+	.googleSquareBigCalc{float: none;}
+	.dodatakFormulaDesno{width: 100%; margin: 0 auto; text-align: center;}
+	.dodatakDesno{display: none;}
+	.dodatakDesnoCalc{padding-left: 0; padding-right: 0;}
+	
+	.footer .welcome {display: none;}
+	.footer .footerLinkovi{width: 100%;}
+	
+	/* calculators */
+	.tabs{width: 100%; }
+	.tabs a.tab{padding: 0px; width: 45%; line-height: normal; text-align: center; padding-top: 10px;}
+	.tabs a.tab30{width: 30%;}
+	#formcalc table.jednaKolona{width: 95%; margin-left: 30px;}
+	#formcalc input {width: 80%; margin-left: 20px;}
+	#formcalc div.leviSpacer50{width: 20px;}
+	#formcalc div.leviSpacer100{width: 20px;}
+	#formcalc div.leviSpacer150{width: 20px;}
+	#formcalc div.leviSpacer163{width: 20px;}
+	#formcalc table.razlomak {margin-left: 50px;}
+	#formcalc .preview{width: 50px; line-height: 12px; margin-left: 5px; margin-left: 5px;}
+	#formcalc .livePreview{padding-left: 0px; font-size: 1em;}
+	#formcalc div.lineBreak480{clear: both;}
+	#formcalc div.geomFormRight {float: left; margin-left: 40px;}
+	#formcalc .leftMargin4480{margin-left: 4px;}
+	#formcalc input.dugi150{width: 120px;}
+	#formcalc textarea.textStat120{margin-left: 10px;}
+	
+	/*lessons */
+	.lesson .question .leftQuestion{width: 100%; border: none;}
+	.lesson .question .rightQuestion{width: 100%;}
+	.lesson .question1left{width: auto; float: none;}
+	.lesson .question1right{width: auto; float: none;}
+	.lesson .question1right table{width: 100%; margin-left: 0px;}
+	
+	/* formulas */
+	.mathformulas h1.formule{font-size: 1.3em; white-space:nowrap; letter-spacing: normal;}
+	.panel{display: none;}
+	div.trigger{cursor: pointer; 
+			width: 80px;
+			text-align: center;
+			padding: 5px;
+			border-bottom-left-radius: 10px;
+	}
+	
+	#simplemodal-container{width: 420px; height: 300px;}
+	#basic-modal-content p{margin-left: 10px;}
+	#basic-modal-content img{width: 90%; margin-left: 10px;}
+}	

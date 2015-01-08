@@ -1,0 +1,912 @@
+
+
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+
+<!-- Mirrored from tutorial.math.lamar.edu/Extras/ComplexPrimer/ComplexNumbers.aspx by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 07 Jan 2015 21:19:49 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<!-- saved from url=(0014)about:internet --><!-- MSIE Mark of the Web -->
+
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=keywords content="MathPageGen">
+
+<meta name=Generator content="MathPage 1.0.1">
+<meta name=Originator content="Microsoft Word 11">
+
+
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<meta name="keywords" content="Complex numbers, complex conjugate, modulus, triangle inequality, polar form, polar form of complex number, exponential form, exponential form of complex number, roots of unity, root of complex number">
+
+<title id="_PageTitle">Pauls Online Notes : Complex Number Primer</title>
+
+
+
+<!-- This if for the general behavior of all the pages and for the 	-->
+<!-- behaviour of the text areas in particular...					-->
+<link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen"> 
+<link rel="stylesheet" href="../../css/notes.css" type="text/css" media="screen"> 
+<!--[if IE]>
+  <link href="/css/main_IE.css" rel="stylesheet" type="text/css" media="screen" />
+  <link rel="stylesheet" href="/css/notes_IE.css" type="text/css" media="screen"> 
+<![endif]-->
+<link rel="stylesheet" href="../../css/menuprint.css" type="text/css" media="print">
+
+<script type="text/javascript" language="JavaScript" src="../../js/main.js"></script>
+<script type="text/javascript" language="JavaScript" src="../../js/Show_Hide.js"></script>
+<script type="text/javascript" language="JavaScript" src="../../js/eventManager.js"></script>
+<script type="text/javascript" language="JavaScript" src="../../js/DHTMLAPI.js"></script>
+
+
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	}
+h1
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-indent:0in;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:Arial;
+	font-weight:bold;}
+h2
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-indent:0in;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:Arial;
+	font-weight:bold;
+	font-style:italic;}
+h3
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-indent:0in;
+	page-break-after:avoid;
+	font-size:13.0pt;
+	font-family:Arial;
+	font-weight:bold;}
+h4
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-indent:0in;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold;}
+h5
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-indent:0in;
+	font-size:13.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold;
+	font-style:italic;}
+h6
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-indent:0in;
+	font-size:11.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold;}
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-indent:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	}
+p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-indent:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-style:italic;}
+p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-indent:0in;
+	font-size:11.0pt;
+	font-family:Arial;
+	}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:12.0pt;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:24.0pt;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	}
+p.MsoListBullet, li.MsoListBullet, div.MsoListBullet
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.25in;
+	margin-bottom:.0001pt;
+	text-indent:-.25in;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	}
+
+
+p
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	}
+span.math1
+	{font-family:"Times New Roman";
+	}
+span.MTEquationSection
+	{color:red;
+	display:none;
+	}
+p.MTDisplayEquation, li.MTDisplayEquation, div.MTDisplayEquation
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold;
+	}
+p.VariableChar, li.VariableChar, div.VariableChar
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:27.0pt;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-style:italic;
+	}
+span.VariableCharChar
+	{font-style:italic;
+	}
+p.Variable, li.Variable, div.Variable
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-style:italic;
+	}
+p.Example, li.Example, div.Example
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:27.0pt;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	}
+ /* Page Definitions */
+ @page
+	{}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{}
+@list l0:level1
+	{margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l1
+	{}
+@list l1:level1
+	{margin-left:0in;
+	text-indent:0in;}
+@list l1:level2
+	{margin-left:0in;
+	text-indent:0in;}
+@list l1:level3
+	{margin-left:0in;
+	text-indent:0in;}
+@list l1:level4
+	{margin-left:0in;
+	text-indent:0in;}
+@list l1:level5
+	{margin-left:0in;
+	text-indent:0in;}
+@list l1:level6
+	{margin-left:0in;
+	text-indent:0in;}
+@list l1:level7
+	{margin-left:0in;
+	text-indent:0in;}
+@list l1:level8
+	{margin-left:0in;
+	text-indent:0in;}
+@list l1:level9
+	{margin-left:0in;
+	text-indent:0in;}
+@list l2
+	{}
+@list l2:level1
+	{margin-left:.25in;
+	text-indent:-.25in;}
+@list l2:level2
+	{margin-left:.55in;
+	text-indent:-.3in;}
+@list l2:level3
+	{margin-left:.85in;
+	text-indent:-.35in;}
+@list l2:level4
+	{margin-left:1.2in;
+	text-indent:-.45in;}
+@list l2:level5
+	{margin-left:1.55in;
+	text-indent:-.55in;}
+@list l2:level6
+	{margin-left:1.9in;
+	text-indent:-.65in;}
+@list l2:level7
+	{margin-left:2.25in;
+	text-indent:-.75in;}
+@list l2:level8
+	{margin-left:2.6in;
+	text-indent:-.85in;}
+@list l2:level9
+	{margin-left:3.0in;
+	text-indent:-1.0in;}
+@list l3
+	{}
+@list l3:level1
+	{margin-left:0in;
+	text-indent:0in;
+	font-family:"Times New Roman";
+	}
+@list l3:level2
+	{margin-left:0in;
+	text-indent:.5in;
+	font-family:"Times New Roman";
+	}
+@list l3:level3
+	{margin-left:0in;
+	text-indent:0in;
+	font-family:"Times New Roman";}
+@list l3:level4
+	{margin-left:.6in;
+	text-indent:-.1in;}
+@list l3:level5
+	{margin-left:.7in;
+	text-indent:-.3in;}
+@list l3:level6
+	{margin-left:.8in;
+	text-indent:-.3in;}
+@list l3:level7
+	{margin-left:.9in;
+	text-indent:-.2in;}
+@list l3:level8
+	{margin-left:1.0in;
+	text-indent:-.3in;}
+@list l3:level9
+	{margin-left:1.1in;
+	text-indent:-.1in;}
+@list l4
+	{}
+@list l4:level1
+	{text-indent:0in;
+	}
+@list l4:level2
+	{margin-left:.5in;
+	text-indent:0in;}
+@list l4:level3
+	{margin-left:1.0in;
+	text-indent:-.3in;}
+@list l4:level4
+	{margin-left:1.1in;
+	text-indent:-.1in;}
+@list l4:level5
+	{margin-left:1.2in;
+	text-indent:-.3in;}
+@list l4:level6
+	{margin-left:1.3in;
+	text-indent:-.3in;}
+@list l4:level7
+	{margin-left:1.4in;
+	text-indent:-.2in;}
+@list l4:level8
+	{margin-left:1.5in;
+	text-indent:-.3in;}
+@list l4:level9
+	{margin-left:1.6in;
+	text-indent:-.1in;}
+@list l5
+	{}
+@list l5:level1
+	{margin-left:0in;
+	text-indent:0in;
+	font-family:"Times New Roman";
+	}
+@list l5:level2
+	{margin-left:0in;
+	text-indent:.5in;
+	font-family:"Times New Roman";
+	}
+@list l5:level3
+	{margin-left:0in;
+	text-indent:0in;
+	font-family:"Times New Roman";}
+@list l5:level4
+	{margin-left:.6in;
+	text-indent:-.1in;}
+@list l5:level5
+	{margin-left:.7in;
+	text-indent:-.3in;}
+@list l5:level6
+	{margin-left:.8in;
+	text-indent:-.3in;}
+@list l5:level7
+	{margin-left:.9in;
+	text-indent:-.2in;}
+@list l5:level8
+	{margin-left:1.0in;
+	text-indent:-.3in;}
+@list l5:level9
+	{margin-left:1.1in;
+	text-indent:-.1in;}
+@list l6
+	{}
+@list l6:level1
+	{text-indent:-.25in;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+<!-- MP HEAD( -->
+<style>
+.MPPH { visibility:hidden; page-break-inside:avoid }
+.MPPHSpan { text-indent:0 }
+sub,sup { font-size:x-small }
+#MPDpiSpan { position:absolute; top:1in; left:1in; width:100px; border:none; visibility:hidden }
+.MPEntity { font-family:'Times New Roman',Times,serif }
+</style>
+<style media=screen>
+.MPScreenEqn { position:absolute; visibility:visible; z-index:98 }
+.MPPrintEqn { display:none }
+.MPScreenPH { }
+.MPPrintPH { display:none }
+.MPPopup { position:absolute; visibility:hidden; z-index:99; top:0; left:0; text-indent:0; cursor:hand; 
+border:solid blue 1px; padding:5px; background-color:#FFFFCC; 
+filter:progid:DXImageTransform.Microsoft.DropShadow(color=#444444,offx=3,offy=3,positive=1) 
+}
+.MPPopupNoBg { position:absolute; visibility:hidden; z-index:99; top:0; left:0; text-indent:0; cursor:hand; 
+border:solid blue 1px; padding:5px; 
+filter:progid:DXImageTransform.Microsoft.DropShadow(color=#444444,offx=3,offy=3,positive=1) 
+}
+</style>
+<style media=print>
+.MPScreenEqn { display:none }
+.MPPrintEqn { position:absolute; visibility:visible }
+.MPScreenPH { display:none }
+.MPPrintPH { }
+.MPPopup { display:none }
+.MPPopupNoBg { display:none }
+</style>
+<script language=javascript src='mathpage.js'></script>
+<script language=javascript>
+if (typeof DSMP == 'undefined') {
+	alert('MathPage Javascript file missing; equations and symbols will not display.');
+	var DSMP = new Object;
+	MPBodyInit=MPSetEqnAttrs=MPSetChAttrs=MPEquation=MPInlineChar=MPDeleteCode=MPNNCalcTopLeft=MPHidePopup=MPShowPopup=MPNNSelectScreenEqn=MPWebEQApplet=MPTechexplorerObject=function(){};
+	DSMP.gEmptySrc=DSMP.gPlaceholderHeight=DSMP.gPlaceholderWidth=DSMP.gPlaceholder2Height=DSMP.gNNPopupBgColor=DSMP.gPopupEqnSrc=DSMP.gPopupEqnPadding=DSMP.gNNLayerTop=DSMP.gNNLayerLeft=DSMP.gScreenEqnSrc=DSMP.gScreenEqnWidth=DSMP.gScreenEqnHeight=DSMP.gPrintEqnSrc=null;
+}
+DSMP.gPageVersion = '1.1';
+DSMP.gMaxCharCompat = 1;
+DSMP.gGenMathZoom = 1;
+DSMP.gPopupEqnBgColorDefault = '#FFFFCC';
+DSMP.gPopupEqnPaddingDefault = 5;
+DSMP.gPlaceholderPadding = 4;
+DSMP.gOldJSMessage = 'Warning: this MathPage document requires a newer JavaScript file and may not display correctly.';
+DSMP.gCompatMessage = 'Warning: this MathPage document was generated for Windows IE5 or later only and may not display correctly.';
+DSMP.gMinBrowserMessage = 'Warning: MathPage requires a version 4 or later browser.';
+DSMP.gHidePopupMessage = 'Click on a MathZoom equation to dismiss it, or shift-Click to close all.';
+DSMP.gShowPopupMessage = 'Click on an equation to show the enlarged MathZoom version.';
+</script>
+<!-- )MP HEAD -->
+</head>
+
+<body onLoad="init()">
+<!-- MP BODY(-->
+<span id=MPDpiSpan></span>
+<script language=javascript>
+MPBodyInit('ComplexNumbers_files')
+</script>
+<!-- )MP BODY -->
+
+
+<div class=Section1>
+
+<form name="Form1" method="post" action="http://tutorial.math.lamar.edu/Extras/ComplexPrimer/ComplexNumbers.aspx" onsubmit="javascript:return WebForm_OnSubmit();" id="Form1">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE5NjMzODg4MDAPZBYIZg8VAcgBQ29tcGxleCBudW1iZXJzLCBjb21wbGV4IGNvbmp1Z2F0ZSwgbW9kdWx1cywgdHJpYW5nbGUgaW5lcXVhbGl0eSwgcG9sYXIgZm9ybSwgcG9sYXIgZm9ybSBvZiBjb21wbGV4IG51bWJlciwgZXhwb25lbnRpYWwgZm9ybSwgZXhwb25lbnRpYWwgZm9ybSBvZiBjb21wbGV4IG51bWJlciwgcm9vdHMgb2YgdW5pdHksIHJvb3Qgb2YgY29tcGxleCBudW1iZXJkAgEPFgIeCWlubmVyaHRtbAUqUGF1bHMgT25saW5lIE5vdGVzIDogQ29tcGxleCBOdW1iZXIgUHJpbWVyZAIFD2QWBAIBD2QWEGYPFQIgL21lbnUvbWVudV9kYXRhX0NvbXBsZXhQcmltZXIuanMaL21lbnUvdG9wX21lbnVfZGF0YV9hbGwuanNkAgEPD2QWBB4Hb25Gb2N1cwVHamF2YXNjcmlwdDp0YldhdGVyTWFya19Gb2N1cygnbkhlYWRlcl9xJywgJ1dhdGVybWFya19Gb2N1cycsICcnLCBmYWxzZSkeBm9uQmx1cgVFamF2YXNjcmlwdDp0YldhdGVyTWFya19CbHVyKCduSGVhZGVyX3EnLCAnV2F0ZXJtYXJrX0JsdXInLCAnJywgZmFsc2UpZAIKDxUBJS9tZW51L3NpZGVfbWVudV9kYXRhX0NvbXBsZXhQcmltZXIuanNkAgsPDxYCHgRUZXh0BSVPbmxpbmUgTm90ZXMgIC8gQ29tcGxleCBOdW1iZXIgUHJpbWVyZGQCFQ8PFgIfAwUVQ29tcGxleCBOdW1iZXIgUHJpbWVyZGQCFw8PFgYeC05hdmlnYXRlVXJsBSUvRXh0cmFzL0NvbXBsZXhQcmltZXIvRGVmaW5pdGlvbi5hc3B4HwMFQ1RoZSBEZWZpbml0aW9uPGltZyBzcmM9Ii9JbWFnZXMvRG91YmxlQXJyb3dSaWdodC5naWYiIGJvcmRlcj0iMCIgLz4eB1Zpc2libGVnFgQeC29uTW91c2VPdmVyBSF0aGlzLmNsYXNzTmFtZT0nUHJldk5leHRCdXR0b25PbiceCm9uTW91c2VPdXQFInRoaXMuY2xhc3NOYW1lPSdQcmV2TmV4dEJ1dHRvbk9mZidkAhsPEA8WAh4LXyFEYXRhQm91bmRnFgIeCG9uQ2hhbmdlBS5pZiAodGhpcy52YWx1ZSAhPSAiLTEiKSB7R29Ub1BhZ2UodGhpcy52YWx1ZSl9EBUDHCAtIFNlbGVjdCBhIFBhZ2UgdG8gVmlzaXQgLSAAJ0Rvd25sb2FkIFBhZ2UgZm9yIENvbXBsZXggTnVtYmVyIFByaW1lchUDAi0xAi0xGi9kb3dubG9hZC5hc3B4P1BERj1CLDM3Oy0zFCsDA2dnZ2RkAh0PEA8WAh8IZxYCHwkFMmlmICh0aGlzLnZhbHVlICE9ICItMSIpIHtEb3dubG9hZEZpbGUodGhpcy52YWx1ZSl9EBUDIyAtIFNlbGVjdCBhIFBERiBGaWxlIHRvIERvd25sb2FkIC0gABZDb21wbGV4IE51bWJlcnMgUHJpbWVyFQMCLTECLTEmQiwzNyxOOy9wZGYvQ29tcGxleC9Db21wbGV4TnVtYmVycy5wZGYUKwMDZ2dnZGQCAw9kFggCAw8PFgIfAwUVQ29tcGxleCBOdW1iZXIgUHJpbWVyZGQCBQ8PFgYfBAUlL0V4dHJhcy9Db21wbGV4UHJpbWVyL0RlZmluaXRpb24uYXNweB8DBUNUaGUgRGVmaW5pdGlvbjxpbWcgc3JjPSIvSW1hZ2VzL0RvdWJsZUFycm93UmlnaHQuZ2lmIiBib3JkZXI9IjAiIC8+HwVnFgQfBgUhdGhpcy5jbGFzc05hbWU9J1ByZXZOZXh0QnV0dG9uT24nHwcFInRoaXMuY2xhc3NOYW1lPSdQcmV2TmV4dEJ1dHRvbk9mZidkAgcPDxYCHwMFJU9ubGluZSBOb3RlcyAgLyBDb21wbGV4IE51bWJlciBQcmltZXJkZAIJDw8WAh8DBR8mY29weTsgMjAwMyAtIDIwMTUgUGF1bCBEYXdraW5zZGQCBw9kFgJmDxUEAAAAAGRkOC5r+SqX3G6kUpb91xRPx4MLnKo=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['Form1'];
+if (!theForm) {
+    theForm = document.Form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="../../WebResource33e8.js?d=YORUXOHolGkRCONPo84CJuYPHXBGUApHFAl7shtryPGwK0bFOwei0v3Gy5tKjz0-5qdg_bNA8_7sxPSNiIy-Bw7cHY81&amp;t=635294879132453548" type="text/javascript"></script>
+
+
+<script src="../../WebResource4708.js?d=yIPaMuK0NxJLVub7mSuSHqFWoFTW5iDqhVoywpwtB7lhIuxbZboTnB_8tYrkof7S65NEVr1oGs5sxDAczrabQRD4pw01&amp;t=635294879132453548" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="DCD47A0B" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWCwL/sJPnAwLK141YAqbV4bUHArzX7VQCn/q9+gwCgZCz6g4CgZCz6g4C2JqgtQsC5L7jtg8C5L7jtg8C/NPAvASwSYEAgTzo7xta4kt3ZCFFPH7BOQ==" />
+</div>
+
+
+<!--
+	 Milonic DHTML Website Navigation Menu Version 5.0
+	 Copyright 2004 (c) Milonic Solutions Limited (UK). All Rights Reserved.
+	 Please visit http://www.milonic.com/ for more information.
+
+	 Although this software may have been freely downloaded, you must obtain a license before using it in any production environment.		 
+	 The free use of this menu is only available for Non-Profit, Educational & Personal Web Sites who have obtained a license to use. 
+	 
+	 Free, Commercial and Corporate Licenses are available from our website.
+	 You also need to include a link back to http://www.milonic.com/ if you use the free license.
+	 
+	 All Copyright notices MUST remain in place at ALL times. 
+	 This includes the first three lines of this notice on every page that uses the menu.
+	 If you cannot comply with all of the above requirements, please contact us to arrange a license waiver.
+-->	
+
+<SCRIPT language=JavaScript src="../../menu/milonic_src.js" type=text/javascript></SCRIPT>	
+<script	language=JavaScript>
+if(ns4)_d.write("<scr"+"ipt language=JavaScript src=/menu/mmenuns4.js><\/scr"+"ipt>");		
+  else _d.write("<scr"+"ipt language=JavaScript src=/menu/mmenudom.js><\/scr"+"ipt>"); 
+</script>
+<SCRIPT language=JavaScript src="../../menu/menu_data_ComplexPrimer.js" type=text/javascript></SCRIPT>	
+
+
+<table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+	<td align="center" colspan="5" valign="top" height="50"><span class="Main_Heading">Paul's Online Math Notes</span></td>
+</tr>
+
+<tr>
+	<td width="150">&nbsp;</td>
+	<td width="3">&nbsp;</td>
+	<td><SCRIPT language=JavaScript src="../../menu/top_menu_data_all.js" type=text/javascript></SCRIPT></td>	
+	<td width="400" align="right">
+		<!-- I found the following code at -->
+		<!-- http://www.codeproject.com/KB/aspnet/CustomSearchEngine.aspx -->
+		<!-- Emulated Google CSE Search Box Begins -->
+	<input name="nHeader$q" type="text" maxlength="512" id="nHeader_q" onFocus="javascript:tbWaterMark_Focus('nHeader_q', 'Watermark_Focus', '', false)" onBlur="javascript:tbWaterMark_Blur('nHeader_q', 'Watermark_Blur', '', false)" style="width:175px;" />
+	<input type="submit" name="nHeader$btnGoogleSearch" value="Search" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;nHeader$btnGoogleSearch&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="nHeader_btnGoogleSearch" />
+	<span id="nHeader__rfvQ" style="color:Red;visibility:hidden;"></span>
+	
+	<input type="hidden" name="nHeader$cx" id="nHeader_cx" value="001004262401526223570:11yv6vpcqvy" />
+	<input type="hidden" name="nHeader$cof" id="nHeader_cof" value="FORID:11" />
+	<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=searchbox_001004262401526223570%3A11yv6vpcqvy"></script>
+	
+	<!-- 
+		In order to make the button's click event fire when the text box is highlighted, we have to
+		have a second text box be a part of the form.  Make it invisible so that the user never 
+		knows it's there.
+		
+		From what research I did, this appears to be an IE-specific problem.  Nevertheless, this 
+		was the only "solution" I found.
+	-->
+	<input name="dummyHidden" value="" style="visibility:hidden;display:none;" />
+	<!-- Emulated Google CSE Search Box Ends -->
+	
+	</td>
+<!-- Google CSE Search Box Ends -->	
+</tr>
+<tr><td colspan="4" height="3"></td></tr>
+<tr>
+	<td valign="top">
+    
+    <SCRIPT language=JavaScript src="../../menu/side_menu_data_ComplexPrimer.js" type=text/javascript></SCRIPT>
+
+    <!--
+    <div style="width: 180px; margin-top: 20px">
+    <script type='text/javascript' id='openstudy-widget-loader' src='http://math.openstudy.com/javascripts/load.js?type=feed&color=blue&studygroup=Mathematics&env=math.openstudy.com'></script>
+    </div>
+    -->
+
+	</td>
+	<td width="3">&nbsp;</td>
+	<td valign="top" colspan="2">
+		<table border="0" width="100%" cellpadding="0">
+		<tr>
+			<td>
+			<div class="MainBox" align="center">
+
+            <table width="97%">
+                <tr>
+                    <td><div align="left"><span id="nHeader_lblBreadCrumb" class="BreadCrumb">Online Notes  / Complex Number Primer</span></div></td>
+                    <td width="250" align="right">
+                                <!-- Place this tag where you want the +1 button to render -->
+<g:plusone size="medium"></g:plusone>
+
+<!-- Place this render call where appropriate -->
+<script type="text/javascript">
+    (function () {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = '../../../apis.google.com/js/plusone.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+    })();
+</script>
+                    </td>
+                </tr>
+            </table>
+
+			
+            
+
+            						
+			
+			
+			
+			
+			
+			
+			<div class="Top_Nav">
+			<table width="100%" align="center" cellspacing="0" cellpadding="0" border="0">
+			<tr><td colspan="3"><hr color="#00000" size="2" /></td></tr>
+			<tr>
+				<td width="36%"><span class="Button_Outer">
+				
+				</span></td>
+				<td width="27%" align="center"><span class="MainTitle"><span id="nHeader_lblTitle">Complex Number Primer</span></span></td>
+				<td width="36%" align="right"><span class="Button_Outer">
+				<a id="nHeader_aNext" class="PrevNextButtonOff" onMouseOver="this.className='PrevNextButtonOn'" onMouseOut="this.className='PrevNextButtonOff'" href="Definition.html">The Definition<img src="../../Images/DoubleArrowRight.gif" border="0" /></a>
+				</span></td>
+			</tr>
+			<tr><td colspan="3">
+			<hr color="#00000" size="2" /></td></tr>
+			</table>
+			</div>  <!-- Top_Nav -->
+
+			<div class="Top_Links">
+			<table width="100%" align="center" cellspacing="0" cellpadding="0" border="0">
+			<tr>
+				<td width="40%"><span class="Smaller"><select name="nHeader$ddlGoTo" id="nHeader_ddlGoTo" onChange="if (this.value != &quot;-1&quot;) {GoToPage(this.value)}">
+	<option value="-1"> - Select a Page to Visit - </option>
+	<option value="-1"></option>
+	<option value="/download.aspx?PDF=B,37;-3">Download Page for Complex Number Primer</option>
+
+</select></span></td>
+				<td align="center">
+				<span class="Smaller" width="40%"><select name="nHeader$ddlDownload" id="nHeader_ddlDownload" onChange="if (this.value != &quot;-1&quot;) {DownloadFile(this.value)}">
+	<option value="-1"> - Select a PDF File to Download - </option>
+	<option value="-1"></option>
+	<option value="B,37,N;/pdf/Complex/ComplexNumbers.pdf">Complex Numbers Primer</option>
+
+</select></span>
+				</td>
+				<td align="right" width="19%"><a class="Smaller" href="javascript:ShowPage('NHelp')">Show Page Help</a></td>
+			</tr>
+			</table>
+			</div>
+
+
+			
+			<div class="Content">
+
+
+<p class=MsoNormal align=center style='text-align:center'><b ><i ><span style='font-size:14.0pt'>Complex
+Numbers Primer</span></i></b></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Before I get started on this let me first make it clear that
+this document is not intended to teach you everything there is to know about
+complex numbers.  That is a subject that
+can (and does) take a whole course to cover. 
+The purpose of this document is to give you a brief overview of complex
+numbers, notation associated with complex numbers, and some of the basic
+operations involving complex numbers.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>This document has been written with the assumption that
+you’ve seen complex numbers at some point in the past, know (or at least knew
+at some point in time) that complex numbers can be solutions to quadratic
+equations, know (or recall) <b ><!-- MP EQPH( --><script id=mpeq0001s1>
+	MPSetEqnAttrs('eq0001','',3,[[36,14,1,-1,-1],[47,18,2,-1,-1],[59,22,3,-1,-1],[53,21,2,-1,-1],[70,27,3,-1,-1],[87,33,4,-2,-2],[147,55,8,-3,-3]])
+</script><![if !ie]><span id=mpnneq0001ph class=MPNNCode
+	><img border=0 align=bottom name=mpeq0001ph src="%26%7bDSMP.html" height="&{DSMP.gPlaceholderHeight};"
+		width="&{DSMP.gPlaceholderWidth};" 
+	><img border=0 align=top src="%26%7bDSMP.html" width=1 
+		height="&{DSMP.gPlaceholder2Height};" 
+></span><![endif]><script id=mpeq0001s2>
+	MPEquation()
+</script><!-- )MP EQPH --></b>,
+and that you’ve seen how to do basic arithmetic with complex numbers.  If you don’t remember how to do arithmetic I
+will show an example or two to remind you how to do arithmetic, but I’m going
+to assume that you don’t need more than that as a reminder.  </p><!-- MP EQRA( --><script id=mpeq0001s1>
+	MPSetEqnAttrs('eq0001','',3,[[36,14,1,-1,-1],[47,18,2,-1,-1],[59,22,3,-1,-1],[53,21,2,-1,-1],[70,27,3,-1,-1],[87,33,4,-2,-2],[147,55,8,-3,-3]]);
+</script><!-- )MP EQRA --><!-- MP EQ( --><![if !ie]><div id=mpnneq0001 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpeq0001ph,'1')
+	</script><layer id=mpeq0001pop bgcolor='&{DSMP.gNNPopupBgColor};' z-index=99 visibility=hidden top=0 left=0
+		 onmouseover="status=DSMP.gHidePopupMessage"  onmouseout="status=''" 
+		><a href='%26%7bDSMP-2.html' onmousedown='return MPHidePopup(event,mpeq0001pop)'
+			><img border=0 src='%26%7bDSMP-2.html' hspace='&{DSMP.gPopupEqnPadding};' vspace='&{DSMP.gPopupEqnPadding};'
+		></a></layer><layer id=mpeq0001 bgcolor='' z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		 onmouseover="status=DSMP.gShowPopupMessage" onmouseout="status=''" 
+		><a href='%26%7bDSMP-3.html' onmousedown='return MPShowPopup(mpeq0001,mpeq0001pop,event)'
+			><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-4.html' onload='MPNNSelectScreenEqn(this)'
+		></a></layer></div><script id=mpeq0001s3>
+	MPDeleteCode('eq0001')
+</script><![endif]><!-- )MP EQ -->
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>For most students the assumptions I’ve made above about
+their exposure to complex numbers is the extent of their exposure.  Problems tend to arise however because most
+instructors seem to assume that either students will see beyond this exposure
+in some later class or have already seen beyond this in some earlier
+class.  Students are then all of a sudden
+expected to know more than basic arithmetic of complex numbers but often
+haven’t actually seen it anywhere and have to quickly pick it up on their own
+in order to survive in the class.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>That is the purpose of this document. We will go beyond the
+basics that most students have seen at some point and show you some of the
+notation and operations involving complex numbers that many students don’t ever
+see once they learn how to deal with complex numbers as solutions to quadratic equations.  We’ll also be seeing a slightly different way
+of looking at some of the basics that you probably didn’t see when you were
+first introduced to complex numbers and proving some of the basic facts.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>The first section is a more mathematical definition of
+complex numbers and is not really required for understanding the remainder of
+the document.  It is presented solely for
+those who might be interested.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>The second section (arithmetic) is assumed to be mostly a
+review for those reading this document and can be read if you need a quick
+refresher on how to do basic arithmetic with complex numbers.  Also included in this section is a more
+precise definition of subtraction and division than is normally given when a person
+is first introduced to complex numbers. 
+Again, understanding these definitions is not required for the remainder
+of the document they are only presented so you can say you’ve seen it.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>The remaining sections are the real point of this document
+and involve the topics that are typically not taught when students are first
+exposed to complex numbers.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>So, with that out of the way, let’s get started…</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<a href="Definition.html">The Definition</a> &ndash; In this section we'll take a look at a more precise and mathematical definition of a complex number. This section is not required for understanding the remainder of this document. <br /><br />
+
+<a href="Arithmetic.html">Arithmetic</a> &ndash; Here we will take a look at arithmetic of complex numbers. We will also provide a more mathematical definition of subtraction and division of complex numbers that is generally given in your first exposure to complex numbers. <br /><br />
+
+<a href="ConjugateModulus.html">Conjugate and Modulus</a> &ndash; We will look at the complex conjugate and modulus of a complex number in this section. We will also look at some nice facts involving these. <br /><br />
+
+<a href="Forms.html">Polar &amp; Exponential Form</a> &ndash; In this section we'll take a look at two alternate forms of the complex numbers and some nice facts that can be derived form them.<br /><br />
+
+<a href="Roots.html">Powers and Roots</a> &ndash; We'll take a look at how to quickly compute powers and roots of complex numbers in this section.<br /><br />
+
+<p class=MsoNormal>&nbsp;</p>
+
+
+			
+			</div>  <!-- Content -->
+			
+			<div class="Bottom_Nav">
+			<table width="100%" align="center" cellspacing="0" cellpadding="0" border="0">
+			<tr>
+				<td width="36%"><span class="Button_Outer">
+				
+				</span></td>
+				<td width="27%" align="center"><span class="MainTitle"><span id="nFooter_lblTitle">Complex Number Primer</span></span></td>
+				<td width="36%" align="right"><span class="Button_Outer">
+				<a id="nFooter_aNext" class="PrevNextButtonOff" onMouseOver="this.className='PrevNextButtonOn'" onMouseOut="this.className='PrevNextButtonOff'" href="Definition.html">The Definition<img src="../../Images/DoubleArrowRight.gif" border="0" /></a>
+				</span></td>
+			</tr>
+			</table>
+			</div>
+			
+			<br />
+			
+			<div align="left"><span id="nFooter_lblBreadCrumb" class="BreadCrumb">Online Notes  / Complex Number Primer</span></div>
+			
+			</div>  <!-- MainBox -->
+			</td>
+		</tr>
+		</table>
+	</td>
+</tr>
+<tr>
+	<td colspan="4" align="center"><span class="Smaller"><br>[<a href="http://tutorial.math.lamar.edu/contact.aspx">Contact Me</a>]&nbsp;[<a href="../../links.html">Links</a>]&nbsp;[<a href="http://tutorial.math.lamar.edu/privacy.aspx">Privacy Statement</a>]&nbsp;[<a href="../../sitemap.html">Site Map</a>]&nbsp;[<a href="http://tutorial.math.lamar.edu/terms.aspx">Terms of Use</a>]&nbsp;[<a href="http://www.milonic.com/">Menus by Milonic</a>]</span></td>
+</tr>
+</table>
+
+
+
+
+<hr width="95%">
+	
+<table width="100%">
+<tr>
+	<td><span id="Foot"><span id="nFooter__CopyRight">&copy; 2003 - 2015 Paul Dawkins</span></span></td>
+	<td align="right"><span id="Foot">&nbsp;</span></td>
+</tr>
+</table>
+
+
+<script type="text/javascript">
+//<![CDATA[
+var Page_Validators =  new Array(document.getElementById("nHeader__rfvQ"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var nHeader__rfvQ = document.all ? document.all["nHeader__rfvQ"] : document.getElementById("nHeader__rfvQ");
+nHeader__rfvQ.controltovalidate = "nHeader_q";
+nHeader__rfvQ.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+nHeader__rfvQ.initialvalue = "";
+//]]>
+</script>
+
+<script language="javascript">
+<!--
+tbWaterMark_Blur('nHeader_q', 'Watermark_Blur','', false);//-->
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        //]]>
+</script>
+</form>
+
+</div>
+
+
+
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '../../../www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-331594-1', 'lamar.edu');
+    ga('send', 'pageview');
+
+</script>
+
+<script type="text/javascript">
+
+    var Cat = '';
+
+    if (Cat != '') {
+        ga('send', 'event', '', '', '');
+    }
+
+</script>
+
+</body>
+
+<!-- Mirrored from tutorial.math.lamar.edu/Extras/ComplexPrimer/ComplexNumbers.aspx by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 07 Jan 2015 21:19:59 GMT -->
+</html>

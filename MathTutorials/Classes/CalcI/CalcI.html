@@ -1,0 +1,2309 @@
+
+
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+
+<!-- Mirrored from tutorial.math.lamar.edu/Classes/CalcI/CalcI.aspx by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 07 Jan 2015 20:30:16 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<!-- saved from url=(0014)about:internet --><!-- MSIE Mark of the Web -->
+
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=keywords content="MathPageGen">
+
+<meta name=Generator content="MathPage 1.0.1">
+<meta name=Originator content="Microsoft Word 12">
+
+
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<meta name="keywords" content="Calculus Tutorial, online calculus tutorial, calculus notes, online calculus notes">
+
+<title id="_PageTitle">Pauls Online Notes : Calculus I </title>
+
+
+
+<!-- This if for the general behavior of all the pages and for the 	-->
+<!-- behaviour of the text areas in particular...					-->
+<link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen"> 
+<link rel="stylesheet" href="../../css/notes.css" type="text/css" media="screen"> 
+<!--[if IE]>
+  <link href="/css/main_IE.css" rel="stylesheet" type="text/css" media="screen" />
+  <link rel="stylesheet" href="/css/notes_IE.css" type="text/css" media="screen"> 
+<![endif]-->
+<link rel="stylesheet" href="../../css/menuprint.css" type="text/css" media="print">
+
+<script type="text/javascript" language="JavaScript" src="../../js/main.js"></script>
+<script type="text/javascript" language="JavaScript" src="../../js/Show_Hide.js"></script>
+<script type="text/javascript" language="JavaScript" src="../../js/eventManager.js"></script>
+<script type="text/javascript" language="JavaScript" src="../../js/DHTMLAPI.js"></script>
+
+
+<link rel=themeData href="CalcI_files/themedata.thmx">
+<link rel=colorSchemeMapping href="CalcI_files/colorschememapping.xml">
+
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	}
+h1
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-indent:0in;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:"Arial","sans-serif";
+	}
+h2
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-indent:0in;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Arial","sans-serif";
+	font-style:italic;}
+h3
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-indent:0in;
+	page-break-after:avoid;
+	font-size:13.0pt;
+	font-family:"Arial","sans-serif";}
+h4
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-indent:0in;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Times New Roman","serif";}
+h5
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-indent:0in;
+	font-size:13.0pt;
+	font-family:"Times New Roman","serif";
+	font-style:italic;}
+h6
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-indent:0in;
+	font-size:11.0pt;
+	font-family:"Times New Roman","serif";}
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-indent:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	}
+p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-indent:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	font-style:italic;}
+p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-indent:0in;
+	font-size:11.0pt;
+	font-family:"Arial","sans-serif";
+	}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	}
+
+
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:8.0pt;
+	font-family:"Tahoma","sans-serif";
+	}
+span.FooterChar
+	{}
+span.HeaderChar
+	{}
+span.BalloonTextChar
+	{font-family:"Tahoma","sans-serif";
+	}
+.MsoChpDefault
+	{font-size:10.0pt;
+	}
+ /* Page Definitions */
+ @page
+	{}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	}
+div.Section1
+	{page:Section1;}
+@page Section2
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	}
+div.Section2
+	{page:Section2;}
+@page Section3
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	}
+div.Section3
+	{page:Section3;}
+ /* List Definitions */
+ @list l0
+	{}
+@list l0:level1
+	{margin-left:0in;
+	text-indent:0in;}
+@list l0:level2
+	{margin-left:0in;
+	text-indent:0in;}
+@list l0:level3
+	{margin-left:0in;
+	text-indent:0in;}
+@list l0:level4
+	{margin-left:0in;
+	text-indent:0in;}
+@list l0:level5
+	{margin-left:0in;
+	text-indent:0in;}
+@list l0:level6
+	{margin-left:0in;
+	text-indent:0in;}
+@list l0:level7
+	{margin-left:0in;
+	text-indent:0in;}
+@list l0:level8
+	{margin-left:0in;
+	text-indent:0in;}
+@list l0:level9
+	{margin-left:0in;
+	text-indent:0in;}
+@list l1
+	{}
+@list l2
+	{}
+@list l2:level1
+	{margin-left:0in;
+	text-indent:0in;}
+@list l2:level2
+	{margin-left:0in;
+	text-indent:0in;}
+@list l2:level3
+	{margin-left:0in;
+	text-indent:0in;}
+@list l2:level4
+	{margin-left:0in;
+	text-indent:0in;}
+@list l2:level5
+	{margin-left:0in;
+	text-indent:0in;}
+@list l2:level6
+	{margin-left:0in;
+	text-indent:0in;}
+@list l2:level7
+	{margin-left:0in;
+	text-indent:0in;}
+@list l2:level8
+	{margin-left:0in;
+	text-indent:0in;}
+@list l2:level9
+	{margin-left:0in;
+	text-indent:0in;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+<!-- MP HEAD( -->
+<style>
+.MPPH { visibility:hidden; page-break-inside:avoid }
+.MPPHSpan { text-indent:0 }
+sub,sup { font-size:x-small }
+#MPDpiSpan { position:absolute; top:1in; left:1in; width:100px; border:none; visibility:hidden }
+.MPEntity { font-family:'Times New Roman',Times,serif }
+</style>
+<style media=screen>
+.MPScreenEqn { position:absolute; visibility:visible; z-index:98 }
+.MPPrintEqn { display:none }
+.MPScreenPH { }
+.MPPrintPH { display:none }
+.MPPopup { position:absolute; visibility:hidden; z-index:99; top:0; left:0; text-indent:0; cursor:hand; 
+border:solid blue 1px; padding:5px; background-color:#FFFFCC; 
+filter:progid:DXImageTransform.Microsoft.DropShadow(color=#444444,offx=3,offy=3,positive=1) 
+}
+.MPPopupNoBg { position:absolute; visibility:hidden; z-index:99; top:0; left:0; text-indent:0; cursor:hand; 
+border:solid blue 1px; padding:5px; 
+filter:progid:DXImageTransform.Microsoft.DropShadow(color=#444444,offx=3,offy=3,positive=1) 
+}
+</style>
+<style media=print>
+.MPScreenEqn { display:none }
+.MPPrintEqn { position:absolute; visibility:visible }
+.MPScreenPH { display:none }
+.MPPrintPH { }
+.MPPopup { display:none }
+.MPPopupNoBg { display:none }
+</style>
+<script language=javascript src='mathpage.js'></script>
+<script language=javascript>
+if (typeof DSMP == 'undefined') {
+	alert('MathPage Javascript file missing; equations and symbols will not display.');
+	var DSMP = new Object;
+	MPBodyInit=MPSetEqnAttrs=MPSetChAttrs=MPEquation=MPInlineChar=MPDeleteCode=MPNNCalcTopLeft=MPHidePopup=MPShowPopup=MPNNSelectScreenEqn=MPWebEQApplet=MPTechexplorerObject=function(){};
+	DSMP.gEmptySrc=DSMP.gPlaceholderHeight=DSMP.gPlaceholderWidth=DSMP.gPlaceholder2Height=DSMP.gNNPopupBgColor=DSMP.gPopupEqnSrc=DSMP.gPopupEqnPadding=DSMP.gNNLayerTop=DSMP.gNNLayerLeft=DSMP.gScreenEqnSrc=DSMP.gScreenEqnWidth=DSMP.gScreenEqnHeight=DSMP.gPrintEqnSrc=null;
+}
+DSMP.gPageVersion = '1.1';
+DSMP.gMaxCharCompat = 1;
+DSMP.gGenMathZoom = 1;
+DSMP.gPopupEqnBgColorDefault = '#FFFFCC';
+DSMP.gPopupEqnPaddingDefault = 5;
+DSMP.gPlaceholderPadding = 4;
+DSMP.gOldJSMessage = 'Warning: this MathPage document requires a newer JavaScript file and may not display correctly.';
+DSMP.gCompatMessage = 'Warning: this MathPage document was generated for Windows IE5 or later only and may not display correctly.';
+DSMP.gMinBrowserMessage = 'Warning: MathPage requires a version 4 or later browser.';
+DSMP.gHidePopupMessage = 'Click on a MathZoom equation to dismiss it, or shift-Click to close all.';
+DSMP.gShowPopupMessage = 'Click on an equation to show the enlarged MathZoom version.';
+</script>
+<!-- )MP HEAD -->
+</head>
+
+<body onLoad="init()">	
+<!-- MP BODY(-->
+<span id=MPDpiSpan></span>
+<script language=javascript>
+MPBodyInit('CalcI_files')
+</script>
+<!-- )MP BODY -->
+
+
+<form name="Form1" method="post" action="http://tutorial.math.lamar.edu/Classes/CalcI/CalcI.aspx" onsubmit="javascript:return WebForm_OnSubmit();" id="Form1">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJMTU0NjU4NzYwD2QWCGYPFQFSQ2FsY3VsdXMgVHV0b3JpYWwsIG9ubGluZSBjYWxjdWx1cyB0dXRvcmlhbCwgY2FsY3VsdXMgbm90ZXMsIG9ubGluZSBjYWxjdWx1cyBub3Rlc2QCAQ8WAh4JaW5uZXJodG1sBSBQYXVscyBPbmxpbmUgTm90ZXMgOiBDYWxjdWx1cyBJIGQCBQ9kFgQCAw9kFhJmDxUCGC9tZW51L21lbnVfZGF0YV9DYWxjSS5qcxovbWVudS90b3BfbWVudV9kYXRhX2FsbC5qc2QCAQ8PZBYEHgdvbkZvY3VzBUdqYXZhc2NyaXB0OnRiV2F0ZXJNYXJrX0ZvY3VzKCduSGVhZGVyX3EnLCAnV2F0ZXJtYXJrX0ZvY3VzJywgJycsIGZhbHNlKR4Gb25CbHVyBUVqYXZhc2NyaXB0OnRiV2F0ZXJNYXJrX0JsdXIoJ25IZWFkZXJfcScsICdXYXRlcm1hcmtfQmx1cicsICcnLCBmYWxzZSlkAgoPFQEdL21lbnUvc2lkZV9tZW51X2RhdGFfQ2FsY0kuanNkAgsPDxYCHgRUZXh0BSNPbmxpbmUgTm90ZXMgIC8gQ2FsY3VsdXMgSSAgKE5vdGVzKWRkAg8PDxYCHgdWaXNpYmxlZ2QWAmYPDxYCHwMF3gQ8YnIgLz4NCjxkaXYgY2xhc3M9Ik5vdGljZSI+PHNwYW4gc3R5bGU9ImZvbnQtd2VpZ2h0OmJvbGQ7Y29sb3I6UmVkIj5JbnRlcm5ldCBFeHBsb3JlciAxMCAmYW1wOyAxMSBVc2VycyA6IDwvc3Bhbj5JZiB5b3UgYXJlIHVzaW5nIEludGVybmV0IEV4cGxvcmVyIDEwIG9yIEludGVybmV0IEV4cGxvcmVyIDExIHRoZW4sIGluIGFsbCBsaWtlbGlob29kLCB0aGUgZXF1YXRpb25zIG9uIHRoZSBwYWdlcyBhcmUgYWxsIHNoaWZ0ZWQgZG93bndhcmQuICBUbyBmaXggdGhpcyB5b3UgbmVlZCB0byBwdXQgeW91ciBicm93c2VyIGluIENvbXBhdGliaWxpdHkgVmlldyBmb3IgbXkgc2l0ZS4gIENsaWNrIDxhIGhyZWY9Ii9JRV9Db21wYXRpYmlsaXR5LmFzcHgiPmhlcmU8L2E+IGZvciBpbnN0cnVjdGlvbnMgb24gaG93IHRvIGRvIHRoYXQuICBBbHRlcm5hdGl2ZWx5LCB5b3UgY2FuIGFsc28gdmlldyB0aGUgcGFnZXMgaW4gQ2hyb21lIG9yIEZpcmVmb3ggYXMgdGhleSBzaG91bGQgZGlzcGxheSBwcm9wZXJseSBpbiB0aGUgbGF0ZXN0IHZlcnNpb25zIG9mIHRob3NlIGJyb3dzZXJzIHdpdGhvdXQgYW55IGFkZGl0aW9uYWwgc3RlcHMgb24geW91ciBwYXJ0Lg0KDQo8L2Rpdj5kZAIVDw8WAh8DBRNDYWxjdWx1cyBJICAtIE5vdGVzZGQCFw8PFgYeC05hdmlnYXRlVXJsBR8vQ2xhc3Nlcy9DYWxjSS9SZXZpZXdJbnRyby5hc3B4HwMFO1JldmlldzxpbWcgc3JjPSIvSW1hZ2VzL0RvdWJsZUFycm93UmlnaHQuZ2lmIiBib3JkZXI9IjAiIC8+HwRnFgQeC29uTW91c2VPdmVyBSF0aGlzLmNsYXNzTmFtZT0nUHJldk5leHRCdXR0b25PbiceCm9uTW91c2VPdXQFInRoaXMuY2xhc3NOYW1lPSdQcmV2TmV4dEJ1dHRvbk9mZidkAhsPEA8WAh4LXyFEYXRhQm91bmRnFgIeCG9uQ2hhbmdlBS5pZiAodGhpcy52YWx1ZSAhPSAiLTEiKSB7R29Ub1BhZ2UodGhpcy52YWx1ZSl9EBUFHCAtIFNlbGVjdCBhIFBhZ2UgdG8gVmlzaXQgLSAAJUUtQm9vayBQcmFjdGljZSBQcm9ibGVtcyBJbnRyb2R1Y3Rpb24nRS1Cb29rIEFzc2lnbm1lbnQgUHJvYmxlbXMgSW50cm9kdWN0aW9uFEUtQm9vayBEb3dubG9hZCBQYWdlFQUCLTECLTEaL3Byb2JsZW1zL2NhbGNpL2NhbGNpLmFzcHgcL3Byb2JsZW1zbnMvY2FsY2kvY2FsY2kuYXNweBgvZG93bmxvYWQuYXNweD9QREY9Qiw4OzgUKwMFZ2dnZ2dkZAIdDxAPFgIfCGcWAh8JBTJpZiAodGhpcy52YWx1ZSAhPSAiLTEiKSB7RG93bmxvYWRGaWxlKHRoaXMudmFsdWUpfRAVBiMgLSBTZWxlY3QgYSBQREYgRmlsZSB0byBEb3dubG9hZCAtIAAMRS1Cb29rIE5vdGVzGEUtQm9vayBQcmFjdGljZSBQcm9ibGVtcyJFLUJvb2sgUHJhY3RpY2UgUHJvYmxlbXMgU29sdXRpb25zGkUtQm9vayBBc3NpZ25tZW50IFByb2JsZW1zFQYCLTECLTEjQiw4LE47L3BkZi9jYWxjaS9jYWxjaV9jb21wbGV0ZS5wZGYsQiw4LFA7L3BkZi9wcm9ibGVtcy9jYWxjaS9jYWxjaV9jb21wbGV0ZS5wZGYtQiw4LFM7L3BkZi9zb2x1dGlvbnMvY2FsY2kvY2FsY2lfY29tcGxldGUucGRmLkIsOCxBOy9wZGYvcHJvYmxlbXNucy9jYWxjaS9jYWxjaV9jb21wbGV0ZS5wZGYUKwMGZ2dnZ2dnZGQCBQ9kFggCAw8PFgIfAwUTQ2FsY3VsdXMgSSAgLSBOb3Rlc2RkAgUPDxYGHwUFHy9DbGFzc2VzL0NhbGNJL1Jldmlld0ludHJvLmFzcHgfAwU7UmV2aWV3PGltZyBzcmM9Ii9JbWFnZXMvRG91YmxlQXJyb3dSaWdodC5naWYiIGJvcmRlcj0iMCIgLz4fBGcWBB8GBSF0aGlzLmNsYXNzTmFtZT0nUHJldk5leHRCdXR0b25PbicfBwUidGhpcy5jbGFzc05hbWU9J1ByZXZOZXh0QnV0dG9uT2ZmJ2QCBw8PFgIfAwUjT25saW5lIE5vdGVzICAvIENhbGN1bHVzIEkgIChOb3RlcylkZAIJDw8WAh8DBR8mY29weTsgMjAwMyAtIDIwMTUgUGF1bCBEYXdraW5zZGQCBw9kFgJmDxUEAAAAAGRkN/7/4frB9y7h4G4cHM2+6XvzRfo=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['Form1'];
+if (!theForm) {
+    theForm = document.Form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="../../WebResource33e8.js?d=YORUXOHolGkRCONPo84CJuYPHXBGUApHFAl7shtryPGwK0bFOwei0v3Gy5tKjz0-5qdg_bNA8_7sxPSNiIy-Bw7cHY81&amp;t=635294879132453548" type="text/javascript"></script>
+
+
+<script src="../../WebResource4708.js?d=yIPaMuK0NxJLVub7mSuSHqFWoFTW5iDqhVoywpwtB7lhIuxbZboTnB_8tYrkof7S65NEVr1oGs5sxDAczrabQRD4pw01&amp;t=635294879132453548" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="82F565D4" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWEQLr6dBNAoTDxbAEAsrXjVgCptXhtQcCvNftVAKf+r36DAKBkLPqDgKBkLPqDgKah9unDAKlx+vFBQLwzPPgCwLkvuO2DwLkvuO2DwLt7Mk4Arf4o6oPAsTU4eUBArq/kXtTN6zy7xxcQRRpr712lUMpLY61bg==" />
+</div>
+<input type="hidden" name="PDFUrl" id="PDFUrl" />
+
+
+<!--
+	 Milonic DHTML Website Navigation Menu Version 5.0
+	 Copyright 2004 (c) Milonic Solutions Limited (UK). All Rights Reserved.
+	 Please visit http://www.milonic.com/ for more information.
+
+	 Although this software may have been freely downloaded, you must obtain a license before using it in any production environment.		 
+	 The free use of this menu is only available for Non-Profit, Educational & Personal Web Sites who have obtained a license to use. 
+	 
+	 Free, Commercial and Corporate Licenses are available from our website.
+	 You also need to include a link back to http://www.milonic.com/ if you use the free license.
+	 
+	 All Copyright notices MUST remain in place at ALL times. 
+	 This includes the first three lines of this notice on every page that uses the menu.
+	 If you cannot comply with all of the above requirements, please contact us to arrange a license waiver.
+-->	
+
+<SCRIPT language=JavaScript src="../../menu/milonic_src.js" type=text/javascript></SCRIPT>	
+<script	language=JavaScript>
+if(ns4)_d.write("<scr"+"ipt language=JavaScript src=/menu/mmenuns4.js><\/scr"+"ipt>");		
+  else _d.write("<scr"+"ipt language=JavaScript src=/menu/mmenudom.js><\/scr"+"ipt>"); 
+</script>
+<SCRIPT language=JavaScript src="../../menu/menu_data_CalcI.js" type=text/javascript></SCRIPT>	
+
+
+<table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+	<td align="center" colspan="5" valign="top" height="50"><span class="Main_Heading">Paul's Online Math Notes</span></td>
+</tr>
+
+<tr>
+	<td width="150">&nbsp;</td>
+	<td width="3">&nbsp;</td>
+	<td><SCRIPT language=JavaScript src="../../menu/top_menu_data_all.js" type=text/javascript></SCRIPT></td>	
+	<td width="400" align="right">
+		<!-- I found the following code at -->
+		<!-- http://www.codeproject.com/KB/aspnet/CustomSearchEngine.aspx -->
+		<!-- Emulated Google CSE Search Box Begins -->
+	<input name="nHeader$q" type="text" maxlength="512" id="nHeader_q" onFocus="javascript:tbWaterMark_Focus('nHeader_q', 'Watermark_Focus', '', false)" onBlur="javascript:tbWaterMark_Blur('nHeader_q', 'Watermark_Blur', '', false)" style="width:175px;" />
+	<input type="submit" name="nHeader$btnGoogleSearch" value="Search" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;nHeader$btnGoogleSearch&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="nHeader_btnGoogleSearch" />
+	<span id="nHeader__rfvQ" style="color:Red;visibility:hidden;"></span>
+	
+	<input type="hidden" name="nHeader$cx" id="nHeader_cx" value="001004262401526223570:11yv6vpcqvy" />
+	<input type="hidden" name="nHeader$cof" id="nHeader_cof" value="FORID:11" />
+	<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=searchbox_001004262401526223570%3A11yv6vpcqvy"></script>
+	
+	<!-- 
+		In order to make the button's click event fire when the text box is highlighted, we have to
+		have a second text box be a part of the form.  Make it invisible so that the user never 
+		knows it's there.
+		
+		From what research I did, this appears to be an IE-specific problem.  Nevertheless, this 
+		was the only "solution" I found.
+	-->
+	<input name="dummyHidden" value="" style="visibility:hidden;display:none;" />
+	<!-- Emulated Google CSE Search Box Ends -->
+	
+	</td>
+<!-- Google CSE Search Box Ends -->	
+</tr>
+<tr><td colspan="4" height="3"></td></tr>
+<tr>
+	<td valign="top">
+    
+    <SCRIPT language=JavaScript src="../../menu/side_menu_data_CalcI.js" type=text/javascript></SCRIPT>
+
+    <!--
+    <div style="width: 180px; margin-top: 20px">
+    <script type='text/javascript' id='openstudy-widget-loader' src='http://math.openstudy.com/javascripts/load.js?type=feed&color=blue&studygroup=Mathematics&env=math.openstudy.com'></script>
+    </div>
+    -->
+
+	</td>
+	<td width="3">&nbsp;</td>
+	<td valign="top" colspan="2">
+		<table border="0" width="100%" cellpadding="0">
+		<tr>
+			<td>
+			<div class="MainBox" align="center">
+
+            <table width="97%">
+                <tr>
+                    <td><div align="left"><span id="nHeader_lblBreadCrumb" class="BreadCrumb">Online Notes  / Calculus I  (Notes)</span></div></td>
+                    <td width="250" align="right">
+                                <!-- Place this tag where you want the +1 button to render -->
+<g:plusone size="medium"></g:plusone>
+
+<!-- Place this render call where appropriate -->
+<script type="text/javascript">
+    (function () {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = '../../../apis.google.com/js/plusone.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+    })();
+</script>
+                    </td>
+                </tr>
+            </table>
+
+			
+            
+
+            						
+			
+			
+			<div id="nHeader_pClassNote" class="Classes_Note">
+	<span id="nHeader_lblClassNote"><br />
+<div class="Notice"><span style="font-weight:bold;color:Red">Internet Explorer 10 &amp; 11 Users : </span>If you are using Internet Explorer 10 or Internet Explorer 11 then, in all likelihood, the equations on the pages are all shifted downward.  To fix this you need to put your browser in Compatibility View for my site.  Click <a href="../../IE_Compatibility.html">here</a> for instructions on how to do that.  Alternatively, you can also view the pages in Chrome or Firefox as they should display properly in the latest versions of those browsers without any additional steps on your part.
+
+</div></span>
+</div>
+			
+			
+			
+			<div class="Top_Nav">
+			<table width="100%" align="center" cellspacing="0" cellpadding="0" border="0">
+			<tr><td colspan="3"><hr color="#00000" size="2" /></td></tr>
+			<tr>
+				<td width="36%"><span class="Button_Outer">
+				
+				</span></td>
+				<td width="27%" align="center"><span class="MainTitle"><span id="nHeader_lblTitle">Calculus I  - Notes</span></span></td>
+				<td width="36%" align="right"><span class="Button_Outer">
+				<a id="nHeader_aNext" class="PrevNextButtonOff" onMouseOver="this.className='PrevNextButtonOn'" onMouseOut="this.className='PrevNextButtonOff'" href="ReviewIntro.html">Review<img src="../../Images/DoubleArrowRight.gif" border="0" /></a>
+				</span></td>
+			</tr>
+			<tr><td colspan="3">
+			<hr color="#00000" size="2" /></td></tr>
+			</table>
+			</div>  <!-- Top_Nav -->
+
+			<div class="Top_Links">
+			<table width="100%" align="center" cellspacing="0" cellpadding="0" border="0">
+			<tr>
+				<td width="40%"><span class="Smaller"><select name="nHeader$ddlGoTo" id="nHeader_ddlGoTo" onChange="if (this.value != &quot;-1&quot;) {GoToPage(this.value)}">
+	<option value="-1"> - Select a Page to Visit - </option>
+	<option value="-1"></option>
+	<option value="/problems/calci/calci.aspx">E-Book Practice Problems Introduction</option>
+	<option value="/problemsns/calci/calci.aspx">E-Book Assignment Problems Introduction</option>
+	<option value="/download.aspx?PDF=B,8;8">E-Book Download Page</option>
+
+</select></span></td>
+				<td align="center">
+				<span class="Smaller" width="40%"><select name="nHeader$ddlDownload" id="nHeader_ddlDownload" onChange="if (this.value != &quot;-1&quot;) {DownloadFile(this.value)}">
+	<option value="-1"> - Select a PDF File to Download - </option>
+	<option value="-1"></option>
+	<option value="B,8,N;/pdf/calci/calci_complete.pdf">E-Book Notes</option>
+	<option value="B,8,P;/pdf/problems/calci/calci_complete.pdf">E-Book Practice Problems</option>
+	<option value="B,8,S;/pdf/solutions/calci/calci_complete.pdf">E-Book Practice Problems Solutions</option>
+	<option value="B,8,A;/pdf/problemsns/calci/calci_complete.pdf">E-Book Assignment Problems</option>
+
+</select></span>
+				</td>
+				<td align="right" width="19%"><a class="Smaller" href="javascript:ShowPage('NHelp')">Show Page Help</a></td>
+			</tr>
+			</table>
+			</div>
+
+
+			
+			<div class="Content">
+
+
+<span class="HeadingText">Calculus I (Math 2413)</span>
+
+<p class=MsoNormal>Here are my online notes for my Calculus I course that I
+teach here at Lamar University.  Despite
+the fact that these are my “class notes”, they should be accessible to anyone
+wanting to learn Calculus I or needing a refresher in some of the early topics
+in calculus.  </p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>I’ve tried to make these notes as self contained as possible
+and so all the information needed to read through them is either from an
+Algebra or Trig class or contained in other sections of the notes.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Here are a couple of warnings to my students who may be here
+to get a copy of what happened on a day that you missed.  </p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal >Because
+     I wanted to make this a fairly complete set of notes for anyone wanting to
+     learn calculus I have included some material that I do not usually have
+     time to cover in class and because this changes from semester to semester
+     it is not noted here.  You will need
+     to find one of your fellow class mates to see if there is something in
+     these notes that wasn’t covered in class.<br >
+     <br >
+     </li>
+ <li class=MsoNormal >Because
+     I want these notes to provide some more examples for you to read through,
+     I don’t always work the same problems in class as those given in the
+     notes.  Likewise, even if I do work
+     some of the problems in here I may work fewer problems in class than are
+     presented here.<br >
+     <br >
+     </li>
+ <li class=MsoNormal >Sometimes
+     questions in class will lead down paths that are not covered here.  I try to anticipate as many of the
+     questions as possible when writing these up, but the reality is that I
+     can’t anticipate all the questions. 
+     Sometimes a very good question gets asked in class that leads to
+     insights that I’ve not included here. 
+     You should always talk to someone who was in class on the day you
+     missed and compare these notes to their notes and see what the differences
+     are.<br >
+     <br >
+     </li>
+ <li class=MsoNormal >This
+     is somewhat related to the previous three items, but is important enough
+     to merit its own item.  THESE NOTES
+     ARE NOT A SUBSTITUTE FOR ATTENDING CLASS!! 
+     Using these notes as a substitute for class is liable to get you in
+     trouble. As already noted not everything in these notes is covered in
+     class and often material or insights not in these notes is covered in
+     class.</li>
+</ol>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Here is a listing and brief description of the material in
+this set of notes.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal style='margin-left:.5in'><a href="ReviewIntro.html"><b
+>Review</b></a> </p>
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="Functions.html"><b
+>Review : Functions</b></a> <!-- MP SYPH( --><script id=mpch0001s1>
+	MPSetChAttrs('ch0001','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0001ph class=MPNNCode
+	><img border=0 name=mpch0001ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0001s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> Here is a quick review of functions, function
+notation and a couple of fairly important ideas about functions.</p><!-- MP SYRA( --><script id=mpch0001s1>
+	MPSetChAttrs('ch0001','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0001 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0001ph,'')
+	</script><layer id=mpch0001 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0001s3>
+	MPDeleteCode('ch0001')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="InverseFunctions.html"><b
+>Review : Inverse Functions</b></a> <!-- MP SYPH( --><script id=mpch0002s1>
+	MPSetChAttrs('ch0002','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0002ph class=MPNNCode
+	><img border=0 name=mpch0002ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0002s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> A quick review of inverse functions and the
+notation for inverse functions.</p><!-- MP SYRA( --><script id=mpch0002s1>
+	MPSetChAttrs('ch0002','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0002 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0002ph,'')
+	</script><layer id=mpch0002 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0002s3>
+	MPDeleteCode('ch0002')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="TrigFcns.html"><b
+>Review : Trig Functions</b></a> <!-- MP SYPH( --><script id=mpch0003s1>
+	MPSetChAttrs('ch0003','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0003ph class=MPNNCode
+	><img border=0 name=mpch0003ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0003s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> A review of trig functions, evaluation of trig
+functions and the unit circle.  This
+section usually gets a quick review in my class.</p><!-- MP SYRA( --><script id=mpch0003s1>
+	MPSetChAttrs('ch0003','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0003 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0003ph,'')
+	</script><layer id=mpch0003 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0003s3>
+	MPDeleteCode('ch0003')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="TrigEquations.html"><b
+>Review : Solving Trig Equations</b></a> <!-- MP SYPH( --><script id=mpch0004s1>
+	MPSetChAttrs('ch0004','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0004ph class=MPNNCode
+	><img border=0 name=mpch0004ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0004s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> A reminder on how to solve trig
+equations.  This section is always
+covered in my class.</p><!-- MP SYRA( --><script id=mpch0004s1>
+	MPSetChAttrs('ch0004','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0004 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0004ph,'')
+	</script><layer id=mpch0004 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0004s3>
+	MPDeleteCode('ch0004')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="TrigEquations_CalcI.html"><b
+>Review : Solving Trig Equations with
+Calculators, Part I</b></a> <!-- MP SYPH( --><script id=mpch0005s1>
+	MPSetChAttrs('ch0005','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0005ph class=MPNNCode
+	><img border=0 name=mpch0005ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0005s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> The previous section worked problems whose
+answers were always the “standard” angles. 
+In this section we work some problems whose answers are not “standard”
+and so a calculator is needed.  This
+section is always covered in my class as most trig equations in the remainder
+will need a calculator.</p><!-- MP SYRA( --><script id=mpch0005s1>
+	MPSetChAttrs('ch0005','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0005 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0005ph,'')
+	</script><layer id=mpch0005 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0005s3>
+	MPDeleteCode('ch0005')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="TrigEquations_CalcII.aspx"><b
+>Review : Solving Trig Equations with
+Calculators, Part II</b></a> <!-- MP SYPH( --><script id=mpch0006s1>
+	MPSetChAttrs('ch0006','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0006ph class=MPNNCode
+	><img border=0 name=mpch0006ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0006s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> Even more trig equations requiring a
+calculator to solve.</p><!-- MP SYRA( --><script id=mpch0006s1>
+	MPSetChAttrs('ch0006','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0006 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0006ph,'')
+	</script><layer id=mpch0006 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0006s3>
+	MPDeleteCode('ch0006')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="ExpFunctions.html"><b
+>Review : Exponential Functions</b></a> <!-- MP SYPH( --><script id=mpch0007s1>
+	MPSetChAttrs('ch0007','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0007ph class=MPNNCode
+	><img border=0 name=mpch0007ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0007s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> A review of exponential functions.  This section usually gets a quick review in
+my class.</p><!-- MP SYRA( --><script id=mpch0007s1>
+	MPSetChAttrs('ch0007','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0007 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0007ph,'')
+	</script><layer id=mpch0007 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0007s3>
+	MPDeleteCode('ch0007')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="LogFcns.html"><b
+>Review : Logarithm Functions</b></a> <!-- MP SYPH( --><script id=mpch0008s1>
+	MPSetChAttrs('ch0008','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0008ph class=MPNNCode
+	><img border=0 name=mpch0008ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0008s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> A review of logarithm functions and logarithm
+properties.  This section usually gets a
+quick review in my class.</p><!-- MP SYRA( --><script id=mpch0008s1>
+	MPSetChAttrs('ch0008','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0008 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0008ph,'')
+	</script><layer id=mpch0008 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0008s3>
+	MPDeleteCode('ch0008')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="ExpLogEqns.html"><b
+>Review : Exponential and Logarithm
+Equations</b></a> <!-- MP SYPH( --><script id=mpch0009s1>
+	MPSetChAttrs('ch0009','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0009ph class=MPNNCode
+	><img border=0 name=mpch0009ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0009s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> How to solve exponential and logarithm
+equations.  This section is always
+covered in my class.</p><!-- MP SYRA( --><script id=mpch0009s1>
+	MPSetChAttrs('ch0009','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0009 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0009ph,'')
+	</script><layer id=mpch0009 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0009s3>
+	MPDeleteCode('ch0009')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="CommonGraphs.html"><b
+>Review : Common Graphs</b></a> <!-- MP SYPH( --><script id=mpch0010s1>
+	MPSetChAttrs('ch0010','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0010ph class=MPNNCode
+	><img border=0 name=mpch0010ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0010s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> This section isn’t much.  It’s mostly a collection of graphs of many of
+the common functions that are liable to be seen in a Calculus class.</p><!-- MP SYRA( --><script id=mpch0010s1>
+	MPSetChAttrs('ch0010','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0010 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0010ph,'')
+	</script><layer id=mpch0010 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0010s3>
+	MPDeleteCode('ch0010')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>            <a
+href="LimitsIntro.html"><b >Limits</b></a><b
+></b></p>
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="Tangents_Rates.html"><b
+>Tangent Lines and Rates of Change</b></a> <!-- MP SYPH( --><script id=mpch0011s1>
+	MPSetChAttrs('ch0011','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0011ph class=MPNNCode
+	><img border=0 name=mpch0011ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0011s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> In this section we will take a look at two
+problems that we will see time and again in this course.  These problems will be used to introduce the
+topic of limits.</p><!-- MP SYRA( --><script id=mpch0011s1>
+	MPSetChAttrs('ch0011','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0011 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0011ph,'')
+	</script><layer id=mpch0011 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0011s3>
+	MPDeleteCode('ch0011')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="TheLimit.html"><b
+>The Limit</b></a> <!-- MP SYPH( --><script id=mpch0012s1>
+	MPSetChAttrs('ch0012','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0012ph class=MPNNCode
+	><img border=0 name=mpch0012ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0012s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> Here we will take a conceptual look at limits
+and try to get a grasp on just what they are and what they can tell us.</p><!-- MP SYRA( --><script id=mpch0012s1>
+	MPSetChAttrs('ch0012','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0012 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0012ph,'')
+	</script><layer id=mpch0012 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0012s3>
+	MPDeleteCode('ch0012')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="OneSidedLimits.html"><b
+>One-Sided Limits</b></a> <!-- MP SYPH( --><script id=mpch0013s1>
+	MPSetChAttrs('ch0013','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0013ph class=MPNNCode
+	><img border=0 name=mpch0013ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0013s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> A brief introduction to one-sided limits.</p><!-- MP SYRA( --><script id=mpch0013s1>
+	MPSetChAttrs('ch0013','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0013 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0013ph,'')
+	</script><layer id=mpch0013 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0013s3>
+	MPDeleteCode('ch0013')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="LimitsProperties.html"><b
+>Limit Properties</b></a> <!-- MP SYPH( --><script id=mpch0014s1>
+	MPSetChAttrs('ch0014','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0014ph class=MPNNCode
+	><img border=0 name=mpch0014ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0014s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> Properties of limits that we’ll need to use in
+computing limits.  We will also compute
+some basic limits in this section</p><!-- MP SYRA( --><script id=mpch0014s1>
+	MPSetChAttrs('ch0014','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0014 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0014ph,'')
+	</script><layer id=mpch0014 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0014s3>
+	MPDeleteCode('ch0014')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="ComputingLimits.html"><b
+>Computing Limits</b></a> <!-- MP SYPH( --><script id=mpch0015s1>
+	MPSetChAttrs('ch0015','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0015ph class=MPNNCode
+	><img border=0 name=mpch0015ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0015s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> Many of the limits we’ll be asked to compute
+will not be “simple” limits.  In other
+words, we won’t be able to just apply the properties and be done.  In this section we will look at several types
+of limits that require some work before we can use the limit properties to
+compute them.  </p><!-- MP SYRA( --><script id=mpch0015s1>
+	MPSetChAttrs('ch0015','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0015 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0015ph,'')
+	</script><layer id=mpch0015 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0015s3>
+	MPDeleteCode('ch0015')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="InfiniteLimits.html"><b
+>Infinite Limits</b></a> <!-- MP SYPH( --><script id=mpch0016s1>
+	MPSetChAttrs('ch0016','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0016ph class=MPNNCode
+	><img border=0 name=mpch0016ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0016s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> Here we will take a look at limits that have a
+value of infinity or negative infinity. 
+We’ll also take a brief look at vertical asymptotes.</p><!-- MP SYRA( --><script id=mpch0016s1>
+	MPSetChAttrs('ch0016','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0016 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0016ph,'')
+	</script><layer id=mpch0016 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0016s3>
+	MPDeleteCode('ch0016')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="LimitsAtInfinityI.html"><b
+>Limits At Infinity, Part I</b></a> <!-- MP SYPH( --><script id=mpch0017s1>
+	MPSetChAttrs('ch0017','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0017ph class=MPNNCode
+	><img border=0 name=mpch0017ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0017s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> In this section we’ll look at limits at
+infinity.  In other words, limits in
+which the variable gets very large in either the positive or negative
+sense.  We’ll also take a brief look at
+horizontal asymptotes in this section. 
+We’ll be concentrating on polynomials and rational expression involving
+polynomials in this section.</p><!-- MP SYRA( --><script id=mpch0017s1>
+	MPSetChAttrs('ch0017','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0017 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0017ph,'')
+	</script><layer id=mpch0017 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0017s3>
+	MPDeleteCode('ch0017')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="LimitsAtInfinityII.html"><b
+>Limits At Infinity, Part II</b></a> <!-- MP SYPH( --><script id=mpch0018s1>
+	MPSetChAttrs('ch0018','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0018ph class=MPNNCode
+	><img border=0 name=mpch0018ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0018s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> We’ll continue to look at limits at infinity
+in this section, but this time we’ll be looking at exponential, logarithms and
+inverse tangents.</p><!-- MP SYRA( --><script id=mpch0018s1>
+	MPSetChAttrs('ch0018','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0018 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0018ph,'')
+	</script><layer id=mpch0018 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0018s3>
+	MPDeleteCode('ch0018')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="Continuity.html"><b
+>Continuity</b></a> <!-- MP SYPH( --><script id=mpch0019s1>
+	MPSetChAttrs('ch0019','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0019ph class=MPNNCode
+	><img border=0 name=mpch0019ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0019s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> In this section we will introduce the concept
+of continuity and how it relates to limits. 
+We will also see the Mean Value Theorem in this section.</p><!-- MP SYRA( --><script id=mpch0019s1>
+	MPSetChAttrs('ch0019','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0019 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0019ph,'')
+	</script><layer id=mpch0019 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0019s3>
+	MPDeleteCode('ch0019')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="DefnOfLimit.html"><b
+>The Definition of the Limit</b></a> <!-- MP SYPH( --><script id=mpch0020s1>
+	MPSetChAttrs('ch0020','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0020ph class=MPNNCode
+	><img border=0 name=mpch0020ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0020s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> We will give the exact definition of several
+of the limits covered in this section. 
+We’ll also give the exact definition of continuity.</p><!-- MP SYRA( --><script id=mpch0020s1>
+	MPSetChAttrs('ch0020','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0020 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0020ph,'')
+	</script><layer id=mpch0020 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0020s3>
+	MPDeleteCode('ch0020')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>            <a
+href="DerivativeIntro.html"><b >Derivatives</b></a><b
+></b></p>
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="DefnOfDerivative.html"><b
+>The Definition of the Derivative</b></a><b
+> </b><b ><!-- MP SYPH( --><script id=mpch0021s1>
+	MPSetChAttrs('ch0021','ch1',[[6,1,-2,0,0],[8,1,-3,0,0],[10,1,-4,0,0],[],[],[],[26,3,-10,1,0]])
+</script><![if !ie]><span id=mpnnch0021ph class=MPNNCode
+	><img border=0 name=mpch0021ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0021s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --></b><b
+> </b>In
+this section we will be looking at the definition of the derivative.  </p><!-- MP SYRA( --><script id=mpch0021s1>
+	MPSetChAttrs('ch0021','ch1',[[6,1,-2,0,0],[8,1,-3,0,0],[10,1,-4,0,0],[],[],[],[26,3,-10,1,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0021 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0021ph,'')
+	</script><layer id=mpch0021 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0021s3>
+	MPDeleteCode('ch0021')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="DerivativeInterp.html"><b
+>Interpretation of the Derivative</b></a> <!-- MP SYPH( --><script id=mpch0022s1>
+	MPSetChAttrs('ch0022','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0022ph class=MPNNCode
+	><img border=0 name=mpch0022ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0022s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> Here we will take a quick look at some
+interpretations of the derivative.</p><!-- MP SYRA( --><script id=mpch0022s1>
+	MPSetChAttrs('ch0022','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0022 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0022ph,'')
+	</script><layer id=mpch0022 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0022s3>
+	MPDeleteCode('ch0022')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="DiffFormulas.html"><b
+>Differentiation Formulas</b></a> <!-- MP SYPH( --><script id=mpch0023s1>
+	MPSetChAttrs('ch0023','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0023ph class=MPNNCode
+	><img border=0 name=mpch0023ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0023s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> Here we will start introducing some of the
+differentiation formulas used in a calculus course.</p><!-- MP SYRA( --><script id=mpch0023s1>
+	MPSetChAttrs('ch0023','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0023 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0023ph,'')
+	</script><layer id=mpch0023 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0023s3>
+	MPDeleteCode('ch0023')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="ProductQuotientRule.html"><b
+>Product and Quotient Rule</b></a> <!-- MP SYPH( --><script id=mpch0024s1>
+	MPSetChAttrs('ch0024','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0024ph class=MPNNCode
+	><img border=0 name=mpch0024ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0024s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> In this section we will took at
+differentiating products and quotients of functions.</p><!-- MP SYRA( --><script id=mpch0024s1>
+	MPSetChAttrs('ch0024','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0024 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0024ph,'')
+	</script><layer id=mpch0024 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0024s3>
+	MPDeleteCode('ch0024')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="DiffTrigFcns.html"><b
+>Derivatives of Trig Functions</b></a> <!-- MP SYPH( --><script id=mpch0025s1>
+	MPSetChAttrs('ch0025','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0025ph class=MPNNCode
+	><img border=0 name=mpch0025ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0025s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> We’ll give the derivatives of the trig
+functions in this section.</p><!-- MP SYRA( --><script id=mpch0025s1>
+	MPSetChAttrs('ch0025','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0025 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0025ph,'')
+	</script><layer id=mpch0025 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0025s3>
+	MPDeleteCode('ch0025')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="DiffExpLogFcns.html"><b
+>Derivatives of Exponential and Logarithm
+Functions</b></a> <!-- MP SYPH( --><script id=mpch0026s1>
+	MPSetChAttrs('ch0026','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0026ph class=MPNNCode
+	><img border=0 name=mpch0026ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0026s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> In this section we will get the derivatives of
+the exponential and logarithm functions.</p><!-- MP SYRA( --><script id=mpch0026s1>
+	MPSetChAttrs('ch0026','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0026 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0026ph,'')
+	</script><layer id=mpch0026 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0026s3>
+	MPDeleteCode('ch0026')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="DiffInvTrigFcns.html"><b
+>Derivatives of Inverse Trig Functions</b></a>
+<!-- MP SYPH( --><script id=mpch0027s1>
+	MPSetChAttrs('ch0027','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0027ph class=MPNNCode
+	><img border=0 name=mpch0027ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0027s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> Here we will look at the derivatives of
+inverse trig functions.</p><!-- MP SYRA( --><script id=mpch0027s1>
+	MPSetChAttrs('ch0027','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0027 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0027ph,'')
+	</script><layer id=mpch0027 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0027s3>
+	MPDeleteCode('ch0027')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="DiffHyperTrigFcns.html"><b
+>Derivatives of Hyperbolic Functions</b></a>
+<!-- MP SYPH( --><script id=mpch0028s1>
+	MPSetChAttrs('ch0028','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0028ph class=MPNNCode
+	><img border=0 name=mpch0028ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0028s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> Here we will look at the derivatives of
+hyperbolic functions.</p><!-- MP SYRA( --><script id=mpch0028s1>
+	MPSetChAttrs('ch0028','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0028 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0028ph,'')
+	</script><layer id=mpch0028 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0028s3>
+	MPDeleteCode('ch0028')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="ChainRule.html"><b
+>Chain Rule</b></a> <!-- MP SYPH( --><script id=mpch0029s1>
+	MPSetChAttrs('ch0029','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0029ph class=MPNNCode
+	><img border=0 name=mpch0029ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0029s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> The Chain Rule is one of the more important
+differentiation rules and will allow us to differentiate a wider variety of
+functions.  In this section we will take
+a look at it.</p><!-- MP SYRA( --><script id=mpch0029s1>
+	MPSetChAttrs('ch0029','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0029 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0029ph,'')
+	</script><layer id=mpch0029 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0029s3>
+	MPDeleteCode('ch0029')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="ImplicitDiff.html"><b
+>Implicit Differentiation</b></a> <!-- MP SYPH( --><script id=mpch0030s1>
+	MPSetChAttrs('ch0030','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0030ph class=MPNNCode
+	><img border=0 name=mpch0030ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0030s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> In this section we will be looking at implicit
+differentiation.  Without this we won’t
+be able to work some of the applications of derivatives.</p><!-- MP SYRA( --><script id=mpch0030s1>
+	MPSetChAttrs('ch0030','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0030 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0030ph,'')
+	</script><layer id=mpch0030 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0030s3>
+	MPDeleteCode('ch0030')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="RelatedRates.html"><b
+>Related Rates</b></a> <!-- MP SYPH( --><script id=mpch0031s1>
+	MPSetChAttrs('ch0031','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0031ph class=MPNNCode
+	><img border=0 name=mpch0031ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0031s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> In this section we will look at the lone
+application to derivatives in this chapter. 
+This topic is here rather than the next chapter because it will help to
+cement in our minds one of the more important concepts about derivatives and
+because it requires implicit differentiation.</p><!-- MP SYRA( --><script id=mpch0031s1>
+	MPSetChAttrs('ch0031','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0031 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0031ph,'')
+	</script><layer id=mpch0031 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0031s3>
+	MPDeleteCode('ch0031')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="HigherOrderDerivatives.html"><b
+>Higher Order Derivatives</b></a> <!-- MP SYPH( --><script id=mpch0032s1>
+	MPSetChAttrs('ch0032','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0032ph class=MPNNCode
+	><img border=0 name=mpch0032ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0032s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> Here we will introduce the idea of higher
+order derivatives. </p><!-- MP SYRA( --><script id=mpch0032s1>
+	MPSetChAttrs('ch0032','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0032 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0032ph,'')
+	</script><layer id=mpch0032 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0032s3>
+	MPDeleteCode('ch0032')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="LogDiff.html"><b
+>Logarithmic Differentiation</b></a> <!-- MP SYPH( --><script id=mpch0033s1>
+	MPSetChAttrs('ch0033','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0033ph class=MPNNCode
+	><img border=0 name=mpch0033ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0033s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> The topic of logarithmic differentiation is
+not always presented in a standard calculus course.  It is presented here for those who are
+interested in seeing how it is done and the types of functions on which it can
+be used.</p><!-- MP SYRA( --><script id=mpch0033s1>
+	MPSetChAttrs('ch0033','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0033 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0033ph,'')
+	</script><layer id=mpch0033 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0033s3>
+	MPDeleteCode('ch0033')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'>&nbsp;</p>
+
+<p class=MsoNormal>            <a
+href="DerivAppsIntro.html"><b >Applications
+of Derivatives</b></a><b ></b></p>
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="RateOfChange.html"><b
+>Rates of Change</b></a> <!-- MP SYPH( --><script id=mpch0034s1>
+	MPSetChAttrs('ch0034','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0034ph class=MPNNCode
+	><img border=0 name=mpch0034ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0034s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> The point of this section is to remind us of
+the application/interpretation of derivatives that we were dealing with in the
+previous chapter.  Namely, rates of
+change. </p><!-- MP SYRA( --><script id=mpch0034s1>
+	MPSetChAttrs('ch0034','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0034 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0034ph,'')
+	</script><layer id=mpch0034 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0034s3>
+	MPDeleteCode('ch0034')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="CriticalPoints.html"><b
+>Critical Points</b></a> <!-- MP SYPH( --><script id=mpch0035s1>
+	MPSetChAttrs('ch0035','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0035ph class=MPNNCode
+	><img border=0 name=mpch0035ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0035s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> In this section we will define critical
+points.  Critical points will show up in
+many of the sections in this chapter so it will be important to understand
+them.</p><!-- MP SYRA( --><script id=mpch0035s1>
+	MPSetChAttrs('ch0035','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0035 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0035ph,'')
+	</script><layer id=mpch0035 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0035s3>
+	MPDeleteCode('ch0035')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="MinMaxValues.html"><b
+>Minimum and Maximum Values</b></a> <!-- MP SYPH( --><script id=mpch0036s1>
+	MPSetChAttrs('ch0036','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0036ph class=MPNNCode
+	><img border=0 name=mpch0036ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0036s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> In this section we will take a look at some of
+the basic definitions and facts involving minimum and maximum values of
+functions.</p><!-- MP SYRA( --><script id=mpch0036s1>
+	MPSetChAttrs('ch0036','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0036 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0036ph,'')
+	</script><layer id=mpch0036 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0036s3>
+	MPDeleteCode('ch0036')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="AbsExtrema.html"><b
+>Finding Absolute Extrema</b></a> <!-- MP SYPH( --><script id=mpch0037s1>
+	MPSetChAttrs('ch0037','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0037ph class=MPNNCode
+	><img border=0 name=mpch0037ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0037s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> Here is the first application of derivatives
+that we’ll look at in this chapter.  We
+will be determining the largest and smallest value of a function on an
+interval. </p><!-- MP SYRA( --><script id=mpch0037s1>
+	MPSetChAttrs('ch0037','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0037 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0037ph,'')
+	</script><layer id=mpch0037 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0037s3>
+	MPDeleteCode('ch0037')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="ShapeofGraphPtI.html"><b
+>The Shape of a Graph, Part I</b></a> <!-- MP SYPH( --><script id=mpch0038s1>
+	MPSetChAttrs('ch0038','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0038ph class=MPNNCode
+	><img border=0 name=mpch0038ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0038s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> We will start looking at the information that
+the first derivatives can tell us about the graph of a function.  We will be looking at increasing/decreasing
+functions as well as the First Derivative Test.</p><!-- MP SYRA( --><script id=mpch0038s1>
+	MPSetChAttrs('ch0038','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0038 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0038ph,'')
+	</script><layer id=mpch0038 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0038s3>
+	MPDeleteCode('ch0038')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="ShapeofGraphPtII.html"><b
+>The Shape of a Graph, Part II</b></a> <!-- MP SYPH( --><script id=mpch0039s1>
+	MPSetChAttrs('ch0039','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0039ph class=MPNNCode
+	><img border=0 name=mpch0039ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0039s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> In this section we will look at the
+information about the graph of a function that the second derivatives can tell
+us.  We will look at inflection points,
+concavity, and the Second Derivative Test.</p><!-- MP SYRA( --><script id=mpch0039s1>
+	MPSetChAttrs('ch0039','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0039 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0039ph,'')
+	</script><layer id=mpch0039 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0039s3>
+	MPDeleteCode('ch0039')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="MeanValueTheorem.html"><b
+>The Mean Value Theorem</b></a> <!-- MP SYPH( --><script id=mpch0040s1>
+	MPSetChAttrs('ch0040','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0040ph class=MPNNCode
+	><img border=0 name=mpch0040ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0040s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> Here we will take a look at the Mean Value
+Theorem.</p><!-- MP SYRA( --><script id=mpch0040s1>
+	MPSetChAttrs('ch0040','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0040 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0040ph,'')
+	</script><layer id=mpch0040 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0040s3>
+	MPDeleteCode('ch0040')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="Optimization.html"><b
+>Optimization Problems</b></a> <!-- MP SYPH( --><script id=mpch0041s1>
+	MPSetChAttrs('ch0041','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0041ph class=MPNNCode
+	><img border=0 name=mpch0041ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0041s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> This is the second major application of
+derivatives in this chapter.  In this
+section we will look at optimizing a function, possibly subject to some
+constraint.</p><!-- MP SYRA( --><script id=mpch0041s1>
+	MPSetChAttrs('ch0041','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0041 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0041ph,'')
+	</script><layer id=mpch0041 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0041s3>
+	MPDeleteCode('ch0041')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="MoreOptimization.html"><b
+>More Optimization Problems</b></a> <!-- MP SYPH( --><script id=mpch0042s1>
+	MPSetChAttrs('ch0042','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0042ph class=MPNNCode
+	><img border=0 name=mpch0042ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0042s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> Here are even more optimization problems.</p><!-- MP SYRA( --><script id=mpch0042s1>
+	MPSetChAttrs('ch0042','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0042 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0042ph,'')
+	</script><layer id=mpch0042 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0042s3>
+	MPDeleteCode('ch0042')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="LHospitalsRule.html"><b
+>L’Hospital’s Rule and Indeterminate Forms</b></a>
+<!-- MP SYPH( --><script id=mpch0043s1>
+	MPSetChAttrs('ch0043','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0043ph class=MPNNCode
+	><img border=0 name=mpch0043ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0043s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> This isn’t the first time that we’ve looked at
+indeterminate forms.  In this section we
+will take a look at L’Hospital’s Rule. 
+This rule will allow us to compute some limits that we couldn’t do until
+this section.</p><!-- MP SYRA( --><script id=mpch0043s1>
+	MPSetChAttrs('ch0043','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0043 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0043ph,'')
+	</script><layer id=mpch0043 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0043s3>
+	MPDeleteCode('ch0043')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="LinearApproximations.html"><b
+>Linear Approximations</b></a> <!-- MP SYPH( --><script id=mpch0044s1>
+	MPSetChAttrs('ch0044','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0044ph class=MPNNCode
+	><img border=0 name=mpch0044ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0044s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> Here we will use derivatives to compute a
+linear approximation to a function.  As
+we will see however, we’ve actually already done this.</p><!-- MP SYRA( --><script id=mpch0044s1>
+	MPSetChAttrs('ch0044','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0044 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0044ph,'')
+	</script><layer id=mpch0044 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0044s3>
+	MPDeleteCode('ch0044')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="Differentials.html"><b
+>Differentials</b></a> <!-- MP SYPH( --><script id=mpch0045s1>
+	MPSetChAttrs('ch0045','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0045ph class=MPNNCode
+	><img border=0 name=mpch0045ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0045s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> We will look at differentials in this section
+as well as an application for them.</p><!-- MP SYRA( --><script id=mpch0045s1>
+	MPSetChAttrs('ch0045','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0045 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0045ph,'')
+	</script><layer id=mpch0045 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0045s3>
+	MPDeleteCode('ch0045')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="NewtonsMethod.html"><b
+>Newton’s Method</b></a> <!-- MP SYPH( --><script id=mpch0046s1>
+	MPSetChAttrs('ch0046','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0046ph class=MPNNCode
+	><img border=0 name=mpch0046ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0046s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> With this application of derivatives we’ll see
+how to approximate solutions to an equation.</p><!-- MP SYRA( --><script id=mpch0046s1>
+	MPSetChAttrs('ch0046','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0046 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0046ph,'')
+	</script><layer id=mpch0046 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0046s3>
+	MPDeleteCode('ch0046')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="BusinessApps.html"><b
+>Business Applications</b></a> <!-- MP SYPH( --><script id=mpch0047s1>
+	MPSetChAttrs('ch0047','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0047ph class=MPNNCode
+	><img border=0 name=mpch0047ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0047s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> Here we will take a quick look at some
+applications of derivatives to the business field.</p><!-- MP SYRA( --><script id=mpch0047s1>
+	MPSetChAttrs('ch0047','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0047 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0047ph,'')
+	</script><layer id=mpch0047 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0047s3>
+	MPDeleteCode('ch0047')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>            <a
+href="IntegralsIntro.html"><b >Integrals</b></a></p>
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="IndefiniteIntegrals.html"><b
+>Indefinite Integrals</b></a> <!-- MP SYPH( --><script id=mpch0048s1>
+	MPSetChAttrs('ch0048','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0048ph class=MPNNCode
+	><img border=0 name=mpch0048ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0048s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> In this section we will start with the
+definition of indefinite integral.  This
+section will be devoted mostly to the definition and properties of indefinite
+integrals and we won’t be working many examples in this section.</p><!-- MP SYRA( --><script id=mpch0048s1>
+	MPSetChAttrs('ch0048','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0048 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0048ph,'')
+	</script><layer id=mpch0048 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0048s3>
+	MPDeleteCode('ch0048')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="ComputingIndefiniteIntegrals.html"><b
+>Computing Indefinite Integrals</b></a> <!-- MP SYPH( --><script id=mpch0049s1>
+	MPSetChAttrs('ch0049','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0049ph class=MPNNCode
+	><img border=0 name=mpch0049ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0049s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> In this section we will compute some
+indefinite integrals and take a look at a quick application of indefinite
+integrals.</p><!-- MP SYRA( --><script id=mpch0049s1>
+	MPSetChAttrs('ch0049','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0049 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0049ph,'')
+	</script><layer id=mpch0049 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0049s3>
+	MPDeleteCode('ch0049')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="SubstitutionRuleIndefinite.html"><b
+>Substitution Rule for Indefinite Integrals</b></a>
+<!-- MP SYPH( --><script id=mpch0050s1>
+	MPSetChAttrs('ch0050','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0050ph class=MPNNCode
+	><img border=0 name=mpch0050ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0050s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> Here we will look at the Substitution Rule as
+it applies to indefinite integrals.  Many
+of the integrals that we’ll be doing later on in the course and in later
+courses will require use of the substitution rule.</p><!-- MP SYRA( --><script id=mpch0050s1>
+	MPSetChAttrs('ch0050','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0050 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0050ph,'')
+	</script><layer id=mpch0050 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0050s3>
+	MPDeleteCode('ch0050')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="SubstitutionRuleIndefinitePtII.html"><b
+>More Substitution Rule</b></a> <!-- MP SYPH( --><script id=mpch0051s1>
+	MPSetChAttrs('ch0051','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0051ph class=MPNNCode
+	><img border=0 name=mpch0051ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0051s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> Even more substitution rule problems.  </p><!-- MP SYRA( --><script id=mpch0051s1>
+	MPSetChAttrs('ch0051','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0051 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0051ph,'')
+	</script><layer id=mpch0051 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0051s3>
+	MPDeleteCode('ch0051')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="AreaProblem.html"><b
+>Area Problem</b></a> <!-- MP SYPH( --><script id=mpch0052s1>
+	MPSetChAttrs('ch0052','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0052ph class=MPNNCode
+	><img border=0 name=mpch0052ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0052s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> In this section we start off with the
+motivation for definite integrals and give one of the interpretations of
+definite integrals.</p><!-- MP SYRA( --><script id=mpch0052s1>
+	MPSetChAttrs('ch0052','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0052 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0052ph,'')
+	</script><layer id=mpch0052 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0052s3>
+	MPDeleteCode('ch0052')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="DefnofDefiniteIntegral.html"><b
+>Definition of the Definite Integral</b></a>
+<!-- MP SYPH( --><script id=mpch0053s1>
+	MPSetChAttrs('ch0053','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0053ph class=MPNNCode
+	><img border=0 name=mpch0053ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0053s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> We will formally define the definite integral
+in this section and give many of its properties.  We will also take a look at the first part of
+the Fundamental Theorem of Calculus.</p><!-- MP SYRA( --><script id=mpch0053s1>
+	MPSetChAttrs('ch0053','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0053 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0053ph,'')
+	</script><layer id=mpch0053 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0053s3>
+	MPDeleteCode('ch0053')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="ComputingDefiniteIntegrals.html"><b
+>Computing Definite Integrals</b></a> <!-- MP SYPH( --><script id=mpch0054s1>
+	MPSetChAttrs('ch0054','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0054ph class=MPNNCode
+	><img border=0 name=mpch0054ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0054s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> We will take a look at the second part of the
+Fundamental Theorem of Calculus in this section and start to compute definite
+integrals.</p><!-- MP SYRA( --><script id=mpch0054s1>
+	MPSetChAttrs('ch0054','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0054 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0054ph,'')
+	</script><layer id=mpch0054 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0054s3>
+	MPDeleteCode('ch0054')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="SubstitutionRuleDefinite.html"><b
+>Substitution Rule for Definite Integrals</b></a>
+<!-- MP SYPH( --><script id=mpch0055s1>
+	MPSetChAttrs('ch0055','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0055ph class=MPNNCode
+	><img border=0 name=mpch0055ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0055s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> In this section we will revisit the
+substitution rule as it applies to definite integrals.</p><!-- MP SYRA( --><script id=mpch0055s1>
+	MPSetChAttrs('ch0055','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0055 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0055ph,'')
+	</script><layer id=mpch0055 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0055s3>
+	MPDeleteCode('ch0055')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>            <a
+href="IntAppsIntro.html"><b >Applications of
+Integrals</b></a><b ></b></p>
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="AvgFcnValue.html"><b
+>Average Function Value</b></a> <!-- MP SYPH( --><script id=mpch0056s1>
+	MPSetChAttrs('ch0056','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0056ph class=MPNNCode
+	><img border=0 name=mpch0056ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0056s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> We can use integrals to determine the average
+value of a function.</p><!-- MP SYRA( --><script id=mpch0056s1>
+	MPSetChAttrs('ch0056','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0056 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0056ph,'')
+	</script><layer id=mpch0056 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0056s3>
+	MPDeleteCode('ch0056')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="AreaBetweenCurves.html"><b
+>Area Between Two Curves</b></a> <!-- MP SYPH( --><script id=mpch0057s1>
+	MPSetChAttrs('ch0057','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0057ph class=MPNNCode
+	><img border=0 name=mpch0057ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0057s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> In this section we’ll take a look at
+determining the area between two curves.</p><!-- MP SYRA( --><script id=mpch0057s1>
+	MPSetChAttrs('ch0057','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0057 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0057ph,'')
+	</script><layer id=mpch0057 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0057s3>
+	MPDeleteCode('ch0057')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="VolumeWithRings.html"><b
+>Volumes of Solids of Revolution / Method of
+Rings</b></a> <!-- MP SYPH( --><script id=mpch0058s1>
+	MPSetChAttrs('ch0058','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0058ph class=MPNNCode
+	><img border=0 name=mpch0058ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0058s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> This is the first of two sections devoted to
+find the volume of a solid of revolution. 
+In this section we look at the method of rings/disks.</p><!-- MP SYRA( --><script id=mpch0058s1>
+	MPSetChAttrs('ch0058','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0058 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0058ph,'')
+	</script><layer id=mpch0058 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0058s3>
+	MPDeleteCode('ch0058')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="VolumeWithCylinder.html"><b
+>Volumes of Solids of Revolution / Method of
+Cylinders</b></a> <!-- MP SYPH( --><script id=mpch0059s1>
+	MPSetChAttrs('ch0059','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0059ph class=MPNNCode
+	><img border=0 name=mpch0059ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0059s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> This is the second section devoted to finding
+the volume of a solid of revolution. 
+Here we will look at the method of cylinders.</p><!-- MP SYRA( --><script id=mpch0059s1>
+	MPSetChAttrs('ch0059','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0059 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0059ph,'')
+	</script><layer id=mpch0059 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0059s3>
+	MPDeleteCode('ch0059')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a href="MoreVolume.html"><b
+>More Volume Problems</b></a> <!-- MP SYPH( --><script id=mpch0060s1>
+	MPSetChAttrs('ch0060','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0060ph class=MPNNCode
+	><img border=0 name=mpch0060ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0060s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> In this section we’ll take a look at find the
+volume of some solids that are either not solids of revolutions or are not easy
+to do as a solid of revolution.</p><!-- MP SYRA( --><script id=mpch0060s1>
+	MPSetChAttrs('ch0060','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0060 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0060ph,'')
+	</script><layer id=mpch0060 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0060s3>
+	MPDeleteCode('ch0060')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="Work.html"><b
+>Work</b></a> <!-- MP SYPH( --><script id=mpch0061s1>
+	MPSetChAttrs('ch0061','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0061ph class=MPNNCode
+	><img border=0 name=mpch0061ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0061s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> The final application we will look at is
+determining the amount of work required to move an object.</p><!-- MP SYRA( --><script id=mpch0061s1>
+	MPSetChAttrs('ch0061','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0061 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0061ph,'')
+	</script><layer id=mpch0061 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0061s3>
+	MPDeleteCode('ch0061')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>            <a
+href="ExtrasIntro.html"><b >Extras</b></a><b
+></b></p>
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="LimitProofs.html"><b
+>Proof of Various Limit Properties</b></a> <!-- MP SYPH( --><script id=mpch0062s1>
+	MPSetChAttrs('ch0062','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0062ph class=MPNNCode
+	><img border=0 name=mpch0062ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0062s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> In this section we prove several of the limit properties
+and facts that were given in various sections of the Limits chapter.</p><!-- MP SYRA( --><script id=mpch0062s1>
+	MPSetChAttrs('ch0062','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0062 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0062ph,'')
+	</script><layer id=mpch0062 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0062s3>
+	MPDeleteCode('ch0062')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="DerivativeProofs.html"><b
+>Proof of Various Derivative
+Facts/Formulas/Properties</b></a> <!-- MP SYPH( --><script id=mpch0063s1>
+	MPSetChAttrs('ch0063','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0063ph class=MPNNCode
+	><img border=0 name=mpch0063ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0063s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> In this section we give the proof for several
+of the rules/formulas/properties of derivatives that we saw in Derivatives
+Chapter.  Included are multiple proofs of
+the Power Rule, Product Rule, Quotient Rule and Chain Rule.</p><!-- MP SYRA( --><script id=mpch0063s1>
+	MPSetChAttrs('ch0063','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0063 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0063ph,'')
+	</script><layer id=mpch0063 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0063s3>
+	MPDeleteCode('ch0063')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="ProofTrigDeriv.html"><b
+>Proof of Trig Limits</b></a> <!-- MP SYPH( --><script id=mpch0064s1>
+	MPSetChAttrs('ch0064','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0064ph class=MPNNCode
+	><img border=0 name=mpch0064ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0064s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> Here we give proofs for the two limits that
+are needed to find the derivative of the sine and cosine functions.</p><!-- MP SYRA( --><script id=mpch0064s1>
+	MPSetChAttrs('ch0064','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0064 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0064ph,'')
+	</script><layer id=mpch0064 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0064s3>
+	MPDeleteCode('ch0064')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="DerivativeAppsProofs.html"><b
+>Proofs of Derivative Applications
+Facts/Formulas</b></a> <!-- MP SYPH( --><script id=mpch0065s1>
+	MPSetChAttrs('ch0065','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0065ph class=MPNNCode
+	><img border=0 name=mpch0065ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0065s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> We’ll give proofs of many of the facts that we
+saw in the Applications of Derivatives chapter.</p><!-- MP SYRA( --><script id=mpch0065s1>
+	MPSetChAttrs('ch0065','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0065 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0065ph,'')
+	</script><layer id=mpch0065 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0065s3>
+	MPDeleteCode('ch0065')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="ProofIntProp.html"><b
+>Proof of Various Integral
+Facts/Formulas/Properties</b></a> <!-- MP SYPH( --><script id=mpch0066s1>
+	MPSetChAttrs('ch0066','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0066ph class=MPNNCode
+	><img border=0 name=mpch0066ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0066s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> Here we will give the proofs of some of the
+facts and formulas from the Integral Chapter as well as a couple from the
+Applications of Integrals chapter.</p><!-- MP SYRA( --><script id=mpch0066s1>
+	MPSetChAttrs('ch0066','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0066 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0066ph,'')
+	</script><layer id=mpch0066 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0066s3>
+	MPDeleteCode('ch0066')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="Area_Volume_Formulas.html"><b >Area and Volume Formulas</b></a> <!-- MP SYPH( --><script id=mpch0067s1>
+	MPSetChAttrs('ch0067','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0067ph class=MPNNCode
+	><img border=0 name=mpch0067ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0067s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> Here is the derivation of the formulas for
+finding area between two curves and finding the volume of a solid of
+revolution.</p><!-- MP SYRA( --><script id=mpch0067s1>
+	MPSetChAttrs('ch0067','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0067 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0067ph,'')
+	</script><layer id=mpch0067 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0067s3>
+	MPDeleteCode('ch0067')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="TypesOfInfinity.html"><b
+>Types of Infinity</b></a> <!-- MP SYPH( --><script id=mpch0068s1>
+	MPSetChAttrs('ch0068','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0068ph class=MPNNCode
+	><img border=0 name=mpch0068ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0068s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> This is a discussion on the types of infinity
+and how these affect certain limits.</p><!-- MP SYRA( --><script id=mpch0068s1>
+	MPSetChAttrs('ch0068','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0068 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0068ph,'')
+	</script><layer id=mpch0068 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0068s3>
+	MPDeleteCode('ch0068')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="SummationNotation.html"><b >Summation Notation</b></a> <!-- MP SYPH( --><script id=mpch0069s1>
+	MPSetChAttrs('ch0069','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0069ph class=MPNNCode
+	><img border=0 name=mpch0069ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0069s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> Here is a quick review of summation notation.</p><!-- MP SYRA( --><script id=mpch0069s1>
+	MPSetChAttrs('ch0069','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0069 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0069ph,'')
+	</script><layer id=mpch0069 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0069s3>
+	MPDeleteCode('ch0069')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="ConstantOfIntegration.html"><b
+>Constant of Integration</b></a> <!-- MP SYPH( --><script id=mpch0070s1>
+	MPSetChAttrs('ch0070','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0070ph class=MPNNCode
+	><img border=0 name=mpch0070ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0070s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> This is a discussion on a couple of subtleties
+involving constants of integration that many students don’t think about. <b
+></b></p><!-- MP SYRA( --><script id=mpch0070s1>
+	MPSetChAttrs('ch0070','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0070 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0070ph,'')
+	</script><layer id=mpch0070 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0070s3>
+	MPDeleteCode('ch0070')
+</script><![endif]><!-- )MP SY -->
+
+
+			
+			</div>  <!-- Content -->
+			
+			<div class="Bottom_Nav">
+			<table width="100%" align="center" cellspacing="0" cellpadding="0" border="0">
+			<tr>
+				<td width="36%"><span class="Button_Outer">
+				
+				</span></td>
+				<td width="27%" align="center"><span class="MainTitle"><span id="nFooter_lblTitle">Calculus I  - Notes</span></span></td>
+				<td width="36%" align="right"><span class="Button_Outer">
+				<a id="nFooter_aNext" class="PrevNextButtonOff" onMouseOver="this.className='PrevNextButtonOn'" onMouseOut="this.className='PrevNextButtonOff'" href="ReviewIntro.html">Review<img src="../../Images/DoubleArrowRight.gif" border="0" /></a>
+				</span></td>
+			</tr>
+			</table>
+			</div>
+			
+			<br />
+			
+			<div align="left"><span id="nFooter_lblBreadCrumb" class="BreadCrumb">Online Notes  / Calculus I  (Notes)</span></div>
+			
+			</div>  <!-- MainBox -->
+			</td>
+		</tr>
+		</table>
+	</td>
+</tr>
+<tr>
+	<td colspan="4" align="center"><span class="Smaller"><br>[<a href="http://tutorial.math.lamar.edu/contact.aspx">Contact Me</a>]&nbsp;[<a href="../../links.html">Links</a>]&nbsp;[<a href="http://tutorial.math.lamar.edu/privacy.aspx">Privacy Statement</a>]&nbsp;[<a href="../../sitemap.html">Site Map</a>]&nbsp;[<a href="http://tutorial.math.lamar.edu/terms.aspx">Terms of Use</a>]&nbsp;[<a href="http://www.milonic.com/">Menus by Milonic</a>]</span></td>
+</tr>
+</table>
+
+
+
+
+<hr width="95%">
+	
+<table width="100%">
+<tr>
+	<td><span id="Foot"><span id="nFooter__CopyRight">&copy; 2003 - 2015 Paul Dawkins</span></span></td>
+	<td align="right"><span id="Foot">&nbsp;</span></td>
+</tr>
+</table>
+
+
+<script type="text/javascript">
+//<![CDATA[
+var Page_Validators =  new Array(document.getElementById("nHeader__rfvQ"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var nHeader__rfvQ = document.all ? document.all["nHeader__rfvQ"] : document.getElementById("nHeader__rfvQ");
+nHeader__rfvQ.controltovalidate = "nHeader_q";
+nHeader__rfvQ.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+nHeader__rfvQ.initialvalue = "";
+//]]>
+</script>
+
+<script language="javascript">
+<!--
+tbWaterMark_Blur('nHeader_q', 'Watermark_Blur','', false);//-->
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        //]]>
+</script>
+</form>
+
+</div>
+
+
+
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '../../../www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-331594-1', 'lamar.edu');
+    ga('send', 'pageview');
+
+</script>
+
+<script type="text/javascript">
+
+    var Cat = '';
+
+    if (Cat != '') {
+        ga('send', 'event', '', '', '');
+    }
+
+</script>
+
+</body>
+
+<!-- Mirrored from tutorial.math.lamar.edu/Classes/CalcI/CalcI.aspx by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 07 Jan 2015 20:42:12 GMT -->
+</html>

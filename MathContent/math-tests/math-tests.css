@@ -1,0 +1,170 @@
+
+/* putanja u vrhu */
+.putanjaQuiz {float: right; font-family: 'Arial';}
+.putanjaQuiz ul{list-style: none;padding: 0;margin: 0;}
+.putanjaQuiz ul li{margin:0;float:left; font-family: 'Arial'; }
+.putanjaQuiz ul li a {text-decoration: none; color: #c60f0f;}
+.putanjaQuiz ul li a:hover {text-decoration: underline;}
+.putanjaQuiz ul li.tacke{font-weight: bold; padding-left: 3px; padding-right: 3px;}
+
+.googleOglasVrhHolder{margin: 20px 0 10px 0;}
+.googleOglasSredinaHolder{margin: 30px 0 10px 0;}
+.googleOglasDnoHolder{margin: 30px 0 10px 0;}
+/* submit quiz button */
+#submitQuizButtonHolder{width: 100%; text-align: center; margin-top: 20px;}
+#submitQuizButtonHolder .quizSubmit{width: 400px; height: 60px; font-weight: bold; font-size: 1.2em; letter-spacing: 2px;
+						background-color: transparent; background-image: url(_quzzesRes/quiz-submit.gif);
+						background-repeat: no-repeat;}
+#submitQuizButtonHolder .quizSubmit:hover{background-color: transparent; 
+							background-image: url(_quzzesRes/quiz-submit-hover.gif);
+							background-repeat: no-repeat; cursor: pointer;}
+
+/* rezultat kviza */
+#quizResult{ width: 660px; margin: 20px 0 10px 30px; border: 2px solid black; 
+}
+#quizResult .resultCaption{font-size: 1.4em; font-weight: bold; color: black; text-align: center; 
+				   letter-spacing: 1px; font-style: italic; line-height: 50px; height: 50px;  
+				   background-repeat: no-repeat; margin-bottom: 3px;}
+
+#quizResult .resultBody table{width: 600px; margin: 10px auto 10px 30px; font-weight: bold; 
+					font-size: 1.2em; line-height: 40px;}
+#quizResult .resultBody table tr:hover {background-color: #FFFF95;}
+#quizResult .resultBody table tr td{width: 20%; height: 40px; border-bottom: 1px dotted black; text-align: center;}
+#quizResult .resultBody table thead{background-color: #333; color: white;
+						height: 40px;
+}
+#quizResult .resultBody table thead tr:hover{background-color: transparent;}
+
+#quizResult .resultBody table tr td span {}
+#quizResult .resultBody table tr td span.easyPitanje {color: green;}
+#quizResult .resultBody table tr td span.normalPitanje {color: orange;}
+#quizResult .resultBody table tr td span.hardPitanje {color: orangered;}
+#quizResult .resultBody table tr td span.wrongOdgovor {color: red;}
+#quizResult .resultBody table tr td span.correctOdgovor {color: green;}
+#quizResult .resultBody table tr td.sumBezCrte{border-bottom: none;}
+#quizResult .resultBody table tr td.sumSaCrtom{border-bottom: 2px solid black;}
+
+#quizResult .tekstIspodGrafik{width:500px; margin: 0 auto 10px auto; padding-bottom: 20px; font-weight: bold; 
+					font-size: 0.9em; text-align: center;}
+
+/* naslov */
+.quizz .naslov {margin: 15px auto 10px auto; text-align: center; padding: 5px 0 5px 0;
+		    border-top: 1px solid black; border-bottom: 1px solid black; 
+		    background-color: #f3f3f3; }
+.quizz .naslov h1{font-size: 1.7em; margin: 5px 0 10px 0; letter-spacing: 1px; font-weight: bold;}
+.quizz .lessonIntro{ color: #FF8B03; font-weight: bold; font-size: 1.3em; letter-spacing: 1px;}
+
+.quizz p.introductionQuiz{margin-left: 20px; font-size: 1.3em; padding: 10px 0; color: black; line-height: 30px;}
+.quizz p.introductionQuizToc{ font-size: 1.4em; color: black; margin: 0; padding-top: 20px;
+					font-style: italic; font-weight: bold; color: green; text-align: center;}
+/* one quiz je sirok 660 a ovaj sto stoji iznad njega je 660-borders = 656 */
+.quizz .currentQuizStatus{font-size: 1.4em; font-weight: bold; width: 660px;
+				  margin: 30px 0 0 30px;line-height: 50px;
+				  text-align: center; height: 50px;  color: black;
+				  letter-spacing: 1px; font-style: italic;
+				  background-image: url(_quzzesRes/quizHederBack.png);
+				  background-repeat: no-repeat; margin-bottom: 2px;}
+.quizz .currentQuizStatus span.currentTestText{color:orangered;}
+
+
+#all_quizzes {}
+#all_quizzes .oneQuiz{height: 400px; border-bottom: 3px solid gray; 
+			    background-image: url(_quzzesRes/quizContentBack.gif); 
+			    background-repeat: repeat-x;}
+#all_quizzes .slikaZaPitanje{float: right; width: 230px; margin: 20px 10px 0 10px;
+					border: 2px solid #aaa;
+				     -moz-box-shadow: 3px 3px 4px #000;
+				     -webkit-box-shadow: 3px 3px 4px #000;
+				     box-shadow: 2px 2px 3px #aaa;
+				     /* For IE 8 */
+				     -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#aaaaaa')";
+				     /* For IE 5.5 - 7 */
+				     filter: progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=135, Color='#aaaaaa');
+					}
+.lakoPitanje{}
+.srednjePitanje{}
+.teskoPitanje{}
+
+/* za postavljanje pitanja */
+#all_quizzes .quizQuestionCaptionHolder{font-size: 1.4em; line-height: 30px; 
+						    margin-left: 30px; color: black; font-weight: bold;}
+#all_quizzes .qusetionCaption{vertical-align: top;  font-weight: bold; color: orangered;
+     padding-right: 10px; font-style: italic; letter-spacing: 1px;}
+#all_quizzes .qusetionCaption div.easy {color: green; font-size: 0.7em; letter-spacing: 0px; line-height: 10px;}
+#all_quizzes .qusetionCaption div.normal {color: orange; font-size: 0.7em; letter-spacing: 0px; line-height: 10px;}
+#all_quizzes .qusetionCaption div.hard {color: red; font-size: 0.7em; letter-spacing: 0px; line-height: 10px;}
+#all_quizzes .qusetionTekst{vertical-align: top;}
+
+/* spaceri */
+#all_quizzes .spacer1 {clear: both; height: 1px; width: 100%;}
+#all_quizzes .spacer20 {clear: both; height: 20px; width: 100%;}
+#all_quizzes .spacer40 {clear: both; height: 40px; width: 100%;}
+#all_quizzes .spacer50 {clear: both; height: 50px; width: 100%;}
+#all_quizzes .spacer60 {clear: both; height: 60px; width: 100%;}
+#all_quizzes .spacer80 {clear: both; height: 80px; width: 100%;}
+
+
+
+
+/* true false */
+#all_quizzes .tabelaTrueFalse{margin: 0px auto 0 auto; left: 100px; position: absolute;}
+#all_quizzes .answerTrue{height: 57px; width: 180px; margin: 0 10px 0 10px; cursor: pointer;
+				 background-image: url(_quzzesRes/true-normal-hover.gif); 
+				 background-repeat: no-repeat;
+				 background-position: top center;}
+#all_quizzes .answerTrue:hover{background-position: bottom center;}
+
+#all_quizzes .answerFalse{height: 57px; width: 180px; margin: 0 10px 0 10px; cursor: pointer;
+				  background-image: url(_quzzesRes/false-normal-hover.gif); 
+				  background-repeat: no-repeat;
+				  background-position: top center;}
+#all_quizzes .answerFalse:hover{background-position: bottom center;}
+
+/* cetiri odgovora */
+#all_quizzes .tabelaSa4odgovora{margin: 0px auto 0 auto; left: 70px; position: absolute;}
+.quizzesMainP {font-size: 1.5em; margin-left: 20px; color: black;}
+#all_quizzes .odgovorType1of4 {background-image: url(_quzzesRes/answer-button.gif); 
+					 background-repeat: no-repeat;
+					 width: 240px; height: 50px; margin: 5px 5px 5px 5px;}
+#all_quizzes .odgovorType1of4Kliknut{background-image: url(_quzzesRes/answer-button-hover.gif); 
+						 background-repeat: no-repeat; 
+						 width: 280px; height: 60px; margin: 5px 5px 5px 5px;}
+#all_quizzes .odgovorType1of4:hover{background-image: url(_quzzesRes/answer-button-hover.gif)}
+#all_quizzes .odgovorType1of4 p{ line-height: 50px; text-align: center; font-size: 1.6em;
+					   font-weight: bold; color: #032E9C; cursor: pointer; font-style: italic;
+					     font-family: 'Times New Roman';}
+
+
+
+/* drag drop 4 komada */
+#all_quizzes .tabelaSa4DragDrop{margin: 0px auto 0 auto; top: 120px; left: 40px; position: absolute; }
+#all_quizzes .draggable{width: 180px; height: 50px; margin: 3px;
+				background-image: url(_quzzesRes/drag-button.jpg); background-repeat: no-repeat; }
+#all_quizzes .droppable{width: 180px; height: 50px;  margin: 3px;
+				background-image: url(_quzzesRes/drop-location.jpg); background-repeat: no-repeat; }
+#all_quizzes .dragDropFiksniDeo{width: 180px; height: 50px; margin: 3px;
+					  background-image: url(_quzzesRes/drag-button.jpg); background-repeat: no-repeat;}
+#all_quizzes .pInsideDragDropEl{ line-height: 50px; text-align: center; font-size: 1.2em;
+					   font-weight: bold; color: #032E9C; cursor: pointer;}
+
+/* radio butonsi */
+#all_quizzes .tableRadioButonsi{margin: 0px auto 0 auto; left: 50px; position: absolute; 
+					  cursor: pointer; width: 350px; font-size: 1.3em; font-weight: bold; color: #111111;}
+#all_quizzes .tableRadioButonsi tr {height: 40px;}
+#all_quizzes .tableRadioButonsi tr td {padding-left: 20px; }
+#all_quizzes .tableRadioButonsi tr td:hover{background-image: url(_quzzesRes/radio-gradient.gif); 
+							  background-repeat: repeat-x;}
+
+/* kombo box */
+#all_quizzes .comboAndTextHolder{margin-left: 40px; width: 80%; float: left; color: #111111;}
+#all_quizzes .beforeCombo{font-size: 1.5em; margin-right: 10px; float: left; padding-top: 7px; font-weight: bold;}
+#all_quizzes .afterCombo{font-size: 1.5em; margin-left: 10px; float: left; padding-top: 7px; font-weight: bold;}
+
+/* TOC */
+p.TocGlavnaTema{padding: 15px 0px 5px 25px; font-size: 1.2em; color: black; font-weight: bold;}
+p.TocPodTema{padding: 5px 0px 5px 50px; font-weight: bold;}
+p.TocPodTema span{font-weight: bold; padding-right: 5px; color: black;}
+p.TocPodTema a:hover{text-decoration: underline;}
+p.TocPodPodTema{padding: 5px 0px 5px 80px;}
+p.TocPodPodTema span{font-weight: bold; padding-right: 5px; color: black;}
+p.TocPodPodTema a:hover{text-decoration: underline;}

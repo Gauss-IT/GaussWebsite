@@ -1,0 +1,47 @@
+.mmenu
+{
+	position:absolute;
+	display:none;
+}
+
+.TopNoteBox
+{
+	position:absolute;
+	display:none;
+}
+
+.TopNavBox
+{
+	position:absolute;
+	display:none;
+}
+
+.BotControlBox
+{
+	position:absolute;
+	display:none;
+}
+
+.MainBox {
+	/*border : 4px inset #999933;
+	background : #FFFFFF;
+	padding-right : 10px;
+	padding-bottom : 2px;
+	padding-left : 10px;*/
+}
+
+.NotesBox {
+	/*border : 2px solid #000000;
+	width : 98%;
+	background : #FFFFFF;
+	padding-top : 10px;
+	padding-bottom : 10px;
+	margin-top : 2px;*/
+}
+
+.InnerNotesBox {
+	padding-left : 10px;
+	padding-right : 10px;
+	/*width : 95%;*/
+	text-align : left;
+}

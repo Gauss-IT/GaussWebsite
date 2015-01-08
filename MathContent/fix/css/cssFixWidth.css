@@ -1,0 +1,327 @@
+* {margin: 0;padding: 0;}
+body, p, ul, li, ul li p, ol li p, img, form, fieldset, input, text-area, select, button {margin:0; padding:0; border:0}
+body {background:#fff url(../slike/layout/bodyBgrd.png) repeat-x scroll left top;
+	color:black; font-family:Arial,Helvetica,sans-serif; font-size:14px;line-height:150%;}
+.wrap {background:transparent url(../slike/layout/wrapBgrd.png) center 30px no-repeat;}
+
+h1, h2, h3, h4, h5, h6 {color:#111111; font-family: Georgia, "Times New Roman", Times, serif; font-weight:normal;line-height:110%;margin:0 0 10px;}
+h1 {font-size: 26px; margin-bottom: 20px;}
+h2 {font-size: 24px; border-bottom: 1px solid #bbbbbb; padding-bottom: 10px;}
+h3 {font-size: 20px;}
+h4 {font-size: 18px;}
+h5 {font-size: 16px; font-weight: bold}
+h6 {font-size: 14px; font-weight: bold}
+p { padding-bottom:15px;}
+p.glavni {padding-left: 20px; }
+ul, ol {margin: 15px;}
+ul li {line-height:180%;margin:0 0 0 20px;}
+ol li {line-height:180%;list-style-type: decimal; margin:0 0 0 20px;}
+a {color:  #CE000C;}
+a:hover {text-decoration: underline;}
+form, input, textarea, select {color:#111111;font-family:Arial,Helvetica,sans-serif;font-size:13px;}
+input, textarea, select {background-color:#FFFFFF; border: 1px solid #cccccc;} 
+label {color: black; display: block; font-size: 14px; padding-top: 8px; text-align: left; font-family: Georgia, "Times New Roman", Times, serif;}
+input { color: black; height: 15px; padding: 6px 5px;}
+textarea, select {overflow: auto;}
+.sve {  width: 980px; margin: 0 auto;}
+.fix:after {clear:both;content:'[.]';display:block;height:0;visibility:hidden;}
+.fix {display:inline-block;}
+.fix {display:block;}
+
+/* HEADER - START */
+.header {height: 220px; position:  relative;}
+.textLogo {float: left; margin: 5px 0 0 0;}
+
+p.logo{left:0;margin:0;position:absolute;top:100px;}
+p.logo a{background:transparent url(../slike/header/logo.png) no-repeat top left;
+	   cursor:pointer;display:block;width:270px; height:90px;text-indent:-2000px; outline: none;}
+.baner p.paragraf1 {font-family: Georgia, "Times New Roman", Times, serif; color: #000000; 
+			  font-size: 25px; font-style: italic; line-height: 80%; text-align: right; 
+			  padding-top: 100px;}
+.baner p.paragraf2 {font-family: Georgia, "Times New Roman", Times, serif; color: #B40000; font-size:  20px; font-weight:  bold; font-style: italic; text-align:  right;}
+.vrh { background-color: white; }
+
+.gornjiLinkovi{ font-family: Tahoma, Arial; font-size: 11px; color: #ffffff;}
+.gornjiLinkovi ul{ list-style: none; float: right; margin: 0; padding: 5px 0; }
+.gornjiLinkovi ul li { float: right; margin-right: 8px; padding-right:  8px; margin-left: 0; 
+			     background: url(../slike/header/separator.gif) right center no-repeat; }
+.gornjiLinkovi ul li a{ color: #ffffff; text-decoration: none; }
+.gornjiLinkovi ul li a:hover{ text-decoration:  underline;}
+
+.glavniLinkovi{ height: 50px;  padding-right: 15px;}
+.glavniLinkovi ul { margin: 0;  }
+.glavniLinkovi ul li { float: right; list-style-type: none; display: inline; margin: 0; padding: 0; }
+.glavniLinkovi ul li.zadnja { }
+.glavniLinkovi ul li:hover { }
+.glavniLinkovi ul li a { text-decoration: none; padding: 0 0 0 20px; margin: 0; float: left; 
+				 background: url(../slike/glavnaNavigacija/nav-sprite.png) no-repeat; 
+				 background-position: 0px 0px;
+				 color: #000000; outline: none;}
+
+.glavniLinkovi ul li a span { font-size: 14px; font-weight: bold; line-height: normal; padding: 20px 35px 18px 15px;  display: block;
+					float: none; display: block; 
+					background: url(../slike/glavnaNavigacija/nav-sprite.png) no-repeat; 
+					background-position: right -265px;
+}
+.glavniLinkovi ul li a:hover {background-position: 0px -55px; color: #CE000C;}
+.glavniLinkovi ul li a:hover span {background-position: right -320px;}
+.glavniLinkovi ul li a.current, .glavniLinkovi ul li a:hover.current  {background-position: 0px -160px; color: #CE000C;}
+.glavniLinkovi ul li a.current span, .glavniLinkovi ul li a:hover.current span {background-position: right -425px;  border-bottom: 1px solid white;}
+
+.contentTop { background: url(../slike/content-tb-sprite.png) no-repeat; height: 5px; width: 980px;  
+		  background-position: -5px -10px; display:  block; }
+.content {background: url(../slike/content.png) left top repeat-y; padding:  25px 15px 30px 10px;}
+.contentBottom { background: url(../slike/content-tb-sprite.png)no-repeat; height: 5px; width: 980px;  
+		     background-position: -5px 0px; display:  block; }
+/* HEADER - END */
+
+
+/* PUTANJA TRENURNW STRANE */
+.putanja {padding: 0px 0px 10px 235px;}
+.putanja ul{list-style: none;padding: 0;margin: 0;}
+.putanja ul li{margin:0;float:left; font-family: Georgia, Times, serif; }
+.putanja ul li a {text-decoration: none;}
+.putanja ul li a:hover {text-decoration: underline;}
+.putanjaCalc {padding: 0px 0px 10px 235px; font-family: 'Times New Roman',Times,serif; float:right;}
+.putanjaCalc ul{list-style: none;padding: 0;margin: 0;}
+.putanjaCalc ul li{margin:0;float:left; font-family: 'Arial'; }
+.putanjaCalc ul li a {text-decoration: none; color: #c60f0f;}
+.putanjaCalc ul li a:hover {text-decoration: underline;}
+.putanjaCalc ul li.tacke{font-weight: bold; padding-left: 5px; padding-right: 3px; letter-spacing: 2px;}
+.putanjaLesson {font-size: 12px; font-weight: bold;}
+/* PUTANJA TRENUTNE STRANE - KRAJ */
+
+/* LEVA NAVIGACIJA */
+.levaKolona { float: left; width: 200px;}
+.separatorRed { background: url(../slike/separatorRed.png) left top no-repeat; width: 200px; height: 10px; float: left; margin-bottom: 20px;}
+.search { float: left; width: 200px; margin-bottom: 20px;padding-bottom: 30px; background: url(../slike/separatorRed.png) left bottom no-repeat; }
+.search .searchMathportal{font-size: 11px; margin: 0px 0px 0px 5px; font-weight: bold; font-family: Arial;
+				  color: rgb(150,150,150);}
+.navigacijaLevo {width: 200px; float: left; }
+.navigacijaLevo h1 { font-family: Georgia, "Times New Roman", Times, serif; font-size: 20px; color: #333333; }
+.navigacijaLevo h1 a{color: black; text-decoration: none; margin-left: 5px;}
+.navigacijaLevo h1 a:hover{text-decoration: underline;}
+
+.navigacijaLevo ul { padding: 0 0 0 0px; margin:0 0 0 0px; }
+.navigacijaLevo ul li { list-style: none;  background: transparent url(../slike/separatorGrey.gif) left bottom repeat-x; 
+				margin: 0; line-height: 100%;} 
+.navigacijaLevo ul li a { 
+	display: block; 
+	text-decoration: none; 
+	font-family: Arial,Helvetica,sans-serif;                
+	font-size: 14px;
+	height: auto !important;
+	line-height: 120%;
+	padding: 10px 0px 10px 25px;  color: #000000;
+}
+.navigacijaLevo ul li a.current {color: #CE000C; font-weight: bold;}
+.navigacija1 {float: left; padding-left: 5px; width: 195px; margin-bottom: 20px;}
+
+
+.navigacijaLevo ul li a:hover {  background-color: #f5f5f5;}
+.navigacijaLevo .last{margin-bottom: 20px;}
+
+.quote {padding-bottom: 20px; margin-bottom: 20px; background: url(../slike/separatorRed.png) left bottom no-repeat;  padding-left: 10px; float: left;}
+.quote h2, .navigacija1 h2, .googleSide h2 {font-family: Georgia, "Times New Roman", Times, serif; font-size: 18px; color: #333333; }
+.quote .quotetekst { font-size: 12px; font-style: italic;}
+.quote .quoteautor { font-size: 14px; text-align: right; font-family: Georgia, "Times New Roman", Times, serif;}
+.navigacija1 h2 { color: #CE000C; border-bottom:  1px solid #CE000C; margin-bottom: 1px;}
+.navigacija1 div.line { color: #CE000C; border-bottom:  1px solid #CE000C; height: 1px;}
+/* LEVA NAVIGACIJA - KRAJ*/
+
+
+/* NAVIGACIJA NA KALKULATORIMA I TESTOVIMA */
+.navigacija1calc ul {display: none;}
+.prviLinkUnavigaciji{border-top: 1px dotted gray;}
+.navigacija1calc ul li a:hover{background-image: url(../slike/separatorGrey.gif); 
+					 background-position: left bottom;
+					 background-repeat: repeat-x;
+					 background-color: #f5f5f5;}
+.navigacija1calc ul li.lastElement { background: none;}
+.navigacija1calc {margin-bottom:0px;}
+.navigacija1calc h2 {margin-bottom:0px;  font-size:13px; font-family:Tahoma, Arial; 
+			   cursor:pointer; border: none; padding:5px 0px 0px 50px; line-height:130%;
+			   background:url(../slike/calculators/side-back.gif);
+			   background-repeat: repeat-x; height: 55px; }
+.navigacija1calc h2.quizH2{padding-left: 15px; padding-top: 10px; height: 50px;}
+.navigacija1calc h2 a{text-decoration:none; outline: none;}
+.navigacija1calc h2:hover {background-color: #F3F3F3; }			  
+.navigacija1calc h2 span{color: black; font-size:11px;}
+
+.navigacija1calc div.line{ background-color: black; height: 1px; width: 100%; border-bottom:  none;}
+.navigacija1calc .slikaUnavigaciji{float: left; margin-top: 8px; margin-left: 1px; width: 40px; height: 40px; 
+					     background: url(../slike/calculators/calc-male-all2.png);
+}
+.navigacija1calc .testNumQuestions{color: black; font-size: 0.8em;}
+.navigacija1calc.currentNavigationBlock ul {display: block;}
+.navigacija1calc .drugaPozadinaZaH2{background-image: none; }
+.navigacija1calc .drugaPozadinaZaH2kviz{padding-left: 15px; padding-top: 10px; height: 40px; font-weight: bold;} 
+#currentCalcStrana{ font-weight: bold; background-color: #F8FCC9; text-decoration: underline; 
+			  border-top: black dashed 1px; border-bottom: black dashed 1px;}
+#currentCalcStranaKviz{ font-weight: bold; background-color: #F8FCC9; text-decoration: underline; 
+				border-top: black dotted 1px; border-bottom: black dotted 1px;} 
+/* NAVIGACIJA NA KALKULATORIMA I TESTOVIMA - KRAJ */
+
+
+
+/* SADRZAJ OPSTE - POCETAK*/
+.sadrzaj, .putanjaHolder{ width:720px; float:right;  margin: 0;  }
+/*.sadrzaj p{ margin: 3px 0 3px 0px; font-family: Arial,Helvetica,sans-serif; color: RGB(10%, 10%, 20%); 
+        line-height: 1.6em; font-size: 0.9em; text-align: justify;}*/
+.sadrzaj p.pn { font-weight: bold; font-size: 1em; color: #993300; margin: 15px 0 0px 0px;} /*podnaslov */
+.sadrzaj p.nn { font-weight: bold; font-size: 0.9em; color: #993300; margin: 0px 0 0px 0px;} /* notenaslov */
+.sadrzaj p.n { font-size: 0.9em; margin: 0px 0 0px 20px;} /* note */
+.sadrzaj p.e { font-weight: bold; } /* example */
+.sadrzaj p.ee { font-weight: bold; color: black; margin: 20px 0 0 0;} /* example2 */
+.sadrzaj p.zu { margin-left: 65px; padding-bottom: 5px; padding-bottom: 5px;} /* zadatak uvucen */
+.sadrzaj p.zuB { margin-left: 65px; padding-bottom: 5px; padding-top: 5px; font-weight: bold;} /* zadatak uvucen */
+.sadrzaj p.zu2 { text-indent: 95px; margin: -3px 0 0 0;} /* zadatak uvucen */
+
+.sadrzaj img.st {  position: relative; top: 5px; }   /* slika u tekstu */
+.sadrzaj img.st2 {  position: relative; top: 15px; } /* slika u tekstu */
+.sadrzaj img.st3 {  position: relative; top: 10px; } /* slika u tekstu */
+.sadrzaj img.st4 {  position: relative; top: 30px; } /* slika u tekstu */
+.sadrzaj a{ text-decoration: none; font-weight: bold; }
+.sadrzaj a:hover{ text-decoration: underline; }
+.sadrzaj .linija { border-top: 2px solid #cccccc; margin: 20px 0 20px 0; }
+.sadrzaj h3.tema { font-size: 14px; padding-left: 40px; padding-bottom: 10px; line-height: 25px; font-family: Arial,Helvetica,sans-serif;}
+.sadrzaj h3.tema span { font-weight: normal; color: black; }
+.sadrzaj h3.tema a:hover{ text-decoration: underline; }
+.sadrzaj p.formpod { font-weight: bold; color: green; margin: 5px 0 -5px 30px; padding: 0 0 0 0;}
+.sadrzaj img.fst2 {  position: relative; top: 6px; } /* slika u tekstu */
+.sadrzaj img.fst3 {  position: relative; top: 9px; } /* slika u tekstu */
+.sadrzaj img.fst4 {  position: relative; top: 12px; } /* slika u tekstu */
+.sadrzaj div.formslika { float: right;}
+.sadrzaj div.formslika2 { display: inline; padding: 0 0 0 80px;}
+.sadrzaj div.clear {clear:both;}
+.sadrzaj div.formuladownload { float: right; padding: 10px 0 10px 40px; background: url(../slike/pdf.jpg) left center no-repeat; display: block;}
+.sadrzaj div.formuladownloadFajl {margin: 20px 0px 60px 0px;}
+/* SADRZAJ OPSTE - KRAJ*/
+
+
+/* MATHFORMULAS - POCETAK */
+.grupaFormula {padding: 20px;}
+.zadnjaGrupa {border-bottom:  none;}
+.mathformulas h3{margin: 20px 0 15px 30px;}
+.mathformulas h1.formule{font-size: 1.6em; margin-top: 10px; background-color: #F3F3F3; line-height: 60px; height: 60px;
+				 text-align: center; border-top: 1px black dashed; border-bottom: 1px black dashed;
+				 letter-spacing: 1px;}
+.mathformulas h1.formule span{color: #CE000C;}
+.mathformulas a:hover {text-decoration: underline;}
+/* MATHFORMULAS - KRAJ */
+
+/* CALCULATORI - sadrzaj calculator */
+.all_calculators h2{ padding-top: 20px;}
+.all_calculators h3 {margin-left: 20px; text-decoration: underline; font-size: 1.4em;}
+/* CALCULATOR - KRAJ */
+
+
+
+/* DODATAK - POCETAK*/
+.dodatakDesno {float:left; width: 300px; margin: 0 0 0 20px;}
+.dodatakDesno p{}
+.dodatakCalcMain{ margin: 20px auto 10px auto; width:700px; border:solid 2px black; padding: 10px 0 0 0; 
+			background:#f3f3f3; padding: 10px;
+			border-left:solid 2px #dddddd; border-right:solid 2px #dddddd;
+}
+.dodatakDesnoCalc {float:left; width: 300px; margin: 0 20px 0px 20px; padding-top: 10px;}
+.dodatakDesnoCalc p {color: black; }
+.dodatakDesnoCalc a:hover {text-decoration: underline;}
+.googlePravougMaliCalc1{float:right; margin: 5px 10px 0px 5px; width: 300px;}
+.googlePravougMaliCalc2{float:right; margin: 0px 2px 0px 0px;}
+.googleSquareBig{float:right; margin: 15px 20px 20px 20px;} 
+.googleIznadForme{margin-bottom: 20px; margin-top: 15px; padding: 0px;}
+.contact_form2 textarea{ border: 1px solid #777777;
+				 margin: 5px 0px 10px 0px;
+				 padding: 0px 5px 5px 5px;
+				 height: 80px;
+				 width: 268px;}
+.contact_form2 input.button2 {display: block; height: 26px; background-color: #990000; color: #ffffff; border: none; cursor: pointer; float: right;}
+.contact_form2 p{line-height: 20px; display: block;}
+/* DODATAK KRAJ */
+
+
+
+/* FOOTER - POCETAK */
+.footerWrap {width: 100%; background: #ffffff url(../slike/footerBgrd.png) left top repeat-x; margin-top: 20px;}
+.footer { padding: 30px 40px 20px 40px; width: 900px; margin: 0 auto;}
+.footer h1{font-size: 18px; color: #333333; border-bottom: 1px solid #999999; padding-bottom: 10px; text-align: center;}
+.footer .welcome {width:270px; float:left; padding: 10px;}
+.footer .welcome p {}
+.footer .welcome a{ text-decoration: none;}
+.footer .welcome a:hover {text-decoration: underline;}
+
+.footer form{width: 250px;}
+.footer form p.form {padding: 0px 0px 0px 0px;}
+.footer .footerForma {width:270px; float:left; padding: 10px; padding-left: 50px;}
+.footer .footerForma h1{text-align: center;}
+.footer textarea{width: 250px; border: 1px solid #777777; padding: 5px; margin: 10px 0px;}
+.footer input.text{width: 250px; padding: 5px; margin: 10px 0px; border: 1px solid #777777;}
+.footer input.submitFoot{margin: 10px 0 0 0; float: right; background: url(../slike/button.png) left top no-repeat; width: 104px; height: 20px; cursor: pointer; padding: 0; border: none; text-indent: -2000em}
+.footer input:hover.submitFoot {background-position: left bottom;}
+.footer input.submitFootLesson{}
+
+.footer .footerLinkovi { float:right; padding: 10px; width: 250px;}
+.footer .footerLinkovi div.footerLink {float: left; width: 100%; margin: 4px 0 4px 30px; }
+.footer .footerLinkovi div.footerLink a{ text-decoration: none; }
+.footer .footerLinkovi div.footerLink a:hover{text-decoration: underline;}
+.footer .google{clear: both; margin: 0px 0 0 70px;}
+#messageFooter h3 {color: #990000; font-size: 18px; font-weight: bold;}
+/* FOOTER KRAJ */
+
+/* GOOGLE OGLASI - START */
+.googleSide, .googleSideAmazon { padding-left: 10px;margin-bottom: 20px; float: left; padding-bottom: 30px; background: url(../slike/separatorRed.png) left bottom no-repeat; width: 200px;}
+.googleSideCalc{margin-left: 30px;}
+.googlePravougSrednji{float:right; margin: 0px 30px 0px 0px; width: 350px;} 
+.googleSquareBigCalc{float:right; margin: 0px 40px 20px 20px;}
+.googleSquareBig{float:right; margin: 15px 20px 20px 20px;}  
+/* GOOGLE OGLASI - END */
+
+/* NEPOZNATO - POCETAK */
+.paymentSadrzaj {margin: 0 auto; float: none;}
+.spacer10{width: 100%; height: 10px;}
+.spacer20{width: 100%; height: 20px;}
+.sadrzaj2 {width: 950px;}
+.sadrzaj2 .noMember{text-align: center; font-family: Georgia, "Times New Roman", Times, serif; color: #990000; font-weight: bold; }
+/* NEPOZNATO - KRAJ */
+
+
+.jquerybubblepopup{width:auto;height:auto;margin:0px;padding:0px;position:absolute;border:0px;z-index:100;text-align:center;background-color:transparent;}
+.jquerybubblepopup-ie{filter:progid:DXImageTransform.Microsoft.Shadow(color="#666666", Direction=135, Strength=3);} 
+.jquerybubblepopup table{width:auto;height:auto;margin:0px;padding:0px;display:table;border-collapse:collapse;border-spacing:0px;border:0px;empty-cells:show;background-color:transparent;}
+.jquerybubblepopup tbody{display:table-row-group;vertical-align:middle;border:0px;background-color:transparent;}
+.jquerybubblepopup td{margin:0px;padding:0px;background-color:transparent;}
+.jquerybubblepopup-top-left,    .jquerybubblepopup-top-right,
+.jquerybubblepopup-bottom-left, .jquerybubblepopup-bottom-right{width:21px;height:21px;overflow:hidden;background-repeat:no-repeat;}
+.jquerybubblepopup-top-middle,  .jquerybubblepopup-bottom-middle{overflow:hidden;background-repeat:repeat-x;}
+.jquerybubblepopup-middle-left, .jquerybubblepopup-middle-right{overflow:hidden;background-repeat:repeat-y;}
+.jquerybubblepopup-tail{border:0px;margin:0px;padding:0px;display:inline;}
+.jquerybubblepopup-azure  .jquerybubblepopup-innerHtml,
+.jquerybubblepopup-black  .jquerybubblepopup-innerHtml,
+.jquerybubblepopup-blue   .jquerybubblepopup-innerHtml,
+.jquerybubblepopup-green  .jquerybubblepopup-innerHtml,
+.jquerybubblepopup-grey   .jquerybubblepopup-innerHtml,
+.jquerybubblepopup-orange .jquerybubblepopup-innerHtml,
+.jquerybubblepopup-violet .jquerybubblepopup-innerHtml, 
+.jquerybubblepopup-yellow .jquerybubblepopup-innerHtml{font-family:'Trebuchet MS',Arial; font-size:11px; font-weight:normal; color:#000000; background-color:#FFFFFF;}
+.jquerybubblepopup-all-azure  .jquerybubblepopup-innerHtml,
+.jquerybubblepopup-all-black  .jquerybubblepopup-innerHtml, 
+.jquerybubblepopup-all-blue   .jquerybubblepopup-innerHtml,
+.jquerybubblepopup-all-green  .jquerybubblepopup-innerHtml, 
+.jquerybubblepopup-all-grey   .jquerybubblepopup-innerHtml, 
+.jquerybubblepopup-all-orange .jquerybubblepopup-innerHtml,
+.jquerybubblepopup-all-violet .jquerybubblepopup-innerHtml, 
+.jquerybubblepopup-all-yellow .jquerybubblepopup-innerHtml{font-family:'Trebuchet MS',Arial; font-size:11px; font-weight:normal; color:#FFFFFF;}
+.jquerybubblepopup-all-azure  .jquerybubblepopup-innerHtml{background-color:#0099FF;}
+.jquerybubblepopup-all-black  .jquerybubblepopup-innerHtml{background-color:#000000;} 
+.jquerybubblepopup-all-blue   .jquerybubblepopup-innerHtml{background-color:#0066CC;}
+.jquerybubblepopup-all-green  .jquerybubblepopup-innerHtml{background-color:#66FF00;} 
+.jquerybubblepopup-all-grey   .jquerybubblepopup-innerHtml{background-color:#666666;}
+.jquerybubblepopup-all-orange .jquerybubblepopup-innerHtml{background-color:#FF9933;}
+.jquerybubblepopup-all-violet .jquerybubblepopup-innerHtml{background-color:#FF33FF;} 
+.jquerybubblepopup-all-yellow .jquerybubblepopup-innerHtml{background-color:#FFCC00;}
+
+.stanjeMalaTabela{width: 100%; margin: 15px 0; color: black; border-top: 1px solid black; border-bottom: 1px solid black;}
+.stanjeMalaTabela tr{min-height: 40px;}
+.stanjeMalaTabela span.saldoDuguje{color: red; font-weight: bold;}
+.stanjeMalaTabela span.saldoPotrazuje{color: green; font-weight: bold;}

@@ -1,0 +1,821 @@
+/* This is the style sheet for the main text frame for the general set	*/
+/* of pages in this site												*/
+
+/* First let's take care of any tag specific styles...					*/
+BODY {
+	color : #000000;
+	/*Background-Attachment : fixed;
+	Background-Image : url(/images/mainback.gif);
+	background-repeat : repeat;*/
+	Background-color : #f0f0f0;
+	font-family : "Times New Roman", arial;
+	font-size : 12pt;
+}
+
+a {
+	text-decoration : None;
+	font-weight:bold;
+}
+
+a:hover {
+	Color : #009966;
+}
+
+a.Page_Button_Hover:hover {
+	color : #000000;
+}
+
+a:link {
+	color : #0000cc;
+}
+
+a:visited {
+	color : #0000cc;
+}
+
+a:hover {
+	Color : #FF00FF;
+}
+
+/* Now lets do the styles for any classes  we might happen to have...  	*/	
+
+.Center {
+	text-align : center;
+}
+
+.FullCenter {
+    width : 100%;
+	text-align : center;
+}
+
+.Example {
+	padding-left : 25px;
+	padding-right : 25px;
+}
+
+.NSExample {
+	background-color: #CCFFFF;
+	
+}
+
+.Indent	{
+		padding-left : 25px;
+}
+
+.Indent2 {
+		padding-left : 50px;
+}
+
+.Indent3 {
+		padding-left : 25px;
+		padding-right : 25px;
+}
+
+.Indent4 {
+		padding-left : 50px;
+		padding-right : 50px;
+}
+
+.Nav {
+	font-family : Times New Roman;
+	font-size : smaller;
+	text-decoration : none;
+}
+
+.EqnNo {
+	font-family : helvetica, arial;
+	font-size : 10pt;
+}
+
+.SelectedItem
+{
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    padding-right: 2px;
+}
+
+.Smaller {
+	font-size : smaller;
+}
+
+.SmallerBold {
+	font-size : smaller;
+	font-weight : bold;
+}
+
+.Larger {
+	font-size : larger;
+}
+
+.LargerBold {
+	font-size : larger;
+	font-weight : bold;
+}
+
+.SmallText {
+	font-size : 8px;
+}
+
+.MediumText {
+	font-size : 10px;
+}
+
+.LargeText {
+	font-size : 12px;
+}
+
+.Math {
+	font-family : arial;
+}
+
+.MathCenter {
+	font-family : arial;
+	text-align : center;
+}
+
+.Variable {
+	font-family : Times New Roman;
+	font-style : italic;
+}
+
+.Hidden 
+{
+	display : none;
+}
+
+.SmallerHidden 
+{
+	font-size : smaller;
+	display : none;
+}
+
+.Notice
+{
+    border: 2px solid #FF0000;
+    background-color: #FFFFFF;
+    margin: 5px;
+    padding: 3px;
+}
+
+.All_Note 
+{
+	margin-left : 3px;
+	margin-right : 3px;
+	font-size : smaller;
+	text-align : left;
+}
+
+.Top_Note 
+{
+	margin-left : 3px;
+	margin-right : 3px;
+	font-size : smaller;
+	text-align : left;
+}
+
+.Middle_Note 
+{
+	margin-left : 3px;
+	margin-right : 3px;
+	font-size : smaller;
+	text-align : left;
+}
+
+.Bottom_Note 
+{
+	margin-left : 3px;
+	margin-right : 3px;
+	font-size : smaller;
+	text-align : left;
+}
+
+.Prob_Note 
+{
+	margin-left : 3px;
+	margin-right : 3px;
+	font-size : smaller;
+	text-align : left;
+}
+
+.Classes_Note 
+{
+	margin-left : 3px;
+	margin-right : 3px;
+	font-size : smaller;
+	text-align : left;
+}
+
+.Panel_Block {
+	border : 1px solid #999999;
+	padding : 5px;
+	margin-left : 5px;
+	margin-right : 15px;
+	width : 100%;
+	display : none;
+}
+
+.Show_Hide 
+{
+	text-decoration : none;
+	font-size : 8pt;
+}
+
+.ShowHide_Link 
+{
+    font-size : smaller;
+    margin-left : 5px;
+}
+
+.Solution_Block {
+	border : 1px solid #999999;
+	padding : 2px;
+	margin-left : 5px;
+	margin-right : 5px;
+	width : 97%;
+	display : none;
+}
+
+.PopUp_Source_Fixed_On 
+{
+	/*display : block;*/
+	background : #FF9933;
+	border-bottom : 1px dashed #000000;
+	cursor : pointer;
+	font-weight : bold;
+	width : 100px;
+	text-align : center;
+}
+
+.PopUp_Source_Fixed_Off 
+{
+	/*display : block;*/
+	font-weight : bold;
+	width : 100px;
+	text-align : center;
+	border-bottom : 1px solid #FFFFFF;
+}
+
+.PopUp_Source_On {
+	background : #FF9933;
+	border-bottom : 1px dashed #000000;
+	cursor : pointer;
+	font-weight : bold;
+	width : 100%;
+	text-align : center;
+}
+
+.PopUp_Source_Off {
+	font-weight : bold;
+	width : 100%;
+	text-align : center;
+	border-bottom : 1px solid #FFFFFF;
+}
+
+.PopUp {
+	position : absolute;
+	top : 0;
+	left : 0;
+	padding : 2;
+	background-color : #FFFFCC;
+	border : 1px solid #0066FF;
+	font-size:small;
+	display : none;
+	z-index : 99;
+	cursor : pointer;
+}
+
+.Image_Hint
+{
+	cursor : pointer;
+	vertical-align : middle;
+}
+
+.Balloon_PopUp {
+	position : absolute;
+	top : 0;
+	left : 0;
+	padding : 2;
+	display : none;
+	z-index : 99;
+	cursor : pointer;
+}
+
+.Balloon_Top_Tip 
+{
+    display : none;
+	background-image : url(../images/Balloon_Top_Left.gif);
+	background-repeat : no-repeat;
+	background-position : top left;
+	padding-top : 12px;
+	padding-left : 3px;
+	padding-right : 3px;
+	width : 100px;
+}
+
+.Balloon_Bottom_Tip 
+{
+	background-image : url(../images/Balloon_Bottom_Left.gif);
+	background-repeat : no-repeat;
+	background-position : bottom left;
+	padding-bottom : 12px;
+	padding-left : 3px;
+	padding-right : 3px;
+	width : 100px;
+}
+
+.Balloon_Header
+{
+	border : 1px solid black;
+	border-bottom-width : 0px;
+	background-color : #F2F2F2;
+	padding : 2px 2px 2px 2px;
+	width : 100px;
+	font-size:small;
+	text-transform : uppercase;
+}
+
+.Balloon 
+{
+	display : block;
+	border : 1px solid black;
+	border-bottom-width : 0px;
+	background-color : #D3FDB8;
+	padding-top : 2px;
+	padding-bottom : 2px;
+	padding-left : 2px;
+	padding-right : 2px;
+	width : 100px;
+	font-size : small;
+}
+
+.Error {
+	color : #FF0000;
+	font-weight:600;
+}
+
+.Watermark_Blur 
+{
+	background-image : url(../images/Google_poweredby.gif);
+	background-repeat : no-repeat;
+	color : #999999;
+}
+
+.Watermark_Focus 
+{
+	color : #000000;
+}
+
+.BreadCrumb {
+	color : #999999;
+	font-size : smaller;
+	border-bottom : 1px solid #999999;
+}
+
+.NotesTitle {
+	font-size : large;
+	font-weight : bold;
+}
+
+.HeadingText 
+{
+    font-size : 14.0pt;
+    font-family : Arial;
+	font-style : italic;
+}
+
+.RowOn {
+	background-color: #FFFFCC;
+}
+
+.RowOff {
+	background-color:#FFFFFF;
+}
+
+.DropDownHeader {
+	text-align:center;
+	font-size:larger;
+	font-weight:bold;
+}
+
+.MainTitle 
+{
+	font-weight:bold;
+}
+
+.PopUp_SubHeading {
+	font-weight:bold;
+	font-size:12px;
+	color:#000000;
+	text-align:center;
+	text-decoration:underline;
+}
+
+.PopUp_Heading {
+	font-weight:bold;
+	font-size:16px;
+	color:#000000;
+	text-align:center;
+}
+
+.Main_Heading {
+	font-weight:bold;
+	font-size:24px;
+	color:#000000;
+}
+
+.MainBox {
+	border : 4px inset #999933;
+	padding-right : 10px;
+	padding-bottom : 2px;
+	padding-left : 10px;
+}
+
+.DownloadBox {
+	border : 2px solid #000000;
+	background : #FFFFFF;
+	padding-right : 10px;
+	padding-bottom : 10px;
+	padding-top : 10px;
+	padding-left : 10px;
+	margin-bottom : 5px;
+	margin-top : 5px;
+	margin-left : 5px;
+	margin-right : 5px;
+}
+
+.EmailWarnBox {
+	border : 2px solid #FF0000;
+	background : #FFFFFF;
+	padding : 10px;
+}
+
+/* The actual notes box needs to be a nested box to get the margins correct */
+/* Both IE and Firefox deal with the margins differently and so the percentage */
+/* width comes out differently in the outer box otherwise... */
+
+
+/* obsolete */
+.NotesBox {
+	border : 2px solid #000000;
+	width : 98%;
+	background : #FFFFFF;
+	padding-top : 10px;
+	padding-bottom : 10px;
+	/*padding-left:10px;
+	padding-right:10px;*/
+	margin-top : 5px;
+	margin-bottom : 5px;
+	
+}
+
+/* obsolete */
+.InnerNotesBox {
+	padding-left : 10px;
+	padding-right : 10px;
+	/*width : 95%;*/
+	text-align : left;
+}
+
+/* obsolete */
+.BotNavBox {
+	width : 98%;
+	padding : 0px;
+
+}
+/* obsolete */
+.BotControlBox {
+	width : 98%;
+	padding-top : 3px;
+	padding-bottom : 0px;
+}
+
+/* obsolete */
+.TopNoteBox 
+{
+	border : 2px solid #000000;
+	width : 98%;
+	background : #FFFFFF;
+	padding-top : 3px;
+	padding-bottom : 0px;
+	margin-bottom : 2px;
+}
+
+/* obsolete */
+.ControlNoteBox {
+	
+	padding-left : 10px;
+	padding-right : 10px;
+	padding-top : 10px;
+	padding-bottom : 10px;
+	margin-top : 5px;
+	margin-bottom : 3px;
+	font-size : smaller;
+	text-align : left;
+}
+
+/* obsolete  */
+.TopNavBox {
+	width : 98%;
+	padding : 0px;
+
+}
+
+/* obsolete */
+.ControlAllNote {
+	padding-left : 5px;
+	padding-right : 5px;
+	padding-top : 10px;
+	padding-bottom : 10px;
+	font-size : smaller;
+}
+
+/* obsolete */
+.ControlTopNote {
+	padding-left : 5px;
+	padding-right : 5px;
+	padding-top : 10px;
+	padding-bottom : 10px;
+	font-size : smaller;
+}
+
+/* obsolete */
+.ControlMidNote {
+	
+}
+
+/* obsolete */
+.ControlBotNote {
+	padding-left : 5px;
+	padding-right : 5px;
+	padding-top : 10px;
+	padding-bottom : 10px;
+	font-size : smaller;
+}
+
+.NavBox {
+	padding-left : 5px;
+	padding-right : 5px;
+	/*padding-top : 10px;*/
+	padding-bottom : 10px;
+	margin-top : 5px;
+	margin-bottom : 3px;
+	text-align : left;
+}
+
+.News_Main {
+	margin-top : 10px;
+	background : #FFFFFF;
+	border-left : 2px solid #000000;
+	border-right : 2px solid #000000;
+	border-top : 2px solid #000000;
+	border-bottom : 2px solid #000000;
+}
+
+.News_Read_Main {
+	margin-top : 10px;
+	/* border-left : 2px solid #000000;
+	border-right : 2px solid #000000;
+	border-top : 2px solid #000000;
+	border-bottom : 2px solid #000000; */
+	margin : 25px;
+}
+
+.News_Head {
+	font-family : Arial, Times New Roman;
+	font-size : 12pt;
+	color : #000000;
+	background : #FFFFFF;
+	font-weight :bold;
+	text-transform : uppercase;
+	text-align: center;
+	margin-left : 5px;
+	margin-right : 5px;
+	padding-left : 5px;
+	padding-top : 3px;
+	padding-bottom : 3px;
+	border-bottom : 1px solid #000000;
+}
+
+.News_Read_Head {
+	font-family : Arial, Times New Roman;
+	color : #000000;
+	font-weight :bold;
+	text-transform : uppercase;
+	text-align: center;
+	margin-left : 5px;
+	margin-right : 5px;
+	padding-left : 5px;
+	padding-top : 3px;
+	padding-bottom : 3px;
+	border-bottom : 1px solid #000000;
+}
+
+.News_Headline {
+	text-decoration : underline;
+}
+
+.News_Items{
+	font-family : Times New Roman;
+	font-size : 10pt;
+	color :	#000000;
+	background : #FFFFFF;
+	padding-top : 20px;
+	padding-left : 5px;
+	padding-right : 5px;
+	padding-bottom : 5px;
+}
+
+.News_Read_Item{
+	font-family : Times New Roman;
+	color :	#000000;
+	padding-top : 10px;
+	padding-left : 15px;
+	padding-right : 5px;
+	padding-bottom : 5px;
+}
+
+.Welcome_Main {
+	margin-top : 10px;
+	background : #FFFFFF;
+	border-left : 2px solid #000000;
+	border-right : 2px solid #000000;
+	border-top : 2px solid #000000;
+	border-bottom : 2px solid #000000;
+}
+
+.Welcome_Head {
+	font-family : Arial, Times New Roman;
+	font-size : 12pt;
+	color : #000000;
+	background : #FFFFFF;
+	font-weight :bold;
+	text-transform : uppercase;
+	text-align: center;
+	margin-left : 5px;
+	margin-right : 5px;
+	padding-left : 5px;
+	padding-top : 3px;
+	padding-bottom : 3px;
+	border-bottom : 1px solid #000000;
+}
+
+.Welcome_Items{
+	font-family : Times New Roman;
+	font-size : 12pt;
+	color :	#000000;
+	background : #FFFFFF;
+	padding-top : 10px;
+	padding-left : 5px;
+	padding-right : 5px;
+	padding-bottom : 5px;
+}
+
+.Content_Main {
+	margin-top : 30px;
+	background : #FFFFFF;
+	border-left : 2px solid #000000;
+	border-right : 2px solid #000000;
+	border-top : 2px solid #000000;
+	border-bottom : 2px solid #000000;
+}
+
+.Content_Head {
+	font-family : Arial, Times New Roman;
+	font-size : 12pt;
+	color : #000000;
+	background : #FFFFFF;
+	font-weight :bold;
+	text-transform : uppercase;
+	text-align : center;
+	margin-left : 5px;
+	margin-right : 5px;
+	padding-left : 5px;
+	padding-top : 3px;
+	padding-bottom : 3px;
+	border-bottom : 1px solid #000000;
+}
+
+.Content_SubHead {
+	font-family : Arial, Times New Roman;
+	font-size : 10pt;
+	color : #000000;
+	background : #FFFFFF;
+	font-weight :bold;
+	text-transform : uppercase;
+	text-decoration : underline;
+	text-align : center;
+}
+
+.Content_Items{
+	font-family : Times New Roman;
+	font-size : 12pt;
+	color :	#000000;
+	background : #FFFFFF;
+	padding-top : 10px;
+	padding-left : 5px;
+	padding-right : 5px;
+	padding-bottom : 5px;
+}
+
+.SiteMap_Main {
+	margin-top : 20px;
+	background : #FFFFFF;
+	border-left : 2px solid #000000;
+	border-right : 2px solid #000000;
+	border-top : 2px solid #000000;
+	border-bottom : 2px solid #000000;
+	padding-bottom : 10px;
+}
+
+.SiteMap_Head {
+	font-family : Arial, Times New Roman;
+	font-size : 10pt;
+	color : #000000;
+	background : #FFFFFF;
+	font-weight :bold;
+	text-transform : uppercase;
+	text-align: center;
+	margin-left : 5px;
+	margin-right : 5px;
+	padding-left : 5px;
+	padding-top : 3px;
+	padding-bottom : 3px;
+	border-bottom : 1px solid #000000;
+}
+
+.SiteMap_Items{
+	font-family : Times New Roman;
+	font-size : 12pt;
+	color :	#000000;
+	background : #FFFFFF;
+	padding-top : 10px;
+	padding-left : 5px;
+	padding-right : 5px;
+	padding-bottom : 5px;
+}
+
+.Page_Button {
+	background : #FFFFFF;
+	font-size : smaller;
+	border : 1px solid #000000;
+	padding : 2px;
+	margin : 2px;
+}
+
+.Page_Button_Hover {
+	background : #FFFF99;
+	font-size : smaller;
+	border : 1px solid #000000;
+	padding : 2px;
+	margin : 2px;
+	color : #000000;
+}
+
+.Archive_News {
+	border-top : 1px solid #000000;
+	border-bottom : 1px solid #000000;
+	padding-left : 25px;
+	padding-right : 25px;
+	padding-top : 5px;
+	padding-bottom : 5px;
+}
+
+.Archive_Headline {
+	font-weight : bold;
+	text-decoration : underline;
+}
+
+.Archive_Item {
+	background-color : #FFFFFF;
+	border : 1px solid #000000;
+	margin-top : 10px;
+	margin-bottom : 10px;
+	padding : 10px;
+}
+
+/* Finally lets do the styles for individual id's....					*/
+
+
+#Head {
+	position : absolute;
+	top : 0px;
+	left : 15px;
+	color : #FFFF00;
+	font-family : helvetica, arial;
+	font-weight : 600;
+	width : 100%;
+	text-align : right;
+	padding-right : 25px;
+}
+
+#Foot {
+	color : #ff0000;
+	font-family : helvetica, arial;
+	font-size : 10px;
+}
+
+
+
+
+
+

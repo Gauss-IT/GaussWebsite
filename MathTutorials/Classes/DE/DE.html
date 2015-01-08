@@ -1,0 +1,2277 @@
+
+
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
+xmlns:st1="urn:schemas-microsoft-com:office:smarttags"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+
+<!-- Mirrored from tutorial.math.lamar.edu/Classes/DE/DE.aspx by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 07 Jan 2015 21:06:08 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<!-- saved from url=(0014)about:internet --><!-- MSIE Mark of the Web -->
+
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=keywords content="MathPageGen">
+
+<meta name=Generator content="MathPage 1.0.1">
+<meta name=Originator content="Microsoft Word 12">
+
+
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<meta name="keywords" content="Differential equations, linear differential equations, separable differential equations, exact differential equations, first order, first order differential equations, linear de, separable de, exact de, solve differential equations, solving differential equations, direction fields, interval of validity, modeling with differential equations, equilibrium solutions, eulers method, interval of validity, initial value problem, Laplace Transforms, Systems of differential equations, eigenvalues, eigenvectors, phase plane, phase portrait, series solutions, series solutions to differential equations, ordinary points, euler equations">
+
+<title id="_PageTitle">Pauls Online Notes : Differential Equations </title>
+
+
+
+<!-- This if for the general behavior of all the pages and for the 	-->
+<!-- behaviour of the text areas in particular...					-->
+<link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen"> 
+<link rel="stylesheet" href="../../css/notes.css" type="text/css" media="screen"> 
+<!--[if IE]>
+  <link href="/css/main_IE.css" rel="stylesheet" type="text/css" media="screen" />
+  <link rel="stylesheet" href="/css/notes_IE.css" type="text/css" media="screen"> 
+<![endif]-->
+<link rel="stylesheet" href="../../css/menuprint.css" type="text/css" media="print">
+
+<script type="text/javascript" language="JavaScript" src="../../js/main.js"></script>
+<script type="text/javascript" language="JavaScript" src="../../js/Show_Hide.js"></script>
+<script type="text/javascript" language="JavaScript" src="../../js/eventManager.js"></script>
+<script type="text/javascript" language="JavaScript" src="../../js/DHTMLAPI.js"></script>
+
+
+<link rel=dataStoreItem href="DE_files/item0001.xml"
+target="DE_files/props0002.xml">
+<link rel=themeData href="DE_files/themedata.thmx">
+<link rel=colorSchemeMapping href="DE_files/colorschememapping.xml">
+
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	}
+h1
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-indent:0in;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:"Arial","sans-serif";
+	}
+h2
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-indent:0in;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Arial","sans-serif";
+	font-style:italic;}
+h3
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-indent:0in;
+	page-break-after:avoid;
+	font-size:13.0pt;
+	font-family:"Arial","sans-serif";}
+h4
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-indent:0in;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Times New Roman","serif";}
+h5
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-indent:0in;
+	font-size:13.0pt;
+	font-family:"Times New Roman","serif";
+	font-style:italic;}
+h6
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-indent:0in;
+	font-size:11.0pt;
+	font-family:"Times New Roman","serif";}
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-indent:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	}
+p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-indent:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	font-style:italic;}
+p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-indent:0in;
+	font-size:11.0pt;
+	font-family:"Arial","sans-serif";
+	}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin:0in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Times New Roman","serif";
+	}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin:0in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Times New Roman","serif";
+	}
+
+
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:8.0pt;
+	font-family:"Tahoma","sans-serif";
+	}
+span.HeaderChar
+	{}
+span.FooterChar
+	{}
+span.BalloonTextChar
+	{font-family:"Tahoma","sans-serif";
+	}
+.MsoChpDefault
+	{font-size:10.0pt;
+	}
+ /* Page Definitions */
+ @page
+	{}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	}
+div.Section1
+	{page:Section1;}
+@page Section2
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	}
+div.Section2
+	{page:Section2;}
+@page Section3
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	}
+div.Section3
+	{page:Section3;}
+@page Section4
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	}
+div.Section4
+	{page:Section4;}
+ /* List Definitions */
+ @list l0
+	{}
+@list l0:level1
+	{margin-left:0in;
+	text-indent:0in;}
+@list l0:level2
+	{margin-left:0in;
+	text-indent:0in;}
+@list l0:level3
+	{margin-left:0in;
+	text-indent:0in;}
+@list l0:level4
+	{margin-left:0in;
+	text-indent:0in;}
+@list l0:level5
+	{margin-left:0in;
+	text-indent:0in;}
+@list l0:level6
+	{margin-left:0in;
+	text-indent:0in;}
+@list l0:level7
+	{margin-left:0in;
+	text-indent:0in;}
+@list l0:level8
+	{margin-left:0in;
+	text-indent:0in;}
+@list l0:level9
+	{margin-left:0in;
+	text-indent:0in;}
+@list l1
+	{}
+@list l2
+	{}
+@list l2:level1
+	{margin-left:0in;
+	text-indent:0in;}
+@list l2:level2
+	{margin-left:0in;
+	text-indent:0in;}
+@list l2:level3
+	{margin-left:0in;
+	text-indent:0in;}
+@list l2:level4
+	{margin-left:0in;
+	text-indent:0in;}
+@list l2:level5
+	{margin-left:0in;
+	text-indent:0in;}
+@list l2:level6
+	{margin-left:0in;
+	text-indent:0in;}
+@list l2:level7
+	{margin-left:0in;
+	text-indent:0in;}
+@list l2:level8
+	{margin-left:0in;
+	text-indent:0in;}
+@list l2:level9
+	{margin-left:0in;
+	text-indent:0in;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+<!-- MP HEAD( -->
+<style>
+.MPPH { visibility:hidden; page-break-inside:avoid }
+.MPPHSpan { text-indent:0 }
+sub,sup { font-size:x-small }
+#MPDpiSpan { position:absolute; top:1in; left:1in; width:100px; border:none; visibility:hidden }
+.MPEntity { font-family:'Times New Roman',Times,serif }
+</style>
+<style media=screen>
+.MPScreenEqn { position:absolute; visibility:visible; z-index:98 }
+.MPPrintEqn { display:none }
+.MPScreenPH { }
+.MPPrintPH { display:none }
+.MPPopup { position:absolute; visibility:hidden; z-index:99; top:0; left:0; text-indent:0; cursor:hand; 
+border:solid blue 1px; padding:5px; background-color:#FFFFCC; 
+filter:progid:DXImageTransform.Microsoft.DropShadow(color=#444444,offx=3,offy=3,positive=1) 
+}
+.MPPopupNoBg { position:absolute; visibility:hidden; z-index:99; top:0; left:0; text-indent:0; cursor:hand; 
+border:solid blue 1px; padding:5px; 
+filter:progid:DXImageTransform.Microsoft.DropShadow(color=#444444,offx=3,offy=3,positive=1) 
+}
+</style>
+<style media=print>
+.MPScreenEqn { display:none }
+.MPPrintEqn { position:absolute; visibility:visible }
+.MPScreenPH { display:none }
+.MPPrintPH { }
+.MPPopup { display:none }
+.MPPopupNoBg { display:none }
+</style>
+<script language=javascript src='mathpage.js'></script>
+<script language=javascript>
+if (typeof DSMP == 'undefined') {
+	alert('MathPage Javascript file missing; equations and symbols will not display.');
+	var DSMP = new Object;
+	MPBodyInit=MPSetEqnAttrs=MPSetChAttrs=MPEquation=MPInlineChar=MPDeleteCode=MPNNCalcTopLeft=MPHidePopup=MPShowPopup=MPNNSelectScreenEqn=MPWebEQApplet=MPTechexplorerObject=function(){};
+	DSMP.gEmptySrc=DSMP.gPlaceholderHeight=DSMP.gPlaceholderWidth=DSMP.gPlaceholder2Height=DSMP.gNNPopupBgColor=DSMP.gPopupEqnSrc=DSMP.gPopupEqnPadding=DSMP.gNNLayerTop=DSMP.gNNLayerLeft=DSMP.gScreenEqnSrc=DSMP.gScreenEqnWidth=DSMP.gScreenEqnHeight=DSMP.gPrintEqnSrc=null;
+}
+DSMP.gPageVersion = '1.1';
+DSMP.gMaxCharCompat = 1;
+DSMP.gGenMathZoom = 1;
+DSMP.gPopupEqnBgColorDefault = '#FFFFCC';
+DSMP.gPopupEqnPaddingDefault = 5;
+DSMP.gPlaceholderPadding = 4;
+DSMP.gOldJSMessage = 'Warning: this MathPage document requires a newer JavaScript file and may not display correctly.';
+DSMP.gCompatMessage = 'Warning: this MathPage document was generated for Windows IE5 or later only and may not display correctly.';
+DSMP.gMinBrowserMessage = 'Warning: MathPage requires a version 4 or later browser.';
+DSMP.gHidePopupMessage = 'Click on a MathZoom equation to dismiss it, or shift-Click to close all.';
+DSMP.gShowPopupMessage = 'Click on an equation to show the enlarged MathZoom version.';
+</script>
+<!-- )MP HEAD -->
+</head>
+
+<body onLoad="init()">
+<!-- MP BODY(-->
+<span id=MPDpiSpan></span>
+<script language=javascript>
+MPBodyInit('DE_files')
+</script>
+<!-- )MP BODY -->
+
+
+<form name="Form1" method="post" action="http://tutorial.math.lamar.edu/Classes/DE/DE.aspx" onsubmit="javascript:return WebForm_OnSubmit();" id="Form1">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJMTU0NjU4NzYwD2QWCGYPFQH3BERpZmZlcmVudGlhbCBlcXVhdGlvbnMsIGxpbmVhciBkaWZmZXJlbnRpYWwgZXF1YXRpb25zLCBzZXBhcmFibGUgZGlmZmVyZW50aWFsIGVxdWF0aW9ucywgZXhhY3QgZGlmZmVyZW50aWFsIGVxdWF0aW9ucywgZmlyc3Qgb3JkZXIsIGZpcnN0IG9yZGVyIGRpZmZlcmVudGlhbCBlcXVhdGlvbnMsIGxpbmVhciBkZSwgc2VwYXJhYmxlIGRlLCBleGFjdCBkZSwgc29sdmUgZGlmZmVyZW50aWFsIGVxdWF0aW9ucywgc29sdmluZyBkaWZmZXJlbnRpYWwgZXF1YXRpb25zLCBkaXJlY3Rpb24gZmllbGRzLCBpbnRlcnZhbCBvZiB2YWxpZGl0eSwgbW9kZWxpbmcgd2l0aCBkaWZmZXJlbnRpYWwgZXF1YXRpb25zLCBlcXVpbGlicml1bSBzb2x1dGlvbnMsIGV1bGVycyBtZXRob2QsIGludGVydmFsIG9mIHZhbGlkaXR5LCBpbml0aWFsIHZhbHVlIHByb2JsZW0sIExhcGxhY2UgVHJhbnNmb3JtcywgU3lzdGVtcyBvZiBkaWZmZXJlbnRpYWwgZXF1YXRpb25zLCBlaWdlbnZhbHVlcywgZWlnZW52ZWN0b3JzLCBwaGFzZSBwbGFuZSwgcGhhc2UgcG9ydHJhaXQsIHNlcmllcyBzb2x1dGlvbnMsIHNlcmllcyBzb2x1dGlvbnMgdG8gZGlmZmVyZW50aWFsIGVxdWF0aW9ucywgb3JkaW5hcnkgcG9pbnRzLCBldWxlciBlcXVhdGlvbnNkAgEPFgIeCWlubmVyaHRtbAUsUGF1bHMgT25saW5lIE5vdGVzIDogRGlmZmVyZW50aWFsIEVxdWF0aW9ucyBkAgUPZBYEAgMPZBYSZg8VAhUvbWVudS9tZW51X2RhdGFfREUuanMaL21lbnUvdG9wX21lbnVfZGF0YV9hbGwuanNkAgEPD2QWBB4Hb25Gb2N1cwVHamF2YXNjcmlwdDp0YldhdGVyTWFya19Gb2N1cygnbkhlYWRlcl9xJywgJ1dhdGVybWFya19Gb2N1cycsICcnLCBmYWxzZSkeBm9uQmx1cgVFamF2YXNjcmlwdDp0YldhdGVyTWFya19CbHVyKCduSGVhZGVyX3EnLCAnV2F0ZXJtYXJrX0JsdXInLCAnJywgZmFsc2UpZAIKDxUBGi9tZW51L3NpZGVfbWVudV9kYXRhX0RFLmpzZAILDw8WAh4EVGV4dAUvT25saW5lIE5vdGVzICAvIERpZmZlcmVudGlhbCBFcXVhdGlvbnMgIChOb3RlcylkZAIPDw8WAh4HVmlzaWJsZWdkFgJmDw8WAh8DBd4EPGJyIC8+DQo8ZGl2IGNsYXNzPSJOb3RpY2UiPjxzcGFuIHN0eWxlPSJmb250LXdlaWdodDpib2xkO2NvbG9yOlJlZCI+SW50ZXJuZXQgRXhwbG9yZXIgMTAgJmFtcDsgMTEgVXNlcnMgOiA8L3NwYW4+SWYgeW91IGFyZSB1c2luZyBJbnRlcm5ldCBFeHBsb3JlciAxMCBvciBJbnRlcm5ldCBFeHBsb3JlciAxMSB0aGVuLCBpbiBhbGwgbGlrZWxpaG9vZCwgdGhlIGVxdWF0aW9ucyBvbiB0aGUgcGFnZXMgYXJlIGFsbCBzaGlmdGVkIGRvd253YXJkLiAgVG8gZml4IHRoaXMgeW91IG5lZWQgdG8gcHV0IHlvdXIgYnJvd3NlciBpbiBDb21wYXRpYmlsaXR5IFZpZXcgZm9yIG15IHNpdGUuICBDbGljayA8YSBocmVmPSIvSUVfQ29tcGF0aWJpbGl0eS5hc3B4Ij5oZXJlPC9hPiBmb3IgaW5zdHJ1Y3Rpb25zIG9uIGhvdyB0byBkbyB0aGF0LiAgQWx0ZXJuYXRpdmVseSwgeW91IGNhbiBhbHNvIHZpZXcgdGhlIHBhZ2VzIGluIENocm9tZSBvciBGaXJlZm94IGFzIHRoZXkgc2hvdWxkIGRpc3BsYXkgcHJvcGVybHkgaW4gdGhlIGxhdGVzdCB2ZXJzaW9ucyBvZiB0aG9zZSBicm93c2VycyB3aXRob3V0IGFueSBhZGRpdGlvbmFsIHN0ZXBzIG9uIHlvdXIgcGFydC4NCg0KPC9kaXY+ZGQCFQ8PFgIfAwUfRGlmZmVyZW50aWFsIEVxdWF0aW9ucyAgLSBOb3Rlc2RkAhcPDxYGHgtOYXZpZ2F0ZVVybAUbL0NsYXNzZXMvREUvSW50cm9CYXNpYy5hc3B4HwMFQ0Jhc2ljIENvbmNlcHRzPGltZyBzcmM9Ii9JbWFnZXMvRG91YmxlQXJyb3dSaWdodC5naWYiIGJvcmRlcj0iMCIgLz4fBGcWBB4Lb25Nb3VzZU92ZXIFIXRoaXMuY2xhc3NOYW1lPSdQcmV2TmV4dEJ1dHRvbk9uJx4Kb25Nb3VzZU91dAUidGhpcy5jbGFzc05hbWU9J1ByZXZOZXh0QnV0dG9uT2ZmJ2QCGw8QDxYCHgtfIURhdGFCb3VuZGcWAh4Ib25DaGFuZ2UFLmlmICh0aGlzLnZhbHVlICE9ICItMSIpIHtHb1RvUGFnZSh0aGlzLnZhbHVlKX0QFQMcIC0gU2VsZWN0IGEgUGFnZSB0byBWaXNpdCAtIAAURS1Cb29rIERvd25sb2FkIFBhZ2UVAwItMQItMRgvZG93bmxvYWQuYXNweD9QREY9QiwxOzEUKwMDZ2dnZGQCHQ8QDxYCHwhnFgIfCQUyaWYgKHRoaXMudmFsdWUgIT0gIi0xIikge0Rvd25sb2FkRmlsZSh0aGlzLnZhbHVlKX0QFQMjIC0gU2VsZWN0IGEgUERGIEZpbGUgdG8gRG93bmxvYWQgLSAADEUtQm9vayBOb3RlcxUDAi0xAi0xHUIsMSxOOy9wZGYvZGUvZGVfY29tcGxldGUucGRmFCsDA2dnZ2RkAgUPZBYIAgMPDxYCHwMFH0RpZmZlcmVudGlhbCBFcXVhdGlvbnMgIC0gTm90ZXNkZAIFDw8WBh8FBRsvQ2xhc3Nlcy9ERS9JbnRyb0Jhc2ljLmFzcHgfAwVDQmFzaWMgQ29uY2VwdHM8aW1nIHNyYz0iL0ltYWdlcy9Eb3VibGVBcnJvd1JpZ2h0LmdpZiIgYm9yZGVyPSIwIiAvPh8EZxYEHwYFIXRoaXMuY2xhc3NOYW1lPSdQcmV2TmV4dEJ1dHRvbk9uJx8HBSJ0aGlzLmNsYXNzTmFtZT0nUHJldk5leHRCdXR0b25PZmYnZAIHDw8WAh8DBS9PbmxpbmUgTm90ZXMgIC8gRGlmZmVyZW50aWFsIEVxdWF0aW9ucyAgKE5vdGVzKWRkAgkPDxYCHwMFHyZjb3B5OyAyMDAzIC0gMjAxNSBQYXVsIERhd2tpbnNkZAIHD2QWAmYPFQQAAAAAZGQVO4IMJk7llqPhVP/yMipVZq+Ayw==" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['Form1'];
+if (!theForm) {
+    theForm = document.Form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="../../WebResource33e8.js?d=YORUXOHolGkRCONPo84CJuYPHXBGUApHFAl7shtryPGwK0bFOwei0v3Gy5tKjz0-5qdg_bNA8_7sxPSNiIy-Bw7cHY81&amp;t=635294879132453548" type="text/javascript"></script>
+
+
+<script src="../../WebResource4708.js?d=yIPaMuK0NxJLVub7mSuSHqFWoFTW5iDqhVoywpwtB7lhIuxbZboTnB_8tYrkof7S65NEVr1oGs5sxDAczrabQRD4pw01&amp;t=635294879132453548" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="D6480FBF" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWDAL/tasOAoTDxbAEAsrXjVgCptXhtQcCvNftVAKf+r36DAKBkLPqDgKBkLPqDgLwzKOcCgLkvuO2DwLkvuO2DwLS5dmlCxSujKcBe0lnGZMlYbLCF6Whv+SR" />
+</div>
+<input type="hidden" name="PDFUrl" id="PDFUrl" />
+
+
+<!--
+	 Milonic DHTML Website Navigation Menu Version 5.0
+	 Copyright 2004 (c) Milonic Solutions Limited (UK). All Rights Reserved.
+	 Please visit http://www.milonic.com/ for more information.
+
+	 Although this software may have been freely downloaded, you must obtain a license before using it in any production environment.		 
+	 The free use of this menu is only available for Non-Profit, Educational & Personal Web Sites who have obtained a license to use. 
+	 
+	 Free, Commercial and Corporate Licenses are available from our website.
+	 You also need to include a link back to http://www.milonic.com/ if you use the free license.
+	 
+	 All Copyright notices MUST remain in place at ALL times. 
+	 This includes the first three lines of this notice on every page that uses the menu.
+	 If you cannot comply with all of the above requirements, please contact us to arrange a license waiver.
+-->	
+
+<SCRIPT language=JavaScript src="../../menu/milonic_src.js" type=text/javascript></SCRIPT>	
+<script	language=JavaScript>
+if(ns4)_d.write("<scr"+"ipt language=JavaScript src=/menu/mmenuns4.js><\/scr"+"ipt>");		
+  else _d.write("<scr"+"ipt language=JavaScript src=/menu/mmenudom.js><\/scr"+"ipt>"); 
+</script>
+<SCRIPT language=JavaScript src="../../menu/menu_data_DE.js" type=text/javascript></SCRIPT>	
+
+
+<table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+	<td align="center" colspan="5" valign="top" height="50"><span class="Main_Heading">Paul's Online Math Notes</span></td>
+</tr>
+
+<tr>
+	<td width="150">&nbsp;</td>
+	<td width="3">&nbsp;</td>
+	<td><SCRIPT language=JavaScript src="../../menu/top_menu_data_all.js" type=text/javascript></SCRIPT></td>	
+	<td width="400" align="right">
+		<!-- I found the following code at -->
+		<!-- http://www.codeproject.com/KB/aspnet/CustomSearchEngine.aspx -->
+		<!-- Emulated Google CSE Search Box Begins -->
+	<input name="nHeader$q" type="text" maxlength="512" id="nHeader_q" onFocus="javascript:tbWaterMark_Focus('nHeader_q', 'Watermark_Focus', '', false)" onBlur="javascript:tbWaterMark_Blur('nHeader_q', 'Watermark_Blur', '', false)" style="width:175px;" />
+	<input type="submit" name="nHeader$btnGoogleSearch" value="Search" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;nHeader$btnGoogleSearch&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="nHeader_btnGoogleSearch" />
+	<span id="nHeader__rfvQ" style="color:Red;visibility:hidden;"></span>
+	
+	<input type="hidden" name="nHeader$cx" id="nHeader_cx" value="001004262401526223570:11yv6vpcqvy" />
+	<input type="hidden" name="nHeader$cof" id="nHeader_cof" value="FORID:11" />
+	<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=searchbox_001004262401526223570%3A11yv6vpcqvy"></script>
+	
+	<!-- 
+		In order to make the button's click event fire when the text box is highlighted, we have to
+		have a second text box be a part of the form.  Make it invisible so that the user never 
+		knows it's there.
+		
+		From what research I did, this appears to be an IE-specific problem.  Nevertheless, this 
+		was the only "solution" I found.
+	-->
+	<input name="dummyHidden" value="" style="visibility:hidden;display:none;" />
+	<!-- Emulated Google CSE Search Box Ends -->
+	
+	</td>
+<!-- Google CSE Search Box Ends -->	
+</tr>
+<tr><td colspan="4" height="3"></td></tr>
+<tr>
+	<td valign="top">
+    
+    <SCRIPT language=JavaScript src="../../menu/side_menu_data_DE.js" type=text/javascript></SCRIPT>
+
+    <!--
+    <div style="width: 180px; margin-top: 20px">
+    <script type='text/javascript' id='openstudy-widget-loader' src='http://math.openstudy.com/javascripts/load.js?type=feed&color=blue&studygroup=Mathematics&env=math.openstudy.com'></script>
+    </div>
+    -->
+
+	</td>
+	<td width="3">&nbsp;</td>
+	<td valign="top" colspan="2">
+		<table border="0" width="100%" cellpadding="0">
+		<tr>
+			<td>
+			<div class="MainBox" align="center">
+
+            <table width="97%">
+                <tr>
+                    <td><div align="left"><span id="nHeader_lblBreadCrumb" class="BreadCrumb">Online Notes  / Differential Equations  (Notes)</span></div></td>
+                    <td width="250" align="right">
+                                <!-- Place this tag where you want the +1 button to render -->
+<g:plusone size="medium"></g:plusone>
+
+<!-- Place this render call where appropriate -->
+<script type="text/javascript">
+    (function () {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = '../../../apis.google.com/js/plusone.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+    })();
+</script>
+                    </td>
+                </tr>
+            </table>
+
+			
+            
+
+            						
+			
+			
+			<div id="nHeader_pClassNote" class="Classes_Note">
+	<span id="nHeader_lblClassNote"><br />
+<div class="Notice"><span style="font-weight:bold;color:Red">Internet Explorer 10 &amp; 11 Users : </span>If you are using Internet Explorer 10 or Internet Explorer 11 then, in all likelihood, the equations on the pages are all shifted downward.  To fix this you need to put your browser in Compatibility View for my site.  Click <a href="../../IE_Compatibility.html">here</a> for instructions on how to do that.  Alternatively, you can also view the pages in Chrome or Firefox as they should display properly in the latest versions of those browsers without any additional steps on your part.
+
+</div></span>
+</div>
+			
+			
+			
+			<div class="Top_Nav">
+			<table width="100%" align="center" cellspacing="0" cellpadding="0" border="0">
+			<tr><td colspan="3"><hr color="#00000" size="2" /></td></tr>
+			<tr>
+				<td width="36%"><span class="Button_Outer">
+				
+				</span></td>
+				<td width="27%" align="center"><span class="MainTitle"><span id="nHeader_lblTitle">Differential Equations  - Notes</span></span></td>
+				<td width="36%" align="right"><span class="Button_Outer">
+				<a id="nHeader_aNext" class="PrevNextButtonOff" onMouseOver="this.className='PrevNextButtonOn'" onMouseOut="this.className='PrevNextButtonOff'" href="IntroBasic.html">Basic Concepts<img src="../../Images/DoubleArrowRight.gif" border="0" /></a>
+				</span></td>
+			</tr>
+			<tr><td colspan="3">
+			<hr color="#00000" size="2" /></td></tr>
+			</table>
+			</div>  <!-- Top_Nav -->
+
+			<div class="Top_Links">
+			<table width="100%" align="center" cellspacing="0" cellpadding="0" border="0">
+			<tr>
+				<td width="40%"><span class="Smaller"><select name="nHeader$ddlGoTo" id="nHeader_ddlGoTo" onChange="if (this.value != &quot;-1&quot;) {GoToPage(this.value)}">
+	<option value="-1"> - Select a Page to Visit - </option>
+	<option value="-1"></option>
+	<option value="/download.aspx?PDF=B,1;1">E-Book Download Page</option>
+
+</select></span></td>
+				<td align="center">
+				<span class="Smaller" width="40%"><select name="nHeader$ddlDownload" id="nHeader_ddlDownload" onChange="if (this.value != &quot;-1&quot;) {DownloadFile(this.value)}">
+	<option value="-1"> - Select a PDF File to Download - </option>
+	<option value="-1"></option>
+	<option value="B,1,N;/pdf/de/de_complete.pdf">E-Book Notes</option>
+
+</select></span>
+				</td>
+				<td align="right" width="19%"><a class="Smaller" href="javascript:ShowPage('NHelp')">Show Page Help</a></td>
+			</tr>
+			</table>
+			</div>
+
+
+			
+			<div class="Content">
+
+
+<span class="HeadingText">Differential Equations (Math 3301)</span>
+
+<br /><br />
+
+<p class=MsoNormal>Here are my online notes for my differential equations
+course that I teach here at Lamar University. 
+Despite the fact that these are my “class notes”, they should be
+accessible to anyone wanting to learn how to solve differential equations or
+needing a refresher on differential equations. 
+</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>I’ve tried to make these notes as self contained as possible
+and so all the information needed to read through them is either from a
+Calculus or Algebra class or contained in other sections of the notes.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>A couple of warnings to my students who may be here to get a
+copy of what happened on a day that you missed. 
+</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal >Because
+     I wanted to make this a fairly complete set of notes for anyone wanting to
+     learn differential equations I have included some material that I do not
+     usually have time to cover in class and because this changes from semester
+     to semester it is not noted here. 
+     You will need to find one of your fellow class mates to see if
+     there is something in these notes that wasn’t covered in class.<br
+     >
+     <br >
+     </li>
+ <li class=MsoNormal >In
+     general I try to work problems in class that are different from my
+     notes.  However, with Differential
+     Equation many of the problems are difficult to make up on the spur of the
+     moment and so in this class my class work will follow these notes fairly
+     close as far as worked problems go. 
+     With that being said I will, on occasion, work problems off the top
+     of my head when I can to provide more examples than just those in my
+     notes.  Also, I often don’t have
+     time in class to work all of the problems in the notes and so you will find
+     that some sections contain problems that weren’t worked in class due to
+     time restrictions.<br >
+     <br >
+     </li>
+ <li class=MsoNormal >Sometimes
+     questions in class will lead down paths that are not covered here.  I try to anticipate as many of the
+     questions as possible in writing these up, but the reality is that I can’t
+     anticipate all the questions. 
+     Sometimes a very good question gets asked in class that leads to
+     insights that I’ve not included here. 
+     You should always talk to someone who was in class on the day you
+     missed and compare these notes to their notes and see what the differences
+     are.<br >
+     <br >
+     </li>
+ <li class=MsoNormal >This
+     is somewhat related to the previous three items, but is important enough
+     to merit its own item.  THESE NOTES
+     ARE NOT A SUBSTITUTE FOR ATTENDING CLASS!! 
+     Using these notes as a substitute for class is liable to get you in
+     trouble. As already noted not everything in these notes is covered in
+     class and often material or insights not in these notes is covered in
+     class.</li>
+</ol>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Here is a listing and brief description of the material in
+this set of notes.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal style='margin-left:.5in'><a href="IntroBasic.html"><b
+>Basic Concepts</b></a> </p>
+
+<p class=MsoNormal style='margin-left:1.0in'><a href="Definitions.html"><b
+>Definitions</b></a> <!-- MP SYPH( --><script id=mpch0001s1>
+	MPSetChAttrs('ch0001','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0001ph class=MPNNCode
+	><img border=0 name=mpch0001ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0001s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> Some of the common definitions and concepts in
+a differential equations course</p><!-- MP SYRA( --><script id=mpch0001s1>
+	MPSetChAttrs('ch0001','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0001 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0001ph,'')
+	</script><layer id=mpch0001 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0001s3>
+	MPDeleteCode('ch0001')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a href="DirectionFields.html"><b
+>Direction Fields</b></a> <!-- MP SYPH( --><script id=mpch0002s1>
+	MPSetChAttrs('ch0002','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0002ph class=MPNNCode
+	><img border=0 name=mpch0002ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0002s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> An introduction to direction fields and what
+they can tell us about the solution to a differential equation.</p><!-- MP SYRA( --><script id=mpch0002s1>
+	MPSetChAttrs('ch0002','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0002 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0002ph,'')
+	</script><layer id=mpch0002 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0002s3>
+	MPDeleteCode('ch0002')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a href="FinalThoughts.html"><b
+>Final Thoughts</b></a> <!-- MP SYPH( --><script id=mpch0003s1>
+	MPSetChAttrs('ch0003','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0003ph class=MPNNCode
+	><img border=0 name=mpch0003ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0003s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> A couple of final thoughts on what we will be
+looking at throughout this course.</p><!-- MP SYRA( --><script id=mpch0003s1>
+	MPSetChAttrs('ch0003','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0003 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0003ph,'')
+	</script><layer id=mpch0003 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0003s3>
+	MPDeleteCode('ch0003')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-left:.5in'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-left:.5in'><a href="IntroFirstOrder.html"><b
+>First Order Differential Equations</b></a></p>
+
+<p class=MsoNormal style='margin-left:1.0in'><a href="Linear.html"><b
+>Linear Equations</b></a> <!-- MP SYPH( --><script id=mpch0004s1>
+	MPSetChAttrs('ch0004','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0004ph class=MPNNCode
+	><img border=0 name=mpch0004ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0004s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> Identifying and solving linear first order
+differential equations.</p><!-- MP SYRA( --><script id=mpch0004s1>
+	MPSetChAttrs('ch0004','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0004 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0004ph,'')
+	</script><layer id=mpch0004 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0004s3>
+	MPDeleteCode('ch0004')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a href="Separable.html"><b
+>Separable Equations</b></a> <!-- MP SYPH( --><script id=mpch0005s1>
+	MPSetChAttrs('ch0005','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0005ph class=MPNNCode
+	><img border=0 name=mpch0005ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0005s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> Identifying and solving separable first order
+differential equations.  We’ll also start
+looking at finding the interval of validity from the solution to a differential
+equation.</p><!-- MP SYRA( --><script id=mpch0005s1>
+	MPSetChAttrs('ch0005','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0005 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0005ph,'')
+	</script><layer id=mpch0005 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0005s3>
+	MPDeleteCode('ch0005')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a href="Exact.html"><b
+>Exact Equations</b></a> <!-- MP SYPH( --><script id=mpch0006s1>
+	MPSetChAttrs('ch0006','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0006ph class=MPNNCode
+	><img border=0 name=mpch0006ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0006s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> Identifying and solving exact differential
+equations.  We’ll do a few more interval
+of validity problems here as well.</p><!-- MP SYRA( --><script id=mpch0006s1>
+	MPSetChAttrs('ch0006','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0006 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0006ph,'')
+	</script><layer id=mpch0006 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0006s3>
+	MPDeleteCode('ch0006')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="Bernoulli.html"><b >Bernoulli Differential Equations</b></a> <!-- MP SYPH( --><script id=mpch0007s1>
+	MPSetChAttrs('ch0007','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0007ph class=MPNNCode
+	><img border=0 name=mpch0007ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0007s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> In this section we’ll see how to solve the
+Bernoulli Differential Equation.  This
+section will also introduce the idea of using a substitution to help us solve
+differential equations.</p><!-- MP SYRA( --><script id=mpch0007s1>
+	MPSetChAttrs('ch0007','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0007 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0007ph,'')
+	</script><layer id=mpch0007 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0007s3>
+	MPDeleteCode('ch0007')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="Substitutions.html"><b >Substitutions</b></a> <!-- MP SYPH( --><script id=mpch0008s1>
+	MPSetChAttrs('ch0008','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0008ph class=MPNNCode
+	><img border=0 name=mpch0008ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0008s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> We’ll pick up where the last section left off
+and take a look at a couple of other substitutions that can be used to solve
+some differential equations that we couldn’t otherwise solve.</p><!-- MP SYRA( --><script id=mpch0008s1>
+	MPSetChAttrs('ch0008','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0008 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0008ph,'')
+	</script><layer id=mpch0008 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0008s3>
+	MPDeleteCode('ch0008')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a href="IoV.html"><b
+>Intervals of Validity</b></a> <!-- MP SYPH( --><script id=mpch0009s1>
+	MPSetChAttrs('ch0009','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0009ph class=MPNNCode
+	><img border=0 name=mpch0009ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0009s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> Here we will give an in-depth look at
+intervals of validity as well as an answer to the existence and uniqueness
+question for first order differential equations.</p><!-- MP SYRA( --><script id=mpch0009s1>
+	MPSetChAttrs('ch0009','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0009 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0009ph,'')
+	</script><layer id=mpch0009 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0009s3>
+	MPDeleteCode('ch0009')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a href="Modeling.html"><b
+>Modeling with First Order Differential
+Equations</b></a> <!-- MP SYPH( --><script id=mpch0010s1>
+	MPSetChAttrs('ch0010','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0010ph class=MPNNCode
+	><img border=0 name=mpch0010ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0010s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> Using first order differential equations to
+model physical situations.  The section
+will show some very real applications of first order differential equations.</p><!-- MP SYRA( --><script id=mpch0010s1>
+	MPSetChAttrs('ch0010','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0010 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0010ph,'')
+	</script><layer id=mpch0010 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0010s3>
+	MPDeleteCode('ch0010')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a href="EquilibriumSolutions.html"><b
+>Equilibrium Solutions</b></a> <!-- MP SYPH( --><script id=mpch0011s1>
+	MPSetChAttrs('ch0011','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0011ph class=MPNNCode
+	><img border=0 name=mpch0011ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0011s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> We will look at the behavior of equilibrium
+solutions and autonomous differential equations.</p><!-- MP SYRA( --><script id=mpch0011s1>
+	MPSetChAttrs('ch0011','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0011 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0011ph,'')
+	</script><layer id=mpch0011 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0011s3>
+	MPDeleteCode('ch0011')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a href="EulersMethod.html"><b
+>Euler’s Method</b></a> <!-- MP SYPH( --><script id=mpch0012s1>
+	MPSetChAttrs('ch0012','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0012ph class=MPNNCode
+	><img border=0 name=mpch0012ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0012s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> In this section we’ll take a brief look at a
+method for approximating solutions to differential equations.</p><!-- MP SYRA( --><script id=mpch0012s1>
+	MPSetChAttrs('ch0012','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0012 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0012ph,'')
+	</script><layer id=mpch0012 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0012s3>
+	MPDeleteCode('ch0012')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>            <a
+href="IntroSecondOrder.html"><b >Second Order
+Differential Equations</b></a></p>
+
+<p class=MsoNormal style='margin-left:1.0in'><a href="SecondOrderConcepts.html"><b
+>Basic Concepts</b></a> <!-- MP SYPH( --><script id=mpch0013s1>
+	MPSetChAttrs('ch0013','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0013ph class=MPNNCode
+	><img border=0 name=mpch0013ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0013s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> Some of the basic concepts and ideas that are
+involved in solving second order differential equations.</p><!-- MP SYRA( --><script id=mpch0013s1>
+	MPSetChAttrs('ch0013','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0013 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0013ph,'')
+	</script><layer id=mpch0013 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0013s3>
+	MPDeleteCode('ch0013')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a href="RealRoots.html"><b
+>Real Roots</b></a> <!-- MP SYPH( --><script id=mpch0014s1>
+	MPSetChAttrs('ch0014','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0014ph class=MPNNCode
+	><img border=0 name=mpch0014ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0014s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> Solving differential equations whose
+characteristic equation has real roots.</p><!-- MP SYRA( --><script id=mpch0014s1>
+	MPSetChAttrs('ch0014','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0014 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0014ph,'')
+	</script><layer id=mpch0014 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0014s3>
+	MPDeleteCode('ch0014')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a href="ComplexRoots.html"><b
+>Complex Roots</b></a> <!-- MP SYPH( --><script id=mpch0015s1>
+	MPSetChAttrs('ch0015','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0015ph class=MPNNCode
+	><img border=0 name=mpch0015ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0015s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> Solving differential equations whose
+characteristic equation complex real roots.</p><!-- MP SYRA( --><script id=mpch0015s1>
+	MPSetChAttrs('ch0015','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0015 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0015ph,'')
+	</script><layer id=mpch0015 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0015s3>
+	MPDeleteCode('ch0015')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a href="RepeatedRoots.html"><b
+>Repeated Roots</b></a> <!-- MP SYPH( --><script id=mpch0016s1>
+	MPSetChAttrs('ch0016','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0016ph class=MPNNCode
+	><img border=0 name=mpch0016ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0016s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> Solving differential equations whose
+characteristic equation has repeated roots.</p><!-- MP SYRA( --><script id=mpch0016s1>
+	MPSetChAttrs('ch0016','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0016 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0016ph,'')
+	</script><layer id=mpch0016 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0016s3>
+	MPDeleteCode('ch0016')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a href="ReductionofOrder.html"><b
+>Reduction of Order</b></a> <!-- MP SYPH( --><script id=mpch0017s1>
+	MPSetChAttrs('ch0017','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0017ph class=MPNNCode
+	><img border=0 name=mpch0017ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0017s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> A brief look at the topic of reduction of
+order.  This will be one of the few times
+in this chapter that non-constant coefficient differential equation will be
+looked at.</p><!-- MP SYRA( --><script id=mpch0017s1>
+	MPSetChAttrs('ch0017','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0017 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0017ph,'')
+	</script><layer id=mpch0017 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0017s3>
+	MPDeleteCode('ch0017')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="FundamentalSetsofSolutions.html"><b >Fundamental
+Sets of Solutions</b></a> <!-- MP SYPH( --><script id=mpch0018s1>
+	MPSetChAttrs('ch0018','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0018ph class=MPNNCode
+	><img border=0 name=mpch0018ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0018s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> A look at some of the theory behind the
+solution to second order differential equations, including looks at the
+Wronskian and fundamental sets of solutions.</p><!-- MP SYRA( --><script id=mpch0018s1>
+	MPSetChAttrs('ch0018','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0018 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0018ph,'')
+	</script><layer id=mpch0018 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0018s3>
+	MPDeleteCode('ch0018')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a href="Wronskian.html"><b
+>More on the Wronskian</b></a> <!-- MP SYPH( --><script id=mpch0019s1>
+	MPSetChAttrs('ch0019','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0019ph class=MPNNCode
+	><img border=0 name=mpch0019ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0019s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> An application of the Wronskian and an
+alternate method for finding it.</p><!-- MP SYRA( --><script id=mpch0019s1>
+	MPSetChAttrs('ch0019','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0019 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0019ph,'')
+	</script><layer id=mpch0019 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0019s3>
+	MPDeleteCode('ch0019')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a href="NonhomogeneousDE.html"><b
+>Nonhomogeneous Differential Equations</b></a>
+<!-- MP SYPH( --><script id=mpch0020s1>
+	MPSetChAttrs('ch0020','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0020ph class=MPNNCode
+	><img border=0 name=mpch0020ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0020s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> A quick look into how to solve nonhomogeneous
+differential equations in general.</p><!-- MP SYRA( --><script id=mpch0020s1>
+	MPSetChAttrs('ch0020','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0020 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0020ph,'')
+	</script><layer id=mpch0020 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0020s3>
+	MPDeleteCode('ch0020')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="UndeterminedCoefficients.html"><b >Undetermined
+Coefficients</b></a> <!-- MP SYPH( --><script id=mpch0021s1>
+	MPSetChAttrs('ch0021','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0021ph class=MPNNCode
+	><img border=0 name=mpch0021ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0021s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> The first method for solving nonhomogeneous
+differential equations that we’ll be looking at in this section.</p><!-- MP SYRA( --><script id=mpch0021s1>
+	MPSetChAttrs('ch0021','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0021 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0021ph,'')
+	</script><layer id=mpch0021 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0021s3>
+	MPDeleteCode('ch0021')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a href="VariationofParameters.html"><b
+>Variation of Parameters</b></a> <!-- MP SYPH( --><script id=mpch0022s1>
+	MPSetChAttrs('ch0022','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0022ph class=MPNNCode
+	><img border=0 name=mpch0022ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0022s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> Another method for solving nonhomogeneous
+differential equations.</p><!-- MP SYRA( --><script id=mpch0022s1>
+	MPSetChAttrs('ch0022','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0022 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0022ph,'')
+	</script><layer id=mpch0022 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0022s3>
+	MPDeleteCode('ch0022')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a href="Vibrations.html"><b
+>Mechanical Vibrations</b></a> <!-- MP SYPH( --><script id=mpch0023s1>
+	MPSetChAttrs('ch0023','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0023ph class=MPNNCode
+	><img border=0 name=mpch0023ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0023s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> An application of second order differential
+equations.  This section focuses on
+mechanical vibrations, yet a simple change of notation can move this into
+almost any other engineering field.</p><!-- MP SYRA( --><script id=mpch0023s1>
+	MPSetChAttrs('ch0023','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0023 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0023ph,'')
+	</script><layer id=mpch0023 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0023s3>
+	MPDeleteCode('ch0023')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal><b >&nbsp;</b></p>
+
+<p class=MsoNormal><b >            </b><a href="LaplaceIntro.html"><b
+>Laplace Transforms</b></a></p>
+
+<p class=MsoNormal style='margin-left:1.0in'><a href="LaplaceDefinition.html"><b
+>The Definition</b></a> <!-- MP SYPH( --><script id=mpch0024s1>
+	MPSetChAttrs('ch0024','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0024ph class=MPNNCode
+	><img border=0 name=mpch0024ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0024s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> The definition of the <st1:place w:st="on">Laplace</st1:place>
+transform.  We will also compute a couple
+<st1:place w:st="on">Laplace</st1:place> transforms using the definition.</p><!-- MP SYRA( --><script id=mpch0024s1>
+	MPSetChAttrs('ch0024','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0024 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0024ph,'')
+	</script><layer id=mpch0024 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0024s3>
+	MPDeleteCode('ch0024')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a href="LaplaceTransforms.html"><b
+>Laplace Transforms</b></a> <!-- MP SYPH( --><script id=mpch0025s1>
+	MPSetChAttrs('ch0025','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0025ph class=MPNNCode
+	><img border=0 name=mpch0025ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0025s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> As the previous section will demonstrate,
+computing <st1:place w:st="on">Laplace</st1:place> transforms directly from the
+definition can be a fairly painful process. 
+In this section we introduce the way we usually compute <st1:place
+w:st="on">Laplace</st1:place> transforms.</p><!-- MP SYRA( --><script id=mpch0025s1>
+	MPSetChAttrs('ch0025','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0025 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0025ph,'')
+	</script><layer id=mpch0025 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0025s3>
+	MPDeleteCode('ch0025')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a href="InverseTransforms.html"><b
+>Inverse Laplace Transforms</b></a> <!-- MP SYPH( --><script id=mpch0026s1>
+	MPSetChAttrs('ch0026','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0026ph class=MPNNCode
+	><img border=0 name=mpch0026ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0026s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> In this section we ask the opposite
+question.  Here’s a <st1:place w:st="on">Laplace</st1:place>
+transform, what function did we originally have?</p><!-- MP SYRA( --><script id=mpch0026s1>
+	MPSetChAttrs('ch0026','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0026 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0026ph,'')
+	</script><layer id=mpch0026 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0026s3>
+	MPDeleteCode('ch0026')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a href="StepFunctions.html"><b
+>Step Functions</b></a> <!-- MP SYPH( --><script id=mpch0027s1>
+	MPSetChAttrs('ch0027','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0027ph class=MPNNCode
+	><img border=0 name=mpch0027ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0027s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> This is one of the more important functions in
+the use of <st1:place w:st="on">Laplace</st1:place> transforms.  With the introduction of this function the
+reason for doing <st1:place w:st="on">Laplace</st1:place> transforms starts to
+become apparent.</p><!-- MP SYRA( --><script id=mpch0027s1>
+	MPSetChAttrs('ch0027','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0027 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0027ph,'')
+	</script><layer id=mpch0027 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0027s3>
+	MPDeleteCode('ch0027')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a href="IVPWithLaplace.html"><b
+>Solving IVP’s with Laplace Transforms</b></a>
+<!-- MP SYPH( --><script id=mpch0028s1>
+	MPSetChAttrs('ch0028','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0028ph class=MPNNCode
+	><img border=0 name=mpch0028ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0028s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> Here’s how we used <st1:place w:st="on">Laplace</st1:place>
+transforms to solve IVP’s.</p><!-- MP SYRA( --><script id=mpch0028s1>
+	MPSetChAttrs('ch0028','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0028 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0028ph,'')
+	</script><layer id=mpch0028 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0028s3>
+	MPDeleteCode('ch0028')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="IVPWithNonconstantCoefficient.html"><b >Nonconstant
+Coefficient IVP’s</b></a> <!-- MP SYPH( --><script id=mpch0029s1>
+	MPSetChAttrs('ch0029','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0029ph class=MPNNCode
+	><img border=0 name=mpch0029ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0029s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> We will see how <st1:place w:st="on">Laplace</st1:place>
+transforms can be used to solve some nonconstant coefficient IVP’s</p><!-- MP SYRA( --><script id=mpch0029s1>
+	MPSetChAttrs('ch0029','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0029 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0029ph,'')
+	</script><layer id=mpch0029 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0029s3>
+	MPDeleteCode('ch0029')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a href="IVPWithStepFunction.html"><b
+>IVP’s with Step Functions</b></a> <!-- MP SYPH( --><script id=mpch0030s1>
+	MPSetChAttrs('ch0030','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0030ph class=MPNNCode
+	><img border=0 name=mpch0030ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0030s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> Solving IVP’s that contain step
+functions.  This is the section where the
+reason for using <st1:place w:st="on">Laplace</st1:place> transforms really
+becomes apparent.</p><!-- MP SYRA( --><script id=mpch0030s1>
+	MPSetChAttrs('ch0030','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0030 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0030ph,'')
+	</script><layer id=mpch0030 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0030s3>
+	MPDeleteCode('ch0030')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a href="DiracDeltaFunction.html"><b
+>Dirac Delta Function</b></a> <!-- MP SYPH( --><script id=mpch0031s1>
+	MPSetChAttrs('ch0031','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0031ph class=MPNNCode
+	><img border=0 name=mpch0031ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0031s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> One last function that often shows up in <st1:place
+w:st="on">Laplace</st1:place> transform problems.</p><!-- MP SYRA( --><script id=mpch0031s1>
+	MPSetChAttrs('ch0031','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0031 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0031ph,'')
+	</script><layer id=mpch0031 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0031s3>
+	MPDeleteCode('ch0031')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a href="ConvolutionIntegrals.html"><b
+>Convolution Integral</b></a> <!-- MP SYPH( --><script id=mpch0032s1>
+	MPSetChAttrs('ch0032','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0032ph class=MPNNCode
+	><img border=0 name=mpch0032ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0032s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> A brief introduction to the convolution
+integral and an application for <st1:place w:st="on">Laplace</st1:place>
+transforms.</p><!-- MP SYRA( --><script id=mpch0032s1>
+	MPSetChAttrs('ch0032','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0032 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0032ph,'')
+	</script><layer id=mpch0032 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0032s3>
+	MPDeleteCode('ch0032')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a href="Laplace_Table.html"><b
+>Table of Laplace Transforms</b></a> <!-- MP SYPH( --><script id=mpch0033s1>
+	MPSetChAttrs('ch0033','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0033ph class=MPNNCode
+	><img border=0 name=mpch0033ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0033s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> This is a small table of Laplace Transforms
+that we’ll be using here.</p><!-- MP SYRA( --><script id=mpch0033s1>
+	MPSetChAttrs('ch0033','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0033 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0033ph,'')
+	</script><layer id=mpch0033 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0033s3>
+	MPDeleteCode('ch0033')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>            <a
+href="SystemsIntro.html"><b >Systems of
+Differential Equations</b></a><b ></b></p>
+
+<p class=MsoNormal style='margin-left:1.0in'><a href="LA_Systems.html"><b
+>Review : Systems of Equations</b></a> <!-- MP SYPH( --><script id=mpch0034s1>
+	MPSetChAttrs('ch0034','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0034ph class=MPNNCode
+	><img border=0 name=mpch0034ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0034s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> The traditional starting point for a linear
+algebra class.  We will use linear algebra
+techniques to solve a system of equations.</p><!-- MP SYRA( --><script id=mpch0034s1>
+	MPSetChAttrs('ch0034','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0034 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0034ph,'')
+	</script><layer id=mpch0034 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0034s3>
+	MPDeleteCode('ch0034')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a href="LA_Matrix.html"><b
+>Review : Matrices and Vectors</b></a> <!-- MP SYPH( --><script id=mpch0035s1>
+	MPSetChAttrs('ch0035','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0035ph class=MPNNCode
+	><img border=0 name=mpch0035ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0035s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> A brief introduction to matrices and
+vectors.  We will look at arithmetic
+involving matrices and vectors, inverse of a matrix, determinant of a matrix,
+linearly independent vectors and systems of equations revisited.</p><!-- MP SYRA( --><script id=mpch0035s1>
+	MPSetChAttrs('ch0035','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0035 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0035ph,'')
+	</script><layer id=mpch0035 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0035s3>
+	MPDeleteCode('ch0035')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a href="LA_Eigen.html"><b
+>Review : Eigenvalues and Eigenvectors</b></a>
+<!-- MP SYPH( --><script id=mpch0036s1>
+	MPSetChAttrs('ch0036','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0036ph class=MPNNCode
+	><img border=0 name=mpch0036ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0036s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> Finding the eigenvalues and eigenvectors of a
+matrix.  This topic will be key to
+solving systems of differential equations.</p><!-- MP SYRA( --><script id=mpch0036s1>
+	MPSetChAttrs('ch0036','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0036 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0036ph,'')
+	</script><layer id=mpch0036 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0036s3>
+	MPDeleteCode('ch0036')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a href="SystemsDE.html"><b
+>Systems of Differential Equations</b></a> <!-- MP SYPH( --><script id=mpch0037s1>
+	MPSetChAttrs('ch0037','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0037ph class=MPNNCode
+	><img border=0 name=mpch0037ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0037s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> Here we will look at some of the basics of
+systems of differential equations.</p><!-- MP SYRA( --><script id=mpch0037s1>
+	MPSetChAttrs('ch0037','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0037 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0037ph,'')
+	</script><layer id=mpch0037 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0037s3>
+	MPDeleteCode('ch0037')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a href="SolutionsToSystems.html"><b
+>Solutions to Systems</b></a> <!-- MP SYPH( --><script id=mpch0038s1>
+	MPSetChAttrs('ch0038','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0038ph class=MPNNCode
+	><img border=0 name=mpch0038ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0038s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> We will take a look at what is involved in
+solving a system of differential equations.</p><!-- MP SYRA( --><script id=mpch0038s1>
+	MPSetChAttrs('ch0038','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0038 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0038ph,'')
+	</script><layer id=mpch0038 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0038s3>
+	MPDeleteCode('ch0038')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a href="PhasePlane.html"><b
+>Phase Plane</b></a> <!-- MP SYPH( --><script id=mpch0039s1>
+	MPSetChAttrs('ch0039','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0039ph class=MPNNCode
+	><img border=0 name=mpch0039ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0039s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> A brief introduction to the phase plane and
+phase portraits.</p><!-- MP SYRA( --><script id=mpch0039s1>
+	MPSetChAttrs('ch0039','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0039 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0039ph,'')
+	</script><layer id=mpch0039 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0039s3>
+	MPDeleteCode('ch0039')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a href="RealEigenvalues.html"><b
+>Real Eigenvalues</b></a> <!-- MP SYPH( --><script id=mpch0040s1>
+	MPSetChAttrs('ch0040','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0040ph class=MPNNCode
+	><img border=0 name=mpch0040ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0040s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> Solving systems of differential equations with
+real eigenvalues.</p><!-- MP SYRA( --><script id=mpch0040s1>
+	MPSetChAttrs('ch0040','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0040 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0040ph,'')
+	</script><layer id=mpch0040 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0040s3>
+	MPDeleteCode('ch0040')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a href="ComplexEigenvalues.html"><b
+>Complex Eigenvalues</b></a> <!-- MP SYPH( --><script id=mpch0041s1>
+	MPSetChAttrs('ch0041','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0041ph class=MPNNCode
+	><img border=0 name=mpch0041ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0041s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> Solving systems of differential equations with
+complex eigenvalues.</p><!-- MP SYRA( --><script id=mpch0041s1>
+	MPSetChAttrs('ch0041','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0041 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0041ph,'')
+	</script><layer id=mpch0041 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0041s3>
+	MPDeleteCode('ch0041')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a href="RepeatedEigenvalues.html"><b
+>Repeated Eigenvalues</b></a> <!-- MP SYPH( --><script id=mpch0042s1>
+	MPSetChAttrs('ch0042','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0042ph class=MPNNCode
+	><img border=0 name=mpch0042ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0042s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> Solving systems of differential equations with
+repeated eigenvalues.</p><!-- MP SYRA( --><script id=mpch0042s1>
+	MPSetChAttrs('ch0042','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0042 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0042ph,'')
+	</script><layer id=mpch0042 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0042s3>
+	MPDeleteCode('ch0042')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a href="NonhomogeneousSystems.html"><b
+>Nonhomogeneous Systems</b></a> <!-- MP SYPH( --><script id=mpch0043s1>
+	MPSetChAttrs('ch0043','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0043ph class=MPNNCode
+	><img border=0 name=mpch0043ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0043s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> Solving nonhomogeneous systems of differential
+equations using undetermined coefficients and variation of parameters.</p><!-- MP SYRA( --><script id=mpch0043s1>
+	MPSetChAttrs('ch0043','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0043 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0043ph,'')
+	</script><layer id=mpch0043 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0043s3>
+	MPDeleteCode('ch0043')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a href="SystemsLaplace.html"><b
+>Laplace Transforms</b></a> <!-- MP SYPH( --><script id=mpch0044s1>
+	MPSetChAttrs('ch0044','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0044ph class=MPNNCode
+	><img border=0 name=mpch0044ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0044s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> A very brief look at how Laplace transforms
+can be used to solve a system of differential equations.</p><!-- MP SYRA( --><script id=mpch0044s1>
+	MPSetChAttrs('ch0044','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0044 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0044ph,'')
+	</script><layer id=mpch0044 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0044s3>
+	MPDeleteCode('ch0044')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="SystemsModeling.html"><b >Modeling</b></a> <!-- MP SYPH( --><script id=mpch0045s1>
+	MPSetChAttrs('ch0045','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0045ph class=MPNNCode
+	><img border=0 name=mpch0045ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0045s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> In this section we’ll take a quick look at
+some extensions of some of the modeling we did in previous sections that lead
+to systems of equations.</p><!-- MP SYRA( --><script id=mpch0045s1>
+	MPSetChAttrs('ch0045','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0045 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0045ph,'')
+	</script><layer id=mpch0045 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0045s3>
+	MPDeleteCode('ch0045')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>            <a
+href="SeriesIntro.html"><b >Series Solutions</b></a></p>
+
+<p class=MsoNormal style='margin-left:1.0in'><a href="PowerSeries.html"><b
+>Review : Power Series</b></a> <!-- MP SYPH( --><script id=mpch0046s1>
+	MPSetChAttrs('ch0046','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0046ph class=MPNNCode
+	><img border=0 name=mpch0046ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0046s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> A brief review of some of the basics of power
+series.</p><!-- MP SYRA( --><script id=mpch0046s1>
+	MPSetChAttrs('ch0046','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0046 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0046ph,'')
+	</script><layer id=mpch0046 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0046s3>
+	MPDeleteCode('ch0046')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a href="TaylorSeries.html"><b
+>Review : Taylor Series</b></a> <!-- MP SYPH( --><script id=mpch0047s1>
+	MPSetChAttrs('ch0047','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0047ph class=MPNNCode
+	><img border=0 name=mpch0047ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0047s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> A reminder on how to construct the <st1:place
+w:st="on"><st1:City w:st="on">Taylor</st1:City></st1:place> series for a
+function.</p><!-- MP SYRA( --><script id=mpch0047s1>
+	MPSetChAttrs('ch0047','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0047 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0047ph,'')
+	</script><layer id=mpch0047 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0047s3>
+	MPDeleteCode('ch0047')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a href="SeriesSolutions.html"><b
+>Series Solutions</b></a> <!-- MP SYPH( --><script id=mpch0048s1>
+	MPSetChAttrs('ch0048','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0048ph class=MPNNCode
+	><img border=0 name=mpch0048ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0048s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> In this section we will construct a series
+solution for a differential equation about an ordinary point.</p><!-- MP SYRA( --><script id=mpch0048s1>
+	MPSetChAttrs('ch0048','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0048 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0048ph,'')
+	</script><layer id=mpch0048 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0048s3>
+	MPDeleteCode('ch0048')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a href="EulerEquations.html"><b
+>Euler Equations</b></a> <!-- MP SYPH( --><script id=mpch0049s1>
+	MPSetChAttrs('ch0049','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0049ph class=MPNNCode
+	><img border=0 name=mpch0049ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0049s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> We will look at solutions to Euler’s
+differential equation in this section.</p><!-- MP SYRA( --><script id=mpch0049s1>
+	MPSetChAttrs('ch0049','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0049 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0049ph,'')
+	</script><layer id=mpch0049 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0049s3>
+	MPDeleteCode('ch0049')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><b >            </b><a href="IntroHigherOrder.html"><b
+>Higher Order Differential Equations</b></a><b
+></b></p>
+
+<p class=MsoNormal style='margin-left:1.0in'><a href="HOBasicConcepts.html"><b
+>Basic Concepts for <i >n</i><sup>th</sup> Order Linear Equations</b></a> <!-- MP SYPH( --><script id=mpch0050s1>
+	MPSetChAttrs('ch0050','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0050ph class=MPNNCode
+	><img border=0 name=mpch0050ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0050s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> We’ll start the chapter off with a quick look
+at some of the basic ideas behind solving higher order linear differential
+equations.</p><!-- MP SYRA( --><script id=mpch0050s1>
+	MPSetChAttrs('ch0050','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0050 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0050ph,'')
+	</script><layer id=mpch0050 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0050s3>
+	MPDeleteCode('ch0050')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a href="HOHomogeneousDE.html"><b
+>Linear Homogeneous Differential Equations</b></a><b
+> </b><!-- MP SYPH( --><script id=mpch0051s1>
+	MPSetChAttrs('ch0051','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0051ph class=MPNNCode
+	><img border=0 name=mpch0051ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0051s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> In this section we’ll take a look at extending
+the ideas behind solving 2<sup>nd</sup> order differential equations to higher
+order.</p><!-- MP SYRA( --><script id=mpch0051s1>
+	MPSetChAttrs('ch0051','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0051 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0051ph,'')
+	</script><layer id=mpch0051 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0051s3>
+	MPDeleteCode('ch0051')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a href="HOUndeterminedCoeff.html"><b
+>Undetermined Coefficients</b></a> <!-- MP SYPH( --><script id=mpch0052s1>
+	MPSetChAttrs('ch0052','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0052ph class=MPNNCode
+	><img border=0 name=mpch0052ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0052s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> Here we’ll look at undetermined coefficients
+for higher order differential equations.</p><!-- MP SYRA( --><script id=mpch0052s1>
+	MPSetChAttrs('ch0052','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0052 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0052ph,'')
+	</script><layer id=mpch0052 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0052s3>
+	MPDeleteCode('ch0052')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a href="HOVariationOfParam.html"><b
+>Variation of Parameters</b></a> <!-- MP SYPH( --><script id=mpch0053s1>
+	MPSetChAttrs('ch0053','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0053ph class=MPNNCode
+	><img border=0 name=mpch0053ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0053s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> We’ll look at variation of parameters for
+higher order differential equations in this section.</p><!-- MP SYRA( --><script id=mpch0053s1>
+	MPSetChAttrs('ch0053','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0053 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0053ph,'')
+	</script><layer id=mpch0053 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0053s3>
+	MPDeleteCode('ch0053')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a href="HOLaplaceTransforms.html"><b
+>Laplace Transforms</b></a> <!-- MP SYPH( --><script id=mpch0054s1>
+	MPSetChAttrs('ch0054','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0054ph class=MPNNCode
+	><img border=0 name=mpch0054ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0054s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> In this section we’re just going to work an
+example of using Laplace transforms to solve a differential equation on a 3<sup>rd</sup>
+order differential equation just so say that we looked at one with order higher
+than 2<sup>nd</sup>.</p><!-- MP SYRA( --><script id=mpch0054s1>
+	MPSetChAttrs('ch0054','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0054 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0054ph,'')
+	</script><layer id=mpch0054 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0054s3>
+	MPDeleteCode('ch0054')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a href="HOSystems.html"><b
+>Systems of Differential Equations</b></a> <!-- MP SYPH( --><script id=mpch0055s1>
+	MPSetChAttrs('ch0055','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0055ph class=MPNNCode
+	><img border=0 name=mpch0055ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0055s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> Here we’ll take a quick look at extending the
+ideas we discussed when solving 2 x 2 systems of differential equations to
+systems of size 3 x 3.</p><!-- MP SYRA( --><script id=mpch0055s1>
+	MPSetChAttrs('ch0055','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0055 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0055ph,'')
+	</script><layer id=mpch0055 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0055s3>
+	MPDeleteCode('ch0055')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a href="HOSeries.html"><b
+>Series Solutions</b></a> <!-- MP SYPH( --><script id=mpch0056s1>
+	MPSetChAttrs('ch0056','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0056ph class=MPNNCode
+	><img border=0 name=mpch0056ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0056s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> This section serves the same purpose as the
+Laplace Transform section.  It is just
+here so we can say we’ve worked an example using series solutions for a
+differential equations of order higher than 2<sup>nd</sup>.</p><!-- MP SYRA( --><script id=mpch0056s1>
+	MPSetChAttrs('ch0056','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0056 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0056ph,'')
+	</script><layer id=mpch0056 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0056s3>
+	MPDeleteCode('ch0056')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal style='text-indent:.5in'><a href="IntroBVP.html"><b
+>Boundary Value Problems &amp; Fourier
+Series</b></a><b ><u></u></b></p>
+
+<p class=MsoNormal style='margin-left:1.0in'><a href="BoundaryValueProblem.html"><b
+>Boundary Value Problems</b></a> <!-- MP SYPH( --><script id=mpch0057s1>
+	MPSetChAttrs('ch0057','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0057ph class=MPNNCode
+	><img border=0 name=mpch0057ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0057s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> In this section we’ll define the boundary
+value problems as well as work some basic examples.<br>
+<a href="BVPEvals.html"><b >Eigenvalues and
+Eigenfunctions</b></a> <!-- MP SYPH( --><script id=mpch0058s1>
+	MPSetChAttrs('ch0058','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0058ph class=MPNNCode
+	><img border=0 name=mpch0058ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0058s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> Here we’ll take a look at the eigenvalues and
+eigenfunctions for boundary value problems.</p><!-- MP SYRA( --><script id=mpch0058s1>
+	MPSetChAttrs('ch0058','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0058 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0058ph,'')
+	</script><layer id=mpch0058 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0058s3>
+	MPDeleteCode('ch0058')
+</script><![endif]><!-- )MP SY --><!-- MP SYRA( --><script id=mpch0057s1>
+	MPSetChAttrs('ch0057','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0057 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0057ph,'')
+	</script><layer id=mpch0057 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0057s3>
+	MPDeleteCode('ch0057')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a href="PeriodicOrthogonal.html"><b
+>Periodic Functions and Orthogonal Functions</b></a>
+<!-- MP SYPH( --><script id=mpch0059s1>
+	MPSetChAttrs('ch0059','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0059ph class=MPNNCode
+	><img border=0 name=mpch0059ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0059s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> We’ll take a look at periodic functions and
+orthogonal functions in section.</p><!-- MP SYRA( --><script id=mpch0059s1>
+	MPSetChAttrs('ch0059','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0059 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0059ph,'')
+	</script><layer id=mpch0059 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0059s3>
+	MPDeleteCode('ch0059')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a href="FourierSineSeries.html"><b
+>Fourier Sine Series</b></a> <!-- MP SYPH( --><script id=mpch0060s1>
+	MPSetChAttrs('ch0060','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0060ph class=MPNNCode
+	><img border=0 name=mpch0060ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0060s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> In this section we’ll start looking at Fourier
+Series by looking at a special case : Fourier Sine Series.</p><!-- MP SYRA( --><script id=mpch0060s1>
+	MPSetChAttrs('ch0060','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0060 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0060ph,'')
+	</script><layer id=mpch0060 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0060s3>
+	MPDeleteCode('ch0060')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a href="FourierCosineSeries.html"><b
+>Fourier Cosine Series</b></a> <!-- MP SYPH( --><script id=mpch0061s1>
+	MPSetChAttrs('ch0061','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0061ph class=MPNNCode
+	><img border=0 name=mpch0061ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0061s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> We’ll continue looking at Fourier Series by
+taking a look at another special case : Fourier Cosine Series.</p><!-- MP SYRA( --><script id=mpch0061s1>
+	MPSetChAttrs('ch0061','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0061 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0061ph,'')
+	</script><layer id=mpch0061 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0061s3>
+	MPDeleteCode('ch0061')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a href="FourierSeries.html"><b
+>Fourier Series</b></a> <!-- MP SYPH( --><script id=mpch0062s1>
+	MPSetChAttrs('ch0062','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0062ph class=MPNNCode
+	><img border=0 name=mpch0062ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0062s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> Here we will look at the full Fourier series.</p><!-- MP SYRA( --><script id=mpch0062s1>
+	MPSetChAttrs('ch0062','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0062 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0062ph,'')
+	</script><layer id=mpch0062 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0062s3>
+	MPDeleteCode('ch0062')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a
+href="ConvergenceFourierSeries.html"><b >Convergence
+of Fourier Series</b></a> <!-- MP SYPH( --><script id=mpch0063s1>
+	MPSetChAttrs('ch0063','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0063ph class=MPNNCode
+	><img border=0 name=mpch0063ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0063s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> Here we’ll take a look at some ideas involved
+in the just what functions the Fourier series converge to as well as
+differentiation and integration of a Fourier series.</p><!-- MP SYRA( --><script id=mpch0063s1>
+	MPSetChAttrs('ch0063','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0063 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0063ph,'')
+	</script><layer id=mpch0063 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0063s3>
+	MPDeleteCode('ch0063')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal style='text-indent:.5in'><a href="IntroPDE.html"><b
+>Partial Differential Equations</b></a><b
+><u></u></b></p>
+
+<p class=MsoNormal style='margin-left:1.0in'><a href="TheHeatEquation.html"><b
+>The Heat Equation</b></a> <!-- MP SYPH( --><script id=mpch0064s1>
+	MPSetChAttrs('ch0064','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0064ph class=MPNNCode
+	><img border=0 name=mpch0064ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0064s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> We do a partial derivation of the heat
+equation in this section as well as a discussion of possible boundary values.<br>
+<a href="TheWaveEquation.html"><b >The Wave Equation</b></a>
+<!-- MP SYPH( --><script id=mpch0065s1>
+	MPSetChAttrs('ch0065','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0065ph class=MPNNCode
+	><img border=0 name=mpch0065ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0065s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> Here we do a partial derivation of the wave
+equation.<br>
+<a href="PDETerminology.html"><b >Terminology</b></a>
+<!-- MP SYPH( --><script id=mpch0066s1>
+	MPSetChAttrs('ch0066','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0066ph class=MPNNCode
+	><img border=0 name=mpch0066ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0066s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> In this section we take a quick look at some
+of the terminology used in the method of separation of variables.<br>
+<a href="SeparationofVariables.html"><b >Separation
+of Variables</b></a> <!-- MP SYPH( --><script id=mpch0067s1>
+	MPSetChAttrs('ch0067','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0067ph class=MPNNCode
+	><img border=0 name=mpch0067ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0067s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> We take a look at the first step in the method
+of separation of variables in this section. 
+This first step is really the step that motivates the whole process.</p><!-- MP SYRA( --><script id=mpch0067s1>
+	MPSetChAttrs('ch0067','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0067 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0067ph,'')
+	</script><layer id=mpch0067 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0067s3>
+	MPDeleteCode('ch0067')
+</script><![endif]><!-- )MP SY --><!-- MP SYRA( --><script id=mpch0066s1>
+	MPSetChAttrs('ch0066','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0066 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0066ph,'')
+	</script><layer id=mpch0066 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0066s3>
+	MPDeleteCode('ch0066')
+</script><![endif]><!-- )MP SY --><!-- MP SYRA( --><script id=mpch0065s1>
+	MPSetChAttrs('ch0065','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0065 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0065ph,'')
+	</script><layer id=mpch0065 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0065s3>
+	MPDeleteCode('ch0065')
+</script><![endif]><!-- )MP SY --><!-- MP SYRA( --><script id=mpch0064s1>
+	MPSetChAttrs('ch0064','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0064 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0064ph,'')
+	</script><layer id=mpch0064 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0064s3>
+	MPDeleteCode('ch0064')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a href="SolvingHeatEquation.html"><b
+>Solving the Heat Equation</b></a> <!-- MP SYPH( --><script id=mpch0068s1>
+	MPSetChAttrs('ch0068','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0068ph class=MPNNCode
+	><img border=0 name=mpch0068ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0068s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> In this section we go through the complete
+separation of variables process and along the way solve the heat equation with
+three different sets of boundary conditions.</p><!-- MP SYRA( --><script id=mpch0068s1>
+	MPSetChAttrs('ch0068','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0068 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0068ph,'')
+	</script><layer id=mpch0068 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0068s3>
+	MPDeleteCode('ch0068')
+</script><![endif]><!-- )MP SY -->
+
+<p class=MsoNormal style='margin-left:1.0in'><a href="HeatEqnNonZero.html"><b
+>Heat Equation with Non-Zero Temperature
+Boundaries</b></a> <!-- MP SYPH( --><script id=mpch0069s1>
+	MPSetChAttrs('ch0069','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0069ph class=MPNNCode
+	><img border=0 name=mpch0069ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0069s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> Here we take a quick look at solving the heat
+equation in which the boundary conditions are fixed, non-zero temperature
+conditions.<br>
+<a href="LaplacesEqn.html"><b >Laplace’s
+Equation</b></a> <!-- MP SYPH( --><script id=mpch0070s1>
+	MPSetChAttrs('ch0070','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0070ph class=MPNNCode
+	><img border=0 name=mpch0070ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0070s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> We discuss solving Laplace’s equation on both
+a rectangle and a disk in this section.<br>
+<a href="VibratingString.html"><b >Vibrating
+String</b></a> <!-- MP SYPH( --><script id=mpch0071s1>
+	MPSetChAttrs('ch0071','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0071ph class=MPNNCode
+	><img border=0 name=mpch0071ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0071s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> Here we solve the wave equation for a vibrating
+string.<br>
+<a href="PDESummary.html"><b >Summary of
+Separation of Variables</b></a> <!-- MP SYPH( --><script id=mpch0072s1>
+	MPSetChAttrs('ch0072','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><![if !ie]><span id=mpnnch0072ph class=MPNNCode
+	><img border=0 name=mpch0072ph src='%26%7bDSMP.html' height=1 width='&{DSMP.gPlaceholderWidth};'
+></span><![endif]><script id=mpch0072s2>
+	MPInlineChar(0)
+</script><!-- )MP SYPH --> In this final section we give a quick summary
+of the method of separation of variables.<b ><u></u></b></p><!-- MP SYRA( --><script id=mpch0072s1>
+	MPSetChAttrs('ch0072','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0072 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0072ph,'')
+	</script><layer id=mpch0072 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0072s3>
+	MPDeleteCode('ch0072')
+</script><![endif]><!-- )MP SY --><!-- MP SYRA( --><script id=mpch0071s1>
+	MPSetChAttrs('ch0071','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0071 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0071ph,'')
+	</script><layer id=mpch0071 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0071s3>
+	MPDeleteCode('ch0071')
+</script><![endif]><!-- )MP SY --><!-- MP SYRA( --><script id=mpch0070s1>
+	MPSetChAttrs('ch0070','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0070 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0070ph,'')
+	</script><layer id=mpch0070 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0070s3>
+	MPDeleteCode('ch0070')
+</script><![endif]><!-- )MP SY --><!-- MP SYRA( --><script id=mpch0069s1>
+	MPSetChAttrs('ch0069','ch0',[[6,1,-3,0,0],[8,1,-4,0,0],[10,1,-4,0,0],[],[],[],[25,2,-11,0,0]])
+</script><!-- )MP SYRA --><!-- MP SY( --><![if !ie]><div id=mpnnch0069 class=MPNNCode
+	><script>
+		MPNNCalcTopLeft(document.mpch0069ph,'')
+	</script><layer id=mpch0069 z-index=98 visibility='visible' top='&{DSMP.gNNLayerTop};' left='&{DSMP.gNNLayerLeft};'
+		><img border=0 width='&{DSMP.gScreenEqnWidth};' height='&{DSMP.gScreenEqnHeight};'
+			 src='%26%7bDSMP-2.html' onload='MPNNSelectScreenEqn(this)'
+	></layer></div><script id=mpch0069s3>
+	MPDeleteCode('ch0069')
+</script><![endif]><!-- )MP SY -->
+
+
+			
+			</div>  <!-- Content -->
+			
+			<div class="Bottom_Nav">
+			<table width="100%" align="center" cellspacing="0" cellpadding="0" border="0">
+			<tr>
+				<td width="36%"><span class="Button_Outer">
+				
+				</span></td>
+				<td width="27%" align="center"><span class="MainTitle"><span id="nFooter_lblTitle">Differential Equations  - Notes</span></span></td>
+				<td width="36%" align="right"><span class="Button_Outer">
+				<a id="nFooter_aNext" class="PrevNextButtonOff" onMouseOver="this.className='PrevNextButtonOn'" onMouseOut="this.className='PrevNextButtonOff'" href="IntroBasic.html">Basic Concepts<img src="../../Images/DoubleArrowRight.gif" border="0" /></a>
+				</span></td>
+			</tr>
+			</table>
+			</div>
+			
+			<br />
+			
+			<div align="left"><span id="nFooter_lblBreadCrumb" class="BreadCrumb">Online Notes  / Differential Equations  (Notes)</span></div>
+			
+			</div>  <!-- MainBox -->
+			</td>
+		</tr>
+		</table>
+	</td>
+</tr>
+<tr>
+	<td colspan="4" align="center"><span class="Smaller"><br>[<a href="http://tutorial.math.lamar.edu/contact.aspx">Contact Me</a>]&nbsp;[<a href="../../links.html">Links</a>]&nbsp;[<a href="http://tutorial.math.lamar.edu/privacy.aspx">Privacy Statement</a>]&nbsp;[<a href="../../sitemap.html">Site Map</a>]&nbsp;[<a href="http://tutorial.math.lamar.edu/terms.aspx">Terms of Use</a>]&nbsp;[<a href="http://www.milonic.com/">Menus by Milonic</a>]</span></td>
+</tr>
+</table>
+
+
+
+
+<hr width="95%">
+	
+<table width="100%">
+<tr>
+	<td><span id="Foot"><span id="nFooter__CopyRight">&copy; 2003 - 2015 Paul Dawkins</span></span></td>
+	<td align="right"><span id="Foot">&nbsp;</span></td>
+</tr>
+</table>
+
+
+<script type="text/javascript">
+//<![CDATA[
+var Page_Validators =  new Array(document.getElementById("nHeader__rfvQ"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var nHeader__rfvQ = document.all ? document.all["nHeader__rfvQ"] : document.getElementById("nHeader__rfvQ");
+nHeader__rfvQ.controltovalidate = "nHeader_q";
+nHeader__rfvQ.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+nHeader__rfvQ.initialvalue = "";
+//]]>
+</script>
+
+<script language="javascript">
+<!--
+tbWaterMark_Blur('nHeader_q', 'Watermark_Blur','', false);//-->
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        //]]>
+</script>
+</form>
+
+</div>
+
+
+
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '../../../www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-331594-1', 'lamar.edu');
+    ga('send', 'pageview');
+
+</script>
+
+<script type="text/javascript">
+
+    var Cat = '';
+
+    if (Cat != '') {
+        ga('send', 'event', '', '', '');
+    }
+
+</script>
+
+</body>
+
+<!-- Mirrored from tutorial.math.lamar.edu/Classes/DE/DE.aspx by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 07 Jan 2015 21:15:16 GMT -->
+</html>
